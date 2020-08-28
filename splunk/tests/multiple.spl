@@ -1,0 +1,4 @@
+index="integration_tests"
+| bin _time span=1month as month
+| stats dc(device_mac_address) as count by month
+| fields count

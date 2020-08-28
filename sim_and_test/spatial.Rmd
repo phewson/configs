@@ -1,0 +1,185 @@
+---
+title: "Overview of activity"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical-layout: fill
+    theme: bootstrap
+    logo: logo.jpg
+    favicon: favicon.ico
+runtime: shiny
+
+---
+<style>                     
+.navbar {
+  background-color:#2db8c5;
+  border-color:black;
+}
+.navbar-brand {
+color:black!important;
+}
+.section.sidebar {
+  background-color: #2db8c5;
+}
+</style>
+
+```{r global, include=FALSE}
+library(flexdashboard)
+library(ggplot2)
+library(ggQC)
+library(shiny)
+library(curl)
+library(jsonlite)
+library(leaflet)
+library(DT)
+library(readr)
+library(sp)
+SERVER <- "http://localhost:8181/"
+METRICS <- c("Uploaded Data (Gb)", "Downloaded Data (Gb)", "New Registrations")
+```
+
+Inputs {.sidebar data-width=160} 
+======================================================
+
+### Customer
+
+```{r}
+radioButtons(
+  "metric", "Activity metric", 
+  choiceValues=c(1:3), 
+  choiceNames=METRICS,
+  selected = 2)
+```
+
+```{r}
+selectInput("chiltern_hotspot", "Chiltern Hotspot ID", 
+            choices=c(28, 29, 31, 55, 58, 61, 68, 69, 72, 73, 77, 90, 91, 93, 94, 
+95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 28481, 
+28503, 28504, 28506, 28510, 28511, 28512, 28520, 28521, 28522, 
+28523, 28524, 28525, 28526, 28527, 28528, 28529, 28530, 28531, 
+28532, 28533, 28534, 28535, 28536, 28537, 28540, 28550, 28551, 
+28553, 28554, 28555, 28556, 28557, 28558, 28565, 28566, 28567, 
+28568, 28569, 28570, 28571, 28572, 28573, 28574, 28575, 28576, 
+28577, 28578, 28579, 28580, 28581, 28582, 28583, 28584, 28585, 
+28586, 28587, 28588, 28589, 28590, 28591, 28592, 28593, 28594, 
+28595, 28596, 28597, 28598, 28599, 28600, 28601, 28602, 28603, 
+28604, 28605, 28606, 28616), selected=28)
+```
+
+```{r}
+radioButtons(
+  "granularity", "OAC level", 
+  choiceValues=c(1:5), 
+  choiceNames=c("Supergroup", "Group", "Subgroup", "Subgroup Description", "Subgroup Top 10 Names"),
+  selected = 1)
+```
+
+```{r}
+sb <- reactive({
+  api <- "hotspots"
+  curl_string <- paste(SERVER, api, sep="")
+  response <- curl(curl_string)
+  customer_data <- fromJSON(response)
+  return(customer_data)
+})
+
+chosen <- reactive({
+  if (input$metric == "2") {ch <- sb()$downloaded
+  } else if (input$metric == "1") 
+  {ch <- sb()$uploaded
+  } else {ch <- sb()$new_reg}
+  return(ch)
+})
+
+chiltern <- reactive({
+  api <- "oac"
+  curl_string <- paste(SERVER, api, "?hotspot_id=", input$chiltern_hotspot, "&granularity=", input$granularity, sep="")
+  response <- curl(curl_string)
+  customer_data <- fromJSON(response)
+  return(customer_data)
+})
+
+ladata <- reactive({
+  api <- "map"
+  curl_string <- paste(SERVER, api, "?hotspot_id=", input$chiltern_hotspot, sep="")
+  response <- curl(curl_string)
+  customer_data <- fromJSON(response)
+  return(customer_data)
+})
+
+```
+
+
+
+Access Point Activity {data-orientation=rows}
+=====================================  
+
+### Users at Access Points
+
+```{r}
+SCALE <- 100
+renderLeaflet({
+pal <- colorNumeric(
+  colorRamp(c("#2db8c5", "#fdc300"), interpolate = "spline"), domain = c(0, max(chosen())))
+
+leaflet(sb()) %>% 
+  addTiles() %>% 
+  addProviderTiles(providers$CartoDB.Positron) %>% 
+  setView(lng = -2.9, lat = 50.7, zoom = 5) %>%
+  addCircleMarkers(
+    radius = ~chosen() / max(chosen()) * SCALE,
+    label= htmltools::htmlEscape(round(chosen(), 2)),
+    color = ~pal(chosen()),
+    stroke = FALSE, 
+    fillOpacity = 0.7, 
+    popup=htmltools::htmlEscape(sb()$label)) %>%
+  addLegend(
+    position = "topright",
+    pal=pal,
+    values = ~chosen(),
+    title = METRICS[as.numeric(input$metric)])
+})
+```
+
+
+User types
+======================================================
+  
+### This is a table
+  
+```{r}
+renderDT({
+  datatable(
+  chiltern(), extensions = 'Buttons', options = list(
+    dom = 'Bfrtip',
+    buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
+  )
+)
+})
+```
+
+
+
+Where do users come from
+======================================================
+  
+### This is a table
+  
+```{r}
+load("~/phewson_configs/las.Rdata")
+renderLeaflet({
+local <- merge(bas, ladata(), by.x="lad19cd", by.y="lad19cd", all.x=TRUE)
+local@data$registrations[is.na(local@data$registrations)] <- 0
+# pal <- colorBin("YlOrRd", domain = local@data$registrations)
+pal <- colorNumeric(
+  colorRamp(c("#2db8c5", "#fdc300"), interpolate = "spline"), domain = c(0, local@data$registrations))
+
+leaflet(local) %>% 
+  addTiles() %>% 
+  addProviderTiles(providers$CartoDB.Positron) %>% 
+  setView(lng = -1.3, lat = 51.8, zoom = 8) %>% 
+  addPolygons(fillColor = ~pal(registrations), weight=1, color="white") %>% 
+  addLegend(pal = pal, values = ~registrations, opacity = 0.7, title = NULL, position = "bottomright")
+
+})
+```

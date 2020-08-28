@@ -1,0 +1,34 @@
+#+TITLE: Tender notes
+
+* Area E.
+
+- [S] Cyclist Insight report for Birmingham City Council (Kate did a lot of the work, need to check what she called it)
+- [T] Delivery of state of the art analysis on the behaviour of a sample of cyclist.
+- [A] Action
+      - Take raw GPS data from a range of recorders that had been issued by BCC.
+      - Develop state of the art algorithms to match noisy GPS data to the highway network, identify trips made by bicycle.
+      - Summarise these data in the form of origin and destination demand for travel as well as route usage analytics.
+
+
+* Area F.
+
+- [S] Use of PNT data to evaluate impact of additional HGV traffic (SSGP / Somerset CC)
+- [T] Analyse the impact of additional HGV traffic on junction performance around Hinkley Point Route.
+- [A] Action
+     - Develop interactive and adjustable junction simulations using pre-existing CSC code to examine the effect of different scheduling strategies on for potential HGV flow on the performance of junctions in Bridgewater.
+     - Use GPS data to validate the performance of transport and junction models
+     - Also obtain data from extant profilers and SCOOT to compare junction performance metrics with those predicted by traffic models.
+     - Find novel ways of presenting data to clients/users in informative ways
+- [R] We have a very nice quote from SSGP somewhere
+
+* Area G.
+- [S] ECC Car Parking Strategy (with Laurence and Kate)
+- [T] Develop new strategy for Exeter City Council
+- [A] Action
+   - Detailed analysis and simulation of potential effect of different pricing strategies on car parking, congestion
+   - Feasibility study for transport hubs, using Express bus services to bring commuters and leisure travellers into Exeter rather than driving to Park and Ride within Exeter
+
+
+* Area H.
+- As at E?
+- it this blogpost any use (no client) https://www.cityscience.com/blog/cycling-spatial-analysis

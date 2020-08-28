@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  splunkenterprise:
+    hostname: splunkenterprise
+    image: splunk/splunk:7.3
+    environment:
+      SPLUNK_START_ARGS: --accept-license
+      SPLUNK_ENABLE_LISTEN: 9998
+      SPLUNK_ADD: tcp 1514
+      SPLUNK_PASSWORD: ChangeMe123
+    volumes:
+      - opt-splunk-etc:/opt/splunk/etc
+      - opt-splunk-var:/opt/splunk/var
+      - $TEST_DATA_HOME:/home/data
+    ports:
+      - "8000:8000"
+      - "8089:8089"
+      - "9997:9997"
+      - "8088:8088"
+      - "1514:1514"
+
+volumes:
+  opt-splunk-etc:
+  opt-splunk-var:

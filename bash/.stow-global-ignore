@@ -1,0 +1,6 @@
+# ignore 
+\.git      # any git folders
+.+~        # emacs backup files
+\#.*\#     # emacs autosave
+abbrev
+ya_snippets

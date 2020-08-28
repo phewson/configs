@@ -1,0 +1,173 @@
+-- Deploy official_stats:vehicles to pg
+
+BEGIN;
+create table dft.stats19_vehicles (
+    accident_index text,
+    vehicle_reference int,
+    vehicle_type int,
+    towing_and_articulation dft.stats19_towing_and_articulation,
+    vehicle_manoeuvre dft.stats19_vehicle_manoeuvre,
+    vehicle_location_restricted_lane dft.stats19_vehicle_location,
+    junction_location dft.stats19_vehicle_junction_location,
+    skidding_and_overturning dft.stats19_skidding_and_overturning,
+    hit_object_in_carriageway dft.stats19_hit_object_in_carriageway,
+    vehicle_leaving_carriageway dft.stats19_vehicle_leaving_carriageway,
+    hit_object_off_carriageway dft.stats19_hit_object_off_carriageway,
+    first_point_of_impact dft.stats19_first_point_of_impact,
+    was_vehicle_left_hand_drive dft.stats19_was_vehicle_left_hand_drive,
+    journey_purpose_of_driver dft.stats19_journey_purpose,
+    sex_of_driver dft.stats19_sex_of_driver,
+    age_of_driver int,
+    age_band_of_driver dft.stats19_age_band_of_driver,
+    engine_capacity_cc int,
+    propulsion_code dft.stats19_propulsion_code,
+    age_of_vehicle int,
+    driver_home_area_type dft.stats19_home_area_type,
+    primary key(accident_index, vehicle_reference)
+    --comment out foreign key constrains as causes issues with truncate and update functions
+    --foreign key(accident_index) references public.dft_stats19_accidents(accident_index),
+    --foreign key(vehicle_type) references public.dft_stats19_lookup_vehicle_type(stats19_code)
+);
+
+create index on dft.stats19_vehicles (accident_index);
+
+create function dft.import_dft_stats19_vehicles() returns void
+as $$
+declare
+begin
+    insert into dft.stats19_vehicles (
+        accident_index,
+        vehicle_reference,
+        vehicle_type,
+        towing_and_articulation,
+        vehicle_manoeuvre,
+        vehicle_location_restricted_lane,
+        junction_location,
+        skidding_and_overturning,
+        hit_object_in_carriageway,
+        vehicle_leaving_carriageway,
+        hit_object_off_carriageway,
+        first_point_of_impact,
+        was_vehicle_left_hand_drive,
+        journey_purpose_of_driver,
+        sex_of_driver,
+        age_of_driver,
+        age_band_of_driver,
+        engine_capacity_cc,
+        propulsion_code,
+        age_of_vehicle,
+        driver_home_area_type)
+        select accident_index,
+            vehicle_reference,
+            vehicle_type,
+            (enum_range(null::dft.stats19_towing_and_articulation))[nullif(towing_and_articulation,-1)+1],
+            (enum_range(null::dft.stats19_vehicle_manoeuvre))[nullif(vehicle_manoeuvre,-1)],
+            (enum_range(null::dft.stats19_vehicle_location))[nullif(vehicle_location_restricted_lane,-1)+1],
+            (enum_range(null::dft.stats19_vehicle_junction_location))[nullif(junction_location,-1)+1],
+            (enum_range(null::dft.stats19_skidding_and_overturning))[nullif(skidding_and_overturning,-1)+1],
+            (enum_range(null::dft.stats19_hit_object_in_carriageway))[nullif(hit_object_in_carriageway,-1)+1],
+            (enum_range(null::dft.stats19_vehicle_leaving_carriageway))[nullif(vehicle_leaving_carriageway,-1)],
+            (enum_range(null::dft.stats19_hit_object_off_carriageway))[nullif(hit_object_off_carriageway,-1)+1],
+            (enum_range(null::dft.stats19_first_point_of_impact))[nullif(first_point_of_impact,-1)+1],
+            (enum_range(null::dft.stats19_was_vehicle_left_hand_drive))[nullif(was_vehicle_left_hand_drivex,-1)],
+            (enum_range(null::dft.stats19_journey_purpose))[nullif(journey_purpose_of_driver,-1)],
+            (enum_range(null::dft.stats19_sex_of_driver))[nullif(sex_of_driver,-1)],
+            age_of_driver,
+            (enum_range(null::dft.stats19_age_band_of_driver))[nullif(age_band_of_driver,-1)],
+            nullif(engine_capacity_xccx,-1),
+            (enum_range(null::dft.stats19_propulsion_code))[nullif(propulsion_code,-1)],
+            nullif(age_of_vehicle,-1),
+            (enum_range(null::dft.stats19_home_area_type))[nullif(driver_home_area_type,-1)]
+            from staging.dft_stats19_vehicles
+    ;
+    insert into dft.stats19_vehicles (
+        accident_index,
+        vehicle_reference,
+        vehicle_type,
+        towing_and_articulation,
+        vehicle_manoeuvre,
+        vehicle_location_restricted_lane,
+        junction_location,
+        skidding_and_overturning,
+        hit_object_in_carriageway,
+        vehicle_leaving_carriageway,
+        hit_object_off_carriageway,
+        first_point_of_impact,
+        was_vehicle_left_hand_drive,
+        journey_purpose_of_driver,
+        sex_of_driver,
+        age_of_driver,
+        age_band_of_driver,
+        engine_capacity_cc,
+        propulsion_code,
+        age_of_vehicle,
+        driver_home_area_type)
+        select accident_index,
+            vehicle_reference,
+            vehicle_type,
+            (enum_range(null::dft.stats19_towing_and_articulation))[nullif(towing_and_articulation,-1)+1],
+            (enum_range(null::dft.stats19_vehicle_manoeuvre))[nullif(vehicle_manoeuvre,-1)],
+            (enum_range(null::dft.stats19_vehicle_location))[nullif(vehicle_location_restricted_lane,-1)+1],
+            (enum_range(null::dft.stats19_vehicle_junction_location))[nullif(junction_location,-1)+1],
+            (enum_range(null::dft.stats19_skidding_and_overturning))[nullif(skidding_and_overturning,-1)+1],
+            (enum_range(null::dft.stats19_hit_object_in_carriageway))[nullif(hit_object_in_carriageway,-1)+1],
+            (enum_range(null::dft.stats19_vehicle_leaving_carriageway))[nullif(vehicle_leaving_carriageway,-1)],
+            (enum_range(null::dft.stats19_hit_object_off_carriageway))[nullif(hit_object_off_carriageway,-1)+1],
+            (enum_range(null::dft.stats19_first_point_of_impact))[nullif(first_point_of_impact,-1)+1],
+            (enum_range(null::dft.stats19_was_vehicle_left_hand_drive))[nullif(was_vehicle_left_hand_drivex,-1)],
+            (enum_range(null::dft.stats19_journey_purpose))[nullif(journey_purpose_of_driver,-1)],
+            (enum_range(null::dft.stats19_sex_of_driver))[nullif(sex_of_driver,-1)],
+            age_of_driver,
+            (enum_range(null::dft.stats19_age_band_of_driver))[nullif(age_band_of_driver,-1)],
+            nullif(engine_capacity_xccx,-1),
+            (enum_range(null::dft.stats19_propulsion_code))[nullif(propulsion_code,-1)],
+            nullif(age_of_vehicle,-1),
+            (enum_range(null::dft.stats19_home_area_type))[nullif(driver_home_area_type,-1)]
+            from staging.dft_stats19_vehicles0514
+    ;
+    insert into dft.stats19_vehicles (
+        accident_index,
+        vehicle_reference,
+        vehicle_type,
+        towing_and_articulation,
+        vehicle_manoeuvre,
+        vehicle_location_restricted_lane,
+        junction_location,
+        skidding_and_overturning,
+        hit_object_in_carriageway,
+        vehicle_leaving_carriageway,
+        hit_object_off_carriageway,
+        first_point_of_impact,
+        was_vehicle_left_hand_drive,
+        journey_purpose_of_driver,
+        sex_of_driver,
+        age_band_of_driver,
+        engine_capacity_cc,
+        propulsion_code,
+        age_of_vehicle,
+        driver_home_area_type)
+        select accident_index,
+            vehicle_reference,
+            vehicle_type,
+            (enum_range(null::dft.stats19_towing_and_articulation))[nullif(towing_and_articulation,-1)+1],
+            (enum_range(null::dft.stats19_vehicle_manoeuvre))[nullif(vehicle_manoeuvre,-1)],
+            (enum_range(null::dft.stats19_vehicle_location))[nullif(vehicle_location_restricted_lane,-1)+1],
+            (enum_range(null::dft.stats19_vehicle_junction_location))[nullif(junction_location,-1)+1],
+            (enum_range(null::dft.stats19_skidding_and_overturning))[nullif(skidding_and_overturning,-1)+1],
+            (enum_range(null::dft.stats19_hit_object_in_carriageway))[nullif(hit_object_in_carriageway,-1)+1],
+            (enum_range(null::dft.stats19_vehicle_leaving_carriageway))[nullif(vehicle_leaving_carriageway,-1)],
+            (enum_range(null::dft.stats19_hit_object_off_carriageway))[nullif(hit_object_off_carriageway,-1)+1],
+            (enum_range(null::dft.stats19_first_point_of_impact))[nullif(first_point_of_impact,-1)+1],
+            (enum_range(null::dft.stats19_was_vehicle_left_hand_drive))[nullif(was_vehicle_left_hand_drivex,-1)],
+            (enum_range(null::dft.stats19_journey_purpose))[nullif(journey_purpose_of_driver,-1)],
+            (enum_range(null::dft.stats19_sex_of_driver))[nullif(sex_of_driver,-1)],
+            (enum_range(null::dft.stats19_age_band_of_driver))[nullif(age_band_of_driver,-1)],
+            nullif(engine_capacity_xccx,-1),
+            (enum_range(null::dft.stats19_propulsion_code))[nullif(propulsion_code,-1)],
+            nullif(age_of_vehicle,-1),
+            (enum_range(null::dft.stats19_home_area_type))[nullif(driver_home_area_type,-1)]
+            from staging.dft_stats19_vehicles7904
+    ;
+end
+$$ language plpgsql;
+COMMIT;

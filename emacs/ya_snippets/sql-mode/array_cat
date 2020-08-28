@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: cat
+# key: cat
+# --
+$1  = array_cat($1, excluded.$1)

@@ -1,0 +1,745 @@
+---
+title: "Data forensics dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical-layout: fill
+    theme: bootstrap
+    logo: logo.jpg
+    favicon: favicon.ico
+runtime: shiny
+
+---
+<style>                     
+.navbar {
+  background-color:#2db8c5;
+  border-color:black;
+}
+.navbar-brand {
+color:black!important;
+}
+.section.sidebar {
+  background-color: #2db8c5;
+}
+</style>
+
+```{r global, include=FALSE}
+library(flexdashboard)
+library(ggplot2)
+library(dplyr)
+library(lubridate)
+library(reshape2)
+library(shiny)
+library(hillmakeR)
+library(hms)
+library(psych)
+library(curl)
+library(jsonlite)
+library(leaflet)
+library(mgcv)
+library(DT)
+source('bodgyfix.R')
+wdays_local <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+con <- curl("http://localhost:8181/customer_ids")
+customer_ids <- fromJSON(con)
+month_start <- function(x) {
+x <- as.POSIXlt(x)
+  x$mday <- 1
+  as.POSIXct(x)}
+this_month_starts <- as.POSIXct(month_start(Sys.Date()))
+#three_months_ago <- as.POSIXct("2019-09-30", "%Y-%m-%d") # Sys.Date() %m-% months(3)
+three_months_ago <- as.POSIXct(this_month_starts %m-% months(3), "%Y-%m-%d") 
+```
+
+Inputs {.sidebar data-width=160} 
+======================================================
+
+### Customer
+
+
+```{r}
+selectInput("chosen_customer_id", "Customer ID:", customer_ids, width = 150, selected=23)
+```
+
+### Date
+
+Enter a date range in the box below
+
+```{r}
+dateRangeInput("date_range", "Date range:",
+                 start  = three_months_ago,
+                 min    = "2019-09-01",
+                 max    = "2020-03-31",
+                 format = "dd/mm/yyyy",
+                 separator = " - ", autoclose=FALSE, width = 150)
+```
+
+
+### Orphans
+
+Remove orphan sessions from concurrency
+
+```{r}
+# checkboxInput("orphans", "Remove", value = TRUE, width = 150)
+radioButtons(
+  "orphans", "Orphan handling", 
+  choiceValues=c("r", "i", "imp"), 
+  choiceNames=c("Remove", "Include", "Impute"),
+  selected = "r")
+```
+
+
+```{r include=FALSE}
+chosen_start <- reactive({as.POSIXct(input$date_range[1])})
+chosen_end <- reactive({as.POSIXct(input$date_range[2])})
+
+registrations_customer <- reactive({
+con <- curl(paste("http://localhost:8181/customer_registrations?customer_id=", 
+                  as.character(input$chosen_customer_id), sep=""))
+customer_data <- fromJSON(con)
+customer_data$regtime <- as.POSIXct(customer_data$regtime, "%Y-%m-%d %H:%M:%S")
+return(customer_data)
+#  subset(registrations, customer_id == as.character(input$chosen_customer_id))
+    })
+sessions_customer <- reactive({
+  # subset(sessions, customer_id == as.character(input$chosen_customer_id))
+  con <- curl(paste("http://localhost:8181/customer_sessions?customer_id=",
+            as.character(input$chosen_customer_id), sep=""))
+customer_data <- fromJSON(con)
+customer_data$starttime <- as.POSIXct(customer_data$starttime, "%Y-%m-%d %H:%M:%S")
+customer_data$endtime <- as.POSIXct(customer_data$endtime, "%Y-%m-%d %H:%M:%S")
+return(customer_data)
+})
+
+registrations_three <- reactive({
+  subset(registrations_customer(), (regtime >= three_months_ago & regtime < this_month_starts))
+    })
+sessions_three <- reactive({
+  subset(sessions_customer(), (starttime >= three_months_ago & starttime < this_month_starts))
+  })
+
+registrations_chosen <- reactive({
+  subset(registrations_customer(), (regtime >= chosen_start() & regtime <= chosen_end()))
+    })
+sessions_chosen <- reactive({
+  subset(sessions_customer(), (starttime >= chosen_start() &  starttime < chosen_end()))
+  })
+
+
+registrations_this_month <- reactive({
+  subset(registrations_customer(), regtime >= this_month_starts)
+  })
+sessions_this_month <- reactive({
+  subset(sessions_customer(), starttime >= this_month_starts)
+  })
+
+
+```
+
+Standard Analytics {data-orientation=rows}
+=====================================  
+
+
+Row {data-height=100}
+-------------------------------------
+
+### New Registrations
+
+```{r}
+
+renderValueBox({
+  new_registrations <- length(registrations_this_month()$regtime)
+  valueBox(new_registrations, caption="New registrations", icon="ion-person-add", color="#2db8c5")
+})
+```
+
+
+### Unique Devices
+
+```{r}
+
+renderValueBox({
+  unique_devices <- length(unique(sessions_this_month()$device_mac_address))
+  valueBox(unique_devices, caption="Unique devices", icon="ion-android-phone-portrait", color="#fdc300")
+})
+```
+
+
+### Sessions
+
+```{r}
+renderValueBox({
+  n_sessions <- length(sessions_this_month()$starttime)
+  valueBox(n_sessions, caption="Device sessions", icon="ion-ios-bolt", color="#2daa56")
+})
+```
+
+
+### Downloaded Data
+
+```{r}
+renderValueBox({
+  data_up_down = round(sum(sessions_this_month()$uploaded_data_gb, na.rm=TRUE) + sum(sessions_this_month()$downloaded_data_gb, na.rm=TRUE), 2)
+  valueBox(paste(prettyNum(data_up_down, big.mark = ","), "Gb"), caption="Data usage", icon="ion-ios-download-outline", color="#fdc300")
+})
+```
+
+
+### Session Length
+
+```{r}
+renderValueBox({
+  total_duration = sum(as.numeric(sessions_this_month()$duration), na.rm=TRUE) / 60
+  valueBox(paste(round(total_duration, 0), "mins"), caption="Session Length", icon="ion-clock", color="#2db8c5")
+})
+```
+
+
+Row 1 
+----------------------------------------------------------
+
+### New Registrations
+
+```{r}
+renderValueBox({
+  new_registrations <- length(registrations_chosen()$regtime)
+  valueBox(new_registrations, caption="New registrations", icon="ion-person-add", color="#2db8c5")
+})
+```
+
+### Unique Devices
+
+```{r}
+
+renderValueBox({
+  unique_devices <- length(unique(sessions_chosen()$device_mac_address))
+  valueBox(unique_devices, caption="Unique devices", icon="ion-android-phone-portrait", color="#fdc300")
+})
+```
+
+### Sessions
+
+```{r}
+renderValueBox({
+  n_sessions <- length(sessions_chosen()$starttime)
+  valueBox(n_sessions, caption="Device sessions", icon="ion-ios-bolt", color="#2daa56")
+})
+```
+
+
+### Data usage
+
+```{r}
+renderValueBox({
+  data_up_down = round(sum(sessions_chosen()$uploaded_data_gb, na.rm=TRUE) + sum(sessions_chosen()$downloaded_data_gb, na.rm=TRUE), 2)
+  valueBox(paste(prettyNum(data_up_down, big.mark = ","), "Gb"), caption="Data usage", icon="ion-ios-download-outline", color="#fdc300")
+})
+```
+
+### Session time
+
+```{r}
+renderValueBox({
+  total_duration = sum(as.numeric(sessions_chosen()$duration), na.rm=TRUE) / 60
+  valueBox(paste(round(total_duration, 0), "mins"), caption="Session Length", icon="ion-clock", color="#2db8c5")
+})
+```
+
+
+
+Row 2 {.tabset .tabset-fade}
+------------------------------------------------------------------------------------------
+
+### Registrations
+
+```{r}
+renderPlot({
+  monthly_data <- registrations_three() %>%
+  group_by(paste(year(registrations_three()$regtime), month(registrations_three()$regtime))) %>%
+  summarise("unique_devices" = n_distinct(device_mac_address))
+  colnames(monthly_data) = c("monthno", "n")
+  ggplot(monthly_data,aes(x = monthno, y = n)) + 
+    geom_bar(stat = "identity",position = "dodge", fill="#2db8c5") +
+    labs(title = "Number of registrations", x = "Month", y = "Count") + theme_bw()
+})
+```
+
+
+### Sessions
+
+```{r}
+renderPlot({
+  monthly_data <- sessions_three() %>%
+  group_by(paste(year(sessions_three()$starttime), month(sessions_three()$starttime))) %>%
+  count()
+  colnames(monthly_data) = c("monthno", "n")
+  ggplot(monthly_data,aes(x = monthno, y = n)) + 
+    geom_bar(stat = "identity",position = "dodge", fill="#2daa56") +
+    labs(title = "Number of sessions", x = "Month", y = "Count") + theme_bw()
+}) 
+```
+
+### Data usage
+
+
+```{r}
+renderPlot({
+  monthly_data <- sessions_three() %>%
+  group_by(paste(year(sessions_three()$starttime), month(sessions_three()$starttime))) %>%
+  summarise(total_downloaded_data_gb = sum(downloaded_data_gb), total_uploaded_data=sum(uploaded_data_gb))
+  dfm <- melt(monthly_data, id.vars = 1)
+  colnames(dfm) = c("monthno", "variable", "value")
+  ggplot(dfm,aes(x = monthno, y = value)) + 
+    geom_bar(aes(fill = variable),stat = "identity", position = "dodge") +
+    scale_fill_manual(values = c("#2db8c5", "#fdc300"), name="",
+                       breaks=c("total_downloaded_data_gb", "total_uploaded_data"),
+                       labels=c("Downloaded", "Uploaded")) +
+    labs(title = "Data usage", x = "Month", y = "Gb") + theme(legend.position="bottom") + theme_bw()
+})
+```
+
+### Session time
+
+```{r}
+renderPlot({
+  monthly_data <- sessions_three() %>%
+  group_by(paste(year(sessions_three()$starttime), month(sessions_three()$starttime))) %>%
+  summarise(session_time = sum(duration, na.rm=TRUE))
+  colnames(monthly_data) = c("monthno", "value")
+  ggplot(monthly_data,aes(x = monthno, y = value)) + 
+    geom_bar(stat = "identity",position = "dodge", fill="#2db8c5") +
+    labs(title = "Total session time", x = "Month", y = "Minutes") + theme_bw()
+})
+```
+
+
+Concurrency by min {data-orientation=rows}
+=====================================  
+
+```{r include=FALSE}
+remove_orphans <- function(choose, df){
+  if (choose == "r") {
+  return(subset(df, endtimemod == 0))
+} else if (choose == "i") {
+  return(df)
+} else if (choose == "imp") {
+  sub_comp <- subset(df, endtimemod == 0)
+  sub_mod <- subset(df, endtimemod == 1)
+  n <- length(sub_mod$starttime)
+  sim_durations <- sample(sub_comp$duration, size=n, replace=TRUE)
+  sub_mod$endtime <- sub_mod$starttime + sim_durations
+  return(data.frame(starttime = c(sub_comp$starttime, sub_mod$starttime), endtime=c(sub_comp$endtime, sub_mod$endtime)))
+}
+}
+
+local_sessions <- reactive({remove_orphans(input$orphans, sessions_three())})
+occ_m <- reactive({occupancy(startTimes=local_sessions()$starttime, stopTimes=local_sessions()$endtime,
+                        resolution="min", initial=0, countlast=FALSE)})
+occ_h <- reactive({occupancy(startTimes=local_sessions()$starttime, stopTimes=local_sessions()$endtime,
+                        resolution="hour", initial=0, countlast=FALSE)})
+m1 <- reactive({gam(counts ~ s(hour(times)) + s(as.numeric(times)) + as.factor(wday(times)), data = occ_h(), family = poisson())})
+fitted <- reactive({plot(m1())})
+```
+
+
+Row {data-height=150}
+---------------------------------------------
+
+### Overall time
+
+```{r}
+renderPlot({
+working_data <- occ_h()
+working_data$weekend <- weekdays(working_data$times) %in% c("Saturday", "Sunday")
+  pmWaw <- 
+  ggplot(aes(x=times, y=counts), data = working_data) + 
+    geom_area(aes(y=weekend*max(counts)), fill="#fdc300") + 
+    geom_line(color="#2db8c5") + 
+    theme_bw()
+    
+pmWaw
+})
+```
+
+### Missing session close {data-width=150}
+
+```{r}
+renderGauge({
+n_present <- length(sessions_three()[sessions_three()$endtimemod == 0, 1])
+n_absent <- length(sessions_three()[sessions_three()$endtimemod == 1, 1])
+gauge(n_absent, 0, n_present+n_absent, sectors = gaugeSectors(), symbol = NULL,
+  label = NULL, abbreviate = TRUE, abbreviateDecimals = 1, href = NULL)
+})
+```
+
+
+Row {data-height=650}
+-------------------------------------
+
+### By Day
+
+```{r}
+
+renderPlot({
+  pmWaw <- ggplot(
+    aes(x=as.hms(times), y=counts, group=lubridate::yday(times)), data = occ_m()) + geom_line(size=1.5, color="#2db8c5") + facet_grid(ordered(weekdays(times), wdays_local) ~ .) + theme_bw() + labs(title = "Concurrent users", x = "Date/Time", y = "Users")
+
+pmWaw
+})
+```
+
+### Events
+
+```{r}
+
+renderPlot({
+  
+bins <- cut(sessions_three()$starttime, 
+            breaks = seq(from = min(sessions_three()$starttime), to=max(sessions_three()$starttime), by = '1 min'))
+unique_macs <- as.data.frame(tapply(sessions_three()$device_mac_address, bins, function(x) length(unique(x))))
+unique_macs$bins <- row.names(unique_macs)
+colnames(unique_macs) <- c("Freq", "bins")
+unique_macs$Freq[is.na(unique_macs$Freq)] <- 0
+unique_macs$bins <- as.POSIXct(as.character(unique_macs$bins), "%Y-%m-%d %H:%M:%S")
+
+unique_sessions <- as.data.frame(tapply(sessions_three()$unique_session_id, bins, function(x) length(unique(x))))
+unique_sessions$bins <- row.names(unique_sessions)
+colnames(unique_sessions) <- c("Freq", "bins")
+unique_sessions$Freq[is.na(unique_sessions$Freq)] <- 0
+unique_sessions$bins <- as.POSIXct(as.character(unique_sessions$bins), "%Y-%m-%d %H:%M:%S")
+
+
+counts <-   as.data.frame(table(bins))
+counts$bins <- as.POSIXct(as.character(counts$bins), "%Y-%m-%d %H:%M:%S")
+pmWaw <- ggplot(
+    aes(x=as.hms(bins), y=Freq),  data = counts, group=lubridate::yday(bins)) + geom_line(size=1.5, color="#9d9d9c") + theme_bw()  + labs(title = "Arrivals", x = "Date/Time", y = "Arrivals") + theme_bw() + facet_grid(ordered(weekdays(bins), wdays_local) ~ .) + geom_line(data = unique_macs, color = "#fdc300", linetype = 2, size=1) + 
+  geom_line(data = unique_sessions, color = "red", linetype = 3, size=1)
+pmWaw
+})
+```
+
+
+
+### Known durations
+
+
+```{r}
+renderPlot({
+ggplot(sessions_three(), aes(x=duration / 3600, y = ..density..)) + geom_histogram(color="black", fill="#2daa56") + geom_density(alpha=.2, fill="#fdc300")  + facet_grid(ordered(weekdays(starttime), wdays_local) ~ .) + scale_x_log10() + theme_bw()  + labs(title = "Dwell time for known users", x = "Hours")
+})
+```
+
+
+
+Concurrency by hour {data-orientation=rows}
+=====================================  
+
+
+Row {data-height=150}
+---------------------------------------------
+
+### Overall time
+
+```{r}
+renderPlot({
+working_data <- occ_h()
+working_data$weekend <- weekdays(working_data$times) %in% c("Saturday", "Sunday")
+pmWaw <- 
+  ggplot(aes(x=times, y=counts), data = working_data) + 
+           geom_area(aes(y=weekend*max(counts)), fill="#fdc300") + 
+           geom_line(color="#2db8c5") + 
+           theme_bw() + 
+           labs(title = "Concurrent users", x = "Date/Time", y = "Users")
+pmWaw
+})
+```
+
+### Missing session close {data-width=150}
+
+```{r}
+renderGauge({
+n_present <- length(sessions_three()[sessions_three()$endtimemod == 0, 1])
+n_absent <- length(sessions_three()[sessions_three()$endtimemod == 1, 1])
+gauge(n_absent, 0, n_present+n_absent, sectors = gaugeSectors(), symbol = NULL,
+  label = NULL, abbreviate = TRUE, abbreviateDecimals = 1, href = NULL)
+})
+```
+
+
+Row {data-height=650}
+-------------------------------------
+
+### By Day
+
+```{r}
+
+renderPlot({
+  pmWaw <- ggplot(
+    aes(x=as.hms(times), y=counts, group=lubridate::yday(times)), data = occ_h()) + geom_line(size=1.5, color="#2db8c5") + facet_grid(ordered(weekdays(times), wdays_local) ~ .) + theme_bw()  + labs(title = "Concurrent users", x = "Date/Time", y = "Users")
+
+pmWaw
+})
+```
+
+### Events
+
+```{r}
+
+renderPlot({
+  
+bins <- cut(sessions_three()$starttime, 
+            breaks = seq(from = min(sessions_three()$starttime), to=max(sessions_three()$starttime), by = '1 hour'))
+unique_macs <- as.data.frame(tapply(sessions_three()$device_mac_address, bins, function(x) length(unique(x))))
+unique_macs$bins <- row.names(unique_macs)
+colnames(unique_macs) <- c("Freq", "bins")
+unique_macs$Freq[is.na(unique_macs$Freq)] <- 0
+unique_macs$bins <- as.POSIXct(as.character(unique_macs$bins), "%Y-%m-%d %H:%M:%S")
+
+unique_sessions <- as.data.frame(tapply(sessions_three()$unique_session_id, bins, function(x) length(unique(x))))
+unique_sessions$bins <- row.names(unique_sessions)
+colnames(unique_sessions) <- c("Freq", "bins")
+unique_sessions$Freq[is.na(unique_sessions$Freq)] <- 0
+unique_sessions$bins <- as.POSIXct(as.character(unique_sessions$bins), "%Y-%m-%d %H:%M:%S")
+
+counts <-   as.data.frame(table(bins))
+counts$bins <- as.POSIXct(as.character(counts$bins), "%Y-%m-%d %H:%M:%S")
+pmWaw <- ggplot(
+    aes(x=as.hms(bins), y=Freq, group=lubridate::yday(bins)),  data = counts) + geom_line(size=1.5, color="#9d9d9c") + theme_bw()  + labs(title = "Arrivals", x = "Date/Time", y = "Arrivals") + theme_bw() + facet_grid(ordered(weekdays(bins), wdays_local) ~ .) + geom_line(data = unique_macs, color = "#fdc300", linetype = 2, size=1) + 
+  geom_line(data = unique_sessions, color = "red", linetype = 3, size=1)
+pmWaw
+})
+```
+
+
+### Known durations
+
+
+```{r}
+renderPlot({
+ggplot(sessions_three(), aes(x=duration / 3600, y = ..density..)) + geom_histogram(color="black", fill="#2daa56") + geom_density(alpha=.2, fill="#fdc300")  + facet_grid(ordered(weekdays(starttime), wdays_local) ~ .) + scale_x_log10() + theme_bw()  + labs(title = "Dwell time for known users", x = "Hours")
+})
+```
+
+Event analysis {data-orientation=rows}
+=====================================  
+
+
+Row {data-height=150}
+---------------------------------------------
+
+### Overall time
+
+```{r}
+renderPlot({
+working_data <- occ_h()
+working_data$weekend <- weekdays(working_data$times) %in% c("Saturday", "Sunday")
+pmWaw <- 
+  ggplot(aes(x=times, y=counts), data = working_data) + 
+           geom_area(aes(y=weekend*max(counts)), fill="#fdc300") + 
+           geom_line(color="#2db8c5") + 
+           theme_bw() + 
+           labs(title = "Concurrent users", x = "Date/Time", y = "Users")
+pmWaw
+})
+```
+
+### Single visits {data-width=150}
+
+```{r}
+renderGauge({
+repeats <- xtabs(~sessions_three()$device_mac_address)
+# BODGE
+repeats <- repeats[repeats<20]
+single_visits <- length(repeats[repeats == 1])
+all_visits <- length(repeats)
+
+gauge(single_visits, 0, all_visits, sectors = gaugeSectors(), symbol = NULL,
+  label = NULL, abbreviate = TRUE, abbreviateDecimals = 1, href = NULL)
+})
+```
+
+
+Row {data-height=650}
+-------------------------------------
+
+### Occupacy by minute
+
+```{r}
+
+renderPlot({
+  pmWaw <- ggplot(
+    aes(x=as.hms(times), y=counts, group=lubridate::yday(times)), data = occ_m()) + geom_line(size=1.5, color="#2db8c5") + facet_grid(ordered(weekdays(times), wdays_local) ~ .) + theme_bw() + labs(title = "Concurrent users", x = "Date/Time", y = "Users")
+
+pmWaw
+})
+```
+
+
+### Events
+
+```{r}
+
+renderPlot({
+  
+bins <- cut(sessions_three()$starttime, 
+            breaks = seq(from = min(sessions_three()$starttime), to=max(sessions_three()$starttime), by = '1 hour'))
+unique_macs <- as.data.frame(tapply(sessions_three()$device_mac_address, bins, function(x) length(unique(x))))
+unique_macs$bins <- row.names(unique_macs)
+colnames(unique_macs) <- c("Freq", "bins")
+unique_macs$Freq[is.na(unique_macs$Freq)] <- 0
+unique_macs$bins <- as.POSIXct(as.character(unique_macs$bins), "%Y-%m-%d %H:%M:%S")
+
+unique_sessions <- as.data.frame(tapply(sessions_three()$unique_session_id, bins, function(x) length(unique(x))))
+unique_sessions$bins <- row.names(unique_sessions)
+colnames(unique_sessions) <- c("Freq", "bins")
+unique_sessions$Freq[is.na(unique_sessions$Freq)] <- 0
+unique_sessions$bins <- as.POSIXct(as.character(unique_sessions$bins), "%Y-%m-%d %H:%M:%S")
+
+counts <-   as.data.frame(table(bins))
+counts$bins <- as.POSIXct(as.character(counts$bins), "%Y-%m-%d %H:%M:%S")
+pmWaw <- ggplot(
+    aes(x=as.hms(bins), y=Freq, group=lubridate::yday(bins)),  data = counts) + geom_line(size=1.5, color="#9d9d9c") + theme_bw()  + labs(title = "Arrivals", x = "Date/Time", y = "Arrivals") + theme_bw() + facet_grid(ordered(weekdays(bins), wdays_local) ~ .) + geom_line(data = unique_macs, color = "#fdc300", linetype = 2, size=1) + 
+  geom_line(data = unique_sessions, color = "red", linetype = 3, size=1)
+pmWaw
+})
+```
+
+
+### Known durations
+
+
+```{r}
+renderPlot({
+ggplot(sessions_three(), aes(x=duration / 3600, y = ..density..)) + geom_histogram(color="black", fill="#2daa56") + geom_density(alpha=.2, fill="#fdc300")  + facet_grid(ordered(weekdays(starttime), wdays_local) ~ .) + scale_x_log10() + theme_bw()  + labs(title = "Dwell time for known users", x = "Hours")
+})
+```
+
+### Multiple visit analysis
+
+```{r}
+
+renderPlot({
+repeats <- as.data.frame(table(sessions_three()$device_mac_address))
+repeats$Var1 <- as.character(repeats$Var1)
+# BODGE
+repeats <- repeats[repeats$Freq<20,]
+par(las=1, mfrow=c(3,1))
+arm::discrete.histogram(repeats$Freq[repeats$Freq > 1], freq=TRUE, prob.col="#2db8c5", xlab="Number of repeat visits", main="Repeat visits in time period")
+
+repeats$Var1 <- as.character(repeats$Var1)
+local <- merge(sessions_three(), repeats, by.x="device_mac_address", by.y="Var1", all.x=TRUE)
+max_duration <- max(local$duration, na.rm=TRUE) / 3600
+mybreaks <- c(0, 0.25, 0.5, 0.75, 1, 2, 3, max_duration+0.01)
+hours_dwell <- mean(local$duration[local$Freq == 1] / 3600, na.rm=TRUE)
+singlelabel = bquote("Average dwell (Single visit)" == .(format(hours_dwell, digits = 1)))
+hist(local$duration[local$Freq == 1] / 3600, xlim=c(0, max_duration), xlab="Hours", main=singlelabel, col="#2daa56", breaks=mybreaks)
+hours_dwell <- mean(local$duration[local$Freq > 1] / 3600, na.rm=TRUE)
+multiplelabel = bquote("Average dwell (Single visit)" == .(format(hours_dwell, digits = 1)))
+hist(local$duration[local$Freq > 1] / 3600, xlim=c(0, max_duration), xlab="Hours", main=multiplelabel, col="#fdc300", breaks=mybreaks)
+})
+```
+
+
+Event analysis {data-orientation=rows}
+=====================================  
+
+Row {data-height=250}
+---------------------------------------------
+
+### Predictions and actual user numbers
+
+```{r}
+renderPlot({
+x <- occ_h()$times
+y <- occ_h()$counts
+predictions <- predict(m1(), se=TRUE)
+y_p <- exp(predictions$fit)
+y_l <- exp(predictions$fit - 1.96 * predictions$se)
+y_u <- exp(predictions$fit + 1.96 * predictions$se)
+plot(x, y_p, ylim=c(0, max(y_u)), type="l", lty=3, col="#2db8c5", bty="n", las=1, xlab="Date", ylab="Users", main="Concurrent users (predictions)")
+make_poly <- function(x, lower, upper){
+  n <- length(x)
+  x <- c(x[1], x, x[n:1], x[1])
+  y <- c(0, upper, lower[n:1], 0)
+  return(cbind(x, y))
+}
+poly_interval <- make_poly(x, y_u, y_l)
+polygon(poly_interval[,1], poly_interval[,2], col="#2db8c5", border=NA)
+#lines(x, y_l, col="#2db8c5", lty=3)
+#lines(x, y_u, col="#2db8c5", lty=3)
+lines(x, y, col="black")})
+```
+
+
+Row {data-height=550}
+---------------------------------------------
+
+### Trend
+
+```{r}
+#m1 <- gam(counts ~ s(h) + s(as.numeric(times)), data = occs, family = poisson())
+#a <- plot(m1)
+renderPlot({
+x <- as.POSIXct(fitted()[[2]]$x, origin="1970-01-01")
+y <- exp(fitted()[[2]]$fit)
+y_u <- exp(fitted()[[2]]$fit + 1.96 * fitted()[[2]]$se)
+y_l <- exp(fitted()[[2]]$fit - 1.96 * fitted()[[2]]$se)
+plot(x, y, xlab="Date", ylab="Underlying trend (multiplicative)", main="Underlying trend", type="l", lwd=2, bty="n", las=1, col="#fdc300", ylim=c(0, max(y_u)))
+lines(x, y_l, lwd=2, lty=3, col="#fdc300")
+lines(x, y_u, type="l", lwd=2, lty=3, col="#fdc300")})
+```
+
+### Daily Pattern
+
+```{r}
+renderPlot({
+x <- fitted()[[1]]$x
+y <- exp(fitted()[[1]]$fit)
+y_u <- exp(fitted()[[1]]$fit + 1.96 * fitted()[[1]]$se)
+y_l <- exp(fitted()[[1]]$fit - 1.96 * fitted()[[1]]$se)
+plot(x, y, type="l", lwd=2, xlab="Hour of day", ylab="Effect of hour (multiplicative)", main="Effect of time of day", col="#2db8c5", bty="n", las=1, ylim=c(0, max(y_u)))
+lines(x, y_l, lwd=2, lty=3, col="#2db8c5")
+lines(x, y_u, type="l", lwd=2, lty=3, col="#2db8c5")})
+```
+
+
+
+Access Point Activity {data-orientation=rows}
+=====================================  
+
+### Users at Access Points
+
+```{r}
+renderLeaflet({
+load("~/geolocated.Rdata")
+starbucks.gl <- geolocated
+starbucks.gl$dummy <- rpois(dim(starbucks.gl)[1], 5)
+pal <- colorNumeric("PuRd", domain = c(0, max(starbucks.gl$dummy)))
+
+leaflet(starbucks.gl) %>% addTiles() %>% addProviderTiles(providers$CartoDB.Positron) %>% 
+  setView(lng = -2.9, lat = 50.7, zoom = 5) %>%
+  addCircleMarkers(
+    color = ~pal(starbucks.gl$dummy),
+    stroke = FALSE, fillOpacity = 0.7, popup=htmltools::htmlEscape(starbucks.gl$address)
+   ) %>%
+  addLegend(position="topright", pal=pal, values = ~starbucks.gl$dummy)
+})
+```
+
+
+Table
+======================================================
+  
+### This is a table
+  
+```{r}
+renderDT({
+data(iris)
+  datatable(
+  iris, extensions = 'Buttons', options = list(
+    dom = 'Bfrtip',
+    buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
+  )
+)
+})
+```

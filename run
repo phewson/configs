@@ -1,0 +1,57 @@
+#!/bin/bash
+
+
+function help(){
+cat <<EOT
+    Commands for this script
+   
+    mock:     See what stow wants to do
+    stow:     Make stow do it's thing
+EOT
+}
+
+function run_cmd(){
+    local cmd=$1
+    shift || true
+    (
+        "cmd_$cmd" "$@"
+    )
+}
+
+function main(){
+    cmd=${1-mock}
+    shift || true
+    case "$cmd" in
+        help)
+            help "$cmd"
+            ;;
+        mock|stow)
+            run_cmd "$cmd" "$@"
+            ;;
+        *)
+            echo "There is no $cmd"
+            ;;
+    esac
+}
+
+function run_cmd(){
+    local cmd=$1
+    shift || true
+    (
+        "cmd_$cmd" "$@"
+    )
+}
+
+function cmd_stow(){
+    stow -S bash/ -t ~/
+    stow -S git/ -t ~/
+    stow -S emacs/ -t ~/
+}
+
+function cmd_mock(){
+    echo $(stow -n -S bash/ -t ~/ -vvv)
+    echo $(stow -n -S git/ -t ~/ -vvv)
+    echo $(stow -n -S emacs/ -t ~/ -vvv)
+}
+
+main "$@"

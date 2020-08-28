@@ -1,0 +1,147 @@
+---
+title: "Egton Anomalies"
+author: "Paul Hewson"
+date: "8/12/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE, echo=FALSE, results='hide'}
+knitr::opts_chunk$set(echo = TRUE)
+
+### Egton Customers
+```
+
+Data for Egton customers 585 588 589 591 592 593 594 595 596 597 598 599 
+    600 601 602 603 604 605 606 607 608 609 610 611 612 
+    613 614 615 616 617 618 619 620 621 622 623 624 625 
+    626 628 629 630 631 632 633 634 635 668 689 698 722
+    has been extracted since January 2019 and all events associated with a particular sessions have been collated.   The reason for January 2019 was to ensure any events from June 2019 onwards had an associated start event.
+
+```{r packages, echo=FALSE, results='hide', warning=FALSE, message=FALSE}
+library(RPostgreSQL)
+library(gt)
+library(dplyr)
+library(ggplot2)
+library(tidyquant)
+drv <- dbDriver("PostgreSQL")
+con <- dbConnect(drv, user="vagrant", host="10.0.2.2", port=15432, dbname="zendesk", password="vagrant")
+
+gb <- function(octets, gigawords){
+   ((gigawords * 4294967296) + octets)/1073741824
+}
+```
+
+
+### Completed sessions by Customer ID
+
+The first question was to examine the number of sessions, and the minimum, maximum and mean session time recorded for each customer
+
+
+```{r by_customer, echo=FALSE, results='markup', cache=TRUE}
+resultset <- dbSendQuery(con, "select customer_id, count(*) as n, min(session_time[array_upper(session_time, 1)]) as min, avg(session_time[array_upper(session_time, 1)]) as mean, max(session_time[array_upper(session_time, 1)]) as max from spark.sessions where type[1] = 'Start' and type[array_upper(type, 1)] = 'Stop' and termination_cause[array_upper(termination_cause, 1)] != 'Suspect-Logout' group by customer_id;")
+summary_by_customer <- fetch(resultset, n = -1)
+summary_by_customer %>%
+ gt() %>%
+  cols_label(
+    n = "Number of completed sessions",
+    min = "Min (hrs)",
+    mean = "Mean (hrs)",
+    max = "Max (hrs)" 
+  ) %>%
+  tab_header(
+    title = "Egton Customers, sessions since 1/1/2019",
+    subtitle = glue::glue("Sessions with Start/Stop")
+  ) %>%
+  fmt_number(
+    columns = vars(min, mean, max),
+    suffixing = FALSE,
+    scale_by = 1/3600
+  )
+```
+
+
+It would appear that there are customer specific timeouts in the order of 20-24 hours with some exceptions.  There are however anomalies recorded with customer id 614.   Examing the individual hotspots for this customer reveals that the anomaly lies within a specific hotspot.
+
+
+
+### Completed sessions by Hotspot ID for Customer ID 614
+
+```{r by_hotspot, echo=FALSE, results='markup', cache=TRUE}
+resultset <- dbSendQuery(con, "select hotspot_id, count(*) as n, min(session_time[array_upper(session_time, 1)]) as min, avg(session_time[array_upper(session_time, 1)]) as mean, max(session_time[array_upper(session_time, 1)]) as max from spark.sessions where type[1] = 'Start' and type[array_upper(type, 1)] = 'Stop' and termination_cause[array_upper(termination_cause, 1)] != 'Suspect-Logout' and customer_id = 614 group by hotspot_id;")
+summary_by_customer <- fetch(resultset, n = -1)
+summary_by_customer %>%
+ gt() %>%
+  cols_label(
+    n = "Number of completed sessions",
+    min = "Min (hrs)",
+    mean = "Mean (hrs)",
+    max = "Max (hrs)" 
+  ) %>%
+  tab_header(
+    title = "Egton Customers, sessions since 1/1/2019",
+    subtitle = glue::glue("Sessions with Start/Stop")
+  ) %>%
+  fmt_number(
+    columns = vars(min, mean, max),
+    suffixing = FALSE,
+    scale_by = 1/3600
+  )
+```
+
+Identifying the sessions concerned suggests that these are two events which have anomalous session time values. The start and stop timestamps for the session do not imply a session of that length, and the data usage do not imply a session that has been open and active for a long period of time.
+
+
+```{r anomalies, echo=FALSE, results='asis', cache=TRUE}
+query_text = "select unique_session_id, time_stamp[1] as start, time_stamp[array_upper(time_stamp, 1)] as stop,
+   input_octets[array_upper(input_octets, 1)] as in_octets, input_gigawords[array_upper(input_gigawords, 1)] as in_words, output_octets[array_upper(output_octets, 1)] as out_octets,  output_gigawords[array_upper(output_gigawords, 1)] as out_words, 
+session_time[array_upper(session_time, 1)] as session_time from spark.sessions where session_time[array_upper(session_time, 1)] > 378000;"
+resultset <- dbSendQuery(con, query_text)
+anomalies <- fetch(resultset, n = -1)
+anomalies$data_usage <- with(anomalies, gb(in_octets, in_words)) + with(anomalies, gb(out_octets, out_words))
+
+
+barry <- subset(anomalies, select=c("unique_session_id", "start", "stop", "data_usage", "session_time"))
+barry %>% gt() %>%
+  fmt_number(
+    columns = vars(session_time),
+    suffixing = FALSE,
+    scale_by = 1/3600
+  ) %>%
+    cols_label(
+    start = "Session Start",
+    stop  = "Session Stop",
+    data_usage = "Data Usage (Gb)",
+    session_time = "Session time (hours)")
+
+```
+
+
+One quick visual is to record the number of completed sessions for each hotspot by month.   There appears to be an uncharacteristically high number of completed sessions for one hotspot for customer 620, but otherwise 
+the number of completed sessions by month seems consistent for all hotspots for all users.
+
+
+```{r customer_hotspot_year_month, echo=FALSE, results='hide', cache=TRUE, messages=FALSE, warnings=FALSE}
+resultset <- dbSendQuery(con, "select customer_id, hotspot_id, extract(year from time_stamp[1]) as year, extract(month from time_stamp[1]) as month, count(*) from spark.sessions where type[1] = 'Start' and type[array_upper(type, 1)] = 'Stop' and termination_cause[array_upper(termination_cause, 1)] != 'Suspect-Logout' group by customer_id, hotspot_id, extract(year from time_stamp[1]), extract(month from time_stamp[1]);")
+summary_by_customer_hotspot_ym <- fetch(resultset, n = -1)
+summary_by_customer_hotspot_ym$date <- with(summary_by_customer_hotspot_ym, as.Date(strptime(paste(year, sprintf("%02d", month), "01", sep="-"), "%Y-%m-%d")))
+ ggplot(summary_by_customer_hotspot_ym, aes(x=date, y=count, group=hotspot_id)) +
+    geom_line(color=factor(summary_by_customer_hotspot_ym$hotspot_id), show.legend=TRUE) + 
+   scale_y_continuous(label = scales::comma) + 
+   scale_x_date(date_labels = "%m-%Y") +
+   facet_wrap(summary_by_customer_hotspot_ym$customer_id) + 
+   labs(title = "Completed Sessions by customer/hotspot",
+       subtitle = "(Since 01/01/2019)",
+       caption = "Egton Customers",
+       tag = "Figure 1",
+       x = "Date",
+       y = "Count") +
+   theme(axis.text.x = element_text(angle = 45, hjust=1)) 
+```
+
+
+Next steps:
+
+- Compare sessions with registrations
+- Compare completed sessions (as above) with sessions which do not Start with a "Start" event.
+
+

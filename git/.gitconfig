@@ -1,0 +1,10 @@
+[user]
+	email = texhewson@gmail.com
+	name = Paul Hewson
+	username = phewson
+[alias]
+    s = status
+
+
+[github]
+	user = phewson

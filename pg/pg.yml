@@ -1,0 +1,102 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - name: sign apt
+    apt_key:
+      url=https://www.postgresql.org/media/keys/ACCC4CF8.asc state=present 
+
+  - apt_repository:
+      repo: deb https://apt.postgresql.org/pub/repos/apt/ eoan-pgdg main
+      state: present
+      update_cache: yes
+   
+   
+  - name: Install postgresql server
+    apt: 
+      name: ['postgresql-12']
+
+  - name: Start postgresql server
+    service: 
+      name: postgresql state=started enabled=yes
+   
+  - name: install postgres libraries
+    apt:
+      name: ['postgresql-contrib-12', 'postgresql-12-postgis-3', 'libpq-dev', 'python-psycopg2', 'sqitch']
+
+  - name: install setfacl support
+    become: yes
+    apt: 
+      name: acl
+
+#  - name: Create Database User
+
+# Connect to default database, create rails user, set its password (MD5-hashed),
+# and grant privilege to create other databases and demote rails from super user status if user exists
+  - name: Create vagrant user
+    remote_user: root
+    become: yes
+    become_user: postgres
+    postgresql_user:
+      name: vagrant
+      password: vagrant
+      role_attr_flags: CREATEDB,NOSUPERUSER
+
+# Note: Default limit for the number of concurrent connections to a specific database is "-1", which means "unlimited"
+  - name: Create database official
+    remote_user: root
+    become: yes
+    become_user: postgres
+    postgresql_db:
+      name: official
+      encoding: UTF-8
+      conn_limit: "10"
+
+  - name: GRANT create PRIVILEGES ON DATABASE official TO vagrant
+    remote_user: root
+    become: yes
+    become_user: postgres
+    postgresql_privs:
+      db: official
+      type: database
+      login: postgres
+      privs: CREATE
+      role: vagrant
+      
+  - name: Alter postgres config 1
+    shell: echo 'listen_addresses = '"'"'*'"'" >> /etc/postgresql/12/main/postgresql.conf
+    become: true
+
+  - name: Alter postgres config 2
+    shell: echo 'host    all             all             10.0.2.0/24            md5' >> /etc/postgresql/12/main/pg_hba.conf
+    become: true
+
+  - name: Alter postgres config
+    shell: systemctl restart postgresql
+    become: true
+
+  - name: staging schema
+    remote_user: root
+    become: yes
+    become_user: postgres
+    postgresql_schema:
+      db: official
+      name: staging
+      owner: vagrant
+
+  - name: dft schema
+    remote_user: root
+    become: yes
+    become_user: postgres
+    postgresql_schema:
+      db: official
+      name: dft
+      owner: vagrant
+
+  - name: activate postgis
+    become: yes
+    become_user: postgres
+    postgresql_ext:
+      name: postgis
+      db: official

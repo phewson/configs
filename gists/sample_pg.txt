@@ -1,0 +1,7 @@
+
+psql> CREATE EXTENSION tsm_system_rows;
+bash> psql -h 10.0.2.2 -p 5432 -U phewson -d phewson
+R> library(RPostgreSQL)
+R> conn=dbConnect(PostgreSQL(), user= "phewson", password="phewson", host="10.0.2.2", port=5432, dbname="phewson")
+R> data1=dbGetQuery(conn, "select a, b from schema.tableTABLESAMPLE SYSTEM_ROWS(1000000) where something_whatever;")
+R> plot(data1, type = "l", ylim=c(4500, 5500))

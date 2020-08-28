@@ -1,0 +1,478 @@
+#+TITLE: CPD Log
+#+AUTHOR: Paul Hewson
+#+EMAIL: phewson@wifispark.com
+#+OPTIONS: toc:0 author:t email:t num:nil
+#+COLUMNS: %10ITEM(Task) %10TAGS %20BENEFITS(BENEFITS TO SELF) %20BENEFITS_TO_USER(BENEFITS TO USER) %20CLOCKSUM %Effort(Effort){:}
+#+TAGS: WorkBasedLearning(w)  ProfessionalActivity(p)  FormalLearning(f)  SelfDirectedLearning(s) Other(o)
+
+
+
+* 2017                                                             :noexport:
+
+** October 2017
+
+*** 2nd October. IT training (security) 		 :formal_educational:
+
+- Security implications of GDPR
+- Time spent: 40 minutes
+- Big issue might be around letting Other people know who we are working with, if we haven't had permission
+
+** November 2017
+
+*** 5th November Review USW maths exam scripts :formal_educational:
+
+- Review exam scripts for UWS maths papers.
+- Time spent: 7 hours
+- Forces me to think hard about foundational mathematic issues that comes in handy when I suddenly pick up a paper
+that requires me to use PDE/ODEs
+- People don't like conditional probability do they?
+
+*** Consider 1 paper for AA&P, send to reviewers. Subsequently reject. :SelfDirectedLearning:
+Time spent: 20 minutes
+
+** December 2017
+
+*** Consider 2 papers for AA&P subsquently 1 reject, 1 accept :SelfDirectedLearning:
+Time spent: 50 minutes
+
+
+
+* 2018                                       :noexport:
+
+** January 2018
+
+*** 17th / 18th. Democratising Data CPD workshop. Coventry UK. :ProfessionalActivity:
+
+Full report available of the proceedings..
+
+- Background reading in preparation for workshop
+- Time spent: 5 hours
+- Attendance at workshop
+- Time spent: 16 hours
+- Post workshop write up and subsequent research
+- Time spent: 4 hours
+- The workshop introduced me to some new datasets that may be useful in understanding road risk.
+- Speaking to delegates increased my understanding of what they mean by "data". It isn't necessarily the same as we mean by data. They "think" they want raw data, but lack capacity/tools to process it. However, they don't wish to pay for a constructed dataset, and are very suspicious of standard statistical models.
+- In Other words, they don't want a model that delivers results, but would accept the output of a model if it was listed as data.
+
+
+*** 22nd January Subject Panel :ProfessionalActivity:
+
+- Attendance at University maths exam panel
+- Time spent:  6 hours
+- Dicussion with academic colleagues, review of student responses. Leads to reflections on the learning process.
+
+
+*** Consider 3 papers for AA&P, subsequently 2 accepted, one rejected :SelfDirectedLearning:
+Time spent: 2 hours 10 mins
+
+** February 2018
+
+*** 27th Feburary Joining the Dots conference :ProfessionalActivity:
+
+- Conference preparation
+- Time spent:  3 hours
+- Conference attendance
+- Time spent:  4 hours (came home early due to snow)
+- Post conference evaluation and relfection work
+- Time spent:  30 mins
+- Required disucssing with colleagues how best to illustrate relevant examples of data fusion with road safety practitioners. Feedback from delegates during the event was analysed afterwards to carefully think about the most immediate examples we can develop.
+- A lot of interest in computing road risk, from predicted flows and turn movements.
+- Again, no interest in a statistical model, but would be interested in predictions if they were regarded as "data"
+- An interesting analogy is the Index of Multiple Deprivation, which is regarded as data but is the output of a statistical process
+
+*** Consider 2 papers for AA&P, subsequently 1 accepted, one rejected :SelfDirectedLearning:
+Time spent: 1 hour
+
+** March 2018
+
+*** Webscraping authenticated website. :SelfDirectedLearning:WorkBasedLearning:
+
+Figure how to use requests package to issue autheticated requests via
+cookies that have been set.  Learn how to extract data from html tables and send repeated tables into a longitudinal database for subsequent analysis.
+
+- Studying and creating mock servers for authentication
+- Time spent:  5 hours
+- Researching tools to use for extracting tables from html
+- Time spent:  2 hours
+- Exploring and evaluating how to use webscapers
+- Time spent:  3 hours
+- Field testing subsequent visuals with potential end users
+- Time spent:  2 hours
+- Technically, I understand a lot more about web-scraping authenticated sites
+- Most interesting thing is that clients sitting on the data are so used to the summary reports they are
+unaware it could be used in different ways. This project was a battle in terms of actually getting the data,
+and trying to visualise the possibilities was difficult. However, having shown what you can do, we get a different response.
+
+
+*** Write professional blogpost (e-bikes) 		 :formal_educational:
+
+- Write a blog post to explain the potential of using spatial generalised additive models
+- Data selection, model fittin
+- Time spent: 4 hours
+- Writing to communciate with non-specialists, reviewing with colleagues/clients and revising
+- Time spent: 12 hours
+- This is based on a reflection of attending workshops earlier in the year and is an attempt to carry out some novel statistical modelling and indicate to road safety professionals what can be done.
+- It has received some good feedback (and a grumpy cyclists using it just to shout at us).
+- There is a value in informal methods of communicating the potential of statistical methods.
+
+*** Consider 2 papers for AA&P, subsequently both rejected
+- Time spent: 40 mins
+
+** April 2018
+
+*** consider 1 pper for AA&P, subsequently accepted
+- Time spent: 1 hour 10 mins
+
+** May 2018
+
+*** 21st May UWS Subject Panel :ProfessionalActivity:
+- Dicussion with academic colleagues, review of student responses. Leads to reflections on the learning process.
+
+- Time spend: 4 hours
+
+** June 2018
+
+
+*** 5th June Exeter Analytics Network :ProfessionalActivity:
+
+- Informal networking around analytics hub
+- Time spent: 2 hours.
+- Exeter College have a degree level apprenticeship in Data Science. Part of the learning will be well controlled hackathons, based on real problems. Need to try to find one to supply.
+
+*** Evise training :formal_educational:
+
+- Essential preparation for using new paper submission system
+- Time spent: 1 hour prep
+- Time spent: 1 hour 1:1 training session
+- Can now use Elseviews new tool
+
+** July 2018
+
+*** 3rd to 7th July Review T-TRIG report
+
+- Reviewing, critiquing and revising extensive report on the use of GPS data and creation of
+metrics for network resilience.
+- Involved extensive literature review to better situate the work, its limitations.
+- Checking code validity, adjusting a few results
+- Dicussing report with client stakeholder
+- Total time spent with CPD value: 10 hours
+- The metrics are out of the comfort zone of end users. We need some way of hand holding them through the logic.
+- That might mean getting them to use simple summaries first, and gradually introducing the ideas of expected risk, extreme events and so on.
+
+
+*** 19th July roads for the future workshop
+
+- Write, submit and present results of SSGP projects
+- This project used raw GPS data, as well as providing novel graphical summaries of road sensor data
+- Discussion with colleagues and stakeholders to communicate what we were doing
+- Visualising a comparison of strategic transport model with evidence from data on the ground
+- Responding to stakeholder comments on the likely compliance of the metrics that were developed
+- Total time spent with CPD value: 6 hours
+- Clients were very defensive of differences between model and actual data
+- Clients were very excited about simulations but need reassurance they meet some kind of DfT standard (which doesn't exist). Not sure what to do about this.
+- Clients were really excited about insights from data and GPS. Have various leads to follow up
+- Our map matching code is too slow, needs to be rewritten for speed.
+
+** August 2018
+
+*** 24th August Turning Insitute :ProfessionalActivity:SelfDirectedLearning:
+
+- Presentation preparation
+- Time spent: 5 hours
+- Workshop attendance
+- Time spent:  8 hours
+- Post workshop study (reading papers on radiation models and sketching possible interpretations): 12 hours
+- Learnt a lot at the workshop, including about radiation models. Sir Alan Wilson was in attendance. We might have different opinions about how much we should believe transport models.
+
+
+*** Consider papers for AA&P, 1 subsequently rejected, 3 under review :SelfDirectedLearning:
+- Time spend 2 hours 50 minutes
+
+** September 2018
+
+*** Consider paper for AA&P, sent to reviewers :SelfDirectedLearning:
+ - Time spent 30 mins
+
+
+*** Review three papers for Teaching Statistics :ProfessionalActivity:
+
+- Revising ideas around communicating statistical significance, and incorporating statistical literacy
+- Time spent: 2 hours :noexport:
+
+
+* 2019 
+  :PROPERTIES:
+  :ID:       2019
+  :END:
+       
+** January 2019
+*** Exam Panel UWS :WorkBasedLearning:
+    :PROPERTIES:
+    :EFFORT:   8:00
+    :BENEFITS_TO_USER: Maintains academic standards, discussions about best practice
+    :BENEFITS: Evaluate potential best practice, gauge student response
+    :END:
+    :LOGBOOK:
+    CLOCK: [2019-01-15 Mon 09:00]--[2019-01-15 Mon 13:48] =>  4:48
+    :END:
+The task involves reading exam scripts and coursework submissions. The latter are electronic and hence read ahead of time.
+The panel itself involves discussions with colleagues.
+
+** February 2019
+*** Consider papers for AA&P, received reviews         :SelfDirectedLearning:
+    :PROPERTIES:
+    :EFFORT:   1:00
+    :BENEFITS_TO_USER: Maintenance of peer review system in publications
+    :BENEFITS: Reconciling referees comments, judgements about importance of comments
+    :END:
+    :LOGBOOK:
+    CLOCK: [2019-02-05 Tue 19:40]--[2019-02-05 Tue 21:16] =>  1:36
+    :END:
+Ongoing task, don't always log as sometimes this is very mechanical.
+
+
+** March 2019
+*** Exeter GIS MeetUp                                 :ProfessionalActivity:
+    :PROPERTIES:
+    :EFFORT:   2:00
+    :BENEFITS: "Better knowledge of the breadth of GIS skills (and which I don't have)"
+    :BENEFITS_TO_USER: Professional networking opportunities
+    :END:
+    :LOGBOOK:
+   CLOCK: [2019-03-14 Tue 17:15]--[2019-03-14 Tue 19:30] =>  2:15
+   :END:
+This was a useful networking exercise.
+1. Made contact with map making company, i.e., people who take great care on the cosmetic presentation of map information
+2. Made contact with property evaluation company, they are interesting because they are a mature company who have been doing GIS since before it was fashionable
+
+** April 2019
+*** Local forecasts, report and meeting with Client (CCC). :WorkBasedLearning:ProfessionalActivity:
+    :PROPERTIES:
+    :BENEFITS_TO_USER: Obtained set of local area predictions AND report discussing assumptions
+    :EFFORT: 16:00
+    :BENEFITS: Revision of STAN useage
+    :END:
+    :LOGBOOK:
+    CLOCK: [2020-04-16 Tue 08:20]--[2020-04-16 Tue 12:30] =>  0:00
+    CLOCK: [2020-04-16 Tue 13:06]--[2020-04-16 Tue 17:30] =>  0:00
+    CLOCK: [2020-04-17 Wed 08:11]--[2020-04-16 Wed 12:07] =>  0:00
+    CLOCK: [2020-04-16 Wed 12:48--[2020-04-16 Wed 16:55] =>  0:00
+    CLOCK: [2020-04-16 Thu 08:32]--[2020-04-16 Thu 11:55] =>  0:00
+    :END:
+
+The goal of the project was to deliver a small area forecasting system that could apply the National Trip End Model estimates (NTEM) to smaller areas.
+This was done with a Google Sheet which allowed the client to alter the input data (allocate jobs/housing to specific smaller areas than modelled by NTEM).
+- Revise usage of Stan for fitting Bayesian models
+- Figure out how to use Stan from Python
+- Fit and check small area estimation models
+- Write report for end user
+- Meet end user and discuss feedback
+
+Note: I'm not convinced the client really wanted the ability to alter the input assumptions, they just wanted an "external expert" set of predictions.
+
+** May 2019
+*** Exam Panel UWS :WorkBasedLearning:
+    :PROPERTIES:
+    :EFFORT:   8:00
+    :BENEFITS_TO_USER: Maintains academic standards, discussions about best practice
+    :BENEFITS: Evaluate potential best practice, gauge student response
+    :END:
+    :LOGBOOK:
+    CLOCK: [2019-05-14 Tue 09:00]--[2019-05-14 Tue 13:38] =>  4:38
+    :END:
+(Note, logged time relates to exam scripts and exam panel meeting, also checkout out online submissions ahead of time)
+
+*** Small Area Estimation (Natural England)            :ProfessionalActivity:
+    :PROPERTIES:
+    :EFFORT: 5:00
+    :BENEFITS: Good discussion about interpretation of statistical results
+    :BENEFITS_TO_USER: Report with support understanding results
+    :SUPPORTING_EVIDENCE: Course certificate
+    :END:
+   :LOGBOOK:
+   CLOCK: [2019-03-16 Sat 06:10]--[2019-03-16 Sun 21:00] => 14:50
+   CLOCK: [2019-03-17 Sun 06:20]--[2019-03-17 Sun 10:22] =>  4:02
+   CLOCK: [2019-03-24 Sun 06:14]--[2019-03-24 Sun 15:13] =>  8:59
+   CLOCK: [2019-04-13 Sat 06:11]--[2019-04-13 Sat 14:31] =>  8:20
+   CLOCK: [2019-04-14 Sun 06:00]--[2019-04-14 Sun 13:13] =>  7:13
+   CLOCK: [2019-04-20 Sat 05:50]--[2019-04-20 Sat 12:30] =>  6:40
+   CLOCK: [2019-04-23 Tue 11:00]--[2019-04-23 Tue 12:46]   =>  1:46
+   :END:
+- This was a stand alone project producing small area estimates from a well established survey.
+- The client was Natural England.
+- Most of the work is now largely routine to me.
+- However, there was HUGE CPD value in that we had a very open discussion about the interpretation of the results. This provided me with a very clear idea of the level of understanding of those who have to interpret/defend the results, and their willingness to understand. I wrote some appendices explaining interpretation and they were very happy with these. I have had many client who don't want results that need work on their part to understand, which can limit the support you can offer. That was not the case in this instance.
+
+** June 2019
+
+*** Heat Transfer Coefficient                          :SelfDirectedLearning:
+    :PROPERTIES:
+    :BENEFITS: Overview of statistical methods for estimating HTC
+    :EFFORT: 8:00
+:BENEFITS_TO_USER: Range of alternative methods for estimating HTC, recommendations on complexity and feasibility
+    :END:
+    :LOGBOOK:
+    CLOCK: [2019-06-10 Mon 08:46]--[2019-06-10 Mon 12:43] =>  3:57
+    CLOCK: [2019-06-10 Mon 13:34]--[2019-06-10 Mon 17:36] =>  4:02
+    CLOCK: [2019-06-11 Tue 08:39]--[2019-06-11 Tue 12:39] =>  4:00
+    CLOCK: [2019-06-11 Tue 13:15]--[2019-06-11 Tue 17:33] =>  4:18
+    CLOCK: [2019-06-12 Wed 08:42]--[2019-06-12 Wed 11:55] =>  3:13
+    :END:
+ - There are a range of black / grey models used to estimate HTC
+ - I have sketched (in Python) one method that estimate HTC based on changepoint regression.
+ - Other models require estimates of dynamical systems, this is a little outside my expertise and I have reported this.
+
+
+** July 2019
+** August 2019
+*** Exam Panel UWS :WorkBasedLearning:
+   :PROPERTIES:
+   :EFFORT: 1:00
+   :BENEFITS_TO_USER: Maintains academic standards, discussions about best practice
+   :BENEFITS: Evaluate potential best practice, gauge student response
+   :END:
+   :LOGBOOK:
+   CLOCK: [2019-08-13 Tue 10:34]--[2019-08-13 Tue 13:41] =>  3:07
+   :END:
+This was a resit panel, and I don't think I gained a lot of CPD value
+
+** September 2019
+** October 2019
+** November 2019
+*** Splunk exercise                             :Other:
+    :PROPERTIES:
+    :EFFORT: 12:00
+    :BENEFITS: Awareness of event data, and methods for processing
+    :BENEFITS_TO_USER: Understanding how to handle wider range of data types
+    :SUPPORTING_EVIDENCE: Emails
+    :END:
+   :LOGBOOK:
+   CLOCK: [2019-11-12 Tue 19:00]--[2019-11-12 Tue 22:00] =>  3:00
+   CLOCK: [2019-11-13 Wed 18:30]--[2019-11-13 Wed 20:15] =>  1:45
+   CLOCK: [2019-11-14 Thu 19:30]--[2019-11-14 Thu 21:30] =>  2:00
+   CLOCK: [2019-11-15 Fri 19:00]--[2019-11-15 Fri 20:15] =>  1:15
+   CLOCK: [2019-11-16 Sat 11:00]--[2019-11-16 Sat 16:45] =>  5:45
+   :END:
+  - This was an interview preparation, but in a new area for me (event data).
+  - Challenging exercise figuring out query logic from a written exercise.
+  - Self study around NOSQL, SQL/JSON 2 in PostgreSQL
+  - Designing dashboard for interview.
+  - Learnt a new tool ("Splunk") for analysing event data (primarily logs).
+  - Constructing a Dashboard required revision of relevant best practice in dashboard design, and evaluation of dashboard wireframe tools.
+
+*** Consider papers for AA&P, received reviews         :SelfDirectedLearning:
+    :PROPERTIES:
+    :EFFORT:   1:00
+    :BENEFITS_TO_USER: Maintenance of peer review system in publications
+    :BENEFITS: Reconciling referees comments, judgements about importance of comments
+    :END:
+    :LOGBOOK:
+    CLOCK: [2019-11-28 Thu 21:40]--[2019-11-28 Tue 22:29] =>  0:49
+    :END:
+Ongoing task, don't always log as sometimes this is very mechanical.
+
+
+*** Splunk Fundamentals    :FormalLearning:
+    :PROPERTIES:
+    :EFFORT: 20:00
+    :BENEFITS: Learnt new data analysis tool for new (to me) data type
+    :BENEFITS_TO_USER: Wider range of knowledge about data sources and methods
+    :SUPPORTING_EVIDENCE: Course certificate
+    :END:
+   :LOGBOOK:
+   CLOCK: [2019-11-19 Tue 19:00]--[2019-11-19 Tue 21:00] =>  2:00
+   CLOCK: [2019-11-20 Wed 18:30]--[2019-11-20 Wed 20:20] =>  1:50
+   CLOCK: [2019-11-21 Thu 19:00]--[2019-11-21 Thu 21:15] =>  2:15
+   CLOCK: [2019-11-22 Fri 20:00]--[2019-11-22 Fri 20:55] =>  0:55
+   CLOCK: [2019-11-23 Sat 16:00]--[2019-11-23 Sat 18:00] =>  2:00
+   CLOCK: [2019-11-26 Tue 19:00]--[2019-11-26 Tue 22:30] =>  3:30
+   CLOCK: [2019-11-27 Wed 18:30]--[2019-11-27 Wed 20:00] =>  1:30
+   CLOCK: [2019-11-28 Thu 19:00]--[2019-11-28 Thu 23:30] =>  4:30
+   :END:
+  - The software was new to me, as was the idea of analysing event data (computer logs)
+  - I can see a lot of applications for this type of analysis.
+
+** December 2019
+
+*** Process Mapping                                    :SelfDirectedLearning:
+    :PROPERTIES:
+    :EFFORT: 12:00
+    :BENEFITS: Better understanding of process mapping event related data
+    :BENEFITS_TO_USER: Deeper understanding of user flow through a system
+    :SUPPORTING_EVIDENCE: Blog posting
+    :END:
+   :LOGBOOK:
+   CLOCK: [2019-12-10 Tue 18:17]--[2019-12-10 Tue 22:49] =>  4:32
+   CLOCK: [2019-12-11 Wed 18:30]--[2019-12-11 Wed 22:44] =>  4:14
+   CLOCK: [2019-12-12 Thu 19:00]--[2019-12-12 Thu 22:56] =>  3:56
+   :END:
+ - Explored use of process mapping to outline how users transition states based on events in log files.
+ - This is a completely novel idea to the client. The goal is to highlight cases where performance is limited by delayed transition between states (or duplicated transitions).
+ - Output an internal blog (didn't get feedback in 2019).
+
+[[https://docs.google.com/document/d/159bBpc1VSG09ZS8gJkAFIb5rsW_eFE0q2MUtNYz9HwQ/edit?usp=sharing][Link to report]]  They are all subscriber_type_id 2 (fixed_duration) at the second one (Epsom and St Helier hospital). I can't see any information on charge, and we only have session expiry info, not subscription expiry. Otherwise, we can get the rest. 
+
+* 2020         :noexport:
+** January 2020
+*** Induction training for new job role
+ - Understanding all roles of business. How can advanced analytics improve offer.
+ - Understand level 2 network communications.
+** February 2020
+** March 2020
+** April 2020
+** May 2020
+** June 2020
+** July 2020
+** August 2020
+** September 2020
+** October 2020
+** November 2020
+** December 2020
+
+
+
+* Reports
+
+#+STARTUP: align
+#+BEGIN: columnview :hlines 2 :id "2019" :maxlevel 4
+| Task                                                   | TAGS                                     | BENEFITS TO SELF                                                         | BENEFITS TO USER                                                                               | CLOCKSUM | Effort |
+|--------------------------------------------------------+------------------------------------------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+----------+--------|
+| 2019                                                   |                                          |                                                                          |                                                                                                |   145:27 |  94:00 |
+|--------------------------------------------------------+------------------------------------------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+----------+--------|
+| January 2019                                           |                                          |                                                                          |                                                                                                |     4:48 |   8:00 |
+| Exam Panel UWS                                         | :WorkBasedLearning:                      | Evaluate potential best practice, gauge student response                 | Maintains academic standards, discussions about best practice                                  |     4:48 |   8:00 |
+|--------------------------------------------------------+------------------------------------------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+----------+--------|
+| February 2019                                          |                                          |                                                                          |                                                                                                |     1:36 |   1:00 |
+| Consider papers for AA&P, received reviews             | :SelfDirectedLearning:                   | Reconciling referees comments, judgements about importance of comments   | Maintenance of peer review system in publications                                              |     1:36 |   1:00 |
+|--------------------------------------------------------+------------------------------------------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+----------+--------|
+| March 2019                                             |                                          |                                                                          |                                                                                                |     2:15 |   2:00 |
+| Exeter GIS MeetUp                                      | :ProfessionalActivity:                   | "Better knowledge of the breadth of GIS skills (and which I don't have)" | Professional networking opportunities                                                          |     2:15 |   2:00 |
+|--------------------------------------------------------+------------------------------------------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+----------+--------|
+| April 2019                                             |                                          |                                                                          |                                                                                                |    11:57 |  16:00 |
+| Local forecasts, report and meeting with Client (CCC). | :WorkBasedLearning:ProfessionalActivity: | Revision of STAN useage                                                  | Obtained set of local area predictions AND report discussing assumptions                       |    11:57 |  16:00 |
+|--------------------------------------------------------+------------------------------------------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+----------+--------|
+| May 2019                                               |                                          |                                                                          |                                                                                                |    56:28 |  13:00 |
+| Exam Panel UWS                                         | :WorkBasedLearning:                      | Evaluate potential best practice, gauge student response                 | Maintains academic standards, discussions about best practice                                  |     4:38 |   8:00 |
+| Small Area Estimation (Natural England)                | :ProfessionalActivity:                   | Good discussion about interpretation of statistical results              | Report with support understanding results                                                      |    51:50 |   5:00 |
+|--------------------------------------------------------+------------------------------------------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+----------+--------|
+| June 2019                                              |                                          |                                                                          |                                                                                                |    19:30 |   8:00 |
+| Heat Transfer Coefficient                              | :SelfDirectedLearning:                   | Overview of statistical methods for estimating HTC                       | Range of alternative methods for estimating HTC, recommendations on complexity and feasibility |    19:30 |   8:00 |
+|--------------------------------------------------------+------------------------------------------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+----------+--------|
+| July 2019                                              |                                          |                                                                          |                                                                                                |          |        |
+|--------------------------------------------------------+------------------------------------------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+----------+--------|
+| August 2019                                            |                                          |                                                                          |                                                                                                |     3:07 |   1:00 |
+| Exam Panel UWS                                         | :WorkBasedLearning:                      | Evaluate potential best practice, gauge student response                 | Maintains academic standards, discussions about best practice                                  |     3:07 |   1:00 |
+|--------------------------------------------------------+------------------------------------------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+----------+--------|
+| September 2019                                         |                                          |                                                                          |                                                                                                |          |        |
+|--------------------------------------------------------+------------------------------------------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+----------+--------|
+| October 2019                                           |                                          |                                                                          |                                                                                                |          |        |
+|--------------------------------------------------------+------------------------------------------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+----------+--------|
+| November 2019                                          |                                          |                                                                          |                                                                                                |    33:04 |  33:00 |
+| Splunk exercise                                        | :Other:                                  | Awareness of event data, and methods for processing                      | Understanding how to handle wider range of data types                                          |    13:45 |  12:00 |
+| Consider papers for AA&P, received reviews             | :SelfDirectedLearning:                   | Reconciling referees comments, judgements about importance of comments   | Maintenance of peer review system in publications                                              |     0:49 |   1:00 |
+| Splunk Fundamentals                                    | :FormalLearning:                         | Learnt new data analysis tool for new (to me) data type                  | Wider range of knowledge about data sources and methods                                        |    18:30 |  20:00 |
+|--------------------------------------------------------+------------------------------------------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+----------+--------|
+| December 2019                                          |                                          |                                                                          |                                                                                                |    12:42 |  12:00 |
+| Process Mapping                                        | :SelfDirectedLearning:                   | Better understanding of process mapping event related data               | Deeper understanding of user flow through a system                                             |    12:42 |  12:00 |
+#+END:

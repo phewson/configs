@@ -1,0 +1,9 @@
+%syntax-version=1.0.0
+%project=official_stats
+%uri=git@bitbucket.org:wifispark/phewson_configs.git
+
+dft_stats19_enums 2020-07-02T14:02:51Z Paul Hewson <phewson@wifispark.com> # Add enums for data in stats19
+dft_stats19_casualties 2020-07-02T14:17:15Z Paul Hewson <phewson@wifispark.com> # Add casualties for data in stats19
+dft_stats19_vehicles 2020-07-02T14:17:50Z Paul Hewson <phewson@wifispark.com> # Add vehicles for data in stats19
+dft_stats19_lookups 2020-07-02T14:42:39Z Paul Hewson <phewson@wifispark.com> # Add stats19 lookups
+dft_stats19_accidents 2020-07-02T14:49:26Z Paul Hewson <phewson@wifispark.com> # Add accidents for data in stats19

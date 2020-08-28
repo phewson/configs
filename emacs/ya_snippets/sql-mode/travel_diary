@@ -1,0 +1,10 @@
+# -*- mode: sql-mode -*-
+# name: travel_diary
+# key: travel
+# --
+(select array_agg(${1:dummy}) from
+  unnest(
+    array[
+      mon_${2:mode}, tue_$2, wed_$2,
+      thu_$2, fri_$2, sat_$2, sun_$2]) $1
+ where $1 is not Null) as ${3:varname},

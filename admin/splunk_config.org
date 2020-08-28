@@ -1,0 +1,54 @@
+#+AUTHOR: Paul Hewson
+#+TITLE: WiFi SPARK planning
+#+EMAIL: phewson@wifispark.com
+
+Standard reports Which of the following is not seen in a standard report
+[ ] How many unique devices were seen,
+[ ] how many new users signed up,
+[ ] how many sessions were started,
+[ ] how many devices per end user were used
+
+What do custom filters do in standard analytics+?
+(I'm not sure of the answer myself here).
+
+Retail analytics. We can provide information on trends in footfall provided:
+[ ] We agree to provide a custom dashboard via a functional spec
+[ ] End users have location tracking enabled on their devices
+[ ] We can only provide location information within one retail unit
+[ ] Additional technologies (Spark sense) are available
+
+Which current sector analytic provides demographics attached to subscriber postcode
+[ ] Health
+[ ] Retail
+[ ] Rail
+[ ] All
+
+Location analytics: which of the following are currently offered / in trial
+[ ] Counts of passers-by or visitors
+[ ] Volumes of visitors in a Zone
+[ ] Demographics of visitors relative to passers-by
+[ ] Device type of visitors
+
+
+Date feeds for use in customer's CRM are managed by:
+[ ] JSON API
+[ ] Email from our analyst to their analyst
+[ ] Custom report sent by post
+[ ] WiFi SPARK require write access to the customer's CRM
+
+#+BEGIN_SRC dot :file data_flow.png :cmdline -Kdot -Tpng
+digraph G {
+  subgraph cluster_hotspot {
+  hotspot [shape=record, label="{hotspot|{10,20,...,70}}"]
+}
+
+  subgraph cluster_end_user {
+  device [shape=record, label="{Device|{mac address | browser}}"]
+}
+  device -- hotspot
+
+}
+#+END_SRC
+
+#+RESULTS:
+[[file:data_flow.png]]

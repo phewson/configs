@@ -1,0 +1,7 @@
+# -*- mode: sql -*-
+# name: do_enum
+# key: do_enum
+# --
+  if not exists (select 1 from pg_type where typname = '$1') then
+    create type $1 as ENUM ('$2');
+  end if;

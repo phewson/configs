@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: row
+# key: row
+# --
+  "$1": "{{event['$1']}}",

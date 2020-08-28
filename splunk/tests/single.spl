@@ -1,0 +1,3 @@
+index="integration_tests"
+| dedup device_mac_address
+| stats count

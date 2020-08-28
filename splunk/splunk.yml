@@ -1,0 +1,55 @@
+---
+- hosts: all
+  become: true
+  environment:
+    SPLUNK_HOME: /opt/splunk
+
+  tasks:
+  - name: set SPLUNK_HOME
+    lineinfile:
+      path: /home/vagrant/.bashrc
+      line: 'export SPLUNK_HOME=/opt/splunk'
+      insertafter: 'EOF'
+      group: vagrant
+
+  - name: apt get update
+    apt:
+      update_cache: yes
+      upgrade: yes
+
+  - name: Check splunk
+    command: dpkg-query -W splunk-8.0.1
+    register: splunk_check_deb
+    failed_when: splunk_check_deb.rc > 1
+    changed_when: splunk_check_deb.rc == 1
+
+  - name: Install splunk
+    apt: deb="splunk-8.0.5-a1a6394cc5ae-linux-2.6-amd64.deb"
+    when: splunk_check_deb.rc == 1
+
+
+  - name: check apps folder exists
+    file:
+      path: /opt/splunk/etc/apps/curl_command
+      state: directory
+     
+  - name: install curl app
+    unarchive:
+      src: curl-command_100.tgz
+      dest: = /opt/splunk/etc/apps/curl_command
+
+  - name: get and check miniconda
+    get_url:
+      url: https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+      dest: /home/vagrant
+      checksum: "sha256:bb2e3cedd2e78a8bb6872ab3ab5b1266a90f8c7004a22d8dc2ea5effeb6a439a"
+      group: vagrant
+
+      
+  - name: install miniconda
+    shell: bash /home/vagrant/Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda && \
+        eval "$(/home/vagrant/miniconda/bin/conda shell.bash hook)" && conda init
+    become: yes
+    become_user: vagrant
+
+

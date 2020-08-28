@@ -1,0 +1,8 @@
+# -*- mode: splunk-*-
+# name: comments
+# key: comments
+# --
+\`comment(\"Product: $1\")\`
+\`comment(\"Customer Name: $2\")\`
+\`comment(\"Query Name: $2 - $3\")\`
+\`comment(\"Description: $4\")\`

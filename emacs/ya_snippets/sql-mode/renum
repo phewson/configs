@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: reset
+# key: reset
+# --
+ALTER SEQUENCE beis.$1_seq RESTART WITH $2;

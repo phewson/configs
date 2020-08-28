@@ -1,0 +1,130 @@
+#!/bin/bash
+set -x
+set -eou pipefail
+#if [ -n "${CWAHOME-a}" ]; then
+#    echo >&2 "Must provide CWAHOME in environment"
+#    exit 2
+#fi
+CWAHOME="$HOME/cwa"
+
+THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+function run_cmd(){
+    local cmd=$1
+    shift || true
+    (
+        "cmd_$cmd" "$@"
+    )
+}
+
+function help(){
+cat <<EOT
+       Run commands for "$THISDIR"
+
+           init:             Clone git repos (assumes ssh key)
+           envinit           Create virtual env cwa
+           envcreate         Add cwa requirements to cwa env
+           lint:             Run linters
+           test:             Run tests
+           migrate:          Run Django migration script
+           createsuperuser   Create Django superuser
+           runserver         Run the Django server
+           default:          Restore and build
+           restore:          Restore
+
+EOT
+}
+
+function main(){
+    cmd=${1-default}
+    shift || true
+    case "$cmd" in
+        help)
+            help "$cmd"
+            ;;
+        lint|test|init|envinit|envcreate)
+            run_cmd "$cmd" "$@"
+            ;;
+        migrate|createsuperuser|runserver)
+            run_cmd "$cmd" "$@"
+            ;;
+        *)
+            echo "There is no $cmd"
+            ;;
+    esac
+}
+
+function cmd_init(){
+    if [ -d "$CWAHOME" ]; then
+        cd $CWAHOME
+        git fetch
+        git submodule update
+    else
+        cd $HOME
+        git clone git@bitbucket.org:wifispark/cwa.git
+        cd $CWAHOME
+        git submodule init
+        git submodule update
+    fi    
+    cd $HOME/cwa/cwa/global-assets/theme
+    npm install
+    npm run gulp
+    # npm run bower
+
+}
+
+function cmd_migrate(){
+    if [ ! -L "$HOME/cwa/cwa/config/settings/settings.py" ]; then
+        ln -s $HOME/cwa/cwa/config/settings/local.py $HOME/cwa/cwa/config/settings/settings.py
+    fi    
+    set +u # but in old activate script
+    source $HOME/.venvs/cwa/bin/activate
+    set -u
+    cd $HOME/cwa/cwa
+    echo $(ls)
+    python manage.py migrate
+}
+
+function cmd_createsuperuser(){
+    if [ ! -L "$HOME/cwa/cwa/config/settings/settings.py" ]; then
+        ln -s $HOME/cwa/cwa/config/settings/local.py $HOME/cwa/cwa/config/settings/settings.py
+    fi
+    set +u
+    source $HOME/.venvs/cwa/bin/activate
+    set -u
+    cd $HOME/cwa/cwa
+    python manage.py createsuperuser
+}
+
+function cmd_runserver(){
+    if [ ! -L "$HOME/cwa/cwa/config/settings/settings.py" ]; then
+        ln -s $HOME/cwa/cwa/config/settings/local.py $HOME/cwa/cwa/config/settings/local.py
+    fi
+    set +u
+    source $HOME/.venvs/cwa/bin/activate
+    set -u
+    cd $HOME/cwa/cwa
+    python manage.py runserver 192.168.33.33:8081
+}
+
+function cmd_envinit(){
+    # set +o
+    export MANPATH=""
+    source /opt/rh/rh-python35/enable
+    echo $(python --version)
+    # set -o
+    mkdir $HOME/.venvs && cd $HOME/.venvs
+    virtualenv -p python3.5 cwa
+    cd $THISDIR
+}
+
+function cmd_envcreate(){
+    local ENV=$1
+    source /opt/rh/rh-python35/enable
+    set +u # bug in old virtualenv script
+    source $HOME/.venvs/cwa/bin/activate
+    set -u
+    pip install -r $HOME/cwa/requirements/${ENV}.txt
+}
+
+main "$@"

@@ -1,0 +1,69 @@
+
+
+hablar / trabajar / pensar
+
++------------+--------------+--------------+
+| presente   | preterite    | imperfect    |
+| hablo      | hablé        | habalaba     |
+| hablas     | hablaste     | hablabas     |
+| habla      | habló        | hablaba      |
+| hablamos   | hablemos     | hablábamos   |
+| habláis    | hablasteis   | hablabais    |
+| hablan     | hablaron     | hablaban     |
++------------+--------------+--------------+
+
+| subjunctivo | imperfect subj | futuro     | condicional |
+|-------------+----------------+------------+-------------|
+| hable       | hablara        | hablaré    | hablaría    |
+| hables      | hablaras       | hablaras   | hablarías   |
+| hable       | hablara        | hablará    | hablaría    |
+| hablemos    | habláremos     | hablaremos | hablaríamos |
+| habléis     | hablarais      | hablaréis  | hablaríais  |
+| hablen      | hablaran       | hablarán   | hablarían   |
+
+
+comer / beber
+
+| presente | preterite | imperfect |
+|----------+-----------+-----------|
+| como     | comí      | comía     |
+| comes    | comiste   | comías    |
+| come     | comió     | comía     |
+| comemos  | comimos   | comíamos  |
+| coméis   | comistéis | comíais   |
+| comen    | comieron  | comían    |
+
+| Subjunctivo | imperf subj | futuro    | condicional |
+|-------------+-------------+-----------+-------------|
+| coma        | comiera     | comeré    | comería     |
+| comas       | comieras    | comerás   | comerías    |
+| coma        | comiera     | comerá    | comería     |
+| comamos     | comiéramos  | comeremos | comeríamos  |
+| comáis      | comierais   | comeréis  | comeríais   |
+| coman       | comieran    | comerán   | comerían    |
+
+
+venir (irregular) salir (irregular) 
+
+subir
+
+|         |           |            |
+|---------+-----------+------------|
+| subo    | subí      | subía      |
+| subas   | subiste   | subías     |
+| sube    | subo      | subía      |
+| subimos | subimos   | subíamos   |
+| subiste | subisteis | subíais    |
+| suben   | subieron  | subían     |
+
+|         |            |           |            |
+|---------+------------+-----------+------------|
+| suba    | subiera    | subiré    | subiría    |
+| subas   | subieras   | subirás   | subirías   |
+| suba    | subiera    | subirá    | subiría    |
+| subamos | subiéramos | subiremos | subiríamos |
+| subáis  | subierais  | subiréis  | subiríais  |
+| suban   | subieran   | subirán   | subirían   |
+
+
+

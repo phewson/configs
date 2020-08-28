@@ -1,0 +1,8 @@
+#+PROPERTY: Effort_all 2d 5d 10d 20d 35d 50d
+#+COLUMNS: %70ITEM(Task) %Effort
+
+* Initialise
+
+* Check
+
+* Enhance

@@ -1,0 +1,5 @@
+# -*- mode: splunk-*-
+# name: downloaded
+# key: downloaded
+# --
+| eval $1 =  (((input_gigawords * 4294967296) + input_octets)/1073741824)

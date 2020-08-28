@@ -1,0 +1,25 @@
+name: splunk
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - click=7.0=py37_0
+  - coverage=5.0=py37h7b6447c_0
+  - faker=4.0.1=py_0
+  - flake8=3.7.9=py37_0
+  - gspread=3.1.0=py_0
+  - jinja2=2.11.1=py_0
+  - mypy=0.750=py_0
+  - oauth2client=4.1.3=py_0
+  - pip=20.0.2=py37_1
+  - pytest=4.5.0=py37_0
+  - python=3.7.6=h0371630_2
+  - requests=2.22.0=py37_1
+  - requests-mock=1.7.0=py_0
+  - testfixtures=6.10.3=py_0
+  - ua-parser=0.8.0=py_0
+  - pip:
+    - docker-compose==1.25.4
+    - pytest-docker==0.7.2
+prefix: /home/vagrant/miniconda3/envs/splunk
+

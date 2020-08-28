@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: ordered array
+# key: oarray
+# --
+array_agg($1 order by timestamp)
