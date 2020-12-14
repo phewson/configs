@@ -7,6 +7,11 @@
 ;;      ((eq system-type 'gnu/linux) "do something else")
 ;;      )
 
+
+;; set transparency
+(set-frame-parameter (selected-frame) 'alpha '(85 85))
+(add-to-list 'default-frame-alist '(alpha 85 85))
+
 (setq require-final-newline t)
 
 (load-library "~/phewson_configs/emacs/misc_personal.el.gpg")
@@ -251,17 +256,19 @@ into a comma-separated one-liner surrounded by QUOTE."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(canlock-password "b32f77f6c531a3dccdac916b000d579035630711")
  '(conda-anaconda-home "~/miniconda")
  '(elfeed-feeds
    (quote
     ("https://martinfowler.com/feed.atom" "https://opensource.com/feed" "https://feeds.feedburner.com/RBloggers")))
+ '(flycheck-checker-error-threshold 800)
  '(flycheck-lintr-linters "with_defaults(line_length_linter(100))")
  '(flycheck-python-flake8-executable "~/miniconda3/envs/splunk/bin/flake8")
  '(flycheck-python-mypy-executable "~/miniconda3/envs/splunk/bin/mypy")
  '(magit-log-arguments (quote ("--graph" "--color" "--decorate" "-n256")))
  '(package-selected-packages
    (quote
-    (forge xterm-color xresources-theme leuven-theme csv-mode sed-mode versuri langtool ov pycoverage org-mime jinja2-mode string-inflection sqlup-mode toggle-quotes docker docker-compose-mode ansible ansible-mode cloud-theme autumn-light-theme org-jira elfeed graphviz-dot-mode yaml-mode smartscan gitlab-ci-mode-flycheck flycheck hackernews ess bbdb anaconda-mode hydandata-light-theme yasnippet wttrin wgrep stan-mode realgud pyvenv poly-R org-gcal magit json-mode htmlize google-translate gnus-desktop-notify dad-joke coverage auto-complete auctex)))
+    (org-sync forge xterm-color xresources-theme leuven-theme csv-mode sed-mode versuri langtool ov pycoverage org-mime jinja2-mode string-inflection sqlup-mode toggle-quotes docker docker-compose-mode ansible ansible-mode cloud-theme autumn-light-theme org-jira elfeed graphviz-dot-mode yaml-mode smartscan gitlab-ci-mode-flycheck flycheck hackernews ess bbdb anaconda-mode hydandata-light-theme yasnippet wttrin wgrep stan-mode realgud pyvenv poly-R org-gcal magit json-mode htmlize google-translate gnus-desktop-notify dad-joke coverage auto-complete auctex)))
  '(send-mail-function (quote smtpmail-send-it)))
 
 (use-package elfeed
@@ -275,6 +282,14 @@ into a comma-separated one-liner surrounded by QUOTE."
      :load-path "~/phewson_configs/misc_el")
 (global-flycheck-mode)
 (add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'c++-mode-hook
+    (lambda() (setq flycheck-gcc-include-path
+       (list (expand-file-name "~/R/x86_64-pc-linux-gnu-library/4.0/testthat/include")
+             (expand-file-name "~/R/x86_64-pc-linux-gnu-library/4.0/Rcpp/include"))
+)))
+
+(dolist (hook '(text-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode 1))))
 
 ;; stack exchange hack, ubuntu has old version of shell linter
 (setq flycheck-shellcheck-follow-sources nil)
@@ -341,12 +356,13 @@ into a comma-separated one-liner surrounded by QUOTE."
 
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
-(setq org-agenda-time-grid (quote 
+(setq org-agenda-time-grid (quote
                              ((daily today remove-match)
-                              (0900 1100 1300 1500 1700)                                   
+                              (0900 1100 1300 1500 1700)
                               "......" "----------------")))
 (setq org-agenda-files (list "~/phewson_configs/admin/planner.org"
-                             "~/phewson_configs/admin/schedule.org"))
+                             "~/phewson_configs/admin/schedule.org"
+                             "~/phewson_configs/admin/github_projects.org"))
 (setq org-export-with-properties '("EFFORT"))
 
 (setq org-duration-format (quote h:mm))
@@ -434,7 +450,13 @@ into a comma-separated one-liner surrounded by QUOTE."
 
 ;; org gcal pulls calendar details from google calendar
 (use-package org-gcal
-    :ensure t)
+  :ensure t)
+
+(use-package org-sync
+  :ensure t)
+(mapc 'load
+      '("org-sync" "org-sync-bb" "org-sync-github" "org-sync-redmine"))
+
 
 ;; ignore code sections when spellchecking noweave
 (add-to-list 'ispell-skip-region-alist '("<<.*>>=" . "^@"))

@@ -1,260 +1,61 @@
+#+TODO: OPEN | CLOSED
 #+AUTHOR: Paul Hewson
-#+TITLE: WiFi SPARK planning
-#+EMAIL: phewson@wifispark.com
+#+TITLE: Work planning
+#+EMAIL: paul@insightsforaction.uk
 #+CATEGORY: Work
 #+TAGS: report(r)  visual(v)  novelpackage(n)  refactoring(f)
 
 
-Ed Parkes Emerging Field
-TfL InLink electronic billoards (replacement phone booths) - very fast free WiFi.
-Not connected to home wifi, white out. Do you know you are wifi off.
-The Markup Blacklight.  Reminding you when you are connected. Supporting normal non-technical person.
-Data Detox Kit
+* UWE
 
-Jemma Venables    twigged
-Wired TfL is going to track all London Underground users using WiFi.
+** Teaching
 
-www.clearyourtracks.org
+*** Tutorial
 
-Jacqueline Lu Data Strategist  Digital Transparency in the Public realm
+*** Prep
 
-Renate Samson - it's not just my privacy, e.g. what are my friends doing with their WhatsApp chats.
+*** Marking
 
+*** Meetings
 
-Carissa Veliz Calls for end to data economy. Mass invasion of privacy is not 
-How do you consent to give data about others e.g. genetic data (about my family).
-Do we know what we will be doing with data in five years time. So we can't give informed consent.
-
-Edward Coke, Attorney General of England "The house of every one is to him as his castle and fortress" 1604
-Thomas Cooley 1888, Prof at Uni Michigan Right to be left alone
-Earl Warren and Louis Brandeis 1890 no to compelled speech
-Louis Brandeis 1928 Dissenting opinion on legitimacy of wiretaps
-William Prosser 1960, four types of privacy torts 
-  - intrusion upon seclusion (including private affairs)
-  - Public disclosure of private facts
-  - Publishing objectionable, false information
-  - Misappropriate of name or likeness
-1967 John Marshall Harlan "If I have exhibited an actual (subjective) expectation of privacy and society is prepared to recognise that this is expectation is (objetively) reasonable then there is a right of privacy in the given circumstance
-
-1974 Fair Information Practice Principles Act
-Collection limitation, data quality, purpose specification, use limitation, security, Openness/notice, INdividual participation, Accountability
-2006 Taxonomy of Privacy Information Collection, Information Processing , INformation Dissemination, Invasions. D. Solovey George Washington Uni, Univ of Pennsylvania Law Reference
-
-Anything voluntary disclosed has less protection. Voluntarily disclose what phone number you have dialled is less protected than the content of your call.
-
-Small towns, very little privacy. Does IT take us back to small towns? No, fresh start if you move to new town but big data never forgets. Kids who grew up have different boundaries (doesn't mean no boundaries).
-Small town: information share is symmetric. Big data is massively asymmetric.
-
-EU and argentina since 2006 have right to be forgotten (eg. criminal conviction that has been wiped). Doesn't wipe the data, rather wipes the search results.
-
-Privacy is not non-disclosure. I disclose info to my GP which they may share but can't make public. Deeply personal story with a friend.
-We should have right to control levels of disclosure.   Ads or subscription programmes. Ditto for apps/webservices.
-
-Public DNA - not just mine to share.
-Surveillance: retrospectively justified, but all other is invasion of privacy.
+*** Training
 
 
-Privacy violations. 
-Surveillance
-Advertising
-Introduction (prospective employee, date etc.)
 
-Open government, Freedom of Information. How to balance with privacy.
-Data brokers; linking datasets.
-Exhaust data
-metadata
-
-We've moved from privacy by trust and need privacy by design.
-
-Snowdon Hack - journalists have an ethical framework. Data science ethics and hacking?
-http://aoir.org/ethics/
-API Auth Credentials
-Username: rttapi_texhewson
-Password: 4c7ac137bfcd0b498d7ec5a4441728442bbf07f2 
-
-/json/search/<station>/<year>/<month>/<day>
-api.rtt.io/api/v1/
-
-
-import requests
-s = requests.Session()
-s.auth = ('rttapi_texhewson', '4c7ac137bfcd0b498d7ec5a4441728442bbf07f2')
-r = s.get("https://api.rtt.io/api/v1/json/search/EXD/to/NTA/2020/10/02")
-tt = r.json()
-
-
-tt['services'][50]['serviceUid']
-tt['services'][50]['locationDetail']['origin']
-tt['services'][50]['atocName']
-tt['services'][50]['locationDetail']['realtimeDeparture']
-tt['services'][50]['locationDetail']['destination']
-
-* DONE Queries [30/37]
- + [ ] GDPR Respond to the following in your ePortfolio:
-
-Question 1: What are the seven key data protection principles?
-
-Question 2: List five ways in which you might typically 'process' personal data.
-
-Question 3: What are the six lawful bases for 'processing' personal data?
-
-Question 4: List 5 aspects of the role of the DPO
-
-Question 5: What does a subject access request give an individual data subject the right to? (Please select the correct answer from the options below. Feedback will be presented instantly when you select your answer.)
-confirmation as to whether their data is being 'processed'
-information about their work colleagues' personal data
-immediate access to their data
-the lawful basis for processing their data
-access to their data within 30 days
-Correct!
- + [ ] SC1090: Can't follow non-constant source. Use a directive to specify location.
- + [X] [[https://en.wikipedia.org/wiki/Pantone_448_C][Pantone 448 C]]
- + [X] Data dictionary for splunk (data types) [[https://wifispark.atlassian.net/wiki/spaces/BT/pages/745898649/Splunk-Spark-Data+Dictionary][Splunk-Spark]]
- + [X] Do we have corporate color palettes (for use in graphs)
- + [X] What's the difference between
-    PortalView, PortalView_Login, PortalView_Login_FreeSub, PortalView_Process_FreeSub
- + [X] Difference between =_time= and =timestamp= (different effects of conversion)
- + [X] Wrap has different effects if you wrap by month and by year. Wrap by month gives you 12 months data, year splits by year.   Kind of obvious really but annoying.
- + [X] Does [[https://docs.splunk.com/Documentation/Splunk/8.0.1/RESTREF/RESTinput#data.2Finputs.2Foneshot][oneshot]] let you load data via the API
- + [ ] Needed to  `vagrant plugin install vagrant-vbguest` to sync folders. That spawned a big installation routine. I then had to vagrant remove them
- + [X]  [[https://www.engadget.com/2020/02/03/mit-rfocus-smart-surface][WiFi amplifiers]]
- + [X] where is vagrant ssh key =C:/Users/phewson/.vagrant.d/insecure_private_key=
-         =scp -i C:/Users/phewson/.vagrant.d/insecure_private_key test.json vagrant@192.168.31.31:/home/vagrant/test.json=
-    curl -k https://localhost:8089/services/auth/login --data-urlencode username=admin --data-urlencode password=pass
-    curl -k -H "Authorization: Splunk a87L_dK0TwR0sgaFrqwWgvVlbBuvcOAAO2XdeVDjupMeX4CvMK6zWwGpj1WWvN3w935AqdqIvtta5WMbH1vbn9TsagfrxjC3iFbnu8WovpXEERuVEobr5d0" --request DELETE https://localhost:8089/services/data/indexes/testing
-    curl -k -H "Authorization: Splunk a87L_dK0TwR0sgaFrqwWgvVlbBuvcOAAO2XdeVDjupMeX4CvMK6zWwGpj1WWvN3w935AqdqIvtta5WMbH1vbn9TsagfrxjC3iFbnu8WovpXEERuVEobr5d0" https://localhost:8089/servicesNS/vagrant/search/data/indexes -d name=testing
-    curl -k -H "Authorization: Splunk a87L_dK0TwR0sgaFrqwWgvVlbBuvcOAAO2XdeVDjupMeX4CvMK6zWwGpj1WWvN3w935AqdqIvtta5WMbH1vbn9TsagfrxjC3iFbnu8WovpXEERuVEobr5d0" https://192.168.31.31:8089/services/data/inputs/oneshot  --data-urlencode name='/home/vagrant/simulations.json' -d host=testing -d sourcetype=testing_json
-    curl -k -H "Authorization: Splunk a87L_dK0TwR0sgaFrqwWgvVlbBuvcOAAO2XdeVDjupMeX4CvMK6zWwGpj1WWvN3w935AqdqIvtta5WMbH1vbn9TsagfrxjC3iFbnu8WovpXEERuVEobr5d0" https://localhost:8089/services/search/jobs/export -d search='search index="testing" | head 3' -d output_mode=csv
- + [ ] [[https://hometoys.com/demystifying-wi-fi-roaming/][WiFi roaming]]
-   - [ ] Shiny server sudo su - \
-    ~-c "R -e \"install.packages('shiny', repos='https://cran.rstudio.com/')\""~
-      and / or
-    ~sudo su - -c "R -e \"install.packages('rmarkdown')\""~
-    This and a few other packages need adding to the ansible playbook
-    ~sudo apt-get install gdebi-core~
-    ~wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.12.933-amd64.deb~
-    ~sudo gdebi shiny-server-1.5.12.933-amd64.deb~
- + [X] Benometer. Software, mimics device on site checks all connection stages including access to a website
- + [X] PLTG Paisler
- + [X] Benometer 2
- + [X] Gavin and Andrew for VPN access
- + [ ]  Do we need a "to_lower()" for email addresses somewhere?
- + [X] libv8-dev to install usparserjs library libudunits2-dev
- + [ ] libgdal-dev   curl cargo   rgdal
- + [X] HERE api key
-     2Gu9FZ2CR8kLTr7RjXgXzSYaMbhg4lWXVhkf_cAmcqo
-     https://developer.here.com/products/indoor-positioning
-   - [X] [[http://www.openculture.com/2019/05/why-the-worlds-best-mathematicians-are-hoarding-japanese-chalk.html][Math chalk]]
- - [ ]  ermination_cause	count
-    400
-    Admin-Reset	1
-    Idle-Timeout	490468
-    Idle-Timeout-Cron	14221
-    Lost-Carrier	5321
-    Lost-Service	45436
-    NAS-Request	88
-    Service-Unavailable	63
-    Session-Timeout	48737
-    Suspect-Logout	866073
-    User-Request	69408
-    null
-
-    Start termination_cause Resumed.
- + [ ] python3-pip   pip3 install --user pipenv chromium-chromedriver
-   - [ ] [[https://www.pbs.org/newshour/science/dogs-poop-in-alignment-with-earths-magnetic-field-study-finds][Dogs]]
-
-index="cloud_spark_859" | where device_mac_address != "" | table device_mac_address, unique_session_id, timestamp, type, page, termination_cause | sort device_mac_address, timestamp
-1. [X] https://www.youtube.com/watch?v=D-6nV0g0BPY Bucamaranga
-2. [X] Need to add a check result func, redo google writing, new sheet per day????, alter time periods, improve password function, add dev.
-   # sh = gc.create("User Agent Analysis")
-   # sh.share('phewson@wifispark.com', perm_type='user', role='writer')
-   # worksheet = sh.add_worksheet(title="Dev", rows="100", cols="20")
-3. [X] Now I have shedloads of data coming through perhaps we only print top 100.
-       Check the spreadsheet row count.....
-4. [X] Check I got a token and crash out if that fails. Must be a simple status check.
-5. git diff --word-diff, you can also use git diff --color-words
-with open("docker-compose.yml", "r") as fn:
-    d = yaml.load(fn, Loader=yaml.FullLoader)
-    d['services']['splunkenterprise']['environment']['SPLUNK_PASSWORD']
-username is admin!
-ports = d['services']['splunkenterprise']['ports']
-['8000:8000', '8089:8089', '9997:9997', '8088:8088', '1514:1514']
-{port.split(":")[0]: port.split(":")[1] for port in ports}
-
-* Admin
-
-https://github.com/phewson/blog_source
-
-** TODO Pierre 1:1
-   SCHEDULED: <2020-10-07 Wed 10:00 +2w>
-   :PROPERTIES:
-   :LAST_REPEAT: [2020-09-25 Fri 12:59]
-   :END:
-   - State "DONE"       from "TODO"       [2020-09-25 Fri 12:59]
-   :LOGBOOK:
-   CLOCK: [2020-01-28 Tue 09:59]--[2020-01-28 Tue 10:49] =>  0:50
-    CLOCK: [2020-01-17 Fri 12:30]--[2020-01-17 Fri 13:03] =>  0:33
+** Admin
+*** Project planning
+    :LOGBOOK:
+    CLOCK: [2020-12-14 Mon 12:17]--[2020-12-14 Mon 12:36] =>  0:19
     :END:
 
-** DONE Ongoing Training [8/8]
-   SCHEDULED: <2020-02-21 Fri>
-   - State "DONE"       from "TODO"       [2020-01-14 Tue 15:25]
-   :LOGBOOK:
-   CLOCK: [2020-03-02 Mon 15:14]--[2020-03-02 Mon 15:44] =>  0:30
-   CLOCK: [2020-01-14 Tue 08:08]--[2020-01-14 Tue 08:23] =>  0:15
-   :END:
- - [X] Social Engineering
- - [X] Webbrowsing
- - [X] Phishing
- - [X] Passwords
- - [X] Hacking
- - [X] Malware and ransomware
- - [X] Spear phising
- - [X] Homeworking
- - [ ] Mobile device defence
 
 
-** TODO Dentist
-   SCHEDULED: <2020-11-26 Thu 08:30>
+* Personal admin
 
-** WAIT Medical (Asthma)
-   SCHEDULED: <2020-02-08 Tue 08:30>
-   - State "WAIT"       from "TODO"       [2020-02-18 Tue 15:08]
+
+** Domestic
+*** Computer Housekeeping
+
+*** Photos - need further sorting
+*** Move ebooks to onedrive
+SCHEDULED: <2020-12-16 Mon>
+
+*** Look for old work on back up drive and move to onedrive
+SCHEDULED: <2020-12-18 Wed>
+
+*** TODO Dentist
+SCHEDULED: <2021-03-26 Fri 08:30>
+
+*** WAIT Medical (Asthma)
+SCHEDULED: <2021-02-08 Mon 08:30>
 *** TODO Prepay Prescription Certificate
-    SCHEDULED: <2021-02-26 Wed>
-    Your NHS Prescription Prepayment Certificate  
-  Certificate for: Paul Hewson  
-  Certificate number: 10113914906  
-  Starts on: 25 March 2019  
-  Ends on: 24 March 2020  
-     Certificate for: Paul Hewson
-      Certificate number: 10121110011
-      Starts on: 25 March 2020
-      Ends on: 24 March 2021
-      
-
-** WAIT org-gcal-sync doesn't work. [0/2]
-   - State "WAIT"       from "TODO"       [2020-01-14 Tue 15:27]
-  - [X ]https://github.com/myuhe/org-gcal.el/issues/73
-I *think* org-gcal-fetch is writing to the schedule.org file as 644 rw-r--r--
-and /cannot/ subsequently _write more_. +Currently+ fixed by deleting and touching the file.   Look at
-solution involving chmod next time (if I remember). R_{sub} R^{sup} \alpha
-  - [ ] Check all the security issues I've opened up
-  - [ ] Can I import work dates into personal diary.
-
-** DONE Telephone [3/3]
-   - State "SHIPPED"    from "WAIT"       [2020-01-27 Mon 12:44]
-   - State "WAIT"       from "DONE"       [2020-01-15 Wed 09:16]
-   - State "DONE"       from              [2020-01-09 Thu 09:44]
-   :LOGBOOK:
-   CLOCK: [2020-01-09 Thu 08:10]--[2020-01-09 Thu 08:24] =>  0:14
-   :END:
-  - [X] Password is 123456
-  - [X] Need to set up phone, instructions [[https://manualsbrain.com/en/manuals/823310/][here]]
-  - [X] Extension 204, number 01392 822204, add to autosignature
+SCHEDULED: <2021-02-26 Fri>
+Certificate for: Paul Hewson
+ Certificate number: 10121110011
+ Starts on: 25 March 2020
+ Ends on: 24 March 2021
 
 
-#
 
 * Emacs [13/21]
 - [X] [[http://pragmaticemacs.com/][Pragmatic emacs]]
@@ -280,136 +81,18 @@ solution involving chmod next time (if I remember). R_{sub} R^{sup} \alpha
 - [X] Rename files in dired. Ctrl-x Ctrl-q to get dired edit mode. Ctrl-c Ctrl-c to commit.
 - [X] Dos2unix    C-x C-m f (or C-x RET f)    .emacs is set up to want utf8 unix
 - [X] Stow.  ~stow stow_directory/package target_directory~
-      By default, ~stow_directory~ is folder in which ~stow~ is called.
-      By default, ~target_directory~ is the parent folder of current folder
-      So you can specify ~-t \~/~
-      There is also a dry-run flag ~-n~, and a verbosity flag ~-v~ through ~-vvv~
+  By default, ~stow_directory~ is folder in which ~stow~ is called.
+  By default, ~target_directory~ is the parent folder of current folder
+  So you can specify ~-t \~/~
+  There is also a dry-run flag ~-n~, and a verbosity flag ~-v~ through ~-vvv~
 - [X] [[https://github.com/pythonic-emacs/anaconda-mode][anaconda mode]]
 - [ ] diff <(jq -S . a.json) <(jq -S . b.json) diff two json files.
+- [ ] org-gcal-sync doesn't work.
+   https://github.com/myuhe/org-gcal.el/issues/73
+   I *think* org-gcal-fetch is writing to the schedule.org file as 644 rw-r--r-- and /cannot/ subsequently _write more_. +Currently+ fixed by deleting and touching the file.   Look at
+solution involving chmod next time (if I remember). R_{sub} R^{sup} \alpha - [ ] Check all the security issues I've opened up
+- [ ] Can I import work dates into personal diary.
 
-
-
-
-
-* Docker
-
-** Run Splunk in Docker
-   :LOGBOOK:
-   CLOCK: [2020-02-26 Wed 17:37]--[2020-02-26 Wed 19:37] =>  2:00
-   CLOCK: [2020-02-26 Wed 14:49]--[2020-02-26 Wed 17:37] =>  2:48
-   :END:
-sudo apt-get install docker.io
-#curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-#sudo apt-key fingerprint 0EBFCD88
-#sudo add-apt-repository\
-# "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-# $(lsb_release -cs) \
-# stable"
-#sudo apt-get update
-#curl -O https://download.docker.com/linux/ubuntu/ubuntu/dists/eoan/pool/edge/amd64/containerd.io
-#sudo apt-get install docker-ce docker-ce-cli containerd.io
-
-sudo docker run hello-world
-sudo docker pull splunknbox/splunk_7.3.0
-sudo docker pull splunk/splunk:7.3
-
-sudo docker run -d -P -e 'SPLUNK_START_ARGS=--accept-license' -e 'SPLUNK_PASSWORD=S0yUn3!3fant3' splunk/splunk_7.3
-sudo docker ps -a -f id=c2f7fd430877ab24d470f94ee3623fd1998aa8ad0da317a397393a8895dac331
-
-monthly_unique_devices_by_customer_by_hotspot
-curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bfe34e1fa28d6d75a7ad05fd02fa5472275673d5f5621b77380898dee1be15d2
-sha256sum Miniconda3-latest-Linux-x86_64.sh
-bash Miniconda3-latest-Linux-x86_64.sh
-docker-compose.yml
-
-while I'm running Docker as sudo, need to pass on the ENV vars as follows:
-sudo --preserve-env=TEST_DATA_HOME python -m pytest tests/
-# sudo groupadd docker
-# sdo gpasswd -a vagrant docker
-sudo usermod -aG docker vagrant
-
-
-* Summary
-
-** Effort
-#+BEGIN: columnview :hlines 2 :id global :maxlevel 4 :scope agenda
-| Task                                    | Effort | CLOCKSUM |
-|-----------------------------------------+--------+----------|
-| Queries                                 |        |          |
-|-----------------------------------------+--------+----------|
-| Admin                                   |        |    16:42 |
-|-----------------------------------------+--------+----------|
-| Pierre 1:1                              |        |     1:23 |
-|-----------------------------------------+--------+----------|
-| Ongoing Training                        |        |     0:15 |
-|-----------------------------------------+--------+----------|
-| Analytics Stand up and Scrumban Meeting |        |    14:50 |
-| Backlog grooming                        |        |     2:33 |
-| Monday Standup                          |        |     2:04 |
-| Tuesday Standup                         |        |     0:38 |
-| Wednesday Standup                       |        |     0:56 |
-| Thursday Standup                        |        |     8:20 |
-| Friday Standup                          |        |     0:19 |
-|-----------------------------------------+--------+----------|
-| Timesheets                              |        |          |
-| Monday Timesheet                        |        |          |
-| Tuesday Timesheet                       |        |          |
-| Wednesday Timesheet                     |        |          |
-| Thursday Timesheet                      |        |          |
-| Friday Timesheet                        |        |          |
-|-----------------------------------------+--------+----------|
-| Dentist                                 |        |          |
-|-----------------------------------------+--------+----------|
-| WAIT Medical (Asthma)                   |        |          |
-|-----------------------------------------+--------+----------|
-| WAIT org-gcal-sync doesn't work.        |        |          |
-|-----------------------------------------+--------+----------|
-| Telephone                               |        |     0:14 |
-|-----------------------------------------+--------+----------|
-| Emacs                                   |        |          |
-|-----------------------------------------+--------+----------|
-| Summary                                 |        |          |
-|-----------------------------------------+--------+----------|
-| Effort                                  |        |          |
-|-----------------------------------------+--------+----------|
-| Today                                   |        |          |
-|-----------------------------------------+--------+----------|
-| This week                               |        |          |
-#+END:
-
-** Today
-#+BEGIN: clocktable :block today :maxlevel 4 :scope agenda
-#+CAPTION: Clock summary at [2020-03-02 Mon 17:28], for Monday, March 02, 2020.
-| File         | Headline                         | Time   |      |      |
-|--------------+----------------------------------+--------+------+------|
-|              | ALL *Total time*                 | *2:14* |      |      |
-|--------------+----------------------------------+--------+------+------|
-| planner.org  | *File time*                      | *0:30* |      |      |
-|              | Admin                            | 0:30   |      |      |
-|              | \_  Ongoing Training [3/6]       |        | 0:30 |      |
-|--------------+----------------------------------+--------+------+------|
-| SPR.org      | *File time*                      | *0:00* |      |      |
-|--------------+----------------------------------+--------+------+------|
-| AT.org       | *File time*                      | *1:44* |      |      |
-|              | AT-Tickets                       | 1:44   |      |      |
-|              | \_  SSU Technical document       |        | 1:44 |      |
-|              | \_    Comment: Alexander Pyatkov |        |      | 1:44 |
-|--------------+----------------------------------+--------+------+------|
-| SUP.org      | *File time*                      | *0:00* |      |      |
-|--------------+----------------------------------+--------+------+------|
-| AH.org       | *File time*                      | *0:00* |      |      |
-|--------------+----------------------------------+--------+------+------|
-| schedule.org | *File time*                      | *0:00* |      |      |
-#+END:
-
-** This week
-#+BEGIN: clocktable :block thisweek :maxlevel 4
-#+CAPTION: Clock summary at [2020-02-18 Tue 16:04], for week 2020-W08.
-| Headline     | Time   |
-|--------------+--------|
-| *Total time* | *0:00* |
-#+END:
 
 
 
@@ -418,170 +101,72 @@ sudo usermod -aG docker vagrant
 * Summary
 
 ** Effort
+
+
 #+BEGIN: columnview :hlines 2 :id global :maxlevel 4 :scope agenda
-| Task                                    | Effort | CLOCKSUM |
-|-----------------------------------------+--------+----------|
-| Queries                                 |        |          |
-|-----------------------------------------+--------+----------|
-| Admin                                   |        |    16:42 |
-|-----------------------------------------+--------+----------|
-| Pierre 1:1                              |        |     1:23 |
-|-----------------------------------------+--------+----------|
-| Ongoing Training                        |        |     0:15 |
-|-----------------------------------------+--------+----------|
-| Analytics Stand up and Scrumban Meeting |        |    14:50 |
-| Backlog grooming                        |        |     2:33 |
-| Monday Standup                          |        |     2:04 |
-| Tuesday Standup                         |        |     0:38 |
-| Wednesday Standup                       |        |     0:56 |
-| Thursday Standup                        |        |     8:20 |
-| Friday Standup                          |        |     0:19 |
-|-----------------------------------------+--------+----------|
-| Timesheets                              |        |          |
-| Monday Timesheet                        |        |          |
-| Tuesday Timesheet                       |        |          |
-| Wednesday Timesheet                     |        |          |
-| Thursday Timesheet                      |        |          |
-| Friday Timesheet                        |        |          |
-|-----------------------------------------+--------+----------|
-| Dentist                                 |        |          |
-|-----------------------------------------+--------+----------|
-| WAIT Medical (Asthma)                   |        |          |
-|-----------------------------------------+--------+----------|
-| WAIT org-gcal-sync doesn't work.        |        |          |
-|-----------------------------------------+--------+----------|
-| Telephone                               |        |     0:14 |
-|-----------------------------------------+--------+----------|
-| Emacs                                   |        |          |
-|-----------------------------------------+--------+----------|
-| Summary                                 |        |          |
-|-----------------------------------------+--------+----------|
-| Effort                                  |        |          |
-|-----------------------------------------+--------+----------|
-| Today                                   |        |          |
-|-----------------------------------------+--------+----------|
-| This week                               |        |          |
+| Task                                                    | Effort | CLOCKSUM |
+|---------------------------------------------------------+--------+----------|
+| UWE                                                     |        |     0:19 |
+|---------------------------------------------------------+--------+----------|
+| Teaching                                                |        |          |
+| Tutorial                                                |        |          |
+| Prep                                                    |        |          |
+| Marking                                                 |        |          |
+| Meetings                                                |        |          |
+| Training                                                |        |          |
+|---------------------------------------------------------+--------+----------|
+| Admin                                                   |        |     0:19 |
+| Project planning                                        |        |     0:19 |
+|---------------------------------------------------------+--------+----------|
+| Personal admin                                          |        |          |
+|---------------------------------------------------------+--------+----------|
+| Domestic                                                |        |          |
+| Computer Housekeeping                                   |        |          |
+| Photos - need further sorting                           |        |          |
+| Move ebooks to onedrive                                 |        |          |
+| Look for old work on back up drive and move to onedrive |        |          |
+| TODO Dentist                                            |        |          |
+| WAIT Medical (Asthma)                                   |        |          |
+| TODO Prepay Prescription Certificate                    |        |          |
+|---------------------------------------------------------+--------+----------|
+| Emacs                                                   |        |          |
+|---------------------------------------------------------+--------+----------|
+| Summary                                                 |        |          |
+|---------------------------------------------------------+--------+----------|
+| Effort                                                  |        |          |
+|---------------------------------------------------------+--------+----------|
+| Today                                                   |        |          |
+|---------------------------------------------------------+--------+----------|
+| This week                                               |        |          |
 #+END:
 
 ** Today
 #+BEGIN: clocktable :block today :maxlevel 4 :scope agenda
-#+CAPTION: Clock summary at [2020-03-02 Mon 17:28], for Monday, March 02, 2020.
-| File         | Headline                         | Time   |      |      |
-|--------------+----------------------------------+--------+------+------|
-|              | ALL *Total time*                 | *2:14* |      |      |
-|--------------+----------------------------------+--------+------+------|
-| planner.org  | *File time*                      | *0:30* |      |      |
-|              | Admin                            | 0:30   |      |      |
-|              | \_  Ongoing Training [3/6]       |        | 0:30 |      |
-|--------------+----------------------------------+--------+------+------|
-| SPR.org      | *File time*                      | *0:00* |      |      |
-|--------------+----------------------------------+--------+------+------|
-| AT.org       | *File time*                      | *1:44* |      |      |
-|              | AT-Tickets                       | 1:44   |      |      |
-|              | \_  SSU Technical document       |        | 1:44 |      |
-|              | \_    Comment: Alexander Pyatkov |        |      | 1:44 |
-|--------------+----------------------------------+--------+------+------|
-| SUP.org      | *File time*                      | *0:00* |      |      |
-|--------------+----------------------------------+--------+------+------|
-| AH.org       | *File time*                      | *0:00* |      |      |
-|--------------+----------------------------------+--------+------+------|
-| schedule.org | *File time*                      | *0:00* |      |      |
+#+CAPTION: Clock summary at [2020-12-14 Mon 15:19], for Monday, December 14, 2020.
+| File                | Headline                                    | Time   |      |      |
+|---------------------+---------------------------------------------+--------+------+------|
+|                     | ALL *Total time*                            | *0:22* |      |      |
+|---------------------+---------------------------------------------+--------+------+------|
+| planner.org         | *File time*                                 | *0:19* |      |      |
+|                     | UWE                                         | 0:19   |      |      |
+|                     | \_  Admin                                   |        | 0:19 |      |
+|                     | \_    Project planning                      |        |      | 0:19 |
+|---------------------+---------------------------------------------+--------+------+------|
+| schedule.org        | *File time*                                 | *0:00* |      |      |
+|---------------------+---------------------------------------------+--------+------+------|
+| github_projects.org | *File time*                                 | *0:03* |      |      |
+|                     | OPEN [#A] Issues of cppRouting              | 0:03   |      |      |
+|                     | \_  OPEN Consider increasing R code test... |        | 0:03 |      |
 #+END:
 
 ** This week
 #+BEGIN: clocktable :block thisweek :maxlevel 4
-#+CAPTION: Clock summary at [2020-02-18 Tue 16:04], for week 2020-W08.
-| Headline     | Time   |
-|--------------+--------|
-| *Total time* | *0:00* |
+#+CAPTION: Clock summary at [2020-12-14 Mon 15:19], for week 2020-W51.
+| Headline               | Time   |      |      |
+|------------------------+--------+------+------|
+| *Total time*           | *0:19* |      |      |
+|------------------------+--------+------+------|
+| UWE                    | 0:19   |      |      |
+| \_  Admin              |        | 0:19 |      |
+| \_    Project planning |        |      | 0:19 |
 #+END:
-
-
-
-
-
-* Summary
-
-** Effort
-#+BEGIN: columnview :hlines 2 :id global :maxlevel 4 :scope agenda
-| Task                                    | Effort | CLOCKSUM |
-|-----------------------------------------+--------+----------|
-| Queries                                 |        |          |
-|-----------------------------------------+--------+----------|
-| Admin                                   |        |    16:42 |
-|-----------------------------------------+--------+----------|
-| Pierre 1:1                              |        |     1:23 |
-|-----------------------------------------+--------+----------|
-| Ongoing Training                        |        |     0:15 |
-|-----------------------------------------+--------+----------|
-| Analytics Stand up and Scrumban Meeting |        |    14:50 |
-| Backlog grooming                        |        |     2:33 |
-| Monday Standup                          |        |     2:04 |
-| Tuesday Standup                         |        |     0:38 |
-| Wednesday Standup                       |        |     0:56 |
-| Thursday Standup                        |        |     8:20 |
-| Friday Standup                          |        |     0:19 |
-|-----------------------------------------+--------+----------|
-| Timesheets                              |        |          |
-| Monday Timesheet                        |        |          |
-| Tuesday Timesheet                       |        |          |
-| Wednesday Timesheet                     |        |          |
-| Thursday Timesheet                      |        |          |
-| Friday Timesheet                        |        |          |
-|-----------------------------------------+--------+----------|
-| Dentist                                 |        |          |
-|-----------------------------------------+--------+----------|
-| WAIT Medical (Asthma)                   |        |          |
-|-----------------------------------------+--------+----------|
-| WAIT org-gcal-sync doesn't work.        |        |          |
-|-----------------------------------------+--------+----------|
-| Telephone                               |        |     0:14 |
-|-----------------------------------------+--------+----------|
-| Emacs                                   |        |          |
-|-----------------------------------------+--------+----------|
-| Summary                                 |        |          |
-|-----------------------------------------+--------+----------|
-| Effort                                  |        |          |
-|-----------------------------------------+--------+----------|
-| Today                                   |        |          |
-|-----------------------------------------+--------+----------|
-| This week                               |        |          |
-#+END:
-
-** Today
-#+BEGIN: clocktable :block today :maxlevel 4 :scope agenda
-#+CAPTION: Clock summary at [2020-03-02 Mon 17:28], for Monday, March 02, 2020.
-| File         | Headline                         | Time   |      |      |
-|--------------+----------------------------------+--------+------+------|
-|              | ALL *Total time*                 | *2:14* |      |      |
-|--------------+----------------------------------+--------+------+------|
-| planner.org  | *File time*                      | *0:30* |      |      |
-|              | Admin                            | 0:30   |      |      |
-|              | \_  Ongoing Training [3/6]       |        | 0:30 |      |
-|--------------+----------------------------------+--------+------+------|
-| SPR.org      | *File time*                      | *0:00* |      |      |
-|--------------+----------------------------------+--------+------+------|
-| AT.org       | *File time*                      | *1:44* |      |      |
-|              | AT-Tickets                       | 1:44   |      |      |
-|              | \_  SSU Technical document       |        | 1:44 |      |
-|              | \_    Comment: Alexander Pyatkov |        |      | 1:44 |
-|--------------+----------------------------------+--------+------+------|
-| SUP.org      | *File time*                      | *0:00* |      |      |
-|--------------+----------------------------------+--------+------+------|
-| AH.org       | *File time*                      | *0:00* |      |      |
-|--------------+----------------------------------+--------+------+------|
-| schedule.org | *File time*                      | *0:00* |      |      |
-#+END:
-
-** This week
-#+BEGIN: clocktable :block thisweek :maxlevel 4
-#+CAPTION: Clock summary at [2020-02-18 Tue 16:04], for week 2020-W08.
-| Headline     | Time   |
-|--------------+--------|
-| *Total time* | *0:00* |
-#+END:
-
-
-
-
-| curl url="http://10.0.2.2:13000/report_tickets" output=text paramMap="spark_id=eq.666"

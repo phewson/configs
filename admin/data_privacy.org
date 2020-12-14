@@ -1,0 +1,62 @@
+
+
+* Benchmark meeting notes.
+
+** Ed Parkes Emerging Field
+- TfL InLink electronic billoards (replacement phone booths) - very fast free WiFi. Do you even know you are connecting.
+- Not connected to home wifi, white out. Do you know you are wifi off - how obvious is it that your WiFi is really turned off
+- The Markup Blacklight.  Reminding you when you are connected. Supporting normal non-technical person.
+- Data Detox Kit
+** Jemma Venables    twigged
+- Wired TfL is going to track all London Underground users using WiFi.  This is an interesting example.
+- So they have developed an answer:  www.clearyourtracks.org
+
+Jacqueline Lu Data Strategist  Digital Transparency in the Public realm
+
+** Renate Samson 
+- it's not just my privacy, e.g. what are my friends doing with their WhatsApp chats.
+
+** Carissa Veliz  
+- Calls for end to data economy. Mass invasion of privacy is not
+- How do you consent to give data about others e.g. genetic data (about my family).
+- Do we know what we will be doing with data in five years time. So we can't give informed consent.
+
+
+* Notes on FutureLearn GDPR course
+
+- Edward Coke, Attorney General of England "The house of every one is to him as his castle and fortress" 1604
+- Thomas Cooley 1888, Prof at Uni Michigan Right to be left alone
+- Earl Warren and Louis Brandeis 1890 no to compelled speech
+- Louis Brandeis 1928 Dissenting opinion on legitimacy of wiretaps
+- William Prosser 1960, four types of privacy torts 
+  - intrusion upon seclusion (including private affairs)
+  - Public disclosure of private facts
+  - Publishing objectionable, false information
+  - Misappropriate of name or likeness
+- 1967 John Marshall Harlan "If I have exhibited an actual (subjective) expectation of privacy and society is prepared to recognise that this is expectation is (objetively) reasonable then there is a right of privacy in the given circumstance
+- 1974 Fair Information Practice Principles Act Collection limitation, data quality, purpose specification, use limitation, security, Openness/notice, INdividual participation, Accountability
+- 2006 Taxonomy of Privacy Information Collection, Information Processing , INformation Dissemination, Invasions. D. Solovey George Washington Uni, Univ of Pennsylvania Law Reference
+
+** Thoughts
+- Anything voluntary disclosed has less protection. Voluntarily disclose what phone number you have dialled is less protected than the content of your call.
+- Small towns, very little privacy. Does IT take us back to small towns? No, fresh start if you move to new town but big data never forgets. Kids who grew up have different boundaries (doesn't mean no boundaries).
+- Small town: information share is symmetric. Big data is massively asymmetric.
+- EU and argentina since 2006 have right to be forgotten (eg. criminal conviction that has been wiped). Doesn't wipe the data, rather wipes the search results.
+- Privacy is not non-disclosure. I disclose info to my GP which they may share but can't make public. Deeply personal story with a friend.
+- We should have right to control levels of disclosure.   Ads or subscription programmes. Ditto for apps/webservices.
+- Public DNA - not just mine to share.
+- Surveillance: retrospectively justified, but all other is invasion of privacy.
+
+
+** Privacy violations. 
+- Surveillance
+- Advertising
+- Introduction (prospective employee, date etc.)
+- Open government, Freedom of Information. How to balance with privacy.
+- Data brokers; linking datasets.
+- Exhaust data
+- metadata
+
+- *We've moved from privacy by trust and need privacy by design.*
+- Snowdon Hack - journalists have an ethical framework. Data science ethics and hacking?
+- http://aoir.org/ethics/
