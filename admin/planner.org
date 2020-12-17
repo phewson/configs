@@ -17,6 +17,10 @@
 *** Marking
 
 *** Meetings
+    :LOGBOOK:
+    CLOCK: [2020-12-16 Wed 11:23]--[2020-12-16 Wed 17:38] =>  6:15
+    CLOCK: [2020-12-15 Tue 16:03]--[2020-12-15 Tue 16:07] =>  0:04
+    :END:
 
 *** Training
 
@@ -31,6 +35,12 @@
 
 
 * Personal admin
+
+
+** Blogging
+   :LOGBOOK:
+   CLOCK: [2020-12-15 Tue 10:02]--[2020-12-15 Tue 10:23] =>  0:21
+   :END:
 
 
 ** Domestic
@@ -118,7 +128,9 @@ solution involving chmod next time (if I remember). R_{sub} R^{sup} \alpha - [ ]
 | Admin                                                   |        |     0:19 |
 | Project planning                                        |        |     0:19 |
 |---------------------------------------------------------+--------+----------|
-| Personal admin                                          |        |          |
+| Personal admin                                          |        |     0:21 |
+|---------------------------------------------------------+--------+----------|
+| Blogging                                                |        |     0:21 |
 |---------------------------------------------------------+--------+----------|
 | Domestic                                                |        |          |
 | Computer Housekeeping                                   |        |          |
@@ -142,21 +154,21 @@ solution involving chmod next time (if I remember). R_{sub} R^{sup} \alpha - [ ]
 
 ** Today
 #+BEGIN: clocktable :block today :maxlevel 4 :scope agenda
-#+CAPTION: Clock summary at [2020-12-14 Mon 15:19], for Monday, December 14, 2020.
-| File                | Headline                                    | Time   |      |      |
-|---------------------+---------------------------------------------+--------+------+------|
-|                     | ALL *Total time*                            | *0:22* |      |      |
-|---------------------+---------------------------------------------+--------+------+------|
-| planner.org         | *File time*                                 | *0:19* |      |      |
-|                     | UWE                                         | 0:19   |      |      |
-|                     | \_  Admin                                   |        | 0:19 |      |
-|                     | \_    Project planning                      |        |      | 0:19 |
-|---------------------+---------------------------------------------+--------+------+------|
-| schedule.org        | *File time*                                 | *0:00* |      |      |
-|---------------------+---------------------------------------------+--------+------+------|
-| github_projects.org | *File time*                                 | *0:03* |      |      |
-|                     | OPEN [#A] Issues of cppRouting              | 0:03   |      |      |
-|                     | \_  OPEN Consider increasing R code test... |        | 0:03 |      |
+#+CAPTION: Clock summary at [2020-12-15 Tue 16:04], for Tuesday, December 15, 2020.
+| File                | Headline         | Time   |      |      |
+|---------------------+------------------+--------+------+------|
+|                     | ALL *Total time* | *0:22* |      |      |
+|---------------------+------------------+--------+------+------|
+| planner.org         | *File time*      | *0:22* |      |      |
+|                     | UWE              | 0:01   |      |      |
+|                     | \_  Teaching     |        | 0:01 |      |
+|                     | \_    Meetings   |        |      | 0:01 |
+|                     | Personal admin   | 0:21   |      |      |
+|                     | \_  Blogging     |        | 0:21 |      |
+|---------------------+------------------+--------+------+------|
+| schedule.org        | *File time*      | *0:00* |      |      |
+|---------------------+------------------+--------+------+------|
+| github_projects.org | *File time*      | *0:00* |      |      |
 #+END:
 
 ** This week
