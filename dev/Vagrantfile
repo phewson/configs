@@ -1,10 +1,17 @@
+$script = <<-SCRIPT
+echo "Installing Ansible"
+sudo apt-get update
+sudo apt-get install -y ansible
+sudo ansible -i hosts all -m setup -u root
+sudo ansible-playbook /vagrant/dev.yml
+SCRIPT
+  
 Vagrant.configure("2") do |config|
-  config.vm.box = "bento/ubuntu-19.10"
+  config.vm.box = "ubuntu/groovy64"
   host_user = ENV['USER'] || ENV['USERNAME']
   vm_name = Dir.pwd.split(File::SEPARATOR).last
-  config.vm.provision "ansible_local" do |ansible|
-    ansible.playbook = "dev.yml"
-  end
+  config.vm.synced_folder ".", "/vagrant"
+  config.vm.provision "shell", inline: $script
   config.vm.provider "virtualbox" do |vb|
      vb.memory = 8128
      vb.name = vm_name
@@ -12,14 +19,14 @@ Vagrant.configure("2") do |config|
      vb.customize ["modifyvm", :id, "--vram", "96"]
      vb.gui = true
      # vb.customize ["modifyvm", :id, "--monitorcount", "2"]
-  end
-    config.vm.hostname = vm_name
-    config.vm.network "private_network", ip: '192.168.32.32'
-    # Enable ssh forward agent
-    config.ssh.forward_agent = true
-    config.ssh.forward_x11 = true
-    config.ssh.insert_key = false
-    # this_dir = File.dirname(__FILE__)
-    # config.vm.synced_folder(File.join(this_dir, '..'), '/Host')
+  end    
+  config.vm.hostname = vm_name
+  config.vm.network "private_network", ip: '192.168.32.32'
+  # Enable ssh forward agent
+  config.ssh.forward_agent = true
+  config.ssh.forward_x11 = true
+  config.ssh.insert_key = false
+  # this_dir = File.dirname(__FILE__)
+  # config.vm.synced_folder(File.join(this_dir, '..'), '/Host')
 end
 

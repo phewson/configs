@@ -18,4 +18,8 @@
 
   - name: emacs
     apt:
-      name: ['emacs', 'emacs-common-non-dfsg','redshift', 'stow', 'dos2unix', 'shellcheck', 'jq']
+      name: ['emacs', 'emacs-common-non-dfsg', 'stow', 'dos2unix', 'shellcheck']
+ 
+  - name: snaps
+    snap:
+      name: bitwarden
