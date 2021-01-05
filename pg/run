@@ -1,6 +1,0 @@
-#!/bin/bash
-
-sqitch deploy official
-bash importers/dft_stats19_casualties.sh | psql -d official -p 15432 -U vagrant
-bash importers/dft_stats19_vehicles.sh | psql -d official -p 15432 -U vagrant
-bash importers/dft_stats19_accidents.sh | psql -d official -p 15432 -U vagrant

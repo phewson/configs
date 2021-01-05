@@ -1,11 +1,18 @@
+$script = <<-SCRIPT
+echo "Installing Ansible"
+sudo apt-get update
+sudo apt-get install -y ansible
+sudo ansible -i hosts all -m setup -u root
+sudo ansible-playbook /vagrant/pg.yml
+SCRIPT
+
 Vagrant.configure("2") do |config|
-  config.vm.box = "bento/ubuntu-19.10"
-  config.vm.provision "ansible_local" do |ansible|
-    ansible.playbook = "pg.yml"
-  end
+  config.vm.box = "ubuntu/groovy64"
+  config.vm.provision "shell", inline: $script
   config.vm.provider "virtualbox" do |vb|
-  end
-    config.vm.network "forwarded_port", guest: 5432, host: 15432
-    config.ssh.insert_key = false
+    vb.memory = 4056
+    end
+  config.vm.network "forwarded_port", guest: 5432, host: 15432
+  config.ssh.insert_key = false
 end
 
