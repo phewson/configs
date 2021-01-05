@@ -1,0 +1,225 @@
+#+TODO: OPEN | CLOSED
+\* OPEN [#A] Issues of cppRouting
+:PROPERTIES:
+:since:    
+:url:      https://api.github.com/repos/phewson/cppRouting
+:END:
+** OPEN CLOSED Modify run file, add cppcheck to actions DEADLINE:
+:PROPERTIES:
+:tags:     ("devops")
+:sync:     conflict-local
+:milestone: "Helium"
+:id:       18
+:date-modification: 2020-12-15T11:34:54+0000
+:date-creation: 2020-12-15T11:24:43+0000
+:author:   "phewson"
+:END:
+: Add a cppcheck to actions (workflow/main.yml).
+: Modify run to have the option to lint all the headers and yield
+: "information"
+: 
+: Closes #8
+** OPEN OPEN OPEN Increase CPP code coverage DEADLINE:
+:PROPERTIES:
+:tags:     ("devops")
+:sync:     conflict-local
+:milestone: "Hydrogen"
+:id:       17
+:date-modification: 2020-12-14T14:22:26+0000
+:date-creation: 2020-12-14T14:22:26+0000
+:author:   "phewson"
+:assignee: "phewson"
+:END:
+: A single CPP unit test has been added, just to demonstrate the use of `catch` within `testthat`. More comprehensive coverage is needed before making further modifications to the code.
+** OPEN OPEN OPEN Consider increasing R code test coverage DEADLINE:
+:PROPERTIES:
+:tags:     ("devops")
+:sync:     conflict-local
+:milestone: "Hydrogen"
+:id:       16
+:date-modification: 2020-12-14T14:20:56+0000
+:date-creation: 2020-12-14T14:20:55+0000
+:author:   "phewson"
+:END:
+:LOGBOOK:
+CLOCK: [2020-12-16 Wed 10:10]--[2020-12-16 Wed 11:22] =>  1:12
+CLOCK: [2020-12-16 Wed 10:10]--[2020-12-16 Wed 10:10] =>  0:00
+CLOCK: [2020-12-16 Wed 09:59]--[2020-12-16 Wed 10:00] =>  0:01
+CLOCK: [2020-12-15 Tue 11:40]--[2020-12-15 Tue 14:41] =>  3:01
+CLOCK: [2020-12-14 Mon 15:15]--[2020-12-14 Mon 17:51] =>  2:36
+:END:
+: Look carefully at the R code coverage and determine whether it is sensible to increase code coverage.
+: Note, it is planned to include some end-to-end testing on the examples in the vignette.
+** OPEN OPEN OPEN Error in .Rbuildignore: not ignoring dotfiles
+:PROPERTIES:
+:tags:     ("bug" "devops")
+:sync:     conflict-local
+:id:       15
+:date-modification: 2020-12-14T11:42:47+0000
+:date-creation: 2020-12-14T11:42:47+0000
+:author:   "phewson"
+:END:
+: `R CMD check` gives a warning about several files, such as `.gitignore`, `.lintr`, even though these are listed in `.Rbuildignore`.  There are various notes on this, but none seems to work (e.g. escaping the dot)
+** OPEN OPEN OPEN OPEN add code coverage integration DEADLINE:
+:PROPERTIES:
+:tags:     ("devops")
+:sync:     conflict-local
+:milestone: "Hydrogen"
+:id:       14
+:date-modification: 2020-12-12T12:38:15+0000
+:date-creation: 2020-12-12T12:38:15+0000
+:author:   "phewson"
+:assignee: "phewson"
+:END:
+: https://github.com/r-lib/actions/tree/master/examples#test-coverage-workflow
+** OPEN OPEN OPEN OPEN Document github action implementation DEADLINE:
+:PROPERTIES:
+:tags:     ("documentation")
+:sync:     conflict-local
+:milestone: "Hydrogen"
+:id:       10
+:date-modification: 2020-12-12T12:29:07+0000
+:date-creation: 2020-12-11T16:22:25+0000
+:author:   "phewson"
+:END:
+: :LOGBOOK:
+: CLOCK: [2020-12-14 Mon 12:36]--[2020-12-14 Mon 14:32] =>  1:56
+: :END:
+: I wish to have a clear explanation of the github actions. This includes explaining how we are lifting some routines from [r-lib](https://github.com/r-lib/actions) as well as a generic explanation of how this relates to github.   There is a  [proto-book](https://ropenscilabs.github.io/actions_sandbox/). At time of raising this ticket, this seemed unfinished. I think the idea was to have several `devtools::do_something()` that avoided the use of github action calls to the r-lib repo.
+** OPEN OPEN OPEN OPEN document and test vignette packages DEADLINE:
+:PROPERTIES:
+:sync:     conflict-local
+:milestone: "Helium"
+:id:       13
+:date-modification: 2020-12-12T12:21:03+0000
+:date-creation: 2020-12-12T12:21:03+0000
+:author:   "phewson"
+:END:
+: For full effect, the vignette shows how to route on oSm.  However, the tile server is no longer available.  I need some package tests which assure the necessary functionality is available.  Where missing (tile server) I want to at least articulate a roadmap for replacements (and implement and in due course)
+** OPEN OPEN OPEN OPEN enhance tests on Dijkstra cpp code
+:PROPERTIES:
+:sync:     conflict-local
+:id:       12
+:date-modification: 2020-12-12T12:16:42+0000
+:date-creation: 2020-12-12T12:16:42+0000
+:author:   "phewson"
+:END:
+: I want to experiment with data structures presented to Dijkstra (to allow a constant graph with varying costs). Before I do this I want to be sure the existing behaviour is helpfully tested
+** OPEN OPEN OPEN CLOSED Td/2 linting
+:PROPERTIES:
+:sync:     conflict-local
+:id:       5
+:date-modification: 2020-12-11T17:24:56+0000
+:date-creation: 2020-12-10T11:42:38+0000
+:author:   "phewson"
+:assignee: "phewson"
+:END:
+: Add some very basic unit tests
+** OPEN OPEN OPEN CLOSED Add testthat framework DEADLINE:
+:PROPERTIES:
+:tags:     ("devops")
+:sync:     conflict-local
+:milestone: "Hydrogen"
+:id:       2
+:date-modification: 2020-12-11T17:05:19+0000
+:date-creation: 2020-09-03T10:54:51+0100
+:author:   "phewson"
+:assignee: "phewson"
+:END:
+: Add testing framework
+: 
+: - [x] Add testthat and some initial unit tests for R code
+: - [x] Use Catch with testthat to add C++ testing, along with initial unit tests
+** OPEN OPEN OPEN OPEN Auto-generated exports files
+:PROPERTIES:
+:tags:     ("bug")
+:sync:     conflict-local
+:id:       11
+:date-modification: 2020-12-11T16:40:44+0000
+:date-creation: 2020-12-11T16:40:44+0000
+:author:   "phewson"
+:END:
+: There are two autogenerated export files (for cpp and R). I wish to be sure they should be checked into the repo. I wonder whether they get autogenerated on build and shouldn't be committed.
+** OPEN OPEN OPEN OPEN Implement Frank-Wolf
+:PROPERTIES:
+:tags:     ("enhancement")
+:sync:     conflict-local
+:milestone: "Lithium"
+:id:       9
+:date-modification: 2020-12-11T16:20:25+0000
+:date-creation: 2020-12-11T16:20:25+0000
+:author:   "phewson"
+:END:
+: Given an OD matrix and a test network, I wish to be able to establish an equilibrium
+** OPEN OPEN OPEN OPEN Resolve cpp lint warnings DEADLINE:
+:PROPERTIES:
+:tags:     ("devops")
+:sync:     conflict-local
+:milestone: "Helium"
+:id:       8
+:date-modification: 2020-12-11T16:06:02+0000
+:date-creation: 2020-12-11T16:06:02+0000
+:author:   "phewson"
+:END:
+: :LOGBOOK:
+: CLOCK: [2020-12-15 Tue 10:23]--[2020-12-15 Tue 11:40] =>  1:17
+: :END:
+: I want to be able to use the linters to help. At the moment I am getting a lot of warnings about header files from other R packages (such as Rcpp).  Figure out how to focus the linting on code only within this package and address any issues which may arise
+** OPEN OPEN OPEN OPEN Resolve R lint warnings DEADLINE:
+:PROPERTIES:
+:tags:     ("devops")
+:sync:     conflict-local
+:milestone: "Helium"
+:id:       7
+:date-modification: 2020-12-11T15:33:43+0000
+:date-creation: 2020-12-11T15:33:43+0000
+:author:   "phewson"
+:assignee: "phewson"
+:END:
+: There are two or three lint warnings from R (essentially too many if/else nestings).   Refactor this code.
+: There also seems to be some scope for abstraction here, which may make this a bigger piece of work.
+** OPEN OPEN OPEN OPEN Establish "integration" tests DEADLINE:
+:PROPERTIES:
+:tags:     ("devops")
+:sync:     conflict-local
+:milestone: "Hydrogen"
+:id:       6
+:date-modification: 2020-12-11T15:29:36+0000
+:date-creation: 2020-12-11T15:29:36+0000
+:author:   "phewson"
+:assignee: "phewson"
+:END:
+: I want to be sure as I alter the code, I don't break anything. Use the examples in the documentation/vignette as integration tests.
+** OPEN OPEN OPEN CLOSED OPEN CLOSED Add linters
+:PROPERTIES:
+:sync:     conflict-local
+:id:       1
+:date-modification: 2020-12-10T10:56:39+0000
+:date-creation: 2020-09-03T10:53:25+0100
+:author:   "phewson"
+:END:
+: Add linters, and reformat code
+: 
+: - [x] lintr for R
+: - [x] suitable linter for c++
+: - [x] Reformat R code
+: - [x] Reformat c++ code
+** OPEN OPEN OPEN CLOSED OPEN OPEN Set up jenkins pipeline
+:PROPERTIES:
+:sync:     conflict-local
+:id:       3
+:date-modification: 2020-12-10T10:52:42+0000
+:date-creation: 2020-09-03T10:55:28+0100
+:author:   "phewson"
+:assignee: "phewson"
+:END:
+: Use github actions to set up necessary pipelines.
+** OPEN OPEN OPEN CLOSED Feature/td/1 linting
+:PROPERTIES:
+:sync:     conflict-local
+:id:       4
+:date-modification: 2020-09-23T12:45:00+0100
+:date-creation: 2020-09-10T11:03:05+0100
+:author:   "phewson"
+:END:
+: Add linting
