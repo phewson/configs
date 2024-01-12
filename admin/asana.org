@@ -1,0 +1,539 @@
+
+
+
+* Asana
+
+** TODO Seventh: Can I close you
+DEADLINE: <2024-01-12 Fri>
+:PROPERTIES:
+:CREATED_AT: [2024-01-11 Thu 16:10]
+:MODIFIED_AT: [2024-01-12 Fri 00:19]
+:ASANA_ID: 1204915780607962-1206330179771915
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1206330179771915]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:ID:       1c12821b-0dfb-4fd4-b9a0-b6b9b2b213ee
+:END:
+:LOGBOOK:
+- [2024-01-12 Fri 00:19] (system)
+  Paul Hewson have a task due Today
+- [2024-01-11 Thu 16:10] (system)
+  Paul Hewson changed the due date to Today
+- [2024-01-11 Thu 16:10] (system)
+  Paul Hewson assigned to you
+:END:
+
+** TODO Activated_at date overwriting could be an issue - create ticket
+:PROPERTIES:
+:CREATED_AT: [2023-09-13 Wed 15:12]
+:MODIFIED_AT: [2023-09-19 Tue 11:56]
+:ASANA_ID: 1204915780607962-1205467920034004
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1205467920034004]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:ID:       2cfe2e8b-1591-4450-9b46-32a44ae636c1
+:END:
+:LOGBOOK:
+- [2023-09-19 Tue 11:56] (comment)
+  Thanks Paul — I think that looks good. I'd probably couch the
+  request with some words around wanting to understand a bit more
+  about how & why the support team are doing that with the field, and
+  to explore whether there's a different solution (which is included
+  in the note too), but I think the note looks good to be shared with
+  Ryan
+- [2023-09-19 Tue 11:37] (comment)
+  [[http://app.asana.com/0/1205456570615490][1205456570615490]] here is the note, can this be shared
+  with Ryan?
+  https://docs.google.com/document/d/1H-iYzjFqSB4tn7ElnOZn_j5vI0jz2RkvAih2zUDodvc/edit?usp=sharing
+- [2023-09-13 Wed 15:13] (system)
+  Chris Walker assigned to you
+- [2023-09-13 Wed 15:12] (system)
+  Chris Walker added to OL - 23:5 Analytics Infrastructure
+:END:
+
+
+Conversation with support, then a ticket
+
+** TODO Shaping - a table for max group size for each group in BQ
+:PROPERTIES:
+:CREATED_AT: [2023-09-13 Wed 15:11]
+:MODIFIED_AT: [2023-11-13 Mon 10:25]
+:ASANA_ID: 1204915780607962-1205467920034000
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1205467920034000]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:CUSTOM_PRIORITY: "Medium"
+:ID:       115ae912-1488-4ebc-9e72-8d4c7e644b47
+:END:
+:LOGBOOK:
+- [2023-11-13 Mon 10:25] (comment)
+  Let's wait until later this week when we have more of an idea on the
+  groups shaping so far. Then, if there is no other route forwards,
+  let's raise a ticket for the basic table here.
+- [2023-11-13 Mon 09:34] (comment)
+  I think the ticket needs to look like:
+  
+  As analysts, we need a history of the official group size.  This
+  could be as simple as capturing the history from
+  analytics.mongo_subscriptions to give us as table that looks like:
+  
+  admin_id members_limit started_at until Group id Number of members
+  allowed in group Date this size applies from Date this size applies
+  to (or NULL)
+  
+  However, it may be considered useful to capture the Recurly
+  information as well
+  
+  admin_id members_limit Recurly_subscription_id plan_code started_at
+  until
+  
+  This may help with the problem we have in group memberships in that
+  the group_id and recurly subscription_id look up takes place in a
+  separate table.
+  
+  
+  This work is really blocked while we worry about this latter point,
+  however, in the meantime we are losing a history of group sizes!
+- [2023-10-04 Wed 12:05] (system)
+  Chris Walker assigned to you
+- [2023-09-13 Wed 15:11] (system)
+  Chris Walker added to OL - 23:5 Analytics Infrastructure
+:END:
+
+
+Is this feasible? What might it look like?
+
+Very initial shaping here
+
+** TODO Split testing template report to collab
+DEADLINE: <2024-01-12 Fri>
+:PROPERTIES:
+:CREATED_AT: [2024-01-02 Tue 09:51]
+:MODIFIED_AT: [2024-01-12 Fri 00:12]
+:ASANA_ID: 1204915780607962-1206262993018468
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1206262993018468]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:ID:       c5c30fdc-64ee-4800-afd6-646636ea6dde
+:END:
+:LOGBOOK:
+- [2024-01-12 Fri 00:12] (system)
+  Paul Hewson have a task due Today
+- [2024-01-02 Tue 09:52] (system)
+  Chris Walker marked Update Overleaf split testing template to remove
+  elements now in collab as blocked by this task
+- [2024-01-02 Tue 09:52] (system)
+  Chris Walker moved this task from "Untitled section" to "Split
+  Testing" in Analytics Team 2024
+- [2024-01-02 Tue 09:52] (system)
+  Chris Walker assigned to you
+- [2024-01-02 Tue 09:52] (system)
+  Chris Walker changed the due date to Today
+- [2024-01-02 Tue 09:51] (system)
+  Chris Walker added to Analytics Team 2024
+:END:
+
+** TODO Will the changes to paywall-prompts blow our MP event budget?
+DEADLINE: <2024-01-12 Fri>
+:PROPERTIES:
+:CREATED_AT: [2023-11-02 Thu 17:21]
+:MODIFIED_AT: [2024-01-12 Fri 00:05]
+:ASANA_ID: 1204915780607962-1205843646074650
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1205843646074650]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:CUSTOM_PRIORITY: "High"
+:ID:       027b0811-ad09-4eac-b08a-5b88c50eb92c
+:END:
+:LOGBOOK:
+- [2024-01-12 Fri 00:05] (system)
+  Paul Hewson have a task due Today
+- [2024-01-02 Tue 09:54] (system)
+  Chris Walker moved this task from "Untitled section" to "Ad Hoc" in
+  Analytics Team 2024
+- [2024-01-02 Tue 09:54] (system)
+  Chris Walker changed the due date to Today
+- [2024-01-02 Tue 09:53] (system)
+  Chris Walker added to Analytics Team 2024
+- [2023-12-15 Fri 00:04] (system)
+  Paul Hewson have a task due Dec 15, 2023
+- [2023-11-27 Mon 10:24] (system)
+  Chris Walker changed the due date to Dec 15, 2023
+- [2023-11-27 Mon 10:21] (system)
+  Chris Walker assigned to you
+- [2023-11-27 Mon 10:16] (system)
+  Chris Walker changed the due date to Dec 1, 2023
+- [2023-11-02 Thu 17:21] (system)
+  Chris Walker changed the due date to Nov 16, 2023
+- [2023-11-02 Thu 17:21] (system)
+  Chris Walker added to Analytics Team 2023
+:END:
+
+
+Changes to the compile timeout have exposed lots more people to the
+paywall prompts which has led to an increase in paywall-prompt
+events. This was not planned for when budgeting for MixPanel.
+
+Is this going to be a problem? We have been seeing strong MAU growth
+this year, and sent a lot of INR events to MixPanel, which may already
+both be putting strain on the budget.
+
+Do we need to take any action?
+
+https://mixpanel.com/s/1EmyyW
+
+** TODO Create asana project for 24.1 churn analysis ❬ Create projects for 24.1 tracks
+DEADLINE: <2024-01-10 Wed>
+:PROPERTIES:
+:CREATED_AT: [2024-01-02 Tue 10:21]
+:MODIFIED_AT: [2024-01-10 Wed 00:14]
+:ASANA_ID: 1204915780607962-1206259875147600
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1206259875147600]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:PARENT_ID: 1204915780607962-1206259875129443
+:ID:       5dde539b-5364-434f-9876-4ee9629d154e
+:END:
+:LOGBOOK:
+- [2024-01-10 Wed 00:14] (system)
+  Paul Hewson have a task due Jan 10
+- [2024-01-02 Tue 10:52] (system)
+  Chris Walker changed the due date to Jan 10
+- [2024-01-02 Tue 10:22] (system)
+  Chris Walker assigned to you
+- [2024-01-02 Tue 10:21] (system)
+  Chris Walker added this task as a subtask of Create projects for
+  24.1 tracks
+:END:
+
+** TODO Create asana project for 24.1 Editor Analytics ❬ Create projects for 24.1 tracks
+DEADLINE: <2024-01-10 Wed>
+:PROPERTIES:
+:CREATED_AT: [2024-01-02 Tue 10:22]
+:MODIFIED_AT: [2024-01-10 Wed 00:14]
+:ASANA_ID: 1204915780607962-1206259875147602
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1206259875147602]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:PARENT_ID: 1204915780607962-1206259875129443
+:ID:       e201b871-a914-43c0-aa8b-a440695ebad2
+:END:
+:LOGBOOK:
+- [2024-01-10 Wed 00:14] (system)
+  Paul Hewson have a task due Jan 10
+- [2024-01-02 Tue 10:52] (system)
+  Chris Walker changed the due date to Jan 10
+- [2024-01-02 Tue 10:22] (system)
+  Chris Walker assigned to you
+- [2024-01-02 Tue 10:22] (system)
+  Chris Walker added this task as a subtask of Create projects for
+  24.1 tracks
+:END:
+
+** DONE Breakdown B2C recognised revenue by country ❬ B2C Recognised Revenue (+other) for JLM
+CLOSED: [2024-01-11 Thu 17:08] DEADLINE: <2024-01-10 Wed>
+:PROPERTIES:
+:CREATED_AT: [2024-01-10 Wed 12:09]
+:MODIFIED_AT: [2024-01-11 Thu 17:08]
+:ASANA_ID: 1204915780607962-1206311241782426
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1206311241782426]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:PARENT_ID: 1204915780607962-1206311241782423
+:ID:       b2fab55e-4ca6-4ccf-a1f3-bf97a5688baa
+:END:
+:LOGBOOK:
+- [2024-01-11 Thu 17:08] (system)
+  Chris Walker marked this task complete
+- [2024-01-11 Thu 17:08] (comment)
+  Great - thanks Paul. I think this is what JLM needs for now, so will
+  mark this as complete. But, I acknowledge that this way of working
+  is not ideal too. I'll pick that up with John in slower time.
+- [2024-01-11 Thu 16:10] (system)
+  Paul Hewson marked incomplete
+- [2024-01-11 Thu 16:10] (system)
+  Paul Hewson completed this task
+- [2024-01-11 Thu 16:02] (comment)
+  We have an answer on RR by country in this spreadsheet:
+  https://docs.google.com/spreadsheets/d/1RpA1_h0AsTx6fK8mRPqGKuETtre7aOW6NqKZ7mW5R3w/edit?usp=sharing
+  
+  It looks as if it is ballpark correct.
+  
+  I think the queries we are getting from John are to do with how we
+  measure active users rather than how we measure paying users.
+- [2024-01-11 Thu 16:01] (system)
+  Paul Hewson added the description
+- [2024-01-10 Wed 12:11] (system)
+  Chris Walker changed the due date to Jan 10
+- [2024-01-10 Wed 12:09] (system)
+  Chris Walker assigned to you
+- [2024-01-10 Wed 12:09] (system)
+  Chris Walker added this task as a subtask of B2C Recognised Revenue
+  (+other) for JLM
+:END:
+
+** TODO Finalise definition of the superproperty we wish to set
+DEADLINE: <2023-11-21 Tue>
+:PROPERTIES:
+:CREATED_AT: [2023-11-17 Fri 11:15]
+:MODIFIED_AT: [2023-11-21 Tue 00:12]
+:ASANA_ID: 1204915780607962-1205976867437770
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1205976867437770]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:CUSTOM_PRIORITY: "High"
+:CUSTOM_🍃_OL_GITHUB_LINK: "https://github.com/overleaf/internal/issues/15055"
+:ID:       174411f8-b4e3-40ff-86aa-d21692b665b6
+:END:
+:LOGBOOK:
+- [2023-11-21 Tue 00:12] (system)
+  Paul Hewson have a task due Nov 21, 2023
+- [2023-11-17 Fri 11:15] (system)
+  Paul Hewson changed the due date to Nov 21, 2023
+- [2023-11-17 Fri 11:15] (system)
+  Paul Hewson assigned to you
+- [2023-11-17 Fri 11:15] (system)
+  Paul Hewson added to 23.6 Analytics Infrastructure
+:END:
+
+
+We need to finalise the shaping. As we understand it, the session has
+functions which return information on isPremium isTrialand
+bestPremiumType. We need to decide which of these we wish to
+incorporate as superproperties, and to ensure we have documented what
+they mean.  Some notes are captured in the associated GitHub ticket.
+
+** TODO 1️⃣ First: Get started using My tasks
+DEADLINE: <2023-06-27 Tue>
+:PROPERTIES:
+:CREATED_AT: [2023-06-20 Tue 12:40]
+:MODIFIED_AT: [2023-06-27 Tue 00:08]
+:ASANA_ID: 1204915780607962-1205458560146447
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1205458560146447]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:ID:       47d01516-19b1-4344-ab78-7250b0132901
+:END:
+:LOGBOOK:
+- [2023-06-27 Tue 00:08] (system)
+  Paul Hewson have a task due Jun 27, 2023
+- [2023-06-20 Tue 12:40] (system)
+  Paul Hewson assigned to you
+:END:
+
+
+👋 Welcome to My tasks!
+
+My tasks shows all tasks assigned to you in a personal, planning
+space. Use My tasks to: Plan and organize tasks with sections
+
+Track and manage your to-dos
+
+Sort tasks by due date, projects, or priority
+
+👉 Try it out!  Add one of your to-dos with "Add task"
+
+Give the task a due date
+
+Then, complete this task!
+
+😎 Pro-tip: Tasks you create in My tasks are private. This means that
+only you can see them.
+
+** TODO 2️⃣ Second: Find the layout that's right for you
+DEADLINE: <2023-06-27 Tue>
+:PROPERTIES:
+:CREATED_AT: [2023-06-20 Tue 12:40]
+:MODIFIED_AT: [2023-06-27 Tue 00:08]
+:ASANA_ID: 1204915780607962-1205458560146451
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1205458560146451]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:ID:       64272c86-f967-4aa5-927d-fe764a6ed485
+:END:
+:LOGBOOK:
+- [2023-06-27 Tue 00:08] (system)
+  Paul Hewson have a task due Jun 27, 2023
+- [2023-06-20 Tue 12:40] (system)
+  Paul Hewson assigned to you
+:END:
+
+
+👏 Well done creating your first task in My tasks!
+
+Next, learn about the different layouts that My tasks has to offer.
+
+👉 Try it out!  At the top of My tasks you will see options for list,
+board, and calendar
+
+Try out each layout and find the one that best matches your needs
+
+Complete this task when you're done!
+
+😎 Pro-tip: Asana will automatically remember the last layout you
+used, so it's easy to jump right back into where you left off last.
+
+** TODO 3️⃣ Third: Get organized with sections
+DEADLINE: <2023-06-27 Tue>
+:PROPERTIES:
+:CREATED_AT: [2023-06-20 Tue 12:40]
+:MODIFIED_AT: [2023-06-27 Tue 00:08]
+:ASANA_ID: 1204915780607962-1205458560146455
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1205458560146455]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:ID:       ef7b82c4-7bc7-45f4-8167-3bac1e2ffc52
+:END:
+:LOGBOOK:
+- [2023-06-27 Tue 00:08] (system)
+  Paul Hewson have a task due Jun 27, 2023
+- [2023-06-20 Tue 12:40] (system)
+  Paul Hewson assigned to you
+:END:
+
+
+🛼 You're on a roll!
+
+Next, learn how to organize tasks with sections.
+
+👉 Try it out!  Find "Add section" and name a new section 'Ideas'
+
+Drag and drop a task into the section (or add a new task in that
+section)
+
+Complete this task when you're done!
+
+😎 Pro-tip: Sections in My Tasks are private and don't affect a team's
+projects. Feel free to change or update sections to best suit your
+needs!
+
+** TODO 4️⃣ Fourth: Stay on top of incoming work
+DEADLINE: <2023-06-27 Tue>
+:PROPERTIES:
+:CREATED_AT: [2023-06-20 Tue 12:40]
+:MODIFIED_AT: [2023-06-27 Tue 00:08]
+:ASANA_ID: 1204915780607962-1205458560146459
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1205458560146459]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:ID:       5aba6dfb-d024-4ddc-b2f7-759afff3f489
+:END:
+:LOGBOOK:
+- [2023-06-27 Tue 00:08] (system)
+  Paul Hewson have a task due Jun 27, 2023
+- [2023-06-20 Tue 12:40] (system)
+  Paul Hewson assigned to you
+:END:
+
+
+💼 Stay on top of incoming work by checking one My tasks section
+
+When anyone assigns you a task in Asana, that task is automatically
+added to My tasks in the section named Recently assigned (or sometimes
+named "📬 New tasks").
+
+🎮 Try it out!  Select the + at the top of Asana and create a new task
+
+A blank task will pop up, give it a name and finish creating it
+
+See that the task you just created shows up in your Recently assigned
+(or "📬 New tasks") section
+
+Complete this task
+
+😎 Pro-tip
+
+When you get a new task, you can prioritize it by moving it to another
+section in My tasks.
+
+** TODO 5️⃣ Fifth: Save time by collaborating in Asana
+DEADLINE: <2023-06-27 Tue>
+:PROPERTIES:
+:CREATED_AT: [2023-06-20 Tue 12:40]
+:MODIFIED_AT: [2023-06-27 Tue 00:08]
+:ASANA_ID: 1204915780607962-1205458560455958
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1205458560455958]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:ID:       20cb1aee-25c5-4558-ab33-072ce8847f1d
+:END:
+:LOGBOOK:
+- [2023-06-27 Tue 00:08] (system)
+  Paul Hewson have a task due Jun 27, 2023
+- [2023-06-20 Tue 12:40] (system)
+  Paul Hewson assigned to you
+:END:
+
+
+⏳ How does collaborating in Asana save me time?
+
+Tasks and projects in Asana put info about what your team is working
+on in one centralized place. You and your team can quickly see where
+work is, what decisions have been made, and what steps to take next.
+
+🤔 Where to start?
+
+Add people as collaborators to the tasks and projects you work on, so
+they can get automatic updates about the work in their Inbox.
+
+🎮 Try it out!  At the bottom of this task it says
+"Collaborators". Right now, you're the only one.
+
+Select an empty circle to search for the name of your manager or a
+coworker to add
+
+Complete this task
+
+😎 Pro-tip
+
+When you (or someone else) make a comment or complete a task, all
+collaborators will automatically get a notification in their Asana
+Inbox.
+
+** TODO 6️⃣ Sixth: Make work manageable
+DEADLINE: <2023-06-27 Tue>
+:PROPERTIES:
+:CREATED_AT: [2023-06-20 Tue 12:40]
+:MODIFIED_AT: [2023-06-27 Tue 00:08]
+:ASANA_ID: 1204915780607962-1205458560455962
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1205458560455962]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:ID:       53df6b6c-8eca-4a46-958d-40b218ac8539
+:END:
+:LOGBOOK:
+- [2023-06-27 Tue 00:08] (system)
+  Paul Hewson have a task due Jun 27, 2023
+- [2023-06-20 Tue 12:40] (system)
+  Paul Hewson assigned to you
+:END:
+
+
+🤩 You are learning so much!
+
+Next, lets make sure you understand how projects, tasks, and subtasks
+fit together to make work manageable.
+
+🌳 Imagine a family tree Projects are at the top of the tree, and are
+used to create a plan with many deliverables like a product launch or
+a big campaign.
+
+Tasks are in the middle of the tree. Each task represents one thing
+that needs to get done.
+
+Subtasks are at the bottom of the tree. Some tasks may need to get
+broken down into smaller parts using subtasks.
+
+🎮 Try it out!  Select "+ Add subtask" at the bottom of this task
+
+Give your subtask a name
+
+Complete the subtask
+
+Then, complete this task
+
+😎 Pro-tip
+
+The best tasks have an assignee and a due date. Most tasks can be
+completed in a matter of minutes or hours. If a task is going to take
+weeks or months, or has no end date, it should be a project.
