@@ -3,6 +3,100 @@
 
 * Asana
 
+** TODO Determine what data we need on errors
+:PROPERTIES:
+:CREATED_AT: [2024-01-12 Fri 16:16]
+:MODIFIED_AT: [2024-01-12 Fri 16:17]
+:ASANA_ID: 1204915780607962-1206339191386279
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1206339191386279]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:ID:       bb77ecfc-0462-43b4-941e-2fe198412cff
+:END:
+:LOGBOOK:
+- [2024-01-12 Fri 16:17] (system)
+  Paul Hewson assigned to you
+- [2024-01-12 Fri 16:16] (system)
+  Paul Hewson added to 24.1 Editor: Analytics Support
+:END:
+
+** TODO Are there templates which lead users to generate more errors
+:PROPERTIES:
+:CREATED_AT: [2024-01-12 Fri 16:16]
+:MODIFIED_AT: [2024-01-12 Fri 16:17]
+:ASANA_ID: 1204915780607962-1206339191386281
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1206339191386281]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:ID:       04ea7ebc-9a52-4b62-9751-f26d2ad97592
+:END:
+:LOGBOOK:
+- [2024-01-12 Fri 16:17] (system)
+  Paul Hewson assigned to you
+- [2024-01-12 Fri 16:16] (system)
+  Paul Hewson added to 24.1 Editor: Analytics Support
+:END:
+
+** TODO Update Overleaf split testing template to remove elements now in collab
+DEADLINE: <2024-01-19 Fri>
+:PROPERTIES:
+:CREATED_AT: [2024-01-02 Tue 09:51]
+:MODIFIED_AT: [2024-01-12 Fri 16:04]
+:ASANA_ID: 1204915780607962-1206262993018470
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1206262993018470]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:ID:       6b55d51f-552b-45eb-bc59-ca068835d580
+:END:
+:LOGBOOK:
+- [2024-01-12 Fri 16:04] (system)
+  Paul Hewson changed the due date to Friday
+- [2024-01-12 Fri 16:04] (system)
+  Paul Hewson assigned to you
+- [2024-01-12 Fri 15:59] (system)
+  You can get started on this task since it's no longer waiting on
+  other tasks
+- [2024-01-12 Fri 15:59] (system)
+  Paul Hewson completed the blocking task ✓ Split testing template
+  report to collab
+- [2024-01-02 Tue 09:52] (system)
+  Chris Walker marked this task as blocked by ✓ Split testing template
+  report to collab
+- [2024-01-02 Tue 09:52] (system)
+  Chris Walker moved this task from "Untitled section" to "Split
+  Testing" in Analytics Team 2024
+- [2024-01-02 Tue 09:51] (system)
+  Chris Walker added to Analytics Team 2024
+:END:
+
+** TODO Update Overleaf split testing template to include section on Assumptions
+DEADLINE: <2024-01-19 Fri>
+:PROPERTIES:
+:CREATED_AT: [2024-01-12 Fri 16:04]
+:MODIFIED_AT: [2024-01-12 Fri 16:06]
+:ASANA_ID: 1204915780607962-1206339191386272
+:ASANA_URL: [[https://app.asana.com/0/1204915780607962/1206339191386272]]
+:WORKSPACE: digital-science.com
+:ASSIGNEE: Paul Hewson
+:END:
+:LOGBOOK:
+- [2024-01-12 Fri 16:04] (system)
+  Paul Hewson changed the due date to Friday
+- [2024-01-12 Fri 16:04] (system)
+  Paul Hewson assigned to you
+- [2024-01-12 Fri 16:04] (system)
+  Paul Hewson added to Analytics Team 2024
+:END:
+
+
+As per data team meeting, we are going to record which assumptions we
+examined data for, and which we just assumed we knew.  There might be
+some granularity such as (a) we have but it's in Mongo and didn't have
+the engineering resource (b) we have the data in Big Query but didn't
+have time to query it (c) we don't have any data at all but could
+collect x and (d) we don't have any data and it's not obvious how we
+could have data.
+
 ** TODO Seventh: Can I close you
 DEADLINE: <2024-01-12 Fri>
 :PROPERTIES:
@@ -16,9 +110,9 @@ DEADLINE: <2024-01-12 Fri>
 :END:
 :LOGBOOK:
 - [2024-01-12 Fri 00:19] (system)
-  Paul Hewson have a task due Today
+  Paul Hewson have a task due Jan 12
 - [2024-01-11 Thu 16:10] (system)
-  Paul Hewson changed the due date to Today
+  Paul Hewson changed the due date to Jan 12
 - [2024-01-11 Thu 16:10] (system)
   Paul Hewson assigned to you
 :END:
@@ -105,11 +199,11 @@ Is this feasible? What might it look like?
 
 Very initial shaping here
 
-** TODO Split testing template report to collab
-DEADLINE: <2024-01-12 Fri>
+** DONE Split testing template report to collab
+CLOSED: [2024-01-12 Fri 15:59] DEADLINE: <2024-01-12 Fri>
 :PROPERTIES:
 :CREATED_AT: [2024-01-02 Tue 09:51]
-:MODIFIED_AT: [2024-01-12 Fri 00:12]
+:MODIFIED_AT: [2024-01-12 Fri 15:59]
 :ASANA_ID: 1204915780607962-1206262993018468
 :ASANA_URL: [[https://app.asana.com/0/1204915780607962/1206262993018468]]
 :WORKSPACE: digital-science.com
@@ -117,8 +211,12 @@ DEADLINE: <2024-01-12 Fri>
 :ID:       c5c30fdc-64ee-4800-afd6-646636ea6dde
 :END:
 :LOGBOOK:
+- [2024-01-12 Fri 15:59] (system)
+  Paul Hewson completed this task
+- [2024-01-12 Fri 15:57] (system)
+  Paul Hewson added the description
 - [2024-01-12 Fri 00:12] (system)
-  Paul Hewson have a task due Today
+  Paul Hewson have a task due Jan 12
 - [2024-01-02 Tue 09:52] (system)
   Chris Walker marked Update Overleaf split testing template to remove
   elements now in collab as blocked by this task
@@ -128,10 +226,19 @@ DEADLINE: <2024-01-12 Fri>
 - [2024-01-02 Tue 09:52] (system)
   Chris Walker assigned to you
 - [2024-01-02 Tue 09:52] (system)
-  Chris Walker changed the due date to Today
+  Chris Walker changed the due date to Jan 12
 - [2024-01-02 Tue 09:51] (system)
   Chris Walker added to Analytics Team 2024
 :END:
+
+
+We wish to use a workflow something like (a) Do analysis in R and (b)
+move artefacts to Overleaf report template. This means a .tex template
+rather than .Rtex which is much easier to use. This also means we can
+create a package to routineise some of our work. An MVP package has
+been created (calls a standard query for one_week_retention at the
+moment).  This is maintained in the git repo and is described in the
+wiki.
 
 ** TODO Will the changes to paywall-prompts blow our MP event budget?
 DEADLINE: <2024-01-12 Fri>
@@ -147,12 +254,12 @@ DEADLINE: <2024-01-12 Fri>
 :END:
 :LOGBOOK:
 - [2024-01-12 Fri 00:05] (system)
-  Paul Hewson have a task due Today
+  Paul Hewson have a task due Jan 12
 - [2024-01-02 Tue 09:54] (system)
   Chris Walker moved this task from "Untitled section" to "Ad Hoc" in
   Analytics Team 2024
 - [2024-01-02 Tue 09:54] (system)
-  Chris Walker changed the due date to Today
+  Chris Walker changed the due date to Jan 12
 - [2024-01-02 Tue 09:53] (system)
   Chris Walker added to Analytics Team 2024
 - [2023-12-15 Fri 00:04] (system)
@@ -206,11 +313,11 @@ DEADLINE: <2024-01-10 Wed>
   24.1 tracks
 :END:
 
-** TODO Create asana project for 24.1 Editor Analytics ❬ Create projects for 24.1 tracks
-DEADLINE: <2024-01-10 Wed>
+** DONE Create asana project for 24.1 Editor Analytics ❬ Create projects for 24.1 tracks
+CLOSED: [2024-01-12 Fri 16:17] DEADLINE: <2024-01-10 Wed>
 :PROPERTIES:
 :CREATED_AT: [2024-01-02 Tue 10:22]
-:MODIFIED_AT: [2024-01-10 Wed 00:14]
+:MODIFIED_AT: [2024-01-12 Fri 16:59]
 :ASANA_ID: 1204915780607962-1206259875147602
 :ASANA_URL: [[https://app.asana.com/0/1204915780607962/1206259875147602]]
 :WORKSPACE: digital-science.com
@@ -219,6 +326,12 @@ DEADLINE: <2024-01-10 Wed>
 :ID:       e201b871-a914-43c0-aa8b-a440695ebad2
 :END:
 :LOGBOOK:
+- [2024-01-12 Fri 16:59] (system)
+  Chris Walker liked that you completed this task
+- [2024-01-12 Fri 16:17] (system)
+  Paul Hewson completed this task
+- [2024-01-12 Fri 16:17] (system)
+  Paul Hewson added the description
 - [2024-01-10 Wed 00:14] (system)
   Paul Hewson have a task due Jan 10
 - [2024-01-02 Tue 10:52] (system)
@@ -229,6 +342,9 @@ DEADLINE: <2024-01-10 Wed>
   Chris Walker added this task as a subtask of Create projects for
   24.1 tracks
 :END:
+
+
+https://app.asana.com/0/1206339191386276/1206339191386276
 
 ** DONE Breakdown B2C recognised revenue by country ❬ B2C Recognised Revenue (+other) for JLM
 CLOSED: [2024-01-11 Thu 17:08] DEADLINE: <2024-01-10 Wed>

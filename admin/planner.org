@@ -4,6 +4,14 @@
 #+EMAIL: paul.hewson@overleaf.com
 
 
+
+Where do we get the best uplift in subscriptions from this? What's the paywall going to look like: what reach do we get from putting on a paywall on certain errors. And how many view those errors. ide-open-logs-once is that granular enough because we don't know what they do next.
+
+Mixpanel numbers out.
+
+Churn - next month.
+
+
  org-timer-set-timer or press C-c C-x ;
 (setq org-clock-sound "~/Music/elephants.wav")
 
@@ -366,6 +374,8 @@ Certificate for: Paul Hewson
 
 
 * Emacs [13/21]
+- [ ] Configure compile options ./configure --with-cairo --with-xwidgets --with-x-toolkit=gtk3 --with-tree-sitter --with-json
+
 - [ ] Calc mode (setq calc-embedded-info nil)
 - [X] [[http://pragmaticemacs.com/][Pragmatic emacs]]
 - [X] Lint errors in .emacs [[https://stackoverflow.com/questions/12432093/get-rid-of-reference-to-free-variable-byte-compilation-warnings][reference-to-free-variable]]
