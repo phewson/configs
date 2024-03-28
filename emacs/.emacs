@@ -10,7 +10,6 @@
 
  (tool-bar-mode 1)
 
-
 (setq treesit-language-source-alist
    '((bash "https://github.com/tree-sitter/tree-sitter-bash")
      (cmake "https://github.com/uyha/tree-sitter-cmake")
@@ -37,6 +36,19 @@
    )
  )
 
+(use-package quelpa
+  :ensure t)
+
+(quelpa
+ '(quelpa-use-package
+   :fetcher git
+   :url "https://github.com/quelpa/quelpa-use-package.git"))
+(require 'quelpa-use-package)
+ 
+(use-package reverso
+  :quelpa ((reverso :fetcher github :repo  "SqrtMinusOne/reverso.el")
+           :upgrade t)
+  )
 
 ;; set transparency
 (set-frame-parameter (selected-frame) 'alpha '(85 85))
@@ -49,6 +61,9 @@
 (use-package helm
   :ensure t)
 (load-library "~/.emacs.d/elpa/asana.el")
+
+(use-package auctex
+  :ensure t)
 
 
 (defun arrayify (start end quote)
@@ -269,7 +284,7 @@ into a comma-separated one-liner surrounded by QUOTE."
  '(flycheck-python-mypy-executable "~/miniconda3/envs/splunk/bin/mypy")
  '(magit-log-arguments '("--graph" "--color" "--decorate" "-n256"))
  '(package-selected-packages
-   '(exec-path-from-shell helm forge all-the-icons-dired all-the-icons xterm-color xresources-theme leuven-theme csv-mode sed-mode versuri ov pycoverage string-inflection sqlup-mode toggle-quotes docker docker-compose-mode ansible ansible-mode cloud-theme autumn-light-theme org-jira elfeed graphviz-dot-mode yaml-mode smartscan gitlab-ci-mode-flycheck flycheck hackernews ess bbdb hydandata-light-theme yasnippet wttrin wgrep stan-mode realgud pyvenv poly-R org-gcal json-mode htmlize google-translate gnus-desktop-notify dad-joke coverage auto-complete auctex))
+   '(auctex request reverso quelpa-use-package quelpa use-package-git exec-path-from-shell helm forge all-the-icons-dired all-the-icons xterm-color xresources-theme leuven-theme csv-mode sed-mode versuri ov pycoverage string-inflection sqlup-mode toggle-quotes docker docker-compose-mode ansible ansible-mode cloud-theme autumn-light-theme org-jira elfeed graphviz-dot-mode yaml-mode smartscan gitlab-ci-mode-flycheck flycheck hackernews ess bbdb hydandata-light-theme yasnippet wttrin wgrep stan-mode realgud pyvenv poly-R org-gcal json-mode htmlize google-translate gnus-desktop-notify dad-joke coverage auto-complete))
  '(send-mail-function 'smtpmail-send-it))
 
 (use-package elfeed

@@ -3,13 +3,25 @@
 #+TITLE: Work planning
 #+EMAIL: paul.hewson@overleaf.com
 
-
+LaTeX language tool https://github.com/valentjn/ltex-ls
 
 Where do we get the best uplift in subscriptions from this? What's the paywall going to look like: what reach do we get from putting on a paywall on certain errors. And how many view those errors. ide-open-logs-once is that granular enough because we don't know what they do next.
 
 Mixpanel numbers out.
 
 Churn - next month.
+
+
+- Premium user churn; new user registrations we never see again.
+- Churn per plan per month
+- Churn aggregated by value.
+- Users who churn (gaps between subscriptions)
+- Voluntary versus involuntary churn
+- What do users do after churn  
+
+  Billings.
+Of the value of subscriptions sold in month 1, what value/proportion were active in month 2.
+Feb 16th.
 
 
  org-timer-set-timer or press C-c C-x ;
@@ -332,6 +344,8 @@ cmake -G "Unix Makefiles"  -DEXERCISM_RUN_ALL_TESTS=1 ..
 make
 
 ~/Downloads/exercism submit ../last_will.cpp
+
+BATS_RUN_SKIPPED=true bats test-raindrops.bats
 
 
 
