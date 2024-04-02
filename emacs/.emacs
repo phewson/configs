@@ -170,8 +170,7 @@ into a comma-separated one-liner surrounded by QUOTE."
   (setq auto-package-update-hide-results t)
   (auto-package-update-maybe))
 
-<<<<<<< HEAD
-=======
+
 ;; load jinja2 mode
 (use-package jinja2-mode
   :ensure t)
@@ -386,12 +385,9 @@ into a comma-separated one-liner surrounded by QUOTE."
                               "......" "----------------")))
 (setq org-agenda-files (list "~/configs/admin/planner.org"
                              "~/configs/admin/schedule.org"
-<<<<<<< HEAD
                              "~/configs/admin/github_projects.org"
                              "~/configs/admin/asana.org")) 
-=======
-                             "~/configs/admin/github_projects.org"))
->>>>>>> 0f0234e (old file)
+
 (setq org-export-with-properties '("EFFORT"))
 
 (setq asana-tasks-org-file "~/configs/admin/asana.org")
@@ -458,8 +454,7 @@ into a comma-separated one-liner surrounded by QUOTE."
                "* PHONE %? :PHONE:\n%U" :clock-in t :clock-resume t)
 )))
 
-<<<<<<< HEAD
-=======
+
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((ditaa . t))) ; this line activates ditaa
