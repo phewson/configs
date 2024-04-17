@@ -1,327 +1,28 @@
-#+TODO: OPEN | CLOSED
 #+AUTHOR: Paul Hewson
 #+TITLE: Work planning
 #+EMAIL: paul.hewson@overleaf.com
 
-LaTeX language tool https://github.com/valentjn/ltex-ls
-
-Where do we get the best uplift in subscriptions from this? What's the paywall going to look like: what reach do we get from putting on a paywall on certain errors. And how many view those errors. ide-open-logs-once is that granular enough because we don't know what they do next.
-
-Mixpanel numbers out.
-
-Churn - next month.
-
-
-- Premium user churn; new user registrations we never see again.
-- Churn per plan per month
-- Churn aggregated by value.
-- Users who churn (gaps between subscriptions)
-- Voluntary versus involuntary churn
-- What do users do after churn  
-
-  Billings.
-Of the value of subscriptions sold in month 1, what value/proportion were active in month 2.
-Feb 16th.
-
-
- org-timer-set-timer or press C-c C-x ;
-(setq org-clock-sound "~/Music/elephants.wav")
-
-
-#+CATEGORY: Work
-#+TAGS: report(r)  splittest(t) underpinning(u) visualisation(v)
-
 * Meetings
 
-- Organising the weekly meetings (wednesday rather than friday)
-- Organise the kick off dock
-- Productionise premium status tables; tickets and asana. Sign off ticket then submit.
-- Production premium status superproperty; tickets for devs and asana for us to keep an eye on thnigs. There is a shaping ticket in Asana from last project
-https://github.com/overleaf/internal/issues/15055 Needs another comment from Thomas, then can be implemented.  Document.  What do we want premium yes/no or routes.  getbestsubscription(free/ind/group/commons). Ticket and asana   We should capture what the rule is.
-Exactly what fields do we want. isPremium isTrial bestPremiumType Ticket but blocked.
-- Asana weekly summary.
-- Financial data pipeline. Billings from NetSuite -> BigQuery (delivered) plus a process that can be duplicated in the future for RR.
-
-- Data quality schedule meeting.
-
-- Overleaf / use collab.
-- Queries for guardrail metrics in Big Query / match with measure log (Yanita uses events a lot more).
-- New split test. Sample size calculations. 5\% reduction in 
-
-
-1240586
-
-12405
-
-% of pdf downloads via new method  Within 4 weeks 1,000 users moved from site menu.
-Not a decision make metric.
-
-how many downloads from editor with no further editing?
-
-Splitting by mobile/desktop will be interesting.
-
-
-
-
-
-
-Draft ticket for Jimmy and Eric on premium status
-
-Individual, group (neither IEEE nor advisors), IEEE, advisors, commons
-Accept 
-
-
-
-** Product team meetings
-   :LOGBOOK:
-   CLOCK: [2023-04-11 Tue 16:30]--[2023-04-11 Tue 17:30] =>  1:00
-   CLOCK: [2023-04-04 Tue 13:31]--[2023-04-04 Tue 14:36] =>  1:05
-   :END:
-
 ** Data team meetings
-   :LOGBOOK:
-   CLOCK: [2023-04-13 Thu 11:00]--[2023-04-13 Thu 12:13] =>  1:13
-   CLOCK: [2023-04-12 Wed 10:31]--[2023-04-12 Wed 11:29] =>  0:58
-   CLOCK: [2023-04-04 Tue 16:00]--[2023-04-04 Tue 16:51] =>  0:51
-   :END:
+:PROPERTIES:
+:EFFORT:   2:00
+:END:
+:LOGBOOK:
+CLOCK: [2024-04-17 Wed 10:58]--[2024-04-17 Wed 11:36] =>  0:38
+CLOCK: [2024-04-17 Wed 10:57]--[2024-04-17 Wed 10:57] =>  0:00
+:END:
 
 ** One to ones/skip meetings
-   :LOGBOOK:
-   CLOCK: [2023-04-17 Mon 10:54]--[2023-04-17 Mon 16:30] =>  5:36
-   :END:
-
 
 ** Email sunk time
-   :LOGBOOK:
-   CLOCK: [2023-04-14 Fri 14:56]--[2023-04-14 Fri 15:34] =>  0:38
-   :END:
-
-
-
-
-Results as a spreadsheet.
-
-- May 1st to April 30th is billing period
-- 240 million threshold (60 million chunks)
-- Options
-
-Weekly daily activity / daily paywall hits.  Week 5 February 21st. Deliver draft 16th.
-
-Pay more / get rid
-
-Churn - overall monthly churn in health metrics (annual versus monthly versus changes)
-subsets of monthly churn
-
-cohort churn (internal)  churn by month started
-
-risk of churn / type of churn (ex users / figured out they can use free methods / churn via upgrade)
-
-Active / non-active users
-
-
-   
-* Data quality
-
-pdf-download in Menu as well as toolbar
-
-** Subscriptions [/]
-
-
-Need a new ticket based on [[https://github.com/overleaf/internal/issues/10154][10154]]
-- [ ] Confirm the problems in 10154 are indeed a backfill problem
-- [ ] Check carefully what we can get from Recurly; can we get a backfill 
-      for the "raw subscriptions"?  How far back does the version data go and what
-      do we want to do with that?
-- [ ] Revisit rules for merging transactions with subscription episodes. Does the
-      refund transaction handling look appropriate. How would we check
-- [ ] Revisit rules for merging coupons. Should we even try this in SQL
-- [ ] Can we cross-reference subscription start events and subscriptions in Recurly
-- [ ] Do we get easy access to KPIs on trial conversion, trial renewals, multiple trial starts?
-
-** Affiliations [/]
-
-- [ ] New worry; closed accounts (do we need an event or property for this). See user superproperties ticket.
-- [ ] Need to check Ieva's ticketing/documentation carefully. 
-- [ ] Some import alerts needed here (we should get x users (chunky), y domains (rare) and z universities (loads, because
-      we run the import daily).
-- [ ] 
-
-
-** Premium status etc. [/]
-
-- [ ] Chase these tickets, we should have a cross check that no subscribers/group members/commons are missing premium status
-- [ ] Feel like a dashboard of how many with premium features and why would put visibility on this
-
-
-** Project
-
-- [ ] Not going to be able to sneak this in, but it would be so useful to have "events" (editing session) data
-      to tell us the last known state of a project (failed, compiled with x errors), any template used, and a look up to tags for that template
-- [ ] Link sharing off event; collaborator x of y invited / removed events
-
-** Payment page conversion
-  See [[https://mixpanel.com/project/2340925/view/2886145/app/boards#id=4754484][Mixpanel]]
-- [ ] We seemed to be filtering out informative messages here.
-
-** Planning
-   :LOGBOOK:
-   CLOCK: [2023-05-18 Thu 09:47]
-   :END:
-
-
-
-
-* Split tests
-
-** Onboarding videos
-   :LOGBOOK:
-   CLOCK: [2023-04-14 Fri 16:28]--[2023-04-14 Fri 17:02] =>  0:34
-   CLOCK: [2023-04-14 Fri 14:24]--[2023-04-14 Fri 14:56] =>  0:32
-   CLOCK: [2023-04-14 Fri 14:06]--[2023-04-14 Fri 14:08] =>  0:02
-   CLOCK: [2023-04-14 Fri 08:52]--[2023-04-14 Fri 12:57] =>  4:05
-   CLOCK: [2023-04-13 Thu 12:12]--[2023-04-13 Thu 12:13] =>  0:01
-
-   CLOCK: [2023-04-13 Thu 09:14]--[2023-04-13 Thu 11:00] =>  1:30
-   CLOCK: [2023-04-13 Thu 07:36]--[2023-04-13 Thu 09:14] =>  1:38
-   CLOCK: [2023-04-06 Thu 09:33]--[2023-04-06 Thu 16:13] =>  6:40
-   :END:
-
-** Welcome to Overleaf
-   [[https://github.com/overleaf/internal/issues/11631][11631]]
-** Chosen by Overleaf
-   :LOGBOOK:
-   CLOCK: [2023-04-25 Tue 09:05]--[2023-04-25 Tue 11:21] =>  2:16
-   CLOCK: [2023-04-14 Fri 14:08]--[2023-04-14 Fri 14:24] =>  0:16
-   CLOCK: [2023-04-26 Wed 07:28]--[2023-04-26 Wed 15:28] =>  8:00
-   :END:
-
-#12646
-Do we have lookup table for template id and tags.
-
-Need to check which templates have been tagged, and which templates have tag cv.
-
-  _gallery-list-item-click_ keys currently include featuredList page template
-  _gallery-search-result-click_
-  Looking to see that the proportion of selected CV templates increases amongst those so tagged.
-  Hypothesis: A Recommended by Overleaf tag (however we finally word it) on templates would be appreciated by users as a possible selection aid. This appreciation can be evidenced by an increase in the number of events where someone looks at a tagged template.
-  
-  ```SELECT DISTINCT key
-  FROM analytics.events, UNNEST(segmentation)
-  WHERE event = 'gallery-list-item-click' AND created_at > '2023-04-12'```
-
-
-Target cohort: (a) All new users (b) All new users who recorded a gallery view event and (c) all non-new users who recorded a gallery view event.
-
-Guardrail Metric: 7 day "activity retention rate" comparing default and activated-tag groups. This "retention rate" is the proportion of users recording any event between 7 and 14 days after their registration, as shown here. We should be able to detect a 5% change after two weeks, one week to run the test and a second week to see how many come back. This would let us detect whether the change moves the retention rate from 23.5% to at least 24.7%
-
-Test Metric: The number of unique user_id / analytics_id values who record an view or open event for a tagged template (or it's corresponding untagged template) amongst the three cohorts listed.
-
-In one week (21st to 28th Feburary 2023) we had 16,497 new users record a gallery-page-view event, compared to 56,916 existing users.
-
-Anciliary Metric: The number of registrations received using the tagged templates. In terms of registrations, we need to be able to associate the id number with the template, there is a lookup from last year here: https://mixpanel.com/s/1DXX8t, this kind of query extracts the project_id numbers:
-
-
-* User profiles
-
-** SQL                                                          :report:
- First date we see a.n.other user id on a editing session for a given project_id
-
-*** CLOSED Develop basic metrics query [0/3]
-   SCHEDULED: <2023-04-04 Tue>
--  [x] Query basic metrics for three months
-- [x] Quick mods to basic metrics
-- [x] Add missing metrics to basic query
-
-** CLOSED Develop point of subscription query  [2/2]                 :report:
-   SCHEDULED: <2023-04-05 Wed>
-   :LOGBOOK:
-   CLOCK: [2023-04-12 Wed 11:29]--[2023-04-12 Wed 12:14] =>  0:45
-   :END:
-- [X] Modify query to obtain data at point of subscription
-- [X] How do I pipe filtered data from `dplyr` into an `rbind` type operation
-
-*** Develop point of churn query [/]
-    SCHEDULED: <2023-04-11 Tue>
-
-- [X] Modify query to obtain churn metrics at point of churn
-
-
-project-invite-accept (invited collab)
-project-joined (link share)
-separate symbol palette
-references-search mendeley
-project-sharing
-
-Can we construct a project joined history.
-
-Descriptive piece that highlights value of different pieces of information
-Collaboration workflows
-First project-members paywall, trying to add second collaborator
-Time since link share.
-(extra link shares).
-(Rinsing permanent premium features).
-
-
-The where clause is removing non-joins, I want blanks if they don't join. Had this problem before.
-
-
-
-** Visualisation [1/1]
-   :LOGBOOK:
-   CLOCK: [2023-04-17 Mon 09:34]--[2023-04-17 Mon 10:54] =>  1:20
-   CLOCK: [2023-04-04 Tue 09:26]--[2023-04-04 Tue 13:31] =>  4:05
-   :END:
-
-*** CLOSED Stage 1 EDA: what can we achieve from this project
-    SCHEDULED: <2023-04-04 Tue>
-    :LOGBOOK:
-    CLOCK: [2023-04-04 Tue 14:36]--[2023-04-04 Tue 15:59] =>  1:23
-    :END:
-- [X] Box plots and summary stats by group (subtype, groupsub, commons)
-- [X] Decision trees for basic metrics
-- [X] Random Forest/Neural Net for basic metrics (at this stage, this is intended solely to estimate the size of groups, and the number of subscribers in each group)
-
-*** Stage 2 EDA: can we distinguish at point of subscription/churn
-- [X] Decision trees for non-subscribers versus just-subscribers
-- [X] Random Forest for non-subscribers versus just-subscribers
-
-
-** Classification
-   :LOGBOOK:
-   CLOCK: [2023-04-25 Tue 11:21]--[2023-04-25 Tue 19:21] =>  8:00
-   CLOCK: [2023-04-14 Fri 15:34]--[2023-04-14 Fri 16:28] =>  0:54
-   CLOCK: [2023-04-11 Tue 17:20]--[2023-04-11 Tue 17:54] =>  0:34
-   CLOCK: [2023-04-11 Tue 08:49]--[2023-04-11 Tue 16:30] =>  7:41
-   :END:
-   [[https://cran.r-project.org/web/packages/CustomerScoringMetrics/CustomerScoringMetrics.pdf][CustomerScoringMetrics]] package
-   [[http://www2.cs.uregina.ca/~dbd/cs831/notes/lift_chart/lift_chart.html][Lift charts]]
-
-
-
-** Presentation
-   :LOGBOOK:
-   CLOCK: [2023-05-16 Tue 10:40]--[2023-05-16 Tue 18:40] =>  8:00
-   :END:
-   
-
-** Planning
-   :LOGBOOK:
-   CLOCK: [2023-04-13 Thu 13:48]--[2023-04-13 Thu 17:07] =>  3:19
-   CLOCK: [2023-04-12 Wed 08:13]--[2023-04-12 Wed 10:30] =>  2:17
-   :END:
-
-
-
-
-
-
 
 
 * Personal admin
 
+** Org mode [[https://github.com/james-stoup/emacs-org-mode-tutorial][org-tutorial]] [[https://doc.norang.ca/org-mode.html][Norangdoc]]
 
 ** Exercism
-
 
 uname -m
 wget ex.....
@@ -332,9 +33,6 @@ exercism configure --token=02816b7b-227a-407c-b79c-fa7e79b2ecec
 sudo apt-get install build-essential
 sudo apt-get install cmake
 sudo apt-get install libboost-all-dev
-
-
-
 
 ~/Downloads/exercism download --track=cpp --exercise=last-will
 
@@ -347,68 +45,62 @@ make
 
 BATS_RUN_SKIPPED=true bats test-raindrops.bats
 
-
-
   
 ** Blogging
-   :LOGBOOK:
-   CLOCK: [2020-12-15 Tue 10:02]--[2020-12-15 Tue 10:23] =>  0:21
-   :END:
-
 
 ** Domestic
-*** Computer Housekeeping
-
-*** Photos - need further sorting
-*** CLOSED Move ebooks to onedrive
-SCHEDULED: <2020-12-16 Mon>
-
-*** CLOSED Look for old work on back up drive and move to onedrive
-SCHEDULED: <2020-12-18 Wed>
-
-*** CLOSED TODO Dentist
-SCHEDULED: <2021-03-26 Fri 08:30>
-
-*** CLOSED WAIT Medical (Asthma)
-SCHEDULED: <2021-02-08 Mon 08:30>
-*** CLOSED TODO Prepay Prescription Certificate
-SCHEDULED: <2021-02-26 Fri>
-Certificate for: Paul Hewson
- Certificate number: 10121110011
- Starts on: 25 March 2020
- Ends on: 24 March 2021
-
 
 
 * LaTeX
+
+- [ ] LaTeX language tool https://github.com/valentjn/ltex-ls
 
 - [ ] Float control [[https://robjhyndman.com/hyndsight/latex-floats/][Rob Hyndman]]
       Why it's difficult [[https://aty.sdsu.edu/bibliog/latex/floats.html][SDSU]]
 - [ ] Line 33 of doc-settings.sty \captionsetup*{labelformat=simple}
 
 
-* Emacs [13/21]
-- [ ] Configure compile options ./configure --with-cairo --with-xwidgets --with-x-toolkit=gtk3 --with-tree-sitter --with-json
+* Emacs
 
+** WAIT Compile from source (treesitter) [0/1]
+- State "WAIT"       from              [2024-04-17 Wed 12:00]
+- [X] Configure compile options ./configure --with-cairo --with-xwidgets --with-x-toolkit=gtk3 --with-tree-sitter --with-json
+- [ ] Find out why I have text only toolbar on dev
+** INPROGRESS Enhancing current setup [1/3]
+SCHEDULED: <2024-04-17 Wed>
+- State "INPROGRESS" from              [2024-04-17 Wed 12:00]
+:LOGBOOK:
+CLOCK: [2024-04-17 Wed 11:51]
+CLOCK: [2024-04-17 Wed 11:49]--[2024-04-17 Wed 11:51] =>  0:02
+CLOCK: [2024-04-17 Wed 09:41]--[2024-04-17 Wed 10:09] =>  0:28
+:END:
+- [ ] Rewrite org, partition out emails and org configs
 - [ ] Calc mode (setq calc-embedded-info nil)
 - [X] [[http://pragmaticemacs.com/][Pragmatic emacs]]
-- [X] Lint errors in .emacs [[https://stackoverflow.com/questions/12432093/get-rid-of-reference-to-free-variable-byte-compilation-warnings][reference-to-free-variable]]
+
+** WAIT Outstanding mysteries [1/2]
+- State "WAIT"       from              [2024-04-17 Wed 12:00]
 - [ ] what is planner.org</users> all about and how do I get out of sync?
-- [X] arrayify new utility routine
-- [ ] Where to park backups / why doesn't .gitignore work properly?
-- [X] Get gnus working again?
-- [ ] gnus/bbdb interaction
-- [X] xml-pretty-print (could that delete trailing white spaces?)
-- [-] splunk-mode
-  - [X] fix lint errors
-  - [ ] different keyword for booleans
-  - [X] yasnippet for comments
-- [X] Check all packages are correctly loaded with use-package
-- [ ] fix google translate?
 - [X] Org agenda / planner not playing together nicely.
-- [ ] CPD sheet not working fully
+
+
+** WAIT email [0/4]
+- State "WAIT"       from              [2024-04-17 Wed 12:00]
+- [ ] Get gnus working again?
+- [ ] gnus/bbdb interaction
+- [ ] org-gcal-sync doesn't work.
+   https://github.com/myuhe/org-gcal.el/issues/73
+      I *think* org-gcal-fetch is writing to the schedule.org file as 644 rw-r--r-- and /cannot/ subsequently _write more_. +Currently+ fixed by deleting and touching the file.   Look at
+solution involving chmod next time (if I remember). R_{sub} R^{sup} \alpha - [ ] Check all the security issues I've opened up
+- [ ] Can I import work dates into personal diary.
+
+** INPROGRESS Recapture [0/2]
+- State "INPROGRESS" from              [2024-04-17 Wed 12:00]
 - [ ] ORG refile, don't understand capture task and refile
 - [ ] Org capture direct from browser?
+
+** WAIT Things I thought I understood once [5/6]
+- State "WAIT"       from              [2024-04-17 Wed 12:00]
 - [X] [[https://stackoverflow.com/questions/6874516/relative-line-numbers-in-emacs][Relative line numbers]]
 - [X] Move files in dired+  Alt-0 w (gets abs filename), Ctrl-y pastes.
 - [X] Rename files in dired. Ctrl-x Ctrl-q to get dired edit mode. Ctrl-c Ctrl-c to commit.
@@ -418,27 +110,24 @@ Certificate for: Paul Hewson
   By default, ~target_directory~ is the parent folder of current folder
   So you can specify ~-t \~/~
   There is also a dry-run flag ~-n~, and a verbosity flag ~-v~ through ~-vvv~
-- [X] [[https://github.com/pythonic-emacs/anaconda-mode][anaconda mode]]
 - [ ] diff <(jq -S . a.json) <(jq -S . b.json) diff two json files.
-- [ ] org-gcal-sync doesn't work.
-   https://github.com/myuhe/org-gcal.el/issues/73
-   I *think* org-gcal-fetch is writing to the schedule.org file as 644 rw-r--r-- and /cannot/ subsequently _write more_. +Currently+ fixed by deleting and touching the file.   Look at
-solution involving chmod next time (if I remember). R_{sub} R^{sup} \alpha - [ ] Check all the security issues I've opened up
-- [ ] Can I import work dates into personal diary.
+
+** INPROGRESS Journaling [0/1]
+- State "INPROGRESS" from              [2024-04-17 Wed 12:00]
 - [ ] Journal mode https://github.com/bastibe/org-journal
+
+** READY Languagues [0/3]
+- State "READY"      from              [2024-04-17 Wed 12:01]
 - [ ] Langtool https://github.com/mhayashi1120/Emacs-langtool
 - [ ] Flycheck language tool https://github.com/emacs-languagetool/flycheck-languagetool
 https://github.com/mhayashi1120/Emacs-langtool
 ' `+ Lingva-translate
-
-
-
+- [ ] Use reverso
 
 
 * Summary
 
 ** Effort
-
 
 #+BEGIN: columnview :hlines 2 :id global :maxlevel 4 :scope agenda
 | Task                                                           | Effort | CLOCKSUM |

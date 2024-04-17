@@ -1,17 +1,1 @@
-*  :NOTE: Subject Access Request (Removal)
-email from Pierre notifying undocumented process for data removal when end users request
-[[https://mail.google.com/mail/u/0/#inbox/FMfcgxwGCklMZjnRkxNzmnLfRJjFggSH][Data Removal Requests]]
 
-
-  :LOGBOOK:
-  CLOCK: [2020-01-14 Tue 15:04]--[2020-01-14 Tue 15:05] =>  0:01
-  :END:
-[2020-01-14 Tue 15:04]
-[[file:c:/users/phewson/ph_configs/admin/planner.org::*This%20week][This week]]
-*  :NOTE:
-[[https://mail.google.com/mail/u/0/#inbox/FMfcgxwGCbLVJQshTrxCkgkkvlNgcKtB][Customising Splunk dashboards]]
-  :LOGBOOK:
-  CLOCK: [2020-01-15 Wed 11:28]--[2020-01-15 Wed 11:28] =>  0:00
-  :END:
-[2020-01-15 Wed 11:28]
-[[file:c:/users/phewson/ph_configs/admin/planner.org::*Summary][Summary]]
