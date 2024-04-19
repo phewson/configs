@@ -24,6 +24,11 @@
 ;; turn on visual icon toolbar
 (tool-bar-mode 1)
 
+(setq-default line-spacing 0.4)
+(setq-default custom-set-faces
+   '((t (:family "Ubuntu" :foundry "DAMA" :slant normal :weight
+     normal :height 143 :width normal))))
+
 ;; default to pdflatex
 (setq latex-run-command "pdflatex")
 
@@ -85,7 +90,8 @@
    )
  )
 
-;; I forgot why I wrote this, turns a column of data into a comma separated list for use in R?
+;; I forgot why I wrote this, turns a column of data into a comma separated
+;;list for use in R?
 (defun arrayify (start end quote)
     "Turn strings on newlines between START and END \
 into a comma-separated one-liner surrounded by QUOTE."
@@ -220,6 +226,10 @@ into a comma-separated one-liner surrounded by QUOTE."
   :ensure t
   :init (require 'ess-site))
 
+(use-package auctex
+  :ensure t)
+(setq auto-mode-alist (append '(("\\.tex\\'" . LaTeX-mode)) auto-mode-alist))
+
 ;; yasnippet
 (use-package yasnippet
     :ensure t)
@@ -273,12 +283,21 @@ into a comma-separated one-liner surrounded by QUOTE."
            :upgrade t)
   )
 
-(use-package reverso
-  :quelpa ((reverso :fetcher github :repo  "SqrtMinusOne/reverso.el")
-           :upgrade t)
-  )
-
 (load-file "~/configs/emacs/.orgconfigs.el")
 
 (provide '.emacs)
 ;;; .emacs ends here
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(yasnippet wttrin wgrep toggle-quotes string-inflection stan-mode sqlup-mode smartscan sed-mode reverso quelpa-use-package poly-R pkg-info ov org-journal leuven-theme json-mode jinja2-mode helm hackernews forge flycheck ess elfeed docker-compose-mode docker auto-package-update auctex ansible all-the-icons-dired)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

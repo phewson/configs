@@ -1,0 +1,237 @@
+
+* sympy
+
+#+NAME: pytest
+#+BEGIN_SRC python :results output
+  from sympy import *
+  x = symbols('x')
+  print(latex(Integral(sqrt(1/x), x)))
+#+END_SRC
+
+#+RESULTS: pytest
+: \int \sqrt{\frac{1}{x}}\, dx
+
+
+#+NAME: pytest2
+#+BEGIN_SRC python :results output
+  from sympy import *
+  x = symbols('x')
+  print(latex(integrate(Integral(sqrt(1/x), x))))
+#+END_SRC
+
+#+RESULTS: pytest2
+: \frac{4 x^{2} \sqrt{\frac{1}{x}}}{3}
+
+
+\begin{displaymath}
+\frac{4 x^{2} \sqrt{\frac{1}{x}}}{3}
+\end{displaymath}
+
+CTRL + X, *, d duplicates formula:
+
+\begin{displaymath}
+\frac{4 x^{2} \sqrt{\frac{1}{x}}}{3}
+\end{displaymath}
+
+
+\begin{displaymath}
+\frac{4 x^{2} \sqrt{\frac{1}{x}}}{3}
+\end{displaymath}
+
+
+
+* globs and greps
+
+glob is a bash explansion feature (simpler than regex) glob matches file name, regex matches text
+
+ls [0-9]?file*.txt   The glob is handled by the shell.
+
+ls | grep '[0-9]?file*.txt' grep matches text and passes to ls
+
+
+disparar balas
+vivir 100 anos, las zonas azules
+
+Types of shell expansion. 7 types.
+Brace expansion
+Tilde expansion
+Shell paramater and variable
+Command explanion
+Arithmetic explansion
+Word splitting
+
+Filename expansion
+Quote removal
+
+\* is most common glob
+
+? matches one character, ?? matches 2 etc.  
+
+ls [123abc].txt
+
+! is posix standard negation. ls file[!a-z].txt gives only numbers
+
+hyphen alone doesn't need escaping.  Square brackets go first.
+
+POSIX character class
+
+nullglob ("" if no matches), failglob (fail if no matches), dotglob (match hidden files),
+globstar (some recursing powerful in loops with **), nocasematch, nocaseglob, extglob
+
+shopt -s to set shopt -u to unset, shopt -p to interrogate
+
+e.g. shopt -u nullglob
+
+Extended glob ?(match) e.g. ?(.jpg|.png) and invert using !(?(.jpg|.png))
+Can only use globs in case, they are quicker in if
+shopt -s extglob in your .bashrc enables extended globs
+@matches exactly one match
+
+Globs match files, regex matches text (which can be output from ls which is text)
+Extended glob           Regex
+@(pattern) matches one  (pattern)
+?(pattern) matches zero or one (pattern)?
++(pattern) matches one or more (pattern)+
+*(pattern) matches zero or more (pattern)*
+!(pattern) negates (!pattern)
+*(pattern1|pattern2) or operator
+N/A         Exactly n matches           (pattern){3}
+
+Brace expansion - only expands braces (first expansion)
+Doesn't depend on existence of files (creates a list of files then looks for them)
+echo {a..f}{1..10}
+or echo {1..100..2}  echo {0002..1000..2} (uses c locale) echo{z..a..2}
+echo file{,.bak}   echo /this/is/a/long/path
+
+Basic and Extended Regular expressions; Perl compatible RegExp (PCRE)
+
+BREs need backslash to make them special
+Ere ^anchors at start $at end, [^ ] is a negation. Escaping special char makes them lose special satus
+grep -G uses basic
+grep -E or
+sed -E forces extended
+awk only uses ere
+[[ =~ ]] uses ere
+
+ Matching one char or word
+
+ . pattern
+ [abc] range match one character from a, b or c
+[^abc] negate match
+[0-9] [a-z], better to use class [:alpha:]
+\b empty string either end of word \brat \b matches rat but not brat.
+\B empty string not at end of word
+\Brat\B matches crate but not furry rat.
+\w empty at star
+\s white space \S not white space
+.? zero or one chars  dog.? matches dog and dogs, + is one or more, * is zero or more.
+.{3} three chars  {,3} up to 3, {3,} 3 or more
+
+Alternation or grouping. dog|cat
+^(dog|cat)?$  0 or 1 matches of dog or cat
+[0-9]|[1-9][0-9]
+[0-9][0-9]? (zero or one of the second set)
+
+(ss).*\1  The \1 refers to the pattern (ss)
+In bash, work in the  \[\[ \]\] only
+if \[\[ $FILE =~ ^Backup.*tar.gz$ \]\] ; then blah fi
+No quotes inside these double square brackets
+
+Bash rematch (regular expression match)
+
+\[\[ abcdef =~ b.d \]\]
+Return code = 0 if no match return code = 1
+populates BASH_REMATCH[0] whole match, BASH_REMATCH[1] etc.  if in parenthesis (a)(.)(d)e
+
+grep -x match whole line
+grep -o only return match
+grep -w matches words
+
+Perl has multiline match and non-greedy matches.
+
+sed -E 's/ERE regex/ERE regex/g' (global,don't stop after first match
+sed '5,10p' print lines 5 to 10
+sed '5,10d' delete
+sed '5,10s/regex/regex/g'
+
+Can use : instead of /   & brings back match s/([0-9]{3})/(\1)
+First back reference \1 is inside parentheses, but these are literal not () group markers. Ouch.
+
+In awk, no \b for word boundary use \y
+\` matches empty string at beginning of buffer \' at end of buffer
+Shell variables have to be passed u=$USER as u
+
+
+* support liaison meeting
+
+SSO error logs - not our business
+erroes surfacing due to os patch / springer template
+A|I ifyou are in alpha group
+Responsibilities for users (security, does it need legal)
+If someone signs up for Overleaf status we don't know how to remove them (GDPR), e.g., we know what to do with Mailchimp
+
+
+
+* inclusiveness
+
+** WCAG standards
+
+- Perceivable (see or know what's happening
+- Operable
+- Understandle
+- Robust (adaptable)
+
+** Three levels A, AA, AAA
+** Section 508 (Americans with Disabilities). Slightly different but aligned.
+
+** Tools
+- Google lighthouse (built into Chrome)
+- Stark plug in for Figma
+
+** Websites
+
+- Rooted in Rights
+- Captioning Key
+- Free web videoing: Amara, Subtitle horse, Social Media auto-captions, Captioning services
+- Podcasts: transcripts (Dragon Naturally Speaking) VLC media player
+- juicystudio.com readability  hemingway.app R fleish kinkaid analysis
+
+** Adaptive design
+
+- Adaptive design 320 480 etc. screen width (better than responsive design - a single layout that resizes)
+(6 designs for each page in adaptive design - therefore only key pages that must be available to every visitor)
+
+- SKip to content...skip global navigation (if you are using something other than a mouse)
+- ONly the most relevant and important links in top level navigation (5 to 8), using grouping structure with navigation if necessary
+- 14px minimal font size (browsers usually default to 16px)
+
+
+
+
+
+Where do we get the best uplift in subscriptions from this? What's the paywall going to look like: what reach do we get from putting on a paywall on certain errors. And how many view those errors. ide-open-logs-once is that granular enough because we don't know what they do next.
+
+Mixpanel numbers out.
+
+Churn - next month.
+
+
+- Premium user churn; new user registrations we never see again.
+- Churn per plan per month
+- Churn aggregated by value.
+- Users who churn (gaps between subscriptions)
+- Voluntary versus involuntary churn
+- What do users do after churn  
+
+  Billings.
+Of the value of subscriptions sold in month 1, what value/proportion were active in month 2.
+Feb 16th.
+
+
+ org-timer-set-timer or press C-c C-x ;
+(setq org-clock-sound "~/Music/elephants.wav")
+
+
+#+CATEGORY: Work
+#+TAGS: report(r)  splittest(t) underpinning(u) visualisation(v)
+

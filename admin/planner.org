@@ -9,17 +9,60 @@
 :EFFORT:   2:00
 :END:
 :LOGBOOK:
+CLOCK: [2024-04-18 Thu 11:17]--[2024-04-18 Thu 12:48] =>  1:31
 CLOCK: [2024-04-17 Wed 10:58]--[2024-04-17 Wed 11:36] =>  0:38
 CLOCK: [2024-04-17 Wed 10:57]--[2024-04-17 Wed 10:57] =>  0:00
 :END:
 
 ** One to ones/skip meetings
-
+** Project/Support meetings
+:LOGBOOK:
+CLOCK: [2024-04-17 Wed 14:55]--[2024-04-17 Wed 17:16] =>  2:21
+CLOCK: [2024-04-17 Wed 14:38]--[2024-04-17 Wed 14:54] =>  0:16
+:END:
+- We have a 503 problem (some universities), Christopher to speak to Google
+- Should we publish problems with tablets (browser compatibility issues page isn't very good)
+- Remove all mentions of personal plan
+- IEEE removals unlinked github; started a new subscription and the error message isn't very helfpul
+- Writeful/TeXGPT feedback (support feel that the LaTeX suggestions are wrong/bad)
 ** Email sunk time
+:LOGBOOK:
+CLOCK: [2024-04-17 Wed 12:21]--[2024-04-17 Wed 12:23] =>  0:02
+CLOCK: [2024-04-17 Wed 12:18]--[2024-04-17 Wed 12:18] =>  0:00
+:END:
 
 
 * Personal admin
 
+** INPROGRESS SFHEA application [1/5]
+- State "INPROGRESS" from              [2024-04-17 Wed 13:18]
+- [X] Information pack
+- [ ] Ask about booking on course (costs 735)
+- [ ] Book on course
+- [ ] Sort out my National Association stuff
+- [ ] Check in with David about MARM
+  
+** READY Manim animations [1/6]
+:LOGBOOK:
+CLOCK: [2024-04-18 Thu 16:48]--[2024-04-18 Thu 18:11] =>  1:23
+CLOCK: [2024-04-18 Thu 12:48]--[2024-04-18 Thu 16:48] =>  4:00
+:END:
+- State "READY"      from              [2024-04-17 Wed 13:19]
+- [X] Correlation as the angle between two vectors
+- [ ] Correlation requires unit vectors
+- [ ] Correlation algebra
+- [ ] Transformation from scatterplot to x, y vector geometry
+- [ ] Non-transitive correlation
+- [ ] Least squares as project problem
+- manim -pql scene.py CreateCircle
+
+
+** READY Concept tests in statistics
+- State "READY"      from              [2024-04-17 Wed 13:21]
+- [ ] Expand question bank
+** TODO Assertion reason tests in Statistics
+** TODO AI in education [1/1]
+- [ ] Talk on 18th
 ** Org mode [[https://github.com/james-stoup/emacs-org-mode-tutorial][org-tutorial]] [[https://doc.norang.ca/org-mode.html][Norangdoc]]
 
 ** Exercism
@@ -54,11 +97,13 @@ BATS_RUN_SKIPPED=true bats test-raindrops.bats
 * LaTeX
 
 - [ ] LaTeX language tool https://github.com/valentjn/ltex-ls
-
 - [ ] Float control [[https://robjhyndman.com/hyndsight/latex-floats/][Rob Hyndman]]
       Why it's difficult [[https://aty.sdsu.edu/bibliog/latex/floats.html][SDSU]]
 - [ ] Line 33 of doc-settings.sty \captionsetup*{labelformat=simple}
 
+  * SFHEA
+  ** Writing classes
+  - [ ] Register
 
 * Emacs
 
@@ -70,7 +115,7 @@ BATS_RUN_SKIPPED=true bats test-raindrops.bats
 SCHEDULED: <2024-04-17 Wed>
 - State "INPROGRESS" from              [2024-04-17 Wed 12:00]
 :LOGBOOK:
-CLOCK: [2024-04-17 Wed 11:51]
+CLOCK: [2024-04-17 Wed 11:51]--[2024-04-17 Wed 12:21] =>  0:30
 CLOCK: [2024-04-17 Wed 11:49]--[2024-04-17 Wed 11:51] =>  0:02
 CLOCK: [2024-04-17 Wed 09:41]--[2024-04-17 Wed 10:09] =>  0:28
 :END:
