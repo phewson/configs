@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       02a55b93-e4cc-44e7-80cc-fc717766ffa8
+:END:
+#+title: NTS2019
+I think I used too much camel case
+I need to get an update, do I want to use EUL still?
+
+* resources
+:PROPERTIES:
+:ID:       36c4c291-3fdb-426e-9fc6-f7213a91d029
+:END:
+org-id-get-create
+org-roam-alias-add
+*

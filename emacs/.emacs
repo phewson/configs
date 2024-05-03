@@ -230,6 +230,7 @@ into a comma-separated one-liner surrounded by QUOTE."
   :ensure t)
 (setq auto-mode-alist (append '(("\\.tex\\'" . LaTeX-mode)) auto-mode-alist))
 
+
 ;; yasnippet
 (use-package yasnippet
     :ensure t)
@@ -285,6 +286,10 @@ into a comma-separated one-liner surrounded by QUOTE."
 
 (load-file "~/configs/emacs/.orgconfigs.el")
 
+(use-package biblio
+  :ensure t)
+;;https://lucidmanager.org/productivity/emacs-bibtex-mode/
+;;https://github.com/pprevos/emacs-writing-studio
 (provide '.emacs)
 ;;; .emacs ends here
 
@@ -294,7 +299,7 @@ into a comma-separated one-liner surrounded by QUOTE."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(yasnippet wttrin wgrep toggle-quotes string-inflection stan-mode sqlup-mode smartscan sed-mode reverso quelpa-use-package poly-R pkg-info ov org-journal leuven-theme json-mode jinja2-mode helm hackernews forge flycheck ess elfeed docker-compose-mode docker auto-package-update auctex ansible all-the-icons-dired)))
+   '(org-roam biblio yasnippet wttrin wgrep toggle-quotes string-inflection stan-mode sqlup-mode smartscan sed-mode reverso quelpa-use-package poly-R pkg-info ov org-journal leuven-theme json-mode jinja2-mode helm hackernews forge flycheck ess elfeed docker-compose-mode docker auto-package-update auctex ansible all-the-icons-dired)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       a5a8efac-d0a0-4c5b-badb-0bcbf1d62df2
+:END:
+#+title: NTS1988Vehchanges
+
+- Previously, all vehicles available to the household at any time were counted as household vehicles
+- This could lead to double counting (one car household replaces car mid-week)
+- Overestimates by 1-2% and exaggerates number of new cars
+- Primary vehicles belong to household at start of week
+- Secondary vehicles are retained solely for purposes of understanding travel stages, but not analysed as if they belonged to the household
+- New questions on exact date of acquisition added from 1995

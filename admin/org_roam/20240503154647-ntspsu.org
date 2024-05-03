@@ -1,0 +1,131 @@
+:PROPERTIES:
+:ID:       ee4b1307-63b4-424b-bf0d-c2c47d82067d
+:END:
+#+title: NTSPSU
+
+with blah(code, type, region) AS (
+SELECT 1 AS code, 'Northern, Metropolitan' AS type, 1 AS region
+UNION SELECT 2 AS code, 'Northern, Non-metropolitan' AS type, 1 AS region
+UNION SELECT 3 AS code, 'Yorkshire/Humberside, Metropolitan' AS type, 3 AS region
+UNION SELECT 4 AS code, 'Yorkshire/Humberside, Non-Metropolitan' AS type, 3 AS region
+UNION SELECT 5 AS code, 'East Midlands' AS type, 4 as region
+UNION SELECT 6 AS code, 'East Anglia' AS type, 7 AS region
+UNION SELECT 7 AS code, 'South East' AS type, 8 AS region
+UNION SELECT 8 AS code, 'London Boroughs' AS type, 6 AS region
+UNION SELECT 9 AS code, 'South West' AS type, 9 AS region
+UNION SELECT 10 AS code, 'West Midlands, Metropolitan' AS type, 5 AS region
+UNION SELECT 11 AS code, 'West Midlands, Non-Metropolitan' AS type, 5 AS region
+UNION SELECT 12 AS code, 'North West, Metropolitan' AS type, 2 AS region
+UNION SELECT 13 AS code, 'North West, Non-Metropolitan' AS type, 2 AS region
+UNION SELECT 14 AS code, 'Wales' AS type, 10 AS region
+UNION SELECT 15 AS code, 'Scotland' AS type, 11 AS region
+) etc.
+
+1, Inner London
+2, Outer London built up
+3, West Midlands built-up
+4, Greater Manchester built-up
+5, West Yorkshire built-up
+6, Glasgow built-up
+7, Liverpool built-up
+8, Tyneside built up
+9, Other urban over 250k
+10, Other urban 100k to 250k
+11, Other urban, over 50k to 100k
+12, Other urban, over 25k to 50k
+13, Other urban, over 3k to 25k
+14, rural
+
+
+PSU pop density
+1, Under 1
+2, 1 to 4.99
+3, 5 to 9.99
+4, 10 to 14.99
+5, 15 to 19.99
+6, 20 to 24.99
+7, 25 to 29.99
+8, 30 to 34.99
+9, 35 to 39.99
+10, 40 to 44.99
+11, 45 to 49.99
+12, 50 to 59.99
+13, 60 to 74.99
+14, 75 and over
+
+la population density
+1, under 1
+2, 1 to 1.99
+3, 2 to 3.49
+4, 3.5 to 4.99
+5, 5 to 9.99
+6, 10 to 14.99
+7, 15 to 19.99
+8, 20 to 24.99
+9, 25 to 34.99
+10, 35 to 44.99
+11, 45 and over
+
+Bus scheme 1=Yes, 2 = No, 3 = NA
+
+Eligibility
+1, Pensionable age
+2, Man or Woman 65+
+3, Pensionable age and pension received
+4, Pensionable age and income restriction
+5, Other condition
+6, NA
+7, DNA
+
+Type of concession
+1, Free fare
+2, Flat fare
+3, Half fare
+4, Two thirds fare
+5, Other reduced fare
+6, Tokens up to GBP10
+7, Tokens GBP10.01 to GBP20
+8, Tokens over GBP20
+9, Tokens value unspecified or variable
+10, Mixture of fares and tokens
+11, Other
+12, NA
+13, DNA
+
+Membership fees
+1, Nil
+2, Up to GBP5
+3, GBP5.01 to GBP10
+4, GBP10.01 to GBP15
+5, Over GBP15
+6, Other fee
+7, NA
+8, DNA
+
+Times available
+1, Anytime
+2, Peak hours only
+3, Off-peak only
+4, Mixture of peak and off-peak
+5, Other time restriction
+6, NA
+7, DNA
+
+Areas available
+1, District only or less
+2, Above district but not countywide
+3, Countywide
+4, Above county
+5, Other area restriction
+6, NA
+7, DNA
+
+Modes additional to bus
+1, None
+2, Public services only
+3, Private and voluntary services only
+4, Both private and voluntary and public
+5, Other
+6, NA
+7, DNA
+

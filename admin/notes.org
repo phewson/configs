@@ -170,7 +170,17 @@ A|I ifyou are in alpha group
 Responsibilities for users (security, does it need legal)
 If someone signs up for Overleaf status we don't know how to remove them (GDPR), e.g., we know what to do with Mailchimp
 
+In awk, ~ matches, !~ doesn't match a regex
 
+awk -F,
+BEGIN {RS="\r"} (MS-DOS line endings
+{FOR (i = 1; i < 3; i++){
+gsub("^\"|\""$, "", $i);
+gsub("\"\"", "\"", $i);
+}
+
+}
+Double quote fields - replaced with two double quotes
 
 * inclusiveness
 

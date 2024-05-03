@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       0f6282df-293f-4c28-a7fa-c6e6699d890b
+:END:
+#+title: NTSEUL
+As a private citizen you can access EUL data, as an academic I think you can get slightly more data

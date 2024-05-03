@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       79724171-05e2-4d4e-a8b0-63a9ae8453f3
+:END:
+#+title: NTS1988
+Add a table within a CTE to translate 1988 regions and types into separate standard fields for GOR and area type
+[[id:02a55b93-e4cc-44e7-80cc-fc717766ffa8][NTS2019]] reminds me I need to update the newer data (maybe I can do better than EUL?)

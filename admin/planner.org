@@ -2,13 +2,23 @@
 #+TITLE: Work planning
 #+EMAIL: paul.hewson@overleaf.com
 
+* Core
+** Cancellations
+:LOGBOOK:
+CLOCK: [2024-05-03 Fri 09:54]
+CLOCK: [2024-05-03 Fri 08:51]--[2024-05-03 Fri 09:53] =>  1:02
+CLOCK: [2024-05-02 Thu 10:32]--[2024-05-02 Thu 11:06] =>  0:34
+:END:
+
 * Meetings
 
 ** Data team meetings
+
 :PROPERTIES:
 :EFFORT:   2:00
 :END:
 :LOGBOOK:
+CLOCK: [2024-05-02 Thu 11:06]--[2024-05-02 Thu 16:54] =>  5:48
 CLOCK: [2024-04-18 Thu 11:17]--[2024-04-18 Thu 12:48] =>  1:31
 CLOCK: [2024-04-17 Wed 10:58]--[2024-04-17 Wed 11:36] =>  0:38
 CLOCK: [2024-04-17 Wed 10:57]--[2024-04-17 Wed 10:57] =>  0:00
@@ -17,6 +27,7 @@ CLOCK: [2024-04-17 Wed 10:57]--[2024-04-17 Wed 10:57] =>  0:00
 ** One to ones/skip meetings
 ** Project/Support meetings
 :LOGBOOK:
+CLOCK: [2024-04-30 Tue 08:47]--[2024-04-30 Tue 17:15] =>  8:28
 CLOCK: [2024-04-17 Wed 14:55]--[2024-04-17 Wed 17:16] =>  2:21
 CLOCK: [2024-04-17 Wed 14:38]--[2024-04-17 Wed 14:54] =>  0:16
 :END:
@@ -86,7 +97,7 @@ make
 
 ~/Downloads/exercism submit ../last_will.cpp
 
-BATS_RUN_SKIPPED=true bats test-raindrops.bats
+BATS_RUN_SKIPPED=true bats test-raindrops.batss
 
   
 ** Blogging

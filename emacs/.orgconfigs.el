@@ -20,6 +20,20 @@
                              "~/configs/admin/github_projects.org"
                              "~/configs/admin/asana.org")) 
 
+(use-package org-roam
+  :ensure t
+  :custom
+  (org-roam-directory "~/configs/admin/org_roam/")
+  (org-roam-completion-everywhere t)
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+	 ("C-c n f" . org-roam-node-find)
+	 ("C-c n i" . org-roam-node-insert)
+	 :map org-mode-map
+	 ("C-M-i" . completion-at-point))
+  :config
+  (org-roam-setup)
+  )
+
 
 (setq org-agenda-time-grid (quote
                              ((daily today remove-match)
