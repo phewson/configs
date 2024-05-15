@@ -1,0 +1,32 @@
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+
+# flymake-mode
+*_flymake.*
+
+# eshell files
+/eshell/history
+/eshell/lastdir
+
+
+# reftex files
+*.rel
+
+# AUCTeX auto folder
+/auto/
+
+# Flycheck
+flycheck_*.el
+
+# directory configuration
+.dir-locals.el
+
