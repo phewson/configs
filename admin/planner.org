@@ -3,9 +3,19 @@
 #+EMAIL: paul.hewson@overleaf.com
 
 * Core
+** Track changes
+:LOGBOOK:
+CLOCK: [2024-05-14 Tue 13:34]--[2024-05-14 Tue 15:24] =>  1:50
+:END:
+** AI errors
+:LOGBOOK:
+CLOCK: [2024-05-14 Tue 15:24]--[2024-05-15 Wed 08:18] => 16:54
+:END:
+
 ** Cancellations
 :LOGBOOK:
-CLOCK: [2024-05-03 Fri 09:54]
+CLOCK: [2024-05-15 Wed 08:18]
+CLOCK: [2024-05-03 Fri 09:54]--[2024-05-03 Fri 16:47] =>  6:53
 CLOCK: [2024-05-03 Fri 08:51]--[2024-05-03 Fri 09:53] =>  1:02
 CLOCK: [2024-05-02 Thu 10:32]--[2024-05-02 Thu 11:06] =>  0:34
 :END:

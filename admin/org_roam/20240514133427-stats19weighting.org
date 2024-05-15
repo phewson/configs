@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       4785e7e2-0092-4b42-a0ca-b9725b8bfb10
+:END:
+#+title: Stats19Weighting
+There seem to be some weights you can use to "alter" the effect of the police mis-estimating the severity
+
+
