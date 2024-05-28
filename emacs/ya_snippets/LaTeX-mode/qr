@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: simple quadratic
+# key: qr
+# --
+
+\begin{equation}
+${1}x^2 + ${2}x + ${3}
+\end{equation}

@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       5f73439a-3cb5-4d75-9104-b8ad1966a683
+:END:
+#+title: VlogKit
+
+* Hardware for vlogging
+
+[[https://www.amazon.co.uk/gp/product/B00EO4A7L0/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00EO4A7L0&linkCode=as2&tag=mikechudleyyo-21&linkId=421a003e22b1b054dae2b3eb13614eff][Lapel mike]]
+[[https://www.amazon.co.uk/gp/product/B084D4ZS52/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B084D4ZS52&linkCode=as2&tag=mikechudleyyo-21&linkId=4b67e4e47e0e2be622a6ca6aba825fe4&th=1][On camera mike]]
+[[https://www.amazon.co.uk/dp/B0966MRJT9/ref=sspa_dk_detail_5?pd_rd_i=B0966MRJT9&pd_rd_w=Vv79e&content-id=amzn1.sym.84ea1bf1-65a8-4363-b8f5-f0df58cbb686&pf_rd_p=84ea1bf1-65a8-4363-b8f5-f0df58cbb686&pf_rd_r=FPVAQ49NEZZWYDW8VK1R&pd_rd_wg=DMjUA&pd_rd_r=ff0a72da-c479-4ddf-bc2c-13f77489f9d7&s=electronics&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&smid=A3BNZIS0E72E4E&th=1][Tripod mount]]
+[[https://www.amazon.co.uk/UTEBIT-Greenscreen-Photography-Background-Compatible/dp/B07SLRT5Y3/ref=sr_1_5?crid=DYEW4JXK6279&dib=eyJ2IjoiMSJ9.SV9GSGddd8zKuQ3HKzgLjvRGRaN8CEOQzCSK0Fg8l90brXe-2-vs2paL7pWkvhGVOkMkqAZZM0s3XwCd8NCIed4UDgXGEuitxijpJImQt1iXke3y07N-b40Nr-q_BS9ZZmj1yOKEHEHRVx4lLnKGDiR0d3Kw3hJ95x-uzt38EEGU882bDx-EeNNerEUUZmYdKGREgVngxtFOPnE5Rpbi3Nsbe5TMT5R8RvdXoLu2IAO5eDEaXrV5Jz-jwpReMDOGBw6ZHCQMiR5otoTTkhwY0N0EWxo7B13zIr2xYoVao10.YJKJAVJ6ldbh3kFWHE5QBOaLT1Es75pLS0DcBcPasTU&dib_tag=se&keywords=green+screen&qid=1715863832&s=electronics&sprefix=green+screen%2Celectronics%2C106&sr=1-5][Green screen]]
+[[https://www.amazon.co.uk/Bi-Color-Dimmable-2500-6500K-Rechargeable-Portable/dp/B0BYDMWKW2/ref=sr_1_4?crid=158SSU9YUY0FO&dib=eyJ2IjoiMSJ9.WL4k0lnSTkpGXok0Aow7YHOAFeeF17rThv7wV1gyZDNbQ6PiIZEzes0j26m7mjwPHqc6lLfiQ23ZvX_NwMLRBAly-GkIoXo1Fu8pC8_aNw0CoS2nnJnysXr78xCYobPNt7FxeVI8wZmz9rWXvNRfm1_BaXzUGkpgatmXx_EU8q3cumnRq1DUNjiuoC09_S25OL2j-RBVGfOGt4_-NlkB5t-h2xY1dxNqzlHY_ffRGtPO3qVGXNnjI8bLOy-stqwFfuzMnC4E_zRtU7YLAU3-8XxGwrq02z9w2UUwqBhLti0.YyUxewO1R_6Moub84z2zsi7qMFo83J2xiDvG-J3SIrw&dib_tag=se&keywords=vlog+lighting&qid=1715863899&s=electronics&sprefix=vlog+lighting%2Celectronics%2C85&sr=1-4][Lighting]]

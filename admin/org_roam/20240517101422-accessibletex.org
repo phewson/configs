@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       22609b19-55ad-4a1a-b846-a914b60124da
+:END:
+#+title: AccessibleTex
+
+[[https://vlmantova.github.io/bookml/][Bookml]]

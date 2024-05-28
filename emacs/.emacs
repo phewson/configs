@@ -157,6 +157,14 @@ into a comma-separated one-liner surrounded by QUOTE."
 (use-package magit
   :ensure t)
 
+;;(add-to-list 'load-path "~/.emacs.d/elpa/emacs-reveal")
+;;(require 'emacs-reveal)
+;;(require 'org-re-reveal)
+(require 'ox-reveal)
+
+(use-package camcorder
+  :ensure t)
+
 (use-package docker
   :ensure t)
 
@@ -299,7 +307,7 @@ into a comma-separated one-liner surrounded by QUOTE."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(org-roam biblio yasnippet wttrin wgrep toggle-quotes string-inflection stan-mode sqlup-mode smartscan sed-mode reverso quelpa-use-package poly-R pkg-info ov org-journal leuven-theme json-mode jinja2-mode helm hackernews forge flycheck ess elfeed docker-compose-mode docker auto-package-update auctex ansible all-the-icons-dired)))
+   '(ox-reveal org-ref oer-reveal camcorder gif-screencast org-roam biblio yasnippet wttrin wgrep toggle-quotes string-inflection stan-mode sqlup-mode smartscan sed-mode reverso quelpa-use-package poly-R pkg-info ov org-journal leuven-theme json-mode jinja2-mode helm hackernews forge flycheck ess elfeed docker-compose-mode docker auto-package-update auctex ansible all-the-icons-dired)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

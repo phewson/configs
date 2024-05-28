@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       7138e8d9-a25c-4ede-8fbb-2f93b3bcb88e
+:END:
+#+title: PostgresSnippets
+* Little bits of PostgreSQL I didn't know before
+
+CUBE/ROLLUP
+filter (where blah > x) as "blah_filtered"
+percentile_cont(0.25) within group (order by height_inches) as "1q"
+n_tile is a window function.
