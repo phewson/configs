@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       677b8b6a-f2eb-4371-9169-f958bc8e286c
+:END:
+#+title: latexlsp
+
+#+begin_src bash :eval no
+wget https://github.com/latex-lsp/texlab/releases/download/v5.16.1/texlab-x86_64-linux.tar.gz
+tar -xvzf texlab-x86_64-linux.tar.gz
+#+end_src
+
+The suggestion is that I then put this file somewhere like /usr/local/bin (need to check on that), and use the .emacs config carefully to point to this.
+
+I think everything else is essentially documented in .emacs.
+
+

@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       aa438dc7-5e73-46bd-9a27-9515c6e9e587
+:END:
+#+title: icons
+Need to run M-x all-the-icons-install-fonts

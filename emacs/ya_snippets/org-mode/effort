@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: effort
+# key: effort
+# --
+:PROPERTIES:
+:EFFORT:   ${1:1:00}
+:END:

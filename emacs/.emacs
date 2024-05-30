@@ -196,6 +196,14 @@ into a comma-separated one-liner surrounded by QUOTE."
           (function (lambda()
                       (whitespace-mode t))))
 
+(use-package dired-single
+  :ensure t)
+(setq dired-listing-switches "-lah --group-directories-first")
+(when (display-graphic-p)
+  (require 'all-the-icons))
+(use-package all-the-icons-dired
+  :hook (dired-mode . all-the-icons-dired-mode))
+
 ;; wgrep mode
 (use-package wgrep
   :ensure t)
@@ -277,20 +285,52 @@ into a comma-separated one-liner surrounded by QUOTE."
 (setq flycheck-shellcheck-follow-sources nil)
 (add-hook 'sh-mode-hook 'flycheck-mode)
 
-(use-package quelpa
-  :ensure t)
+(use-package lsp-mode
+  :ensure t
+  :init
+  (setq lsp-keymap-prefix "C-c l")
+  :hook ((latex-mode . lsp)
+         (bibtex-mode . lsp))
+  :commands lsp)
 
-(quelpa
- '(quelpa-use-package
-   :fetcher git
-   :url "https://github.com/quelpa/quelpa-use-package.git"))
-(require 'quelpa-use-package)
+(use-package lsp-ui
+  :commands lsp-ui-mode)
+(use-package lsp-latex
+	 :ensure t)
+(add-to-list 'load-path "~/Downloads")
+(setq lsp-latex-texlab-executable "~/Downloads/texlab")
+;;(with-eval-after-load "tex-mode"
+;; (add-hook 'tex-mode-hook 'lsp)
+;; (add-hook 'latex-mode-hook 'lsp))
 
-;; grammar and translation software
-(use-package reverso
-  :quelpa ((reverso :fetcher github :repo  "SqrtMinusOne/reverso.el")
-           :upgrade t)
-  )
+;; For bibtex
+(with-eval-after-load "bibtex"
+ (add-hook 'bibtex-mode-hook 'lsp))
+(use-package company
+  :after lsp-mode
+  :hook (lsp-mode . company-mode)
+  :config
+  (setq company-minimum-prefix-length 1)
+  (setq company-idle-delay 0.0)) ;; Default is 0.2
+
+(use-package languagetool
+  :ensure t
+  :defer t
+  :commands (languagetool-check
+             languagetool-clear-suggestions
+             languagetool-correct-at-point
+             languagetool-correct-buffer
+             languagetool-set-language
+             languagetool-server-mode
+             languagetool-server-start
+             languagetool-server-stop)
+     :config
+  (setq languagetool-java-bin "/usr/bin/java"
+        languagetool-server-command "/snap/languagetool/current/usr/bin/languagetool-server.jar"
+       languagetool-console-command "/snap/languagetool/current/usr/bin/languagetool-commandline.jar"
+        languagetool-java-arguments '("-Dfile.encoding=UTF-8")
+	)
+)
 
 (load-file "~/configs/emacs/.orgconfigs.el")
 
@@ -306,11 +346,13 @@ into a comma-separated one-liner surrounded by QUOTE."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
+ '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(ox-reveal org-ref oer-reveal camcorder gif-screencast org-roam biblio yasnippet wttrin wgrep toggle-quotes string-inflection stan-mode sqlup-mode smartscan sed-mode reverso quelpa-use-package poly-R pkg-info ov org-journal leuven-theme json-mode jinja2-mode helm hackernews forge flycheck ess elfeed docker-compose-mode docker auto-package-update auctex ansible all-the-icons-dired)))
+   '(org-bullets company lsp-ui lsp-latex dired-single lsp-mode languagetool ox-reveal org-ref oer-reveal camcorder gif-screencast org-roam biblio yasnippet wttrin wgrep toggle-quotes string-inflection stan-mode sqlup-mode smartscan sed-mode reverso quelpa-use-package poly-R pkg-info ov org-journal leuven-theme json-mode jinja2-mode helm hackernews forge flycheck ess elfeed docker-compose-mode docker auto-package-update auctex ansible all-the-icons-dired)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "Ubuntu Mono" :foundry "DAMA" :slant normal :weight regular :height 158 :width normal)))))

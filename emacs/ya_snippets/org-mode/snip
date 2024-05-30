@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Insert code snippet
+# key: snip
+# --
+#+begin_src ${1:sql} :eval no
