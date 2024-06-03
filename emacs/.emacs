@@ -90,6 +90,15 @@
    )
  )
 
+
+(setq erc-server "irc.libera.chat"
+      erc-nick "texhewson"
+      erc-user-full-name "Paul Hewson"
+      erc-track-shorten-start 8
+      erc-autojoin-channels-alist '(("irc.libera.chat" "#systemcrafters" "#emacs"))
+      erc-kill-buffer-on-part t
+            erc-auto-query 'bury)
+
 ;; I forgot why I wrote this, turns a column of data into a comma separated
 ;;list for use in R?
 (defun arrayify (start end quote)
@@ -246,6 +255,16 @@ into a comma-separated one-liner surrounded by QUOTE."
   :ensure t)
 (setq auto-mode-alist (append '(("\\.tex\\'" . LaTeX-mode)) auto-mode-alist))
 
+(use-package projectile
+  :diminish projectile-mode
+  :config (projectile-mode)
+  :bind-keymap
+  ("C-c p" . projectile-command-map)
+  :init
+  (when (file-directory-p "~/Documents")
+    (setq projectile-project-search-path '("~/Documents")))
+  (setq projectile-switch-project-action #'projectile-dired))
+
 
 ;; yasnippet
 (use-package yasnippet
@@ -349,7 +368,7 @@ into a comma-separated one-liner surrounded by QUOTE."
  '(column-number-mode t)
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(org-bullets company lsp-ui lsp-latex dired-single lsp-mode languagetool ox-reveal org-ref oer-reveal camcorder gif-screencast org-roam biblio yasnippet wttrin wgrep toggle-quotes string-inflection stan-mode sqlup-mode smartscan sed-mode reverso quelpa-use-package poly-R pkg-info ov org-journal leuven-theme json-mode jinja2-mode helm hackernews forge flycheck ess elfeed docker-compose-mode docker auto-package-update auctex ansible all-the-icons-dired)))
+   '(projectile org-bullets company lsp-ui lsp-latex dired-single lsp-mode languagetool ox-reveal org-ref oer-reveal camcorder gif-screencast org-roam biblio yasnippet wttrin wgrep toggle-quotes string-inflection stan-mode sqlup-mode smartscan sed-mode reverso quelpa-use-package poly-R pkg-info ov org-journal leuven-theme json-mode jinja2-mode helm hackernews forge flycheck ess elfeed docker-compose-mode docker auto-package-update auctex ansible all-the-icons-dired)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

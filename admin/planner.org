@@ -11,6 +11,8 @@ CLOCK: [2024-05-14 Tue 13:34]--[2024-05-14 Tue 15:24] =>  1:50
 :END:
 ** AI errors
 :LOGBOOK:
+CLOCK: [2024-05-31 Fri 07:47]--[2024-05-31 Fri 16:31] =>  8:44
+CLOCK: [2024-05-30 Thu 16:17]--[2024-05-30 Thu 17:46] =>  1:29
 CLOCK: [2024-05-30 Thu 8:47]--[2024-05-30 Thu 11:00] =>  2:13
 CLOCK: [2024-05-29 Wed 11:08]--[2024-05-29 Wed 14:34] =>  3:26
 CLOCK: [2024-05-29 Wed 09:57]--[2024-05-29 Wed 10:29] =>  0:32
@@ -79,6 +81,11 @@ CLOCK: [2024-04-17 Wed 14:38]--[2024-04-17 Wed 14:54] =>  0:16
 - 503 git errors, google suggest something to do with VPNs
 - Readcube integration - lots of concern that they aren't very good at LaTeX
 
+** PDF viewer controls
+:LOGBOOK:
+CLOCK: [2024-06-03 Mon 10:57]
+:END:
+
 
 ** Writeful prompts
 :LOGBOOK:
@@ -100,6 +107,10 @@ May 2023-2024 name = 'writefull-premium'
 #+end_src
 
 ** One to ones/skip meetings
+:LOGBOOK:
+CLOCK: [2024-06-03 Mon 09:56]--[2024-06-03 Mon 10:57] =>  1:01
+:END:
+
 
 ** Email sunk time
 :LOGBOOK:
