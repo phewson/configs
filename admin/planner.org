@@ -2,7 +2,6 @@
 #+TITLE: Work planning
 #+EMAIL: paul.hewson@overleaf.com
 
-(font-family-list)
 
 * Core
 ** Track changes

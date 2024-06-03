@@ -2,6 +2,25 @@
 ;;; Commentary:
 ;;; Code:
 
+;; This is meant to be an accessible theme, but, ouch.
+(load-theme 'modus-operandi t)
+
+
+;; Remember and restore the last cursor location of opened files
+(save-place-mode 1)
+
+(setq custom-file (locate-user-emacs-file "~/configs/emacs/.custom-vars.el"))
+(load custom-file 'noerror 'nomessage)
+
+;; Don't pop up UI dialogs when prompting
+(setq use-dialog-box nil)
+
+;; Revert buffers when the underlying file has changed
+(global-auto-revert-mode 1)
+
+;; Revert Dired and other buffers
+(setq global-auto-revert-non-file-buffers t)
+
 ;; set various environmental variables
 ;;(setenv "TEST_DATA_HOME" "/home/phewson/analytics-queries/ci/tests/sim_data")
 ;;(setenv "HOME" "~/")
@@ -169,10 +188,7 @@ into a comma-separated one-liner surrounded by QUOTE."
 ;;(add-to-list 'load-path "~/.emacs.d/elpa/emacs-reveal")
 ;;(require 'emacs-reveal)
 ;;(require 'org-re-reveal)
-(require 'ox-reveal)
-
-(use-package camcorder
-  :ensure t)
+;;(require 'ox-reveal)
 
 (use-package docker
   :ensure t)
@@ -212,7 +228,7 @@ into a comma-separated one-liner surrounded by QUOTE."
   (require 'all-the-icons))
 (use-package all-the-icons-dired
   :hook (dired-mode . all-the-icons-dired-mode))
-
+;; M-x all-the-icons-install-fonts
 ;; wgrep mode
 (use-package wgrep
   :ensure t)
@@ -317,6 +333,8 @@ into a comma-separated one-liner surrounded by QUOTE."
 (use-package lsp-latex
 	 :ensure t)
 (add-to-list 'load-path "~/Downloads")
+;;; wget https://github.com/latex-lsp/texlab/releases/download/v5.16.1/texlab-x86_64-linux.tar.gz in Downloads (need to change the location)
+;; tar -xvf texlab-x86_64-linux.tar.gz 
 (setq lsp-latex-texlab-executable "~/Downloads/texlab")
 ;;(with-eval-after-load "tex-mode"
 ;; (add-hook 'tex-mode-hook 'lsp)
@@ -351,6 +369,16 @@ into a comma-separated one-liner surrounded by QUOTE."
 	)
 )
 
+(use-package vertico
+  :init
+  (vertico-mode))
+
+(use-package marginalia
+:after vertico
+:ensure t
+:init;;
+(marginalia-mode))
+
 (load-file "~/configs/emacs/.orgconfigs.el")
 
 (use-package biblio
@@ -359,19 +387,6 @@ into a comma-separated one-liner surrounded by QUOTE."
 ;;https://github.com/pprevos/emacs-writing-studio
 (provide '.emacs)
 ;;; .emacs ends here
+ ;; If there is more than one, they won't work right.
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(column-number-mode t)
- '(global-display-line-numbers-mode t)
- '(package-selected-packages
-   '(projectile org-bullets company lsp-ui lsp-latex dired-single lsp-mode languagetool ox-reveal org-ref oer-reveal camcorder gif-screencast org-roam biblio yasnippet wttrin wgrep toggle-quotes string-inflection stan-mode sqlup-mode smartscan sed-mode reverso quelpa-use-package poly-R pkg-info ov org-journal leuven-theme json-mode jinja2-mode helm hackernews forge flycheck ess elfeed docker-compose-mode docker auto-package-update auctex ansible all-the-icons-dired)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "Ubuntu Mono" :foundry "DAMA" :slant normal :weight regular :height 158 :width normal)))))
+;; (update emacs)
