@@ -1,4 +1,4 @@
-
+#+FILETAGS: REFILE
 *  :NOTE:
 :LOGBOOK:
 CLOCK: [2024-04-18 Thu 16:48]--[2024-04-18 Thu 16:48] =>  0:00
@@ -6,8 +6,3 @@ CLOCK: [2024-04-18 Thu 16:48]--[2024-04-18 Thu 16:48] =>  0:00
 [2024-04-18 Thu 16:48]
 [[file:~/configs/admin/planner.org::*Meetings][Meetings]]
 Data is an artefact of the human experience
-* TODO Why can't i install reveal.js and what is xaringan
-:LOGBOOK:
-CLOCK: [2024-05-03 Fri 09:53]--[2024-05-03 Fri 09:54] =>  0:01
-:END:
-[2024-05-03 Fri 09:53]

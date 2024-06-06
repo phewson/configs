@@ -5,7 +5,6 @@
 ;; This is meant to be an accessible theme, but, ouch.
 (load-theme 'modus-operandi t)
 
-
 ;; Remember and restore the last cursor location of opened files
 (save-place-mode 1)
 
@@ -324,10 +323,14 @@ into a comma-separated one-liner surrounded by QUOTE."
   :ensure t
   :init
   (setq lsp-keymap-prefix "C-c l")
+  :commands (lsp lsp-deferred)
   :hook ((latex-mode . lsp)
-         (bibtex-mode . lsp))
-  :commands lsp)
-
+         (bibtex-mode . lsp)
+	 (python-mode lsp))
+  )
+;; auto-installs lsp-ui
+;; need to run pip install python-language-server[all].to get a python lsp.
+;;need to check out conda for this.
 (use-package lsp-ui
   :commands lsp-ui-mode)
 (use-package lsp-latex
@@ -349,6 +352,14 @@ into a comma-separated one-liner surrounded by QUOTE."
   :config
   (setq company-minimum-prefix-length 1)
   (setq company-idle-delay 0.0)) ;; Default is 0.2
+
+
+(use-package which-key
+  :init (which-key-mode)
+  :diminish which-key-mode
+  :config
+  (setq which-key-idle-delay 0.3))
+
 
 (use-package languagetool
   :ensure t
@@ -381,8 +392,29 @@ into a comma-separated one-liner surrounded by QUOTE."
 
 (load-file "~/configs/emacs/.orgconfigs.el")
 
-(use-package biblio
+(use-package counsel
+     :ensure t)
+
+(use-package ivy-rich
+  :init (ivy-rich-mode 1)
+)
+
+(use-package academic-phrases
   :ensure t)
+
+(use-package citar
+  :custom
+  (citar-bibliography '("~/configs/admin/papers/regression.bib"))
+  :hook (org-mode . citar-capf-setup)
+)
+
+(use-package citar-org-roam
+  :after (citar org-roam)
+  :config (citar-org-roam-mode))
+
+
+;;(use-package biblio
+;;  :ensure t)
 ;;https://lucidmanager.org/productivity/emacs-bibtex-mode/
 ;;https://github.com/pprevos/emacs-writing-studio
 (provide '.emacs)

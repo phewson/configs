@@ -1,9 +1,20 @@
-;; org mode
-;;(make-frame-command)
-;;(split-window-below)
-;;(split-window-right)
-;;(other-window 2)
-;;(split-window-right)
+;;; org-configs --- Summary
+;;; Commentary:
+;;; These are my org configs
+;;; Code:
+
+(use-package org
+  :ensure t
+  :hook (org-mode . dw/org-mode-setup)
+  :config
+  (setq org-ellipsis " ▾"
+        org-hide-emphasis-markers t))
+
+(defun dw/org-mode-setup ()
+  (org-indent-mode)
+  (variable-pitch-mode 1)
+  (auto-fill-mode 0)
+  (visual-line-mode 1))
 
 ;; I only use org mode on .org files
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
@@ -15,43 +26,42 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 
 ;; These are the files that can contribute to the agenda
+;;(defvar org-agenda-files);; this line added so emacs knows the next variable exists.
 (setq org-agenda-files (list "~/configs/admin/planner.org"
                              "~/configs/admin/schedule.org"
-                             "~/configs/admin/github_projects.org"
-                             "~/configs/admin/asana.org"))
+                             "~/configs/admin/github_projects.org"))
 
 (use-package org-roam
   :ensure t
+  :after org
   :custom
   (org-roam-directory "~/configs/admin/org_roam/")
   (org-roam-completion-everywhere t)
   :bind (("C-c n l" . org-roam-buffer-toggle)
-	 ("C-c n f" . org-roam-node-find)
-	 ("C-c n i" . org-roam-node-insert)
-	 :map org-mode-map
-	 ("C-M-i" . completion-at-point))
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n i" . org-roam-node-insert))
+  :bind (:map org-mode-map
+              ("C-M-i" . completion-at-point))
   :config
-  (org-roam-setup)
-  )
+  (org-roam-setup))
 
-
+(defvar org-agenda-time-grid)
 (setq org-agenda-time-grid (quote
                              ((daily today remove-match)
                               (0900 1100 1300 1500 1700)
                               "......" "----------------")))
 
-
+(defvar org-export-with-properties)
 (setq org-export-with-properties '("EFFORT"))
 
 
 ;;(setq org-default-notes-file (list "~/configs/admin/notes.org"))
 
-(setq asana-tasks-org-file "~/configs/admin/asana.org")
-
 ;;(setq org-duration-format (quote h:mm))
 ;;(setq org-clock-persist 'history)
 ;;(org-clock-persistence-insinuate)
 
+(defvar org-replace-disputed-keys)
 (setq org-replace-disputed_keys t)
 ;; Make windmove work in Org mode:
 (add-hook 'org-shiftup-final-hook 'windmove-up)
@@ -93,6 +103,7 @@
 
 ;; Capture templates for: TODO tasks, Notes,
 ;; appointments, phone calls, meetings, and org-protocol
+(defvar org-capture-templates)
 (setq org-capture-templates
       (quote (("t" "todo" entry (file "~/configs/admin/refile.org")
                "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
@@ -114,16 +125,20 @@
 
 
 ; Targets include this file and any file contributing to the agenda - up to 9 levels deep
+(defvar org-refile-targets)
 (setq org-refile-targets (quote ((nil :maxlevel . 9)
                                  (org-agenda-files :maxlevel . 9))))
 
 ; Use full outline paths for refile targets - we file directly with IDO
+(defvar org-refile-use-outline-path)
 (setq org-refile-use-outline-path t)
 
 ; Allow refile to create parent tasks with confirmation
+(defvar org-refile-allow-creating-parent-nodes)
 (setq org-refile-allow-creating-parent-nodes (quote confirm))
 
 
+(defvar org-babel-python-command)
 (setq org-babel-python-command "python3")
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -132,6 +147,7 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((ditaa . t))) ; this line activates ditaa
+(defvar org-ditaa-jar-path)
 (setq org-ditaa-jar-path "~/configs/admin/ditaa0_9.jar")
 
 (org-babel-do-load-languages
@@ -140,34 +156,8 @@
 
 
 (define-key global-map "\C-ca" 'org-agenda)
+(defvar org-agenda-show-all-dates)
 (setq org-agenda-show-all-dates nil)
-
-(use-package org-journal
-  :ensure t)
-(setq org-journal-file-type 'monthly)
-(defun org-journal-file-header-func (time)
-  "Custom function to create journal header."
-  (concat
-    (pcase org-journal-file-type
-      (`daily "#+TITLE: Daily Journal\n#+STARTUP: showeverything")
-      (`weekly "#+TITLE: Weekly Journal\n#+STARTUP: folded")
-      (`monthly "#+TITLE: Monthly Journal\n#+STARTUP: folded")
-      (`yearly "#+TITLE: Yearly Journal\n#+STARTUP: folded"))))
-
-(setq org-journal-file-header 'org-journal-file-header-func)
-
-
-(defun dw/org-mode-setup ()
-  (org-indent-mode)
-  (variable-pitch-mode 1)
-  (auto-fill-mode 0)
-  (visual-line-mode 1))
-
-(use-package org
-  :hook (org-mode . dw/org-mode-setup)
-  :config
-  (setq org-ellipsis " ▾"
-        org-hide-emphasis-markers t))
 
 (use-package org-bullets
   :after org
@@ -198,12 +188,16 @@
                     :height 120) ;; Adjust font fa
 
 ;; Ensure that anything that should be fixed-pitch in Org files appears that way
+(with-eval-after-load 'org
 (set-face-attribute 'org-table nil :inherit 'fixed-pitch)
-(set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
+(set-face-attribute 'org-block nil :foreground 'unspecified :inherit 'fixed-pitch)
 (set-face-attribute 'org-code nil   :inherit '(shadow fixed-pitch))
 (set-face-attribute 'org-indent nil :inherit '(org-hide fixed-pitch))
 (set-face-attribute 'org-verbatim nil :inherit '(shadow fixed-pitch))
 (set-face-attribute 'org-special-keyword nil :inherit '(font-lock-comment-face fixed-pitch))
 (set-face-attribute 'org-meta-line nil :inherit '(font-lock-comment-face fixed-pitch))
 (set-face-attribute 'org-checkbox nil :inherit 'fixed-pitch)
+)
 
+(provide '.orgconfigs)
+;;; .orgconfigs.el ends here

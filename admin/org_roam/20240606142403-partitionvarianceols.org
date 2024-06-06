@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       998c5142-6b32-490a-824e-72793914eea8
+:END:
+#+title: PartitionVarianceOLS
+* Partitioning Variance
+
+** [cite:@mood:1971]
+- Page 193 "We can be reasonably certain that the figure of 60% overstates the dependence of A on x (A is the dependent variable).
+- "Thus there are a great many other indicators of the X's that might have been included ... and the included x's are serving not only measure themselves but also act as partial proxies for all those other x's that might have been included"
+- Then also our original set of X's may have been incomplete
+- Then, too, least squares picks up various random fluctuations in the right direction to help out the x's and gives the x's credit for those.
+
+ I don't think he really develops the maths.
