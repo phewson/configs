@@ -2,6 +2,7 @@
 :ID:       02a55b93-e4cc-44e7-80cc-fc717766ffa8
 :END:
 #+title: NTS2019
+
 I think I used too much camel case
 I need to get an update, do I want to use EUL still?
 

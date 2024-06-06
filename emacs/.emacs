@@ -395,9 +395,17 @@ into a comma-separated one-liner surrounded by QUOTE."
 (use-package counsel
      :ensure t)
 
+(use-package all-the-icons-ivy-rich
+  :ensure t
+  :init (all-the-icons-ivy-rich-mode 1))
+;;(setq all-the-icons-ivy-rich-icon t)
+
 (use-package ivy-rich
   :init (ivy-rich-mode 1)
 )
+
+(ivy-mode 1)
+(counsel-mode 1)
 
 (use-package academic-phrases
   :ensure t)

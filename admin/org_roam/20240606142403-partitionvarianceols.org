@@ -2,6 +2,7 @@
 :ID:       998c5142-6b32-490a-824e-72793914eea8
 :END:
 #+title: PartitionVarianceOLS
+#+filetags: :CorrelatedPredictors:
 * Partitioning Variance
 
 ** [cite:@mood:1971]
@@ -11,3 +12,11 @@
 - Then, too, least squares picks up various random fluctuations in the right direction to help out the x's and gives the x's credit for those.
 
  I don't think he really develops the maths.
+
+** [cite:@Newton+Spurrel:1967]
+- This is their follow up paper, giving more examples that demonstrated they were on to something
+** [cite:@hardin:2016]
+- Dr. Hoaglin advocates the phrase “adjusting for” instead of “controlling for” whenidentifying concomitant covariates in discussion of the interpretation of a particularcovariate of interest.
+- 1) added-variable plots; 2) examination of coefficients in multivariate normal distributions and the geometry of leastsquares; and 3) proper application of multivariable models requires caution in calculating predictions that average over other variables
+- "In section 4, Dr. Hoaglin cautions against the “holding other covariates constant”phrase when interpreting a coefficient associated with a variable that enters the model in multiple ways either as part of an interaction or in an additional function form as is the case in polynomial models. All authors (of texts to which I had access in mybookshelf) go to great lengths to cover interpretation in such models, and none of them advocate using this phrase in those instances."
+-  At worst, “held constant” is a placeholder with which we have become a little too comfortable. That phrase is a nod toward the fitted model and the model’s underlying assumptions. 
