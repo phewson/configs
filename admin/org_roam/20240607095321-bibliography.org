@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       66eea19c-325d-4fd4-b00e-f224ad36af0b
+:END:
+#+title: Bibliography
+
+* Some notes on Bibliography management
+
+- [[https://lucidmanager.org/productivity/emacs-bibtex-mode/][Emacs writing studio]]
+- [[https://digital-science.slack.com/archives/D02KQLKDQ4T/p1717688536761439][Org mode citation features]]
