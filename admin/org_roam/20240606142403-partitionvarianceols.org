@@ -20,3 +20,8 @@
 - 1) added-variable plots; 2) examination of coefficients in multivariate normal distributions and the geometry of leastsquares; and 3) proper application of multivariable models requires caution in calculating predictions that average over other variables
 - "In section 4, Dr. Hoaglin cautions against the “holding other covariates constant”phrase when interpreting a coefficient associated with a variable that enters the model in multiple ways either as part of an interaction or in an additional function form as is the case in polynomial models. All authors (of texts to which I had access in mybookshelf) go to great lengths to cover interpretation in such models, and none of them advocate using this phrase in those instances."
 -  At worst, “held constant” is a placeholder with which we have become a little too comfortable. That phrase is a nod toward the fitted model and the model’s underlying assumptions. 
+
+Michael Zyphur = University of Queensland and Instats
+States we only care about regression when the predictors are correlated
+
+But "in the presence of multicollinearity, it becomes challenging to determine the individual effect of each predictor variable on the dependent variable.

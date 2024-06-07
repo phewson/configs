@@ -90,6 +90,7 @@ CLOCK: [2024-06-06 Thu 10:21]--[2024-06-06 Thu 10:24] =>  0:03
 ** Uni Toronto
 SCHEDULED: <2024-06-06 Thu>
 :LOGBOOK:
+CLOCK: [2024-06-07 Fri 07:47]--[2024-06-07 Fri 17:56] => 10:09
 CLOCK: [2024-06-06 Thu 15:53]--[2024-06-06 Thu 17:48] =>  1:55
 CLOCK: [2024-06-06 Thu 11:59]--[2024-06-06 Thu 14:56] =>  2:57
 CLOCK: [2024-06-06 Thu 10:24]--[2024-06-06 Thu 11:58] =>  1:34
@@ -189,6 +190,8 @@ CLOCK: [2024-04-18 Thu 12:48]--[2024-04-18 Thu 16:48] =>  4:00
 - manim -pql scene.py CreateCircle
 
 
+
+
 ** READY Concept tests in statistics
 - State "READY"      from              [2024-04-17 Wed 13:21]
 - [ ] Expand question bank
@@ -234,7 +237,22 @@ BATS_RUN_SKIPPED=true bats test-raindrops.batss
 - [ ] Line 33 of doc-settings.sty \captionsetup*{labelformat=simple}
 
 * Emacs
+** WAIT Git cloning blog
+#+begin_src bash :eval no
+  git submodule sync
+  git submodule update --init --recursive
 
+  cd public
+  git fetch --all
+  cd ..
+  
+  cd public
+  git checkout 21c85a84c7c3c82d58994c86f5e55935112ac4a8
+#+end_src
+
+I think that last git checkout 21etc. was part of the fix. I don't think I've captured the whole fix.
+
+- State "WAIT"       from              [2024-06-07 Fri 09:51]
 ** DONE Compile from source (treesitter) [0/1]
 - State "WAIT"       from              [2024-04-17 Wed 12:00]
 - [X] Configure compile options ./configure --with-cairo --with-xwidgets --with-x-toolkit=gtk3 --with-tree-sitter --with-json
