@@ -5,7 +5,7 @@
 #+filetags: :CorrelatedPredictors:
 * Partitioning Variance
 
-** [cite:@mood:1971]
+** [cite:&mood:1971]
 - Page 193 "We can be reasonably certain that the figure of 60% overstates the dependence of A on x (A is the dependent variable).
 - "Thus there are a great many other indicators of the X's that might have been included ... and the included x's are serving not only measure themselves but also act as partial proxies for all those other x's that might have been included"
 - Then also our original set of X's may have been incomplete
@@ -13,9 +13,9 @@
 
  I don't think he really develops the maths.
 
-** [cite:@Newton+Spurrel:1967]
+** [cite:&newton+Spurrel:1967]
 - This is their follow up paper, giving more examples that demonstrated they were on to something
-** [cite:@hardin:2016]
+** [cite:&hardin:2016]
 - Dr. Hoaglin advocates the phrase “adjusting for” instead of “controlling for” whenidentifying concomitant covariates in discussion of the interpretation of a particularcovariate of interest.
 - 1) added-variable plots; 2) examination of coefficients in multivariate normal distributions and the geometry of leastsquares; and 3) proper application of multivariable models requires caution in calculating predictions that average over other variables
 - "In section 4, Dr. Hoaglin cautions against the “holding other covariates constant”phrase when interpreting a coefficient associated with a variable that enters the model in multiple ways either as part of an interaction or in an additional function form as is the case in polynomial models. All authors (of texts to which I had access in mybookshelf) go to great lengths to cover interpretation in such models, and none of them advocate using this phrase in those instances."
@@ -25,3 +25,20 @@ Michael Zyphur = University of Queensland and Instats
 States we only care about regression when the predictors are correlated
 
 But "in the presence of multicollinearity, it becomes challenging to determine the individual effect of each predictor variable on the dependent variable.
+** [[cite:&mead71_note_use_misus_regres_model_ecolog]]
+Make the following points
+riables.' No such rule exists and, contrary to the belief
+research workers in biological fields, multiple regression is a perfectly va
+when the independent variables are correlated. The effect of such correlation
+the multiple regression less efficient in the sense that standard errors of the
+regression coefficients will, in general, be larger than with uncorrelated
+variables. In either case the estimated regression coefficients give unbiased esti
+true coefficients. If the independent variables are completely independen
+efficients in a multiple regression will be identical with those calculated f
+simple linear regressions of Y on each X in turn. When the independent
+correlated this is no longer so, but the interpretation of each regression coef
+multiple regression is unchanged: the coefficient of X1 estimates the ef
+increasing X1 by one unit, if the values of all other X's are held constant. It
+argued that the term 'independent variable' is an unfortunate one but, s
+widely used, it would seem more reasonable to attempt to correct misunderst
+the assumptions made than to change th

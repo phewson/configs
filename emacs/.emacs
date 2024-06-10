@@ -220,13 +220,18 @@ into a comma-separated one-liner surrounded by QUOTE."
           (function (lambda()
                       (whitespace-mode t))))
 
-(use-package dired-single
-  :ensure t)
+;;THis never seemed to work?
+;;(use-package dired-single
+;;  :ensure t)
+(setf dired-kill-when-opening-new-dired-buffer t)
+
 (setq dired-listing-switches "-lah --group-directories-first")
 (when (display-graphic-p)
   (require 'all-the-icons))
 (use-package all-the-icons-dired
-  :hook (dired-mode . all-the-icons-dired-mode))
+  :hook (dired-mode . all-the-icons-dired-mode)
+  :config (setq all-the-icons-dired-monochrome nil)
+  )
 ;; M-x all-the-icons-install-fonts
 ;; wgrep mode
 (use-package wgrep
@@ -352,7 +357,9 @@ into a comma-separated one-liner surrounded by QUOTE."
   :config
   (setq company-minimum-prefix-length 1)
   (setq company-idle-delay 0.0)) ;; Default is 0.2
-
+;; Configure texlab settings
+(setq lsp-texlab-diagnostics-ignore-lists
+      '((texlab "unused_entry")))
 
 (use-package which-key
   :init (which-key-mode)
@@ -409,6 +416,19 @@ into a comma-separated one-liner surrounded by QUOTE."
 
 (use-package academic-phrases
   :ensure t)
+
+
+; Enable command logging
+(setq message-log-max t)
+
+;; Function to print a message to *Messages*
+(defun my-echo-command (command)
+  (message "Command executed: %s" command))
+
+;; Hook into the post-command-hook to log every command
+(add-hook 'post-command-hook
+          (lambda ()
+            (my-echo-command this-command)))
 
 (use-package citar
   :custom

@@ -199,5 +199,45 @@
 (set-face-attribute 'org-checkbox nil :inherit 'fixed-pitch)
 )
 
+
+(use-package org-ref
+  :ensure t
+  :init
+  (setq reftex-default-bibliography '("~/configs/admin/papers/regression.bib"))
+  (setq org-ref-bibliography-notes "~/configs/admin/notes.org"
+        org-ref-default-bibliography '("~/configs/admin/papers/regression.bib")
+        org-ref-pdf-directory "~/Documents/papers"
+	org-ref-bibtex-pdf-download-dir "~/Documents/papers")
+  :config
+  (require 'org-ref)
+  (setq org-ref-completion-library 'org-ref-ivy-cite))
+
+(setq bibtex-completion-pdf-open-function 'org-open-file)
+
+;; Install and configure ivy-bibtex
+(use-package ivy-bibtex
+  :ensure t
+  :bind ("C-c b" . ivy-bibtex)
+  :init
+  (setq bibtex-completion-bibliography '("~/configs/admin/papers/regression.bib")
+        bibtex-completion-library-path "~/Documents/papers/"
+        bibtex-completion-notes-path "~/configs/admin/notes.org"
+        bibtex-completion-pdf-field "file")
+  :config
+  (setq ivy-bibtex-default-action 'ivy-bibtex-insert-citation
+        ivy-bibtex-quick-add-keys t))
+
+(use-package pdf-tools
+  :ensure t)
+
+;; One candidate key binding
+;;(global-set-key (kbd "C-c r p") 'org-ref-pdf-to-bibtex)
+
+;; Optional: Configure additional settings for org-ref
+(setq org-ref-get-pdf-filename-function 'org-ref-get-pdf-filename-ivy-bibtex
+      org-ref-notes-function 'org-ref-notes-function-one-file)
+
+
+
 (provide '.orgconfigs)
 ;;; .orgconfigs.el ends here
