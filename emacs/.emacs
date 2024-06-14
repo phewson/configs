@@ -233,6 +233,54 @@ into a comma-separated one-liner surrounded by QUOTE."
   :config (setq all-the-icons-dired-monochrome nil)
   )
 ;; M-x all-the-icons-install-fonts
+
+(use-package powerline
+  :ensure t)
+(defun my-powerline-setup ()
+  (interactive)
+  (setq-default mode-line-format
+                '("%e"
+                  (:eval
+                   (let* ((active (powerline-selected-window-active))
+                          (mode-line (if active 'mode-line 'mode-line-inactive))
+                          (face1 (if active 'powerline-active1 'powerline-inactive1))
+                          (face2 (if active 'powerline-active2 'powerline-inactive2))
+                          (separator-left (intern (format "powerline-%s-%s"
+                                                          powerline-default-separator
+                                                          (car powerline-default-separator-dir))))
+                          (separator-right (intern (format "powerline-%s-%s"
+                                                           powerline-default-separator
+                                                           (cdr powerline-default-separator-dir))))
+                          (lhs (list (powerline-raw "%*" nil 'l)
+                                     (powerline-buffer-id nil 'l)
+                                     (powerline-raw " ")
+                                     (funcall separator-left mode-line face1)
+                                     (powerline-narrow face1 'l)
+                                     (powerline-vc face1)))
+                          (rhs (list (powerline-raw global-mode-string face1 'r)
+                                     (funcall separator-right face1 face2)
+                                     (powerline-raw "%4l" face2 'r)
+                                     (powerline-raw ":" face2 'r)
+                                     (powerline-raw "%3c" face2 'r)
+                                     (funcall separator-right face2 mode-line)
+                                     (powerline-raw " ")
+                                     (powerline-raw "%6p" nil 'r)
+                                     (powerline-hud face2 face1)))
+                          (center (list (powerline-raw " " face1)
+                                        (powerline-raw (all-the-icons-icon-for-buffer) face1 'l)
+                                        (powerline-major-mode face1 'l)
+                                        (powerline-process face1)
+                                        (powerline-minor-modes face1 'l)
+                                        (powerline-raw " " face1))))
+                     (concat (powerline-render lhs)
+                             (powerline-fill-center face1 (/ (powerline-width center) 2.0))
+                             (powerline-render center)
+                             (powerline-fill face1 (powerline-width rhs))
+                             (powerline-render rhs)))))))
+
+;; Apply custom powerline setup
+(my-powerline-setup)
+
 ;; wgrep mode
 (use-package wgrep
   :ensure t)
@@ -271,6 +319,10 @@ into a comma-separated one-liner surrounded by QUOTE."
   :ensure t
   :init (require 'ess-site))
 
+(use-package poly-R
+  :ensure t
+)
+
 (use-package auctex
   :ensure t)
 (setq auto-mode-alist (append '(("\\.tex\\'" . LaTeX-mode)) auto-mode-alist))
@@ -285,6 +337,24 @@ into a comma-separated one-liner surrounded by QUOTE."
     (setq projectile-project-search-path '("~/Documents")))
   (setq projectile-switch-project-action #'projectile-dired))
 
+
+
+;;(use-package counsel-projectile
+;; :after projectile
+;; :config
+;; (counsel-projectile-mode 1))
+
+
+;;  persp-switch command (C-x x s)
+;;persp-next (C-x x n or C-x x <right>): switch to the next perspective
+;;persp-prev (C-x x p or C-x x <left>): switch to the previous perspective
+(use-package perspective
+  :ensure t  ; use `:straight t` if using straight.el!
+  :bind (("C-x k" . persp-kill-buffer*))
+  :custom
+  (persp-mode-prefix-key (kbd "C-c M-p"))
+  :init (persp-mode)
+)
 
 ;; yasnippet
 (use-package yasnippet
@@ -417,8 +487,17 @@ into a comma-separated one-liner surrounded by QUOTE."
 (use-package academic-phrases
   :ensure t)
 
+(use-package rainbow-delimiters
+  :ensure t
+  :hook (prog-mode . rainbow-delimiters-mode)
+  )
 
-; Enable command logging
+;; I think this is useless
+;; requires manual source from emacs wiki
+;;(add-to-list 'load-path "~/.emacs.d/elpa/hl-line+")
+;;(require 'hl-line+)
+
+;; Enable command logging
 (setq message-log-max t)
 
 ;; Function to print a message to *Messages*
@@ -439,7 +518,6 @@ into a comma-separated one-liner surrounded by QUOTE."
 (use-package citar-org-roam
   :after (citar org-roam)
   :config (citar-org-roam-mode))
-
 
 ;;(use-package biblio
 ;;  :ensure t)

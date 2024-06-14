@@ -27,11 +27,14 @@ May 2023-2024 name = 'writefull-premium'
 
 ** Track changes
 :LOGBOOK:
+CLOCK: [2024-06-12 Wed 12:27]--[2024-06-12 Wed 13:30] =>  1:03
 CLOCK: [2024-06-03 Mon 17:39]--[2024-06-03 Mon 17:39] =>  0:00
 CLOCK: [2024-05-14 Tue 13:34]--[2024-05-14 Tue 15:24] =>  1:50
 :END:
 ** AI errors
 :LOGBOOK:
+CLOCK: [2024-06-12 Wed 15:56]--[2024-06-12 Wed 18:40] =>  2:44
+CLOCK: [2024-06-12 Wed 13:30]--[2024-06-12 Wed 14:31] =>  1:01
 CLOCK: [2024-06-04 Tue 08:18]--[2024-06-04 Tue 09:23] =>  1:05
 CLOCK: [2024-05-31 Fri 07:47]--[2024-05-31 Fri 16:31] =>  8:44
 CLOCK: [2024-05-30 Thu 16:17]--[2024-05-30 Thu 17:46] =>  1:29
@@ -49,6 +52,8 @@ CLOCK: [2024-05-16 Thu 08:30]--[2024-05-16 Thu 11:01] =>  2:31
 CLOCK: [2024-05-14 Tue 15:24]--[2024-05-14 Tue 18:18] =>  2:54
 :END:
 
+- Fake Door test (how many people are interesting in buying an AI feature)
+
 ** Cancellations
 :LOGBOOK:
 CLOCK: [2024-06-03 Mon 17:40]--[2024-06-03 Mon 17:40] =>  0:00
@@ -57,6 +62,8 @@ CLOCK: [2024-05-03 Fri 09:54]--[2024-05-03 Fri 16:47] =>  6:53
 CLOCK: [2024-05-03 Fri 08:51]--[2024-05-03 Fri 09:53] =>  1:02
 CLOCK: [2024-05-02 Thu 10:32]--[2024-05-02 Thu 11:06] =>  0:34
 :END:
+
+
 
 
 ** PDF viewer controls
@@ -91,6 +98,10 @@ CLOCK: [2024-06-06 Thu 10:21]--[2024-06-06 Thu 10:24] =>  0:03
 ** Uni Toronto
 SCHEDULED: <2024-06-06 Thu>
 :LOGBOOK:
+CLOCK: [2024-06-14 Fri 07:45]--[2024-06-14 Fri 17:07] =>  9:22
+CLOCK: [2024-06-13 Thu 07:41]--[2024-06-13 Thu 18:12] => 10:31
+CLOCK: [2024-06-12 Wed 08:36]--[2024-06-12 Wed 11:08] =>  2:32
+CLOCK: [2024-06-11 Tue 08:22]--[2024-06-11 Tue 16:22] =>  8:00
 CLOCK: [2024-06-10 Mon 16:01]--[2024-06-10 Mon 17:27] =>  1:26
 CLOCK: [2024-06-10 Mon 0:49]--[2024-06-10 Mon 11:06] => 10:17
 CLOCK: [2024-06-07 Fri 07:47]--[2024-06-07 Fri 17:56] => 10:09
@@ -101,15 +112,116 @@ CLOCK: [2024-06-06 Thu 08:58]--[2024-06-06 Thu 10:21] =>  1:23
 :END:
 - Number of collaborators / number of projects
 
+So, I can run this query and get in the ballpark
+
+#+begin_src sql :eval no
+WITH edited_projects AS (
+  SELECT MIN(started_at) AS start_date, SUM(EXTRACT(DAY FROM duration) * 24 + EXTRACT(HOUR FROM duration) + EXTRACT(MINUTE FROM duration) / 60 + EXTRACT(SECOND FROM duration) / 3600) AS editing_time, project_id, user_id
+  FROM analytics.editing_sessions
+  WHERE started_at >= '2024-06-13' AND started_at < '2024-06-14'
+  GROUP BY project_id, user_id
+ ),
+ current_toronto_affiliate AS (
+   SELECT DISTINCT user_id
+    FROM `analytics.affiliation_episodes`
+    WHERE name = 'University of Toronto' AND episode_to IS NULL
+ )
+SELECT COUNT(DISTINCT project_id) AS n_projects, COUNT(DISTINCT user_id) AS n_users
+FROM edited_projects
+WHERE user_id in (SELECT user_id FROM current_toronto_affiliate)
+#+end_src
+
+I can change the dates and get plausibly close to what we see here: [[https://www.overleaf.com/institutions/944/hub][v1 metrics]]
+
+I can't match the collaborations.
+
+#+begin_src sql :eval no
+WITH edited_projects AS (
+  SELECT MIN(started_at) AS start_date, SUM(EXTRACT(DAY FROM duration) * 24 + EXTRACT(HOUR FROM duration) + EXTRACT(MINUTE FROM duration) / 60 + EXTRACT(SECOND FROM duration) / 3600) AS editing_time, project_id, user_id
+  FROM analytics.editing_sessions
+  WHERE started_at >= '2023-01-01' AND started_at < '2024-01-01'
+  GROUP BY project_id, user_id
+ ),
+ current_toronto_affiliate AS (
+   SELECT DISTINCT user_id
+    FROM `analytics.affiliation_episodes`
+    WHERE name = 'University of Toronto' AND episode_to IS NULL
+ ),
+ toronto_user_projects AS (
+  SELECT DISTINCT project_id, owner_id, collab_id as user_id, collab_type, 'toronto_owner' AS owner
+  FROM (
+    SELECT id AS project_id, owner_id, collab_id, 'rw' AS collab_type
+    FROM `analytics.raw_projects`, UNNEST(readwrite_user_ids) AS collab_id
+    UNION ALL
+    SELECT id AS project_id, owner_id, collab_id, 'ls_rw' AS collab_type
+    FROM `analytics.raw_projects`, UNNEST(link_sharing_readwrite_user_ids) AS collab_id
+    WHERE owner_id IN (SELECT user_id FROM current_toronto_affiliate)
+  )
+  ),
+ toronto_collab_projects AS (
+  SELECT DISTINCT project_id, owner_id AS user_id, collab_type, 'toronto_collab' AS owner
+  FROM (
+    SELECT id AS project_id, owner_id, collab_id, 'rw' AS collab_type
+    FROM `analytics.raw_projects`, UNNEST(readwrite_user_ids) AS collab_id
+    UNION ALL
+    SELECT id AS project_id, owner_id, collab_id, 'ls_rw' AS collab_type
+    FROM `analytics.raw_projects`, UNNEST(link_sharing_readwrite_user_ids) AS collab_id
+    WHERE collab_id IN (SELECT user_id FROM current_toronto_affiliate)
+  )
+  )
+SELECT name, country_code, collab_type, owner, COUNT(DISTINCT project_id) AS n_projects, COUNT(DISTINCT user_id) AS n_users, SUM(editing_time) AS editing_time_hours
+FROM (SELECT project_id, user_id, collab_type, owner FROM toronto_user_projects UNION ALL SELECT project_id, user_id, collab_type, owner FROM toronto_collab_projects) p
+INNER JOIN edited_projects
+USING(user_id, project_id)
+LEFT JOIN (SELECT user_id, name FROM analytics.affiliation_episodes WHERE episode_to IS NULL)
+USING(user_id)
+LEFT JOIN analytics.current_universities
+USING(name)
+WHERE owner = 'toronto_owner'
+GROUP BY name, country_code, collab_type, owner
+ORDER BY n_users DESC
+#+end_src
+
+
+This is much closer to a match
+
+#+begin_src sql :eval no
+WITH  current_toronto_affiliate AS (
+   SELECT DISTINCT user_id
+    FROM `analytics.affiliation_episodes`
+    WHERE name = 'University of Toronto' AND episode_to IS NULL
+ ),
+edited_projects AS (
+  SELECT MIN(started_at) AS start_date, SUM(EXTRACT(DAY FROM duration) * 24 + EXTRACT(HOUR FROM duration) + EXTRACT(MINUTE FROM duration) / 60 + EXTRACT(SECOND FROM duration) / 3600) AS editing_time, project_id, s.user_id
+  FROM analytics.editing_sessions s
+  WHERE started_at >= '2024-05-01' AND started_at < '2024-06-01'
+  GROUP BY project_id, user_id
+  HAVING editing_time > 0
+ ),
+
+ toronto_user_projects AS (
+  SELECT DISTINCT project_id
+  FROM edited_projects
+  WHERE user_id in (SELECT user_id FROM current_toronto_affiliate)
+  )
+SELECT names[0], country_code, COUNT(DISTINCT project_id) AS n_projects, COUNT(DISTINCT user_id) AS n_users, SUM(editing_time) AS editing_time_hours
+FROM edited_projects
+LEFT JOIN (SELECT user_id, ARRAY_AGG(name ORDER BY episode_from DESC) AS names FROM analytics.affiliation_episodes WHERE episode_to IS NULL GROUP BY user_id) 
+USING(user_id)
+LEFT JOIN analytics.current_universities
+ON name = names[0]
+WHERE project_id IN (SELECT project_id FROM toronto_user_projects)
+GROUP BY names[0], country_code
+ORDER BY n_users DESC
+#+end_src
+
 * Meetings
 
 
 ** Data team meetings
 
-:PROPERTIES:
-:EFFORT:   2:00
-:END:
 :LOGBOOK:
+CLOCK: [2024-06-12 Wed 11:08]--[2024-06-12 Wed 12:27] =>  1:19
 CLOCK: [2024-06-06 Thu 10:58]--[2024-06-06 Thu 11:59] =>  1:01
 CLOCK: [2024-06-05 Wed 10:30]--[2024-06-05 Wed 15:10] =>  4:40
 CLOCK: [2024-05-30 Thu 11:19]--[2024-05-30 Thu 13:15] =>  1:56
@@ -132,6 +244,7 @@ CLOCK: [2024-05-22 Wed 14:46]--[2024-05-22 Wed 17:35] =>  2:49
 
 ** Product/Support meetings
 :LOGBOOK:
+CLOCK: [2024-06-12 Wed 14:31]--[2024-06-12 Wed 15:56] =>  1:25
 CLOCK: [2024-05-29 Wed 14:34]--[2024-05-29 Wed 17:14] =>  2:40
 CLOCK: [2024-04-30 Tue 08:47]--[2024-04-30 Tue 17:15] =>  8:28
 CLOCK: [2024-04-17 Wed 14:55]--[2024-04-17 Wed 17:16] =>  2:21
@@ -148,7 +261,16 @@ CLOCK: [2024-04-17 Wed 14:38]--[2024-04-17 Wed 14:54] =>  0:16
 *** Support 29th May
 - 503 git errors, google suggest something to do with VPNs
 - Readcube integration - lots of concern that they aren't very good at LaTeX
-
+*** Support 12th June
+- Link share webinars need to be aware of changes to functionality
+- Trial hacking - limit ability to extend trials (one only) and how often you can start a trial (e.g., one trial per year).
+- Something about account suspension
+- How long should gradual rollouts be (for catching mistakes); avoid big increase on Friday.
+- 403 errors still seem to be google fault
+- Worrying about accessibility of editor - they do get asked questions about this and aren't sure they are giving optimal answers. Rebekah and Jess have been working on this - watch this space. Don't understand legal compliance; JLM to run cross-checks. It's OK to give different answers to real users.
+- Readcube integration. Do we want out own Bibtex conversion from Readcube API - but RC are interested in the write-and-cite workflow (via the enterprise API).
+- New pdf viewers about to be released.
+    
 ** Cycle planning meetings
 *** 10th June 2024
 :LOGBOOK:
