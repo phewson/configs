@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       b187c68b-8971-4fa6-890a-03d64e7e2461
+:END:
+#+title: STATs19
+** Source: data.gov.uk
+
+- Source: [[https://www.data.gov.uk/dataset/cb7ae6f0-4be6-4935-9277-47e5ce24a11f/road-safety-data][data.gov.uk]]
+- file list (save in urllist.txt)
+#+begin_src txt :eval no
+https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-adjustment-lookup_2004-latest-published-year.csv
+https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-adjustment-lookup_2004-latest-published-year.csv
+https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-e-scooter-2020-Latest-Published-Year.csv
+https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-historical-revisions-data.csv
+https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2022.csv
+https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2022.csv
+https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2022.csv
+https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-1979-latest-published-year.csv
+https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-1979-latest-published-year.csv
+https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-1979-latest-published-year.csv
+#+end_src
+
+obtain files (using hard coded filepath for now, need to set location as environment variable)
+
+#+begin_src bash :eval no
+wget -P ~/DATA/dft/stats19/ -i urllist.txt
+ #+end_src
+
+#+begin_src bash :eval no
+bash dft_stats19_casualties.sh | psql -d official -h 10.0.2.2 -p 15432 -U vagrant
+bash dft_stats19_accidents.sh | psql -d official -h 10.0.2.2 -p 15432 -U vagrant
+bash dft_stats19_vehicles.sh | psql -d official -h 10.0.2.2 -p 15432 -U vagrant
+#+end_src

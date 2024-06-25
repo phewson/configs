@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       8e66ce77-8191-4061-b904-044938e98bad
+:END:
+#+title: GPG
+* So *first* step is to generate a key
+
+#+begin_src bash :eval no
+gpg --full-generate-key
+#+end_src
+generates a key. I'm not too sure about the options (just used defaults)
+
+#+begin_src bash :eval no
+gpg --export-secret-keys --export-options backup --output private.gpg
+gpg --export --export-options backup --output public.gpg
+gpg --export-ownertrust > trust.gpg
+#+end_src
+* Second step is to use pass
+
+* Third step will be calling pass from emacs
+
+
