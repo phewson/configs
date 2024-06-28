@@ -201,8 +201,9 @@ into a comma-separated one-liner surrounded by QUOTE."
 
 ;; linum mode
 ;;(global-linum-mode t)
-(global-display-line-numbers-mode)
-
+;;(global-display-line-numbers-mode)
+(column-number-mode t)
+(global-display-line-numbers-mode t)
 ;; whitespace mode
 (use-package whitespace
   :ensure t)
@@ -233,6 +234,22 @@ into a comma-separated one-liner surrounded by QUOTE."
   :config (setq all-the-icons-dired-monochrome nil)
   )
 ;; M-x all-the-icons-install-fonts
+
+(use-package browse-kill-ring
+  :ensure t
+  :bind (("M-y" . browse-kill-ring))
+  :config
+  (setq browse-kill-ring-highlight-current-entry t)
+  (setq browse-kill-ring-separator "\n--------------------\n")
+)
+
+(use-package vundo
+  :ensure t
+  :bind (("C-x u" . vundo))
+  :config
+  (setq vundo-compact-display t)
+  (setq vundo-roll-back-on-quit t)
+)
 
 (use-package powerline
   :ensure t)
@@ -296,10 +313,10 @@ into a comma-separated one-liner surrounded by QUOTE."
 (add-to-list 'initial-frame-alist '(width . 101))
 (add-to-list 'default-frame-alist '(width . 101))
 
-(require 'dired-x)
-(setq-default dired-omit-files-p t)
-(setq dired-omit-files
-      (concat dired-omit-files "\\.doc$"))
+;;(require 'dired-x)
+;;(setq-default dired-omit-files-p t)
+;;(setq dired-omit-files
+;;      (concat dired-omit-files "\\.doc$"))
 
 (use-package hackernews
   :ensure t)
@@ -337,24 +354,33 @@ into a comma-separated one-liner surrounded by QUOTE."
     (setq projectile-project-search-path '("~/Documents")))
   (setq projectile-switch-project-action #'projectile-dired))
 
-
-
 ;;(use-package counsel-projectile
 ;; :after projectile
 ;; :config
 ;; (counsel-projectile-mode 1))
 
 
-;;  persp-switch command (C-x x s)
-;;persp-next (C-x x n or C-x x <right>): switch to the next perspective
-;;persp-prev (C-x x p or C-x x <left>): switch to the previous perspective
-(use-package perspective
-  :ensure t  ; use `:straight t` if using straight.el!
-  :bind (("C-x k" . persp-kill-buffer*))
+;; Enable tab-bar-mode
+(tab-bar-mode 1)
+
+(use-package tabspaces
+  :ensure t
+  :hook (after-init . tabspaces-mode)
+  :commands (tabspaces-switch-or-create-workspace
+             tabspaces-open-or-create-project-and-workspace)
   :custom
-  (persp-mode-prefix-key (kbd "C-c M-p"))
-  :init (persp-mode)
-)
+  (tabspaces-use-filtered-buffers-as-default t)
+  (tabspaces-default-tab "Default")
+  (tabspaces-remove-to-default t)
+  (tabspaces-include-buffers '("*scratch*"))
+  (tabspaces-initialize-project-with-todo t)
+  (tabspaces-todo-file-name "project-todo.org")
+  (tabspaces-session t)
+  (tabspaces-session-auto-restore t))
+
+(global-set-key (kbd "C-c t s") 'tabspaces-switch-or-create-workspace)
+(global-set-key (kbd "C-c t o") 'tabspaces-open-or-create-project-and-workspace)
+(global-set-key (kbd "C-c t r") 'tabspaces-remove-current-buffer)
 
 ;; yasnippet
 (use-package yasnippet
@@ -461,28 +487,54 @@ into a comma-separated one-liner surrounded by QUOTE."
   :init
   (vertico-mode))
 
+(defun my-marginalia-annotate-with-icons (cand)
+  "Annotate CAND with an icon."
+  (let ((icon (cond
+               ((file-directory-p cand) (all-the-icons-icon-for-dir cand))
+               ((file-regular-p cand) (all-the-icons-icon-for-file cand))
+               (t ""))))
+    (marginalia--fields
+     ((marginalia--classify-candidate cand) :face 'marginalia-documentation)
+     ((propertize icon 'face 'all-the-icons) :face 'marginalia-documentation))))
+
+(setq marginalia-annotators
+      '(my-marginalia-annotate-with-icons
+        marginalia-annotate-symbol
+        marginalia-annotate-command
+        marginalia-annotate-file
+        marginalia-annotate-buffer
+        marginalia-annotate-bookmark
+        marginalia-annotate-binding
+        marginalia-annotate-variable
+        marginalia-annotate-face
+        marginalia-annotate-package))
+
 (use-package marginalia
-:after vertico
-:ensure t
-:init;;
-(marginalia-mode))
+  :after vertico
+  :ensure t
+  :init (marginalia-mode)
+  :bind (("M-A" . marginalia-cycle))
+  :config
+    (add-to-list 'marginalia-annotators 'my-marginalia-annotate-with-icons)
+  )
+
 
 (load-file "~/configs/emacs/.orgconfigs.el")
 
-(use-package counsel
-     :ensure t)
+;;(use-package counsel
+;;     :ensure t)
 
-(use-package all-the-icons-ivy-rich
-  :ensure t
-  :init (all-the-icons-ivy-rich-mode 1))
+;;(use-package all-the-icons-ivy-rich
+;;  :ensure t
+;;  :init (all-the-icons-ivy-rich-mode 1))
 ;;(setq all-the-icons-ivy-rich-icon t)
 
-(use-package ivy-rich
-  :init (ivy-rich-mode 1)
-)
+;;(use-package ivy-rich
+;;  :init (ivy-rich-mode 1)
+;;)
 
-(ivy-mode 1)
-(counsel-mode 1)
+;;(ivy-mode 1)
+;;(counsel-mode 1)
 
 (use-package academic-phrases
   :ensure t)
@@ -498,16 +550,16 @@ into a comma-separated one-liner surrounded by QUOTE."
 ;;(require 'hl-line+)
 
 ;; Enable command logging
-(setq message-log-max t)
+;;(setq message-log-max t)
 
 ;; Function to print a message to *Messages*
-(defun my-echo-command (command)
-  (message "Command executed: %s" command))
+;;(defun my-echo-command (command)
+;;  (message "Command executed: %s" command))
 
 ;; Hook into the post-command-hook to log every command
-(add-hook 'post-command-hook
-          (lambda ()
-            (my-echo-command this-command)))
+;;(add-hook 'post-command-hook
+;;          (lambda ()
+;;            (my-echo-command this-command)))
 
 (use-package citar
   :custom
