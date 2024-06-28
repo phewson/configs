@@ -1,0 +1,21 @@
+services:
+  rstudio:
+    build:
+      context: "."
+      tags:
+        - "rstudio_server"
+    image: rstudio_pg
+    container_name: rstudio_pg_client
+    restart: on-failure
+    volumes:
+        - $TEMP_R_LIBRARY:/usr/local/lib/R/custom-library
+        - $DATAHOME:/home/rstudio/overleaf
+        - $HOME/.cache/gargle:/home/rstudio/.cache/gargle
+        - $HOME/.ssh:/home/rstudio/.ssh
+    environment:
+      - PASSWORD=rstudio1
+    env_file:
+      - .env
+    ports:
+      - 8888:8787
+

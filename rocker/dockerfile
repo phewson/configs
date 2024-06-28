@@ -1,0 +1,22 @@
+FROM rocker/rstudio:4.3.2
+
+LABEL source="Dockerfile"
+
+MAINTAINER Paul Hewson <paul@insightsforaction.uk>
+
+RUN apt-get clean all && \
+    apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y ssh && \
+    apt-get install -y build-essential && \
+    apt-get install -y libpq-dev && \
+    apt-get install -y libudunits2-dev && \
+    apt-get install -y libproj-dev gdal-bin && \
+    apt-get clean all && \
+    apt-get purge && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+RUN Rscript -e "install.packages(c('rmarkdown', 'tidyverse', 'xtable', 'rpostgis'));"
+
+COPY --chown=rstudio:rstudio .Rprofile /home/rstudio/
+COPY --chown=rstudio:rstudio .gitconfig /home/rstudio/.gitconfig
