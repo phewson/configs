@@ -5,6 +5,23 @@
 ;; This is meant to be an accessible theme, but, ouch.
 (load-theme 'modus-operandi t)
 
+(use-package pulsar
+  :ensure t
+  :config
+  ;; Enable pulsar-mode globally
+  (pulsar-global-mode 1)
+
+  ;; Optionally, customize pulsar's behavior
+  (setq pulsar-pulse t)
+  (setq pulsar-delay 0.05)
+  (setq pulsar-iterations 10)
+  (setq pulsar-face 'pulsar-magenta)
+  (setq pulsar-highlight-face 'pulsar-yellow)
+
+  ;; Optionally, set up key bindings for pulsar commands
+  (global-set-key (kbd "C-x l") 'pulsar-pulse-line)
+  (global-set-key (kbd "C-x C-l") 'pulsar-pulse-buffer))
+
 ;; Remember and restore the last cursor location of opened files
 (save-place-mode 1)
 
@@ -40,12 +57,30 @@
 ;;(find-file "~/configs/admin/planner.org")
 
 ;; turn on visual icon toolbar
-(tool-bar-mode 1)
+(tool-bar-mode 0)
+
+
 
 (setq-default line-spacing 0.4)
 (setq-default custom-set-faces
    '((t (:family "Ubuntu" :foundry "DAMA" :slant normal :weight
      normal :height 143 :width normal))))
+
+(use-package writeroom-mode
+  :ensure t
+  :hook
+  (writeroom-mode . (lambda ()
+                      (if writeroom-mode
+                          (progn
+                            (setq original-frame-width (frame-width))
+                            (setq original-frame-height (frame-height))
+                            (display-line-numbers-mode -1))
+                        (progn
+                          (display-line-numbers-mode 1)
+                          (set-frame-width (selected-frame) original-frame-width)
+                          (set-frame-height (selected-frame) original-frame-height)))))
+)
+(global-set-key (kbd "<f9>") 'writeroom-mode)
 
 ;; default to pdflatex
 (setq latex-run-command "pdflatex")
@@ -64,7 +99,12 @@
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 ;; include column numbers for cursor in modeline
-(setq column-number-mode t)
+;;(setq column-number-mode t)
+;; linum mode
+;;(global-linum-mode t)
+;;(global-display-line-numbers-mode)
+(column-number-mode t)
+(global-display-line-numbers-mode t)
 
 ;; stop shell duplicating history
 (defvar comint-input-ignoredups)
@@ -199,11 +239,6 @@ into a comma-separated one-liner surrounded by QUOTE."
 (use-package json-mode
   :ensure t)
 
-;; linum mode
-;;(global-linum-mode t)
-;;(global-display-line-numbers-mode)
-(column-number-mode t)
-(global-display-line-numbers-mode t)
 ;; whitespace mode
 (use-package whitespace
   :ensure t)
@@ -325,7 +360,8 @@ into a comma-separated one-liner surrounded by QUOTE."
   :ensure t)
 (setq elfeed-feeds '("https://martinfowler.com/feed.atom"
 		     "https://opensource.com/feed"
-		     "https://feeds.feedburner.com/RBloggers"))
+		     "https://feeds.feedburner.com/RBloggers"
+		     "https://planet.debian.org/rss20.xml"))
 
 ;; stan mode
 (use-package stan-mode

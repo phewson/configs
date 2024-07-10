@@ -237,7 +237,11 @@
 (setq org-ref-get-pdf-filename-function 'org-ref-get-pdf-filename-ivy-bibtex
       org-ref-notes-function 'org-ref-notes-function-one-file)
 
-
+(use-package gscholar-bibtex
+  :ensure t
+  :custom
+  (gscholar-bibtex-default-source "Google Scholar")
+  (gscholar-bibtex-database-file "~/configs/admin/papers/regression.bib"))
 
 (provide '.orgconfigs)
 ;;; .orgconfigs.el ends here

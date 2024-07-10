@@ -355,6 +355,9 @@ CLOCK: [2024-04-17 Wed 14:38]--[2024-04-17 Wed 14:54] =>  0:16
 *** Support 26th June
 - Pondering incident calling options (e.g., platform down needs people woken, fake trial extensions don't)
 - Support worrying about greyed out toolbar (writefull) on Overleaf and generally about Writefull rushing to release features that haven't been tested by Overleaf support (features developed based on data analysis not Overleaf support customer feedback).
+***** Support 10/07/2024
+- Lots of complaints about link sharing. Removing ability to comment via read-only is generating lots of complaints and can't see the upside.  What is the free plan for (students/developing world)? Don't have a narrative to explain why these changes are being made.
+Complaints that we are going to remove collaborators. Support not convinced free plan is a viable option.However, also stated that not many people affected hence little public negative feedback.
 ** Cycle planning meetings
 *** 10th June 2024
 :LOGBOOK:
