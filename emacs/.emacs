@@ -397,26 +397,26 @@ into a comma-separated one-liner surrounded by QUOTE."
 
 
 ;; Enable tab-bar-mode
-(tab-bar-mode 1)
+;;(tab-bar-mode 1)
 
-(use-package tabspaces
-  :ensure t
-  :hook (after-init . tabspaces-mode)
-  :commands (tabspaces-switch-or-create-workspace
-             tabspaces-open-or-create-project-and-workspace)
-  :custom
-  (tabspaces-use-filtered-buffers-as-default t)
-  (tabspaces-default-tab "Default")
-  (tabspaces-remove-to-default t)
-  (tabspaces-include-buffers '("*scratch*"))
-  (tabspaces-initialize-project-with-todo t)
-  (tabspaces-todo-file-name "project-todo.org")
-  (tabspaces-session t)
-  (tabspaces-session-auto-restore t))
-
-(global-set-key (kbd "C-c t s") 'tabspaces-switch-or-create-workspace)
-(global-set-key (kbd "C-c t o") 'tabspaces-open-or-create-project-and-workspace)
-(global-set-key (kbd "C-c t r") 'tabspaces-remove-current-buffer)
+;;(use-package tabspaces
+;;  :ensure t
+;;  :hook (after-init . tabspaces-mode)
+;;  :commands (tabspaces-switch-or-create-workspace
+;;             tabspaces-open-or-create-project-and-workspace)
+;;  :custom
+;;  (tabspaces-use-filtered-buffers-as-default t)
+;;  (tabspaces-default-tab "Default")
+;;  (tabspaces-remove-to-default t)
+;;  (tabspaces-include-buffers '("*scratch*"))
+;;  (tabspaces-initialize-project-with-todo t)
+;;  (tabspaces-todo-file-name "project-todo.org")
+;;  (tabspaces-session t)
+;;  (tabspaces-session-auto-restore t))
+;;
+;;(global-set-key (kbd "C-c t s") 'tabspaces-switch-or-create-workspace)
+;;(global-set-key (kbd "C-c t o") 'tabspaces-open-or-create-project-and-workspace)
+;;(global-set-key (kbd "C-c t r") 'tabspaces-remove-current-buffer)
 
 ;; yasnippet
 (use-package yasnippet
@@ -523,36 +523,44 @@ into a comma-separated one-liner surrounded by QUOTE."
   :init
   (vertico-mode))
 
-(defun my-marginalia-annotate-with-icons (cand)
-  "Annotate CAND with an icon."
-  (let ((icon (cond
-               ((file-directory-p cand) (all-the-icons-icon-for-dir cand))
-               ((file-regular-p cand) (all-the-icons-icon-for-file cand))
-               (t ""))))
-    (marginalia--fields
-     ((marginalia--classify-candidate cand) :face 'marginalia-documentation)
-     ((propertize icon 'face 'all-the-icons) :face 'marginalia-documentation))))
 
-(setq marginalia-annotators
-      '(my-marginalia-annotate-with-icons
-        marginalia-annotate-symbol
-        marginalia-annotate-command
-        marginalia-annotate-file
-        marginalia-annotate-buffer
-        marginalia-annotate-bookmark
-        marginalia-annotate-binding
-        marginalia-annotate-variable
-        marginalia-annotate-face
-        marginalia-annotate-package))
+;;(defun my-marginalia-annotate-with-icons (cand)
+;;  "Annotate CAND with an icon."
+;;  (let ((icon (cond
+;;               ((file-directory-p cand) (all-the-icons-icon-for-dir cand))
+;;               ((file-regular-p cand) (all-the-icons-icon-for-file cand))
+;;               (t ""))))
+;;    (marginalia--fields
+;;     ((marginalia--classify-candidate cand) :face 'marginalia-documentation)
+;;     ((propertize icon 'face 'all-the-icons) :face 'marginalia-documentation))))
+
+;;(setq marginalia-annotators
+;;      '(my-marginalia-annotate-with-icons
+;;        marginalia-annotate-symbol
+;;        marginalia-annotate-command
+;;        marginalia-annotate-file
+;;        marginalia-annotate-buffer
+;;        marginalia-annotate-bookmark
+;;        marginalia-annotate-binding
+;;        marginalia-annotate-variable
+;;        marginalia-annotate-face
+;;        marginalia-annotate-package))
 
 (use-package marginalia
-  :after vertico
   :ensure t
+  :after vertico
   :init (marginalia-mode)
-  :bind (("M-A" . marginalia-cycle))
-  :config
-    (add-to-list 'marginalia-annotators 'my-marginalia-annotate-with-icons)
+;;  :bind (("M-A" . marginalia-cycle))
+;;  :config
+;;    (add-to-list 'marginalia-annotators 'my-marginalia-annotate-with-icons)
   )
+
+(use-package all-the-icons-completion
+  :ensure t
+  :after (marginalia all-the-icons)
+  :hook (marginalia-mode . all-the-icons-completion-marginalia-setup)
+  :init
+  (all-the-icons-completion-mode))
 
 
 (load-file "~/configs/emacs/.orgconfigs.el")
