@@ -95,7 +95,7 @@
 (setq org-columns-default-format "%60ITEM(Task)
      %10Effort(Effort){:} %10CLOCKSUM")
 
-(setq org-directory "~/phhewson_configs/admin")
+(setq org-directory "~/phewson_configs/admin")
 (setq org-default-notes-file "~/configs/admin/refile.org")
 
 ;; I use C-c c to start capture mode

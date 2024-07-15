@@ -361,7 +361,10 @@ into a comma-separated one-liner surrounded by QUOTE."
 (setq elfeed-feeds '("https://martinfowler.com/feed.atom"
 		     "https://opensource.com/feed"
 		     "https://feeds.feedburner.com/RBloggers"
-		     "https://planet.debian.org/rss20.xml"))
+		     "https://planet.debian.org/rss20.xml"
+		     "https://sachachua.com/blog/feed/index.xml"
+		     "https://karthinks.com/tags/elfeed/index.xml"
+		     "https://ctan.org/ctan-ann/rss"))
 
 ;; stan mode
 (use-package stan-mode
@@ -379,6 +382,14 @@ into a comma-separated one-liner surrounded by QUOTE."
 (use-package auctex
   :ensure t)
 (setq auto-mode-alist (append '(("\\.tex\\'" . LaTeX-mode)) auto-mode-alist))
+
+(setq TeX-view-program-list
+      '(("Okular" "okular %o")
+       ("Firefox" "firefox %o")
+       ("Zathura" "zathura %o"))
+
+(setq TeX-view-program-selection
+      '((output-pdf "Okular")))
 
 (use-package projectile
   :diminish projectile-mode
@@ -523,37 +534,20 @@ into a comma-separated one-liner surrounded by QUOTE."
   :init
   (vertico-mode))
 
-
-;;(defun my-marginalia-annotate-with-icons (cand)
-;;  "Annotate CAND with an icon."
-;;  (let ((icon (cond
-;;               ((file-directory-p cand) (all-the-icons-icon-for-dir cand))
-;;               ((file-regular-p cand) (all-the-icons-icon-for-file cand))
-;;               (t ""))))
-;;    (marginalia--fields
-;;     ((marginalia--classify-candidate cand) :face 'marginalia-documentation)
-;;     ((propertize icon 'face 'all-the-icons) :face 'marginalia-documentation))))
-
-;;(setq marginalia-annotators
-;;      '(my-marginalia-annotate-with-icons
-;;        marginalia-annotate-symbol
-;;        marginalia-annotate-command
-;;        marginalia-annotate-file
-;;        marginalia-annotate-buffer
-;;        marginalia-annotate-bookmark
-;;        marginalia-annotate-binding
-;;        marginalia-annotate-variable
-;;        marginalia-annotate-face
-;;        marginalia-annotate-package))
+(use-package general
+  :ensure t)
 
 (use-package marginalia
-  :ensure t
-  :after vertico
-  :init (marginalia-mode)
-;;  :bind (("M-A" . marginalia-cycle))
-;;  :config
-;;    (add-to-list 'marginalia-annotators 'my-marginalia-annotate-with-icons)
-  )
+  :general
+  (:keymaps 'minibuffer-local-map
+   "M-A" 'marginalia-cycle)
+  :custom
+  (marginalia-max-relative-age 0)
+  (marginalia-align 'right)
+  :init
+  (marginalia-mode))
+
+
 
 (use-package all-the-icons-completion
   :ensure t
@@ -561,6 +555,7 @@ into a comma-separated one-liner surrounded by QUOTE."
   :hook (marginalia-mode . all-the-icons-completion-marginalia-setup)
   :init
   (all-the-icons-completion-mode))
+
 
 
 (load-file "~/configs/emacs/.orgconfigs.el")
