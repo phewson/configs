@@ -19,8 +19,7 @@
   (setq pulsar-highlight-face 'pulsar-yellow)
 
   ;; Optionally, set up key bindings for pulsar commands
-  (global-set-key (kbd "C-x l") 'pulsar-pulse-line)
-  (global-set-key (kbd "C-x C-l") 'pulsar-pulse-buffer))
+  (global-set-key (kbd "C-x l") 'pulsar-pulse-line)  (global-set-key (kbd "C-x C-l") 'pulsar-pulse-buffer))
 
 ;; Remember and restore the last cursor location of opened files
 (save-place-mode 1)
@@ -62,9 +61,9 @@
 
 
 (setq-default line-spacing 0.4)
-(setq-default custom-set-faces
-   '((t (:family "Ubuntu" :foundry "DAMA" :slant normal :weight
-     normal :height 143 :width normal))))
+;;(setq-default custom-set-faces
+;;   '((t (:family "Ubuntu" :foundry "DAMA" :slant normal :weight
+;;     normal :height 143 :width normal))))
 
 (use-package writeroom-mode
   :ensure t
@@ -286,52 +285,52 @@ into a comma-separated one-liner surrounded by QUOTE."
   (setq vundo-roll-back-on-quit t)
 )
 
-(use-package powerline
-  :ensure t)
-(defun my-powerline-setup ()
-  (interactive)
-  (setq-default mode-line-format
-                '("%e"
-                  (:eval
-                   (let* ((active (powerline-selected-window-active))
-                          (mode-line (if active 'mode-line 'mode-line-inactive))
-                          (face1 (if active 'powerline-active1 'powerline-inactive1))
-                          (face2 (if active 'powerline-active2 'powerline-inactive2))
-                          (separator-left (intern (format "powerline-%s-%s"
-                                                          powerline-default-separator
-                                                          (car powerline-default-separator-dir))))
-                          (separator-right (intern (format "powerline-%s-%s"
-                                                           powerline-default-separator
-                                                           (cdr powerline-default-separator-dir))))
-                          (lhs (list (powerline-raw "%*" nil 'l)
-                                     (powerline-buffer-id nil 'l)
-                                     (powerline-raw " ")
-                                     (funcall separator-left mode-line face1)
-                                     (powerline-narrow face1 'l)
-                                     (powerline-vc face1)))
-                          (rhs (list (powerline-raw global-mode-string face1 'r)
-                                     (funcall separator-right face1 face2)
-                                     (powerline-raw "%4l" face2 'r)
-                                     (powerline-raw ":" face2 'r)
-                                     (powerline-raw "%3c" face2 'r)
-                                     (funcall separator-right face2 mode-line)
-                                     (powerline-raw " ")
-                                     (powerline-raw "%6p" nil 'r)
-                                     (powerline-hud face2 face1)))
-                          (center (list (powerline-raw " " face1)
-                                        (powerline-raw (all-the-icons-icon-for-buffer) face1 'l)
-                                        (powerline-major-mode face1 'l)
-                                        (powerline-process face1)
-                                        (powerline-minor-modes face1 'l)
-                                        (powerline-raw " " face1))))
-                     (concat (powerline-render lhs)
-                             (powerline-fill-center face1 (/ (powerline-width center) 2.0))
-                             (powerline-render center)
-                             (powerline-fill face1 (powerline-width rhs))
-                             (powerline-render rhs)))))))
+;; (use-package powerline
+;;   :ensure t)
+;; (defun my-powerline-setup ()
+;;   (interactive)
+;;   (setq-default mode-line-format
+;;                 '("%e"
+;;                   (:eval
+;;                    (let* ((active (powerline-selected-window-active))
+;;                           (mode-line (if active 'mode-line 'mode-line-inactive))
+;;                           (face1 (if active 'powerline-active1 'powerline-inactive1))
+;;                           (face2 (if active 'powerline-active2 'powerline-inactive2))
+;;                           (separator-left (intern (format "powerline-%s-%s"
+;;                                                           powerline-default-separator
+;;                                                           (car powerline-default-separator-dir))))
+;;                           (separator-right (intern (format "powerline-%s-%s"
+;;                                                            powerline-default-separator
+;;                                                            (cdr powerline-default-separator-dir))))
+;;                           (lhs (list (powerline-raw "%*" nil 'l)
+;;                                      (powerline-buffer-id nil 'l)
+;;                                      (powerline-raw " ")
+;;                                      (funcall separator-left mode-line face1)
+;;                                      (powerline-narrow face1 'l)
+;;                                      (powerline-vc face1)))
+;;                           (rhs (list (powerline-raw global-mode-string face1 'r)
+;;                                      (funcall separator-right face1 face2)
+;;                                      (powerline-raw "%4l" face2 'r)
+;;                                      (powerline-raw ":" face2 'r)
+;;                                      (powerline-raw "%3c" face2 'r)
+;;                                      (funcall separator-right face2 mode-line)
+;;                                      (powerline-raw " ")
+;;                                      (powerline-raw "%6p" nil 'r)
+;;                                      (powerline-hud face2 face1)))
+;;                           (center (list (powerline-raw " " face1)
+;;                                         (powerline-raw (all-the-icons-icon-for-buffer) face1 'l)
+;;                                         (powerline-major-mode face1 'l)
+;;                                         (powerline-process face1)
+;;                                         (powerline-minor-modes face1 'l)
+;;                                         (powerline-raw " " face1))))
+;;                      (concat (powerline-render lhs)
+;;                              (powerline-fill-center face1 (/ (powerline-width center) 2.0))
+;;                              (powerline-render center)
+;;                              (powerline-fill face1 (powerline-width rhs))
+;;                              (powerline-render rhs)))))))
 
-;; Apply custom powerline setup
-(my-powerline-setup)
+;; ;; Apply custom powerline setup
+;; (my-powerline-setup)
 
 ;; wgrep mode
 (use-package wgrep
@@ -387,6 +386,7 @@ into a comma-separated one-liner surrounded by QUOTE."
       '(("Okular" "okular %o")
        ("Firefox" "firefox %o")
        ("Zathura" "zathura %o"))
+)
 
 (setq TeX-view-program-selection
       '((output-pdf "Okular")))
@@ -467,42 +467,28 @@ into a comma-separated one-liner surrounded by QUOTE."
 (setq flycheck-shellcheck-follow-sources nil)
 (add-hook 'sh-mode-hook 'flycheck-mode)
 
-(use-package lsp-mode
-  :ensure t
-  :init
-  (setq lsp-keymap-prefix "C-c l")
-  :commands (lsp lsp-deferred)
-  :hook ((latex-mode . lsp)
-         (bibtex-mode . lsp)
-	 (python-mode lsp))
-  )
-;; auto-installs lsp-ui
-;; need to run pip install python-language-server[all].to get a python lsp.
-;;need to check out conda for this.
-(use-package lsp-ui
-  :commands lsp-ui-mode)
-(use-package lsp-latex
-	 :ensure t)
-(add-to-list 'load-path "~/Downloads")
+
+;;(add-to-list 'load-path "~/Downloads")
 ;;; wget https://github.com/latex-lsp/texlab/releases/download/v5.16.1/texlab-x86_64-linux.tar.gz in Downloads (need to change the location)
 ;; tar -xvf texlab-x86_64-linux.tar.gz 
-(setq lsp-latex-texlab-executable "~/Downloads/texlab")
-;;(with-eval-after-load "tex-mode"
-;; (add-hook 'tex-mode-hook 'lsp)
-;; (add-hook 'latex-mode-hook 'lsp))
 
-;; For bibtex
-(with-eval-after-load "bibtex"
- (add-hook 'bibtex-mode-hook 'lsp))
+(require 'eglot)
+(add-to-list 'eglot-server-programs '(latex-mode . ("~/Downloads/texlab")))
+(add-hook 'latex-mode-hook 'eglot-ensure)
 (use-package company
-  :after lsp-mode
-  :hook (lsp-mode . company-mode)
+  :ensure t
+  :hook (after-init . global-company-mode)
   :config
-  (setq company-minimum-prefix-length 1)
-  (setq company-idle-delay 0.0)) ;; Default is 0.2
-;; Configure texlab settings
-(setq lsp-texlab-diagnostics-ignore-lists
-      '((texlab "unused_entry")))
+  (setq company-idle-delay 0.2
+        company-minimum-prefix-length 1
+        company-selection-wrap-around t
+        company-frontends '(company-pseudo-tooltip-frontend
+                            company-echo-metadata-frontend)))
+
+(use-package company-auctex
+  :ensure t
+  :config
+  (company-auctex-init))
 
 (use-package which-key
   :init (which-key-mode)
@@ -600,8 +586,9 @@ into a comma-separated one-liner surrounded by QUOTE."
 ;;          (lambda ()
 ;;            (my-echo-command this-command)))
 
+
 (use-package citar
-  :custom
+:custom
   (citar-bibliography '("~/configs/admin/papers/regression.bib"))
   :hook (org-mode . citar-capf-setup)
 )
