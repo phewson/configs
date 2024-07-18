@@ -14,6 +14,21 @@ gpg --export-secret-keys --export-options backup --output private.gpg
 gpg --export --export-options backup --output public.gpg
 gpg --export-ownertrust > trust.gpg
 #+end_src
+
+#+begin_src sql :eval no
+gpg --import public.gpg
+gpg --import public.gpg
+gpg --import private.gpg
+gpg --import-ownertrust trust.gpg
+#+end_src
+
+#+begin_src sql :eval no
+gpg  --fingerprint
+pass init EBE831F0
+pass insert bq/projid
+pass bq/projid
+#+end_src
+
 * Second step is to use pass
 
 * Third step will be calling pass from emacs

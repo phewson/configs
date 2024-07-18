@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       d4024b72-7773-48d3-b8c1-743742ea3770
+:END:
+#+title: Privacy
+https://www.law.cornell.edu/wex/expectation_of_privacy

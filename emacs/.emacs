@@ -382,14 +382,38 @@ into a comma-separated one-liner surrounded by QUOTE."
   :ensure t)
 (setq auto-mode-alist (append '(("\\.tex\\'" . LaTeX-mode)) auto-mode-alist))
 
-(setq TeX-view-program-list
-      '(("Okular" "okular %o")
-       ("Firefox" "firefox %o")
-       ("Zathura" "zathura %o"))
-)
+;;(setq TeX-view-program-list
+;;      '(("Okular" "okular %o")
+;;       ("Firefox" "firefox %o")
+;;       ("Zathura" "zathura %o"))
+;;)
 
-(setq TeX-view-program-selection
-      '((output-pdf "Okular")))
+;;(setq TeX-view-program-selection
+;;      '((output-pdf "Okular")))
+
+;; Custom function to split window vertically and display PDF
+(defun my-TeX-revert-document-buffer (file)
+  "Revert the buffer corresponding to FILE in another window."
+  (let ((buf (find-buffer-visiting file)))
+    (if buf
+        (progn
+          (select-window (split-window-right))
+          (switch-to-buffer buf)
+          (pdf-view-mode)
+          (pdf-view-fit-page-to-window))
+      (message "No buffer associated with %s" file))))
+
+(setq TeX-view-program-selection '((output-pdf "PDF Tools"))
+      TeX-source-correlate-start-server t)
+
+(add-hook 'TeX-after-compilation-finished-functions
+          #'TeX-revert-document-buffer)
+
+(use-package cdlatex
+  :ensure t)
+
+(use-package consult
+  :ensure t)
 
 (use-package projectile
   :diminish projectile-mode
@@ -489,6 +513,17 @@ into a comma-separated one-liner surrounded by QUOTE."
   :ensure t
   :config
   (company-auctex-init))
+
+(eval-after-load "tex" 
+  '(setcdr (assoc "LaTeX" TeX-command-list)
+          '("%`%l%(mode) -shell-escape%' %t"
+          TeX-run-TeX nil (latex-mode doctex-mode) :help "Run LaTeX")
+    )
+  )
+(use-package xenops
+  :ensure t)
+
+(require 'ob-python)
 
 (use-package which-key
   :init (which-key-mode)

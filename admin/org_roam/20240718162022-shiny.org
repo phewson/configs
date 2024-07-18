@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       2dd4cf5d-603c-4bae-af7d-1e55ed817358
+:END:
+#+title: Shiny
+https://rinterface.github.io/shinyMobile/index.html

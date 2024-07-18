@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       9001c596-23a5-489e-97ee-b5bd8253104a
+:END:
+#+title: Pipelines
+https://snakemake.github.io/

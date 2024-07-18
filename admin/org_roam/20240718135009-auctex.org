@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       b521826b-9d74-482f-82d1-76cd22d0b319
+:END:
+#+title: auctex
+
+Narrow Ctrl-x n e (other arguments in completion buffer
+Widen Ctrl-x n w
+
+f9 (my binding) writeroom-mode
+
+
+Ctrl-c Ctrl-c Compile
+Ctrl-c Ctrl-v View
+Ctrl-c Ctrl-a Compile and view
+
+M+x prettify-symbols-mode
+
+enable TeX-fold-mode ???
+
+cdlatex-mode `a gives $\alpha$ for example and x'- gives \bar{x}
+
+
+[[https://michaelneuper.com/posts/efficient-latex-editing-with-emacs/][Editing post 1]]
+[[https://github.com/dandavison/xenops][xenops]]
+[[https://karthinks.com/software/latex-input-for-impatient-scholars/][Editing post 3]]

@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       66f775bd-5682-4351-a808-1f42802ae958
+:END:
+#+title: BoringTech
+https://boringtechnology.club/

@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       8bfeb6d5-b800-49a2-b626-986b884a3ba1
+:END:
+#+title: CasualMisc
+https://causalml-book.org/assets/chapters/CausalML_book.pdf
+
+https://macartan.github.io/integrated_inferences/index.html
+
+https://www.youtube.com/watch?v=nT_yCwXSz54
+
+https://juanitorduz.github.io/causal_inference_example/
+
+https://iyarlin.github.io/2024/07/10/better_ab_testing_with_survival/
+
+https://appliedcausalinference.github.io/aci_book/
+
+https://pjvglb.clicks.mlsend.com/te/cl/eyJ2Ijoie1wiYVwiOjUxNjI1MSxcImxcIjo5NTc3NDQ0Nzk4OD[…]NTc3NDYyMjY3NTM3MTQ3NH0iLCJzIjoiMjhjNDY5NWE0YmNhMTk4NSJ9
+
+https://pjvglb.clicks.mlsend.com/te/cl/eyJ2Ijoie1wiYVwiOjUxNjI1MSxcImxcIjo5NTc3NDQ0Nzk4ODkwMTgyNSxcInJcIjo5NTc3NDYyMjY3NTM3MTQ3NH0iLCJzIjoiMjhjNDY5NWE0YmNhMTk4NSJ9
+
+https://agrum.gitlab.io/pages/agrum.html
+
+http://webia.lip6.fr/~phw//aGrUM/BookOfWhy/
+

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       e40782ba-e2c0-4ca8-85f3-d1bc961e577b
+:END:
+#+title: DataViz
+https://clauswilke.com/dataviz/directory-of-visualizations.html
+
+https://cedricscherer.netlify.app/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/
+
+https://rkabacoff.github.io/datavis/

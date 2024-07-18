@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       6c92eb67-b7a0-4a94-b6e3-29b988752374
+:END:
+#+title: awk
+https://github.com/learnbyexample/TUI-apps/tree/main/AwkTutorial
