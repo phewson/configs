@@ -1,0 +1,623 @@
+* Emacs config
+
+This can be tangled using *M-x org-babel-tangle* or *C-c C-v t*
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+;;; package --- summary
+;;; Commentary:
+;;; Code:
+#+END_SRC
+
+** Appearance
+
+This theme is meant to be an accessible light mode theme.
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(load-theme 'modus-operandi t)
+#+END_SRC
+
+Don't pop up dialog boxes
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(setq use-dialog-box nil)
+#+END_SRC
+
+I want to inhibit the splash screen but open with my main planner.org file.
+Also, 101 by 101 is my default frame size.
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+  (setq inhibit-splash-screen t
+        initial-buffer-choice "~/configs/admin/planner.org")
+(add-to-list 'initial-frame-alist '(width . 101))
+(add-to-list 'default-frame-alist '(width . 101))
+#+END_SRC
+
+
+I don't want the tool bar, not even with the cutesy latex lion
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(tool-bar-mode 0)
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
+#+END_SRC
+
+I want to display line numbers of just about everything (this is now an emacs built in).
+I also want the column number displayed in the modeline
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+  (column-number-mode t)
+  (global-display-line-numbers-mode t)
+#+END_SRC
+
+  #+BEGIN_SRC emacs-lisp :tangle testing.el
+  (setq-default line-spacing 0.4)
+#+END_SRC
+
+Loads writeroom mode. I don't like the f9 keybinding.
+Also, I want to couple this with a pomodoro.
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(use-package writeroom-mode
+  :ensure t
+  :hook
+  (writeroom-mode . (lambda ()
+                      (if writeroom-mode
+                          (progn
+                            (setq original-frame-width (frame-width))
+                            (setq original-frame-height (frame-height))
+                            (display-line-numbers-mode -1))
+                        (progn
+                          (display-line-numbers-mode 1)
+                          (set-frame-width (selected-frame) original-frame-width)
+                          (set-frame-height (selected-frame) original-frame-height)))))
+)
+(global-set-key (kbd "<f9>") 'writeroom-mode)
+#+END_SRC
+
+I just want ONE dired buffer opened at a time. Also, I want some order in the dired views
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(setf dired-kill-when-opening-new-dired-buffer t)
+(setq dired-listing-switches "-lah --group-directories-first")
+#+END_SRC
+
+
+This is meant to provide a blink when I'm moving the cursor from one window to another
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+  (use-package pulsar
+    :ensure t
+    :config
+    ;; Enable pulsar-mode globally
+    (pulsar-global-mode 1)
+
+    ;; Optionally, customize pulsar's behavior
+    (setq pulsar-pulse t)
+    (setq pulsar-delay 0.05)
+    (setq pulsar-iterations 10)
+    (setq pulsar-face 'pulsar-magenta)
+    (setq pulsar-highlight-face 'pulsar-yellow)
+
+    ;; Optionally, set up key bindings for pulsar commands
+    (global-set-key (kbd "C-x l") 'pulsar-pulse-line)
+)
+#+END_SRC
+
+
+
+** Text coding
+
+Found out that expecting utf-8 can be really helpful
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(prefer-coding-system 'utf-8-unix)
+(set-default-coding-systems 'utf-8-unix)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+;; Treat clipboard input as UTF-8 string first; compound text next, etc.
+(setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(setq require-final-newline t)
+#+END_SRC
+
+
+** Tree-sitter and lsp
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(setq treesit-language-source-alist
+   '((bash "https://github.com/tree-sitter/tree-sitter-bash")
+     (cmake "https://github.com/uyha/tree-sitter-cmake")
+     (c "https://github.com/tree-sitter/tree-sitter-c")
+     (cpp "https://github.com/tree-sitter/tree-sitter-cpp")
+     (css "https://github.com/tree-sitter/tree-sitter-css")
+     (elisp "https://github.com/Wilfred/tree-sitter-elisp")
+     (go "https://github.com/tree-sitter/tree-sitter-go")
+     (html "https://github.com/tree-sitter/tree-sitter-html")
+     (javascript "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src")
+     (json "https://github.com/tree-sitter/tree-sitter-json")
+     (latex "https://github.com/tree-sitter/tree-sitter-latex")
+     (make "https://github.com/alemuller/tree-sitter-make")
+     (markdown "https://github.com/ikatyang/tree-sitter-markdown")
+     (python "https://github.com/tree-sitter/tree-sitter-python")
+     (r "https://github.com/tree-sitter/tree-sitter-r")
+     (toml "https://github.com/tree-sitter/tree-sitter-toml")
+     (tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src")
+     (typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
+     (yaml "https://github.com/ikatyang/tree-sitter-yaml")))
+#+END_SRC
+
+An LSP can be set up with eglot because it's inbuilt
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(require 'eglot)
+#+END_SRC
+
+
+** ERC server
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(setq erc-server "irc.libera.chat"
+      erc-nick "texhewson"
+      erc-user-full-name "Paul Hewson"
+      erc-track-shorten-start 8
+      erc-autojoin-channels-alist '(("irc.libera.chat" "#systemcrafters" "#emacs"))
+      erc-kill-buffer-on-part t
+            erc-auto-query 'bury)
+#+END_SRC
+
+** Arrayify column
+
+I forgot why I wrote this, turns a column of data into a comma separate list for use in R?
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(defun arrayify (start end quote)
+    "Turn strings on newlines between START and END \
+into a comma-separated one-liner surrounded by QUOTE."
+    (interactive "r\nMQuote: ")
+    (let ((insertion
+           (mapconcat
+            (lambda (x) (format "%s%s%s" quote x quote))
+            (split-string (buffer-substring start end)) ", ")))
+      (delete-region start end)
+      (insert insertion)))
+#+END_SRC
+
+** C++
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+;; make c++ mode tree sitter mode
+(setq major-mode-remap-alist '((c++-mode . c++-ts-mode)))
+#+END_SRC
+
+** Memory
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(save-place-mode 1)
+#+END_SRC
+
+Revert buffers like dired. I'm not sure I need both
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(global-auto-revert-mode 1)
+(setq global-auto-revert-non-file-buffers t)
+#+END_SRC
+
+** Bundle custom vars into their own file
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(setq custom-file (locate-user-emacs-file "~/configs/emacs/.custom-vars.el"))
+(load custom-file 'noerror 'nomessage)
+#+END_SRC
+
+** PostgreSQL
+
+There are two sets of postgres variables. One set is environmental variables which can be picked up by various scripted usage of postgres (importing data for example). The other set are needed for direct emacs<-> postgresql interaction
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+;;(setenv "TEST_DATA_HOME" "/home/phewson/analytics-queries/ci/tests/sim_data")
+;;(setenv "HOME" "~/")
+(setenv "PGUSER" "vagrant")
+(setenv "PGHOST" "localhost")
+(setenv "PGDATABASE" "official")
+(setenv "PGPORT" "15432")
+(setq sql-postgres-login-params
+      '((user :default "vagrant")
+        (database :default "official")
+        (server :default "localhost")
+        (port :default 15452)))
+(setq sql-product 'postgres)
+#+END_SRC
+
+** Framemove
+
+I want to bounce between windows using *C-ARROW*
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(use-package framemove
+    :load-path "~/configs/misc_el/")
+(windmove-default-keybindings)
+(setq framemove-hook-into-windmove t)
+;; (when (fboundp 'windmove-default-keybindings)
+;;  (windmove-default-keybindings))
+#+END_SRC
+
+** Shell
+
+This ensures that the shell only records unique entries.
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(defvar comint-input-ignoredups)
+(setq comint-input-ignoredups t)
+#+END_SRC
+
+
+** Package loading
+
+So, the first thing is, I'm not sure I have any configs/misc_el anymore?
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(add-to-list 'load-path (expand-file-name "~/configs/misc_el/"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/elpa/"))
+#+END_SRC
+
+I need to check out how much of this is needed. Should all be superceded by things like
+straight.el?
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(require 'package)
+(setq package-archives
+   (quote
+    (("melpa" . "https://melpa.org/packages/")
+     ("gnu" . "https://elpa.gnu.org/packages/"))))
+(package-initialize)
+(eval-when-compile
+#+END_SRC
+
+This feels like (a) a convoluted way of loading use-package and (b) don't
+I need a better way of updating packages.
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(require 'use-package))
+(require 'bind-key)
+(setq use-package-always-ensure t)
+(use-package auto-package-update
+  :config
+  (setq auto-package-update-delete-old-versions t)
+  (setq auto-package-update-hide-results t)
+  (auto-package-update-maybe))
+#+END_SRC
+
+** Standard packages
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+  (use-package wgrep
+    :ensure t)
+  (use-package magit
+    :ensure t)
+  (use-package docker
+    :ensure t)
+  (use-package docker-compose-mode
+    :ensure t)
+  (use-package json-mode
+    :ensure t)
+  (use-package hackernews
+    :ensure t)
+  (use-package stan-mode
+    :ensure t)
+  (use-package ess
+    :ensure t
+    :init (require 'ess-site))
+  (use-package poly-R
+    :ensure t)
+  (use-package academic-phrases
+    :ensure t)
+  (use-package rainbow-delimiters
+    :ensure t
+    :hook (prog-mode . rainbow-delimiters-mode)
+  )
+#+END_SRC
+
+** RSS reading
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(use-package elfeed
+  :ensure t)
+(setq elfeed-feeds '("https://martinfowler.com/feed.atom"
+		     "https://opensource.com/feed"
+		     "https://feeds.feedburner.com/RBloggers"
+		     "https://planet.debian.org/rss20.xml"
+		     "https://sachachua.com/blog/feed/index.xml"
+		     "https://karthinks.com/tags/elfeed/index.xml"
+		     "https://ctan.org/ctan-ann/rss"))
+#+END_SRC
+** Completions
+
+This is also a work in progress. I think it could be simplified if I stopped trying to get
+icons in *C-x C-f*
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(use-package vertico
+  :init
+  (vertico-mode))
+
+(use-package general
+  :ensure t)
+
+(use-package marginalia
+  :general
+  (:keymaps 'minibuffer-local-map
+   "M-A" 'marginalia-cycle)
+  :custom
+  (marginalia-max-relative-age 0)
+  (marginalia-align 'right)
+  :init
+  (marginalia-mode))
+
+(use-package all-the-icons-completion
+  :ensure t
+  :after (marginalia all-the-icons)
+  :hook (marginalia-mode . all-the-icons-completion-marginalia-setup)
+  :init
+  (all-the-icons-completion-mode))
+#+END_SRC
+
+
+** Whitespace mode
+
+This is meant to work in prog mode (I think, code files)
+101 lines is the hard limit.
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(use-package whitespace
+  :ensure t)
+(setq-default whitespace-line-column 101)
+(add-hook 'emacs-lisp-mode-hook
+          (function (lambda()
+                      (whitespace-mode t))))
+(add-hook 'python-mode-hook
+          (function (lambda()
+                      (whitespace-mode t))))
+(add-hook 'r-mode-hook
+          (function (lambda()
+                      (whitespace-mode t))))
+#+END_SRC
+
+
+** Helpful things
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(use-package which-key
+  :init (which-key-mode)
+  :diminish which-key-mode
+  :config
+  (setq which-key-idle-delay 0.3))
+#+END_SRC
+
+
+** Adding icons
+
+I'm going to need to run *M-x all-the-icons-install-fonts*
+But this adds some icon displays in a few nice places.
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(when (display-graphic-p)
+  (require 'all-the-icons))
+(use-package all-the-icons-dired
+  :hook (dired-mode . all-the-icons-dired-mode)
+  :config (setq all-the-icons-dired-monochrome nil)
+  )
+#+END_SRC
+
+** Browsing kill ring
+
+I'm not sure I want to do this, or *consult-yank-from-kill-ring*
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(use-package browse-kill-ring
+  :ensure t
+  :bind (("M-y" . browse-kill-ring))
+  :config
+  (setq browse-kill-ring-highlight-current-entry t)
+  (setq browse-kill-ring-separator "\n--------------------\n")
+)
+#+END_SRC
+** Undo history
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(use-package vundo
+  :ensure t
+  :bind (("C-x u" . vundo))
+  :config
+  (setq vundo-compact-display t)
+  (setq vundo-roll-back-on-quit t)
+)
+#+END_SRC
+
+
+
+** LaTeX
+
+Here's a list of some standard packages and basic configs.
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(setq latex-run-command "pdflatex")
+#+END_SRC
+
+  ,#+BEGIN_SRC emacs-lisp :tangle testing.el
+    (use-package auctex
+      :ensure t)
+    (setq auto-mode-alist
+          (append '(("\\.tex\\'" . LaTeX-mode)) auto-mode-alist))
+    (use-package cdlatex
+      :ensure t)
+    (use-package xenops
+    :ensure t)
+    (require 'ob-python)
+    (use-package consult
+      :ensure t)
+    ;;(setq TeX-view-program-list
+    ;;      '(("Okular" "okular %o")
+    ;;       ("Firefox" "firefox %o")
+    ;;       ("Zathura" "zathura %o"))
+    ;;)
+
+    ;;(setq TeX-view-program-selection
+    ;;      '((output-pdf "Okular")))
+
+    ;; Custom function to split window vertically and display PDF
+    (defun my-TeX-revert-document-buffer (file)
+      "Revert the buffer corresponding to FILE in another window."
+      (let ((buf (find-buffer-visiting file)))
+        (if buf
+            (progn
+              (select-window (split-window-right))
+              (switch-to-buffer buf)
+              (pdf-view-mode)
+              (pdf-view-fit-page-to-window))
+          (message "No buffer associated with %s" file))))
+
+    (setq TeX-view-program-selection '((output-pdf "PDF Tools"))
+          TeX-source-correlate-start-server t)
+
+    (add-hook 'TeX-after-compilation-finished-functions
+              #'TeX-revert-document-buffer)
+#+END_SRC
+
+
+*** LaTeX LSP
+
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+;;; wget https://github.com/latex-lsp/texlab/releases/download/v5.16.1/texlab-x86_64-linux.tar.gz in Downloads (need to change the location)
+;; tar -xvf texlab-x86_64-linux.tar.gz 
+
+(add-to-list 'eglot-server-programs '(latex-mode . ("~/Downloads/texlab")))
+(add-hook 'latex-mode-hook 'eglot-ensure)
+(use-package company
+  :ensure t
+  :hook (after-init . global-company-mode)
+  :config
+  (setq company-idle-delay 0.2
+        company-minimum-prefix-length 1
+        company-selection-wrap-around t
+        company-frontends '(company-pseudo-tooltip-frontend
+                            company-echo-metadata-frontend)))
+
+(use-package company-auctex
+  :ensure t
+  :config
+  (company-auctex-init))
+
+(eval-after-load "tex" 
+  '(setcdr (assoc "LaTeX" TeX-command-list)
+          '("%`%l%(mode) -shell-escape%' %t"
+          TeX-run-TeX nil (latex-mode doctex-mode) :help "Run LaTeX")
+    )
+  )
+#+END_SRC
+
+
+
+** yasnippet
+
+I'm not sure how much of this config I need, because it seems to pick up latex mode for example
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(use-package yasnippet
+    :ensure t)
+(setq yas-snippet-dirs '("~/configs/emacs/ya_snippets/"))
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
+(add-hook 'sql-interactive-mode-hook
+          #'(lambda () (setq yas--extra-modes '(sql-mode))))
+(yas-global-mode 1)
+#+END_SRC
+
+
+** Flycheck
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+;;(setq flycheck-flake8rc "~/configs/splunk/.flake8")
+(use-package flycheck
+     :ensure t)
+;;(use-package flycheck-mypy
+;;     :load-path "~/configs/misc_el")
+(global-flycheck-mode)
+(add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'c++-mode-hook
+    (lambda() (setq flycheck-gcc-include-path
+       (list (expand-file-name "~/R/x86_64-pc-linux-gnu-library/4.0/testthat/include")
+             (expand-file-name "~/R/x86_64-pc-linux-gnu-library/4.0/Rcpp/include"))
+)))
+(setq flycheck-checker-error-threshold 800)
+(setq flycheck-lintr-linters "with_defaults(line_length_linter(100))")
+(setq flycheck-python-flake8-executable "~/miniconda3/envs/splunk/bin/flake8")
+(setq flycheck-python-mypy-executable "~/miniconda3/envs/splunk/bin/mypy")
+(setq magit-log-arguments '("--graph" "--color" "--decorate" "-n256"))
+
+(dolist (hook '(text-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode 1))))
+
+;; stack exchange hack, ubuntu has old version of shell linter
+(setq flycheck-shellcheck-follow-sources nil)
+(add-hook 'sh-mode-hook 'flycheck-mode)
+#+END_SRC
+
+** Grammar assistance
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(use-package languagetool
+  :ensure t
+  :defer t
+  :commands (languagetool-check
+             languagetool-clear-suggestions
+             languagetool-correct-at-point
+             languagetool-correct-buffer
+             languagetool-set-language
+             languagetool-server-mode
+             languagetool-server-start
+             languagetool-server-stop)
+     :config
+  (setq languagetool-java-bin "/usr/bin/java"
+        languagetool-server-command "/snap/languagetool/current/usr/bin/languagetool-server.jar"
+       languagetool-console-command "/snap/languagetool/current/usr/bin/languagetool-commandline.jar"
+        languagetool-java-arguments '("-Dfile.encoding=UTF-8")
+	)
+)
+#+END_SRC
+
+** Bibliography management
+
+[[https://lucidmanager.org/productivity/emacs-bibtex-mode/][Lucid manager article]] and [[https://github.com/pprevos/emacs-writing-studio][Emacs writing studio]]
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(use-package citar
+:custom
+  (citar-bibliography '("~/configs/admin/papers/regression.bib"))
+  :hook (org-mode . citar-capf-setup)
+)
+
+(use-package citar-org-roam
+  :after (citar org-roam)
+  :config (citar-org-roam-mode))
+
+;;(use-package biblio
+;;  :ensure t)
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(load-file "~/configs/emacs/.orgconfigs.el")
+#+END_SRC
+
+* End note
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(provide '.emacs)
+;;; .emacs ends here
+#+END_SRC
