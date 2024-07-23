@@ -488,41 +488,65 @@ Here's a list of some standard packages and basic configs.
     (add-hook 'TeX-after-compilation-finished-functions
               #'TeX-revert-document-buffer)
 #+END_SRC
-
-
+The following will require emacs 30
+#+begin_src emacs-lisp :eval no
+(use-package twauctex
+  :vc (:url "https://github.com/jeeger/twauctex")
+#+end_src
+Do I get any more nonsense here?
+So, in the mean time I need to use:
+#+begin_src emacs-lisp :eval no
+(add-to-list 'load-path "~/configs/misc_el/twauctex")
+(require 'twauctex)
+(twauctex-global-mode)
+#+end_src
 *** LaTeX LSP
-
+I'm trying to only use company-lsp as the backend. I only want lsp support from company.
 
 #+BEGIN_SRC emacs-lisp :tangle testing.el
-;;; wget https://github.com/latex-lsp/texlab/releases/download/v5.16.1/texlab-x86_64-linux.tar.gz in Downloads (need to change the location)
-;; tar -xvf texlab-x86_64-linux.tar.gz 
+      ;;; wget https://github.com/latex-lsp/texlab/releases/download/v5.16.1/texlab-x86_64-linux.tar.gz in Downloads (need to change the location)
+      ;; tar -xvf texlab-x86_64-linux.tar.gz 
+    (use-package company
+      :ensure t
+      :config
+      (global-company-mode)
+      (setq company-backends '(company-capf))
+      (setq company-idle-delay 0.2
+          company-minimum-prefix-length 1
+          company-selection-wrap-around t
+          company-frontends '(company-pseudo-tooltip-frontend
+                              company-echo-metadata-frontend))
+      )  ; Use only company-capf for completions
 
-(add-to-list 'eglot-server-programs '(latex-mode . ("~/Downloads/texlab")))
-(add-hook 'latex-mode-hook 'eglot-ensure)
-(use-package company
-  :ensure t
-  :hook (after-init . global-company-mode)
-  :config
-  (setq company-idle-delay 0.2
-        company-minimum-prefix-length 1
-        company-selection-wrap-around t
-        company-frontends '(company-pseudo-tooltip-frontend
-                            company-echo-metadata-frontend)))
+    ;; Install and configure eglot
+    (use-package eglot
+      :ensure t
+      :hook ((latex-mode . eglot-ensure)
+             (LaTeX-mode . eglot-ensure))  ; Ensure eglot starts for LaTeX modes
+      :config
+      (add-to-list 'eglot-server-programs '(latex-mode . ("~/Downloads/texlab"))))
 
-(use-package company-auctex
-  :ensure t
-  :config
-  (company-auctex-init))
+    ;; Optional: Additional settings for LaTeX editing (e.g., AUCTeX)
+    (use-package auctex
+      :ensure t
+      :defer t
+      :hook (LaTeX-mode . (lambda ()
+                            (turn-on-reftex)
+                            (flyspell-mode)
+                            (TeX-fold-mode))))
 
-(eval-after-load "tex" 
-  '(setcdr (assoc "LaTeX" TeX-command-list)
-          '("%`%l%(mode) -shell-escape%' %t"
-          TeX-run-TeX nil (latex-mode doctex-mode) :help "Run LaTeX")
-    )
-  )
+      (use-package company-auctex
+        :ensure t
+        :config
+        (company-auctex-init))
+;; this is for minted I think
+      (eval-after-load "tex" 
+        '(setcdr (assoc "LaTeX" TeX-command-list)
+                '("%`%l%(mode) -shell-escape%' %t"
+                TeX-run-TeX nil (latex-mode doctex-mode) :help "Run LaTeX")
+          )
+        )
 #+END_SRC
-
-
 
 ** yasnippet
 

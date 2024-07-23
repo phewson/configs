@@ -8,3 +8,6 @@ CUBE/ROLLUP
 filter (where blah > x) as "blah_filtered"
 percentile_cont(0.25) within group (order by height_inches) as "1q"
 n_tile is a window function.
+
+
+https://www.ubicloud.com/blog/difference-between-running-postgres-for-yourself-and-for-others
