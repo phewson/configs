@@ -449,7 +449,7 @@ Here's a list of some standard packages and basic configs.
 (setq latex-run-command "pdflatex")
 #+END_SRC
 
-  ,#+BEGIN_SRC emacs-lisp :tangle testing.el
+  #+BEGIN_SRC emacs-lisp :tangle testing.el
     (use-package auctex
       :ensure t)
     (setq auto-mode-alist
@@ -500,6 +500,43 @@ So, in the mean time I need to use:
 (require 'twauctex)
 (twauctex-global-mode)
 #+end_src
+If I want reftex to use biber (loading it automatically with latex mode as well)
+
+#+begin_src bash :eval no
+sudo apt install texlive-bibtex-extra texlive-publishers biber
+#+end_src
+
+  
+  #+begin_src emacs-lisp :eval no
+    (use-package reftex
+      :ensure t
+      :hook ((LaTeX-mode . reftex-mode))
+      :config
+      ;; Add custom citation commands for biblatex
+      (setq reftex-cite-format '((?\C-m . "\\cite[]{%l}")
+                                 (?p . "\\parencite[]{%l}")
+                                 (?t . "\\textcite[]{%l}")))
+
+      ;; Add biblatex commands to reftex
+    (setq reftex-cite-prompt-optional-args t) ; Prompt for empty optional arguments in cite commands
+    (setq reftex-cite-key-separator ", "))
+    (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+
+    ;; Add custom citation commands for RefTeX
+    (setq reftex-cite-prompt-optional-args t) ; Prompt for empty optional arguments in cite commands
+    (setq reftex-cite-format
+          '((?a . "\\autocite[]{%l}")
+            (?c . "\\cite[]{%l}")
+            (?f . "\\footcite[]{%l}")
+            (?n . "\\nocite{%l}")
+            (?p . "\\parencite[]{%l}")
+            (?s . "\\smartcite[]{%l}")
+            (?t . "\\textcite[]{%l}"))))
+#+end_src
+
+Mark with m (multiple marks) insert with return.
+spc opens full database file
+
 *** LaTeX LSP
 I'm trying to only use company-lsp as the backend. I only want lsp support from company.
 
@@ -635,9 +672,33 @@ I'm not sure how much of this config I need, because it seems to pick up latex m
 ;;  :ensure t)
 #+END_SRC
 
+#+begin_src emacs-lisp :eval no
+  (use-package gscholar-bibtex
+    :ensure t
+    :init
+    (setq gscholar-bibtex-default-source "Google Scholar")
+    (setq gscholar-bibtex-database-file "~/configs/admin/papers/regression.bib"))
+#+end_src
+
+I keep org configs in a separate file (probably need to stop this)
 #+BEGIN_SRC emacs-lisp :tangle testing.el
-(load-file "~/configs/emacs/.orgconfigs.el")
+   (load-file "~/configs/emacs/.orgconfigs.el")
 #+END_SRC
+
+* DevDocs
+
+#+begin_src emacs-lisp :eval no
+  (use-package devdocs
+    :ensure t
+    :config
+    ;; Custom function to check if a documentation set is installed
+    (add-hook 'after-init-hook
+            (lambda ()
+              (unless (member "latex" (devdocs-installed-docs))
+                (devdocs-install "latex"))))
+     (setq devdocs-browser-function 'browse-url-default-browser)
+         :bind ("C-h D" . devdocs-lookup))
+ #+end_src
 
 * End note
 
