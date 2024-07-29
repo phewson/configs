@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       cfc955c0-89c1-43e5-b5bf-77994f498fcf
+:END:
+#+title: Jumpcloud
+
+Stop the agent
+
+Stop the agent
+
+#+begin_src bash :eval no
+sudo systemctl stop jumpcloud-agent
+#+end_src
+
+Then remove the agent
+
+#+begin_src bash :eval no
+sudo apt-get remove jumpcloud-agent
+#+end_src
+
+Maybe we can do this (remove, purge) Also might be worth checking if it's added something to etc/apt/sources.list.data
+
+
+#+begin_src bash :eval no
+sudo apt-get purge jumpcloud-agent
+#+end_src
+
+Finally, check it;s really gone.
+#+begin_src bash :eval no
+systemctl status jumpcloud-agent
+#+end_src
+
+Maybe run an autoremove as well
