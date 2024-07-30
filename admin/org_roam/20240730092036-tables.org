@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       c7974ff7-5870-4905-a83b-0a180ab3b2e4
+:END:
+#+title: Tables
+https://github.com/rstudio/gt

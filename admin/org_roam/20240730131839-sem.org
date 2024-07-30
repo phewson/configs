@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       acbf0cdd-509d-4c39-8ae8-09f3dce8eb14
+:END:
+#+title: SEM
+blavaan does bayesian SEM

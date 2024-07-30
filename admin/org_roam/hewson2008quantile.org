@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       0db89a07-d745-419e-a252-97e1b36233b9
+:END:
+#+title: Hewson, Paul and Yu, Keming :: Quantile regression for binary performance indicators
+
