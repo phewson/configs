@@ -1,0 +1,129 @@
+:PROPERTIES:
+:ID:       f2a089b2-87a1-4199-a413-92095563ac49
+:END:
+#+title: Farewell
+Chris Walker
+:spiral_calendar_pad:  Jul 2nd at 11:54 AM
+Hello team
+I am also sad to announce that 
+@Paul Hewson
+ is going to be leaving Overleaf at the end of July to take up a Senior Lecturer role in Maths and Stats / Data Science with the University of Exeter.
+Paul joined us almost 3 years ago, just as we were forming the analytics team, and has been instrumental in helping the team get to where we are today. Some of Paul's project highlights that stand out from the last few years:
+Getting us up and running with split testing analysis, creating our reporting templates (in Overleaf) and defining our first guardrail metrics.
+Spotting some errors in Recurly’s analytics dashboards (in their tool, not just for our account), sharing them with the Recurly team and instigating them being updated for everyone.
+Designing SQL to manipulate incoming raw data into the tables we now use in lots of our day-to-day analysis
+Various other impactful analyses over the years, including a retrospective analysis of the interstitial page split test, which was one of the main instigators in retiring the Personal plan.
+As an Overleaf user before joining us, Paul has brought a wealth of ideas and product suggestions too (and would probably make a great user interview subject in his new role :wink:). Paul has become our go-to person for a wide range of things in the analytics team, and is going to be leaving behind some big shoes to fill.
+If you’d like to stay in touch, you can reach out to Paul on LinkedIn or by email: paul@insightsforaction.uk
+While of course a big loss for us, I have no doubt the new role is going to be a great fit.
+Please join me in wishing Paul all the best in his new role.
+Chris
+:green_heart:
+48
+:cry:
+24
+:male-teacher:
+1
+
+
+
+
+NEW
+
+15 replies
+
+
+Mark Moreau
+:spiral_calendar_pad:  Jul 2nd at 12:07 PM
+I will always chuckle to myself thinking of the stitched Elephant heart aorta you just 'happened' to have in your bag in Brighton, and our conversations about houses built on hydraulic stilts in Hamburg.... I wish you all the very best for the future, Paul!
+:heavy_plus_sign:
+1
+:elephant:
+1
+
+
+
+Christopher Hoskin
+:spiral_calendar_pad:  Jul 2nd at 12:07 PM
+Wow! Congrats on taking up an academic role :mortar_board:
+
+
+Tim Down
+:no_entry:  Jul 2nd at 12:09 PM
+Congratulations on the new role, Paul, it's been a real pleasure working with you and (more often) chatting with you
+
+
+Ali Smith
+  Jul 2nd at 12:12 PM
+Congrats on the new role Paul! That sounds really exciting! I’ve really enjoyed discussing various product ideas with you, as well as your clear insights into the data! All the best for the future! (edited) 
+
+
+Paulo Cereda
+  Jul 2nd at 1:05 PM
+Congrats for the awesome achievement, Paul! Wishing you the best on this new journey, with lots of happiness and kayaking! :green_heart: :tada: :duck:
+
+
+Ray Counley
+:palm_tree:  Jul 2nd at 1:33 PM
+Thank you for all you have done in the realms of analytics for Overleaf Paul! Sorry to hear that you are going, but this sounds like a great next step for you - all the best for this new adventure! :green_heart: :mortar_board:
+
+
+Eric Mc Sween
+:no_entry:  Jul 2nd at 2:00 PM
+Hi Paul. Congratulations on the new role. Your students will be lucky to have you. I've enjoyed the opportunities we had to work on big SQL queries together, and I particularly enjoyed your presentations where there was always something interesting to learn, or a very sophisticated way (to me) of looking at data. All the best!
+
+
+Sasha Göbbels
+:spiral_calendar_pad:  Jul 2nd at 2:06 PM
+Hi Paul, it was impressive and insightful to work with you (even if we were not closely working together). I will miss your clear and analytical view on things and your immense knowledge. So I'm happy for you to take a role in academia!
+
+
+Ryan Ross (she/her)
+:speech_balloon:  Jul 2nd at 4:17 PM
+BRB enrolling in Data Science program at Exeter. (I have really enjoyed working with you, 
+@Paul Hewson
+!)
+
+
+Shelly Miller (she/her)
+  Jul 2nd at 4:40 PM
+Thanks for all that you've contributed, Paul! Wishing you all the best in your new Senior Lecturer role! Sounds exciting!
+
+
+Jamie Liu (she/her)
+  Jul 2nd at 5:25 PM
+Best of luck in the future Paul! I'll miss the always erudite chats we have had and your excellent Attenborough imitation. :green_heart:
+
+
+Tom Hejda
+:face_with_thermometer:  Jul 3rd at 7:55 AM
+I'm tempted to say that this is great news -- I'm so happy that the uni gets a great teacher with a lot of practical "field" experience. This is so important!
+(But really, I'll miss you, it's been a pleasure to work with you!)
+
+
+Brian Gough
+  Jul 3rd at 5:05 PM
+Congrats on your return to academia Paul, all the best at Exeter :mortar_board:
+
+
+Villy Ioannou
+  Jul 3rd at 6:07 PM
+All the best Paul in the next chapter! :slightly_smiling_face:
+
+
+Lee Shalit
+  Jul 4th at 9:01 AM
+Wow, congratulations 
+@Paul Hewson
+! Thank you so much for all your contributions to Overleaf. I wish all the best in your new position as a Senior Lecturer. :green_heart:
+
+
+
+
+Liz Thomas
+  10:16 AM
+@Paul Hewson
+ for the humour, stats advice and user/ product knowledge shared over the last year I've been working here. All the best :)
+:this:
+3
+
