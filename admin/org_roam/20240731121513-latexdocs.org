@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       5baf342b-efa6-4033-ab3d-5fe13bf56ba1
+:END:
+#+title: LaTeXDocs
+https://texdoc.org/index.html
