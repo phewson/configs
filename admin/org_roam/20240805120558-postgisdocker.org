@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       4ba6d756-47c8-4635-bfef-386fd53576fc
+:END:
+#+title: PostgisDocker
+
+I've used this container "as is": [[https://registry.hub.docker.com/r/postgis/postgis/][Docker Debian]]
+There is a (currently embryonic) compose.yml in my configs files
+
+I load with
+#+begin_src bash :eval no
+docker compose up -d
+docker exec -it postgis_container /bin/bash
+#+end_src
+
+I then needed to open psql as root (no password)
+
+#+begin_src bash :eval no
+psql -U postgres
+\du
+postgres=# create user pgdocker with password 'pgdocker';
+create database official;
+postgres=# grant all privileges on database official to pgdocker;
+#+end_src
+
+And that seems to give me a pg server.   I also installed psql-client on debian directly. Might want to worry about versions at some stage?
+
+
+Also, had to manually add the schema
+#+begin_src bash :eval no
+  psql -U postgres -d official
+    postgres=# create schema staging;
+    postgres=# create schema ons;
+    postgres=# create schema dft;
+
+    alter schema ons owner to pgdocker;
+    create extension postgis;
+#+end_src
