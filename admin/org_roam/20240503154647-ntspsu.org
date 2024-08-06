@@ -3,6 +3,28 @@
 :END:
 #+title: NTSPSU
 
+NTS Technical Report 2003-2004
+
+Section 8.2 Page 176 (184 of pdf)
+- SRS not possible (costs)
+- Hence stratified sampling.
+    - PSU (Primary sampling unit): one or a small group of postcode sectors. PSUs are usually more homogenous so the error "is greater".  "Offset to some extent by the sampling frame"
+- Sampling errors can be calculated for all estimates, however multilevel structure makes this more complex.
+ - First two digits of PSU identify major strata, next three form minor strata.
+
+   $SE(r) = \sqrt{ \sum_{pair} \frac{a}{a-1)x^2 \sum_{i=1}^a (z_i - \bar{z})^2 }$
+
+    -  r: statistic being considered (mean or proportion),
+    - a, number of psus,
+    - $y_i$ sum of statistic in PSU $i$,
+    - $x_i$: sample size in PSU $i$,
+    - x: $\sum x_i$,
+    - $z_i$: $y_i - r x_i$,
+    - $\bar{z}$ minor strata mean
+
+This looks like work on one of the older NTSs
+
+#+begin_src sql :eval no
 with blah(code, type, region) AS (
 SELECT 1 AS code, 'Northern, Metropolitan' AS type, 1 AS region
 UNION SELECT 2 AS code, 'Northern, Non-metropolitan' AS type, 1 AS region
@@ -20,7 +42,9 @@ UNION SELECT 13 AS code, 'North West, Non-Metropolitan' AS type, 2 AS region
 UNION SELECT 14 AS code, 'Wales' AS type, 10 AS region
 UNION SELECT 15 AS code, 'Scotland' AS type, 11 AS region
 ) etc.
+#+end_src
 
+#+begin_src sql :eval no
 1, Inner London
 2, Outer London built up
 3, West Midlands built-up
@@ -35,8 +59,9 @@ UNION SELECT 15 AS code, 'Scotland' AS type, 11 AS region
 12, Other urban, over 25k to 50k
 13, Other urban, over 3k to 25k
 14, rural
+#+end_src
 
-
+#+begin_src sql :eval no
 PSU pop density
 1, Under 1
 2, 1 to 4.99
@@ -52,7 +77,9 @@ PSU pop density
 12, 50 to 59.99
 13, 60 to 74.99
 14, 75 and over
+#+end_src
 
+#+begin_src sql :eval no
 la population density
 1, under 1
 2, 1 to 1.99
@@ -65,9 +92,13 @@ la population density
 9, 25 to 34.99
 10, 35 to 44.99
 11, 45 and over
+#+end_src
 
+#+begin_src sql :eval no
 Bus scheme 1=Yes, 2 = No, 3 = NA
+#+end_src
 
+#+begin_src sql :eval no
 Eligibility
 1, Pensionable age
 2, Man or Woman 65+
@@ -76,7 +107,9 @@ Eligibility
 5, Other condition
 6, NA
 7, DNA
+#+end_src
 
+#+begin_src sql :eval no
 Type of concession
 1, Free fare
 2, Flat fare
@@ -91,7 +124,9 @@ Type of concession
 11, Other
 12, NA
 13, DNA
+#+end_src
 
+#+begin_src sql :eval no
 Membership fees
 1, Nil
 2, Up to GBP5
@@ -101,7 +136,9 @@ Membership fees
 6, Other fee
 7, NA
 8, DNA
+#+end_src
 
+#+begin_src sql :eval no
 Times available
 1, Anytime
 2, Peak hours only
@@ -110,7 +147,9 @@ Times available
 5, Other time restriction
 6, NA
 7, DNA
+#+end_src
 
+#+begin_src sql :eval no
 Areas available
 1, District only or less
 2, Above district but not countywide
@@ -119,7 +158,9 @@ Areas available
 5, Other area restriction
 6, NA
 7, DNA
+#+end_src
 
+#+begin_src sql :eval no
 Modes additional to bus
 1, None
 2, Public services only
@@ -128,4 +169,4 @@ Modes additional to bus
 5, Other
 6, NA
 7, DNA
-
+#+end_src

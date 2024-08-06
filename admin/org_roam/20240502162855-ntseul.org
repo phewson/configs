@@ -2,4 +2,38 @@
 :ID:       0f6282df-293f-4c28-a7fa-c6e6699d890b
 :END:
 #+title: NTSEUL
+
+#+begin_src R :eval no
+x <- read.table("attitudes_eul_2002-2022.tab",
+                  sep = "\t", header=TRUE)
+get_type <- function(x){
+   # smallint -32768 to +32767
+   # int -2147483648 to +2147483647
+   # bigint -9223372036854775808 to +9223372036854775807
+       if (class(x) == "character"){
+         type <- "text"}
+       else if (class(x) == "integer" & max(abs(x), na.rm=TRUE) <= 32767){
+         type <- "smallint"}
+       else if (class(x) == "integer" & max(abs(x), na.rm=TRUE) > 32767 &
+                max(abs(x), na.rm=TRUE) <= 2147483647) {
+         type <- "int"}
+       else if (class(x) == "integer" & max(abs(x), na.rm=TRUE) > 2147483647 &
+                max(abs(x), na.rm=TRUE) < 9223372036854775807){
+         type = "bigint"}
+       else if (class(x) == "numeric"){
+           type <- "float"}
+     else {
+           type = "text"}
+       return(type)
+  }
+
+    cnames <- colnames(x)
+    for (i in c(1:length(cnames))){
+       cat(paste(cnames[i], get_type(x[,i]), ",", sep=" "))
+    }
+
+
+
+#+end_src
+
 As a private citizen you can access EUL data, as an academic I think you can get slightly more data
