@@ -16,8 +16,10 @@ SCHEDULED: <2024-08-08 Thu>
 - [ ] Mail Chaplain
 Can I construct a narrative around accessibility...
 
-* Personal admin
-
+* Work
+** TODO Significance article on older drivers
+** TODO Map of road casualties (start of GitLab blog?)
+** SVLOC work
 ** INPROGRESS SFHEA application [1/5]
 - State "INPROGRESS" from              [2024-04-17 Wed 13:18]
 - [X] Information pack
@@ -78,6 +80,25 @@ BATS_RUN_SKIPPED=true bats test-raindrops.batss
 ** Blogging
 
 ** Domestic
+
+* Official [0/5]
+- [ ]Need to attend to deploy nts scripts. Can I check differences between staging and final automatically.
+  Check table definition is updated for 2002-2022 and that table ddl matches import query
+  - [X] Tickets
+  - [X] Individual
+  - [ ] Household
+  - [ ] Trip
+  - [X] Stage
+  - [X] LDJ
+  - [X] Attitudes
+  - [X] Vehicles
+  - [X] PSU
+- [ ]Import MOSAIC
+- [ ] Backup routine for data (rsync)
+- [ ] Import and tidy population data
+- [ ] Other NTS data
+- [ ] Active People survey (longer term)
+- [ ] Life expectancy data
 
 
 * LaTeX

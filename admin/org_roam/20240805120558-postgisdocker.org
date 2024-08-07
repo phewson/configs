@@ -35,3 +35,13 @@ Also, had to manually add the schema
     alter schema ons owner to pgdocker;
     create extension postgis;
 #+end_src
+
+
+#+begin_src bash :eval no
+sudo apt-get install libpq-dev
+sudo apt-get install libgdal-dev
+sudo apt-get install libudunits2-dev
+sudo apt-get install libfontconfig1-dev
+sudo apt-get install libfribidi-dev libharfbuzz-dev
+sudo apt-get install pandoc
+#+end_src

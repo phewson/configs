@@ -41,15 +41,16 @@
 ;; set various environmental variables
 ;;(setenv "TEST_DATA_HOME" "/home/phewson/analytics-queries/ci/tests/sim_data")
 ;;(setenv "HOME" "~/")
-(setenv "PGUSER" "vagrant")
+(setenv "DATASTORE" "/home/phewson/DATA")
+(setenv "PGUSER" "pgvagrant")
 (setenv "PGHOST" "localhost")
 (setenv "PGDATABASE" "official")
 (setenv "PGPORT" "15432")
 (setq sql-postgres-login-params
-      '((user :default "vagrant")
+      '((user :default "pgdocker")
         (database :default "official")
         (server :default "localhost")
-        (port :default 15452)))
+        (port :default 15432)))
 (setq sql-product 'postgres)
 
 ;; open with an org mode file as default
