@@ -1,0 +1,52 @@
+:PROPERTIES:
+:ID:       612682b5-8d55-4401-ba8e-fcc38057b82a
+:END:
+#+title: Teaching
+
+- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH1100&ay=2024&sys=1][MTH1100]] (0 Credits) 32 students
+- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH3100&ay=2024/5&sys=1][MTH3100]] (120 credits, CANDI module) 17 students
+- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTHM053&ay=2024&sys=1][MTHM053]] (60 credits) 6 students
+- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=EMP3001&ay=2024&sys=1][EMP3001]] (20 credits) 20 students
+
+  - Strengthen links with industrial partners and departmental business engagement portfolio (as in Eng and Bus school).
+
+** MTH1100
+- Term 1 and 2
+- 4 career zone workshops in year 1 semester 1 and 2 including CV and job application skills, searching for internships
+- Attend specific sessions for this module
+- Attend 2 or more extra-curricular EMPS-specific employability or alumni events
+- 1-1 meeting with careers consultant
+- Work through online ELE resources (including all quizzes)
+*** Assessment
+- 30 minute interview with MTH3100 module leader late in year 1 (term 2 or 3)
+- Complete assessments/quizzes by end of August
+- Insufficient engagement will result in transfer to a different programme
+* MTH3100
+- Term 1, 2 and 3
+- Practical work experience, normally for one year at least 6 months. No need to be paid a salary.
+- 1,194 hours work placement and preparation, 6 hours supervisory meetings.
+
+** Assessment:
+- technical report 4,000 words (60%), journal 2,000 words (20%), poster, 20 minute discussion (20%)
+
+
+* MTHM053
+- Term 1, 2 and 3
+- 500 hours spread over placement
+- 80 hours research and report preparation
+- 20 hours meetings with academic supervisor
+- Ideally this will provide material for MSc dissertation
+** Assessment
+- Work plan 2,000 words (20%)
+- Placement report 4,000 words (60%)
+- Presentation/Interview, 30 minutes (20%)
+
+* EMP3001
+- Term 1
+- 11 week duration. Preparation, reflective practice, project management, fortnightly progress review, debrief, assessment.
+** Assessment:
+- project report 4,000 words (70%)
+- Poster (A1) (30%)
+- Re-assessment possible (capped to 40%)
+
+
