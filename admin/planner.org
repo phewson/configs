@@ -82,12 +82,12 @@ BATS_RUN_SKIPPED=true bats test-raindrops.batss
 ** Domestic
 
 * Official [0/5]
-- [ ]Need to attend to deploy nts scripts. Can I check differences between staging and final automatically.
+- [X]Need to attend to deploy nts scripts. Can I check differences between staging and final automatically.
   Check table definition is updated for 2002-2022 and that table ddl matches import query
   - [X] Tickets
   - [X] Individual
-  - [ ] Household
-  - [ ] Trip
+  - [X] Household
+  - [X] Trip
   - [X] Stage
   - [X] LDJ
   - [X] Attitudes

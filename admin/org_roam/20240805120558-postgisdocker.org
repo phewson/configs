@@ -45,3 +45,6 @@ sudo apt-get install libfontconfig1-dev
 sudo apt-get install libfribidi-dev libharfbuzz-dev
 sudo apt-get install pandoc
 #+end_src
+
+
+I also needed to install postgis on host because it uses shp2pgsql to import shapefiles.

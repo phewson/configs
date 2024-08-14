@@ -247,6 +247,30 @@ I want to bounce between windows using *C-ARROW*
 ;;  (windmove-default-keybindings))
 #+END_SRC
 
+#+begin_src emacs-lisp :eval no
+(require 'cl-lib)
+  (use-package windmove
+      :ensure nil
+      :config
+      ;; Enable windmove to use Shift + Arrow keys to switch between windows
+      (windmove-default-keybindings 'shift))
+  ;;  (global-set-key (kbd "C-c <left>")  'windmove-left)
+  ;;(global-set-key (kbd "C-c <right>") 'windmove-right)
+  ;;(global-set-key (kbd "C-c <up>")    'windmove-up)
+  ;;(global-set-key (kbd "C-c <down>")  'windmove-down)
+
+    ;; Configure framemove
+    (use-package framemove
+      :load-path "~/configs/misc_el/"
+      :ensure nil
+      :after windmove
+      :config
+      ;; Integrate framemove with windmove
+      (setq framemove-hook-into-windmove t))
+  #+end_src
+
+
+
 ** Shell
 
 This ensures that the shell only records unique entries.
@@ -539,6 +563,52 @@ spc opens full database file
 
 *** LaTeX LSP
 I'm trying to only use company-lsp as the backend. I only want lsp support from company.
+#+begin_src emacs-lisp :eval no
+(use-package eglot
+  :hook (prog-mode . eglot-ensure)
+  :config
+  ;; Configure Eglot-specific settings here if needed
+  )
+
+;; Corfu Configuration
+(use-package corfu
+  :init
+  (setq corfu-auto t)                 ;; Enable auto completion
+  (setq corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
+  (setq corfu-auto-prefix 2)          ;; Show completions after 2 characters
+  (setq corfu-auto-delay 0.0)         ;; No delay for completion
+  (setq corfu-quit-at-boundary nil)   ;; Don't quit at completion boundary
+  (setq corfu-quit-no-match t)        ;; Quit if no match
+  (setq corfu-preview-current nil)    ;; Disable current candidate preview
+  (setq corfu-preselect-first nil)    ;; Do not preselect first candidate
+  (setq corfu-scroll-margin 5)        ;; Use scroll margin
+  :config
+  (global-corfu-mode))
+
+;; Corfu Documentation (Optional)
+(use-package corfu-doc
+  :after corfu
+  :hook (corfu-mode . corfu-doc-mode)
+  :bind (:map corfu-map
+              ("M-d" . corfu-doc-toggle)
+              ("M-p" . corfu-doc-scroll-up)
+              ("M-n" . corfu-doc-scroll-down)))
+
+;; Corfu Popup Info (Optional)
+(use-package corfu-popupinfo
+  :after corfu
+  :config
+  (corfu-popupinfo-mode))
+
+;; Integrate Corfu with Eglot
+(use-package eglot
+  :hook (eglot-managed-mode . corfu-eglot-setup)
+  :config
+  (defun corfu-eglot-setup ()
+    "Custom setup for Eglot with Corfu."
+    (setq-local completion-at-point-functions
+                (list (cape-super-capf #'eglot-completion-at-point #'cape-dabbrev)))))
+#+end_src
 
 #+BEGIN_SRC emacs-lisp :tangle testing.el
       ;;; wget https://github.com/latex-lsp/texlab/releases/download/v5.16.1/texlab-x86_64-linux.tar.gz in Downloads (need to change the location)

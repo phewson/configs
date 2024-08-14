@@ -42,7 +42,7 @@
 ;;(setenv "TEST_DATA_HOME" "/home/phewson/analytics-queries/ci/tests/sim_data")
 ;;(setenv "HOME" "~/")
 (setenv "DATASTORE" "/home/phewson/DATA")
-(setenv "PGUSER" "pgvagrant")
+(setenv "PGUSER" "pgdocker")
 (setenv "PGHOST" "localhost")
 (setenv "PGDATABASE" "official")
 (setenv "PGPORT" "15432")

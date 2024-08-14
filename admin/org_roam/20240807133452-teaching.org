@@ -3,21 +3,34 @@
 :END:
 #+title: Teaching
 
+-  [[https://ele.exeter.ac.uk/my/][VLE]]
+ - [[https://mytimetable.exeter.ac.uk/schedule][Timetable]]
+
+- Some statistics tutorials (one hour a forthnight) / half a module (if grants succeed)
+- MSc Project Supervision.
+
 - [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH1100&ay=2024&sys=1][MTH1100]] (0 Credits) 32 students
 - [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH3100&ay=2024/5&sys=1][MTH3100]] (120 credits, CANDI module) 17 students
 - [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTHM053&ay=2024&sys=1][MTHM053]] (60 credits) 6 students
 - [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=EMP3001&ay=2024&sys=1][EMP3001]] (20 credits) 20 students
 
-  - Strengthen links with industrial partners and departmental business engagement portfolio (as in Eng and Bus school).
 
-** MTH1100
+
+  - Strengthen links with industrial partners and departmental business engagement portfolio (as in Eng and Bus school).
+- Mark Baldwin - arrange handover meetings
+  - Career Zone
+
+    
+
+  
+* MTH1100
 - Term 1 and 2
 - 4 career zone workshops in year 1 semester 1 and 2 including CV and job application skills, searching for internships
 - Attend specific sessions for this module
 - Attend 2 or more extra-curricular EMPS-specific employability or alumni events
 - 1-1 meeting with careers consultant
 - Work through online ELE resources (including all quizzes)
-*** Assessment
+** Assessment
 - 30 minute interview with MTH3100 module leader late in year 1 (term 2 or 3)
 - Complete assessments/quizzes by end of August
 - Insufficient engagement will result in transfer to a different programme
@@ -41,8 +54,9 @@
 - Placement report 4,000 words (60%)
 - Presentation/Interview, 30 minutes (20%)
 
-* EMP3001
+* EMP3001 Commercial and Industrial Experience
 - Term 1
+- 80 hours on placement 6 weeks
 - 11 week duration. Preparation, reflective practice, project management, fortnightly progress review, debrief, assessment.
 ** Assessment:
 - project report 4,000 words (70%)
