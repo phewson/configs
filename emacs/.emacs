@@ -6,7 +6,7 @@
 
 ;; This is meant to be an accessible theme, but, ouch.
 (load-theme 'modus-operandi t)
-
+(set-frame-font "DejaVu Sans Mono-11" nil t)
 (use-package pulsar
   :ensure t
   :config
@@ -502,15 +502,68 @@ into a comma-separated one-liner surrounded by QUOTE."
 (require 'eglot)
 (add-to-list 'eglot-server-programs '(latex-mode . ("~/Downloads/texlab")))
 (add-hook 'latex-mode-hook 'eglot-ensure)
-(use-package company
+
+
+(add-hook 'ess-r-mode-hook 'eglot-ensure)
+(add-hook 'eglot-managed-mode-hook (lambda () (corfu-mode 1)))
+
+(use-package corfu
   :ensure t
-  :hook (after-init . global-company-mode)
+  :init
+  (global-corfu-mode)
+  ;; Optionally use TAB for cycling, compatible with both lsp-mode and eglot
+  (setq corfu-cycle t)
+  (setq corfu-auto t)                 ;; Enable auto completion
+  (setq corfu-auto-prefix 2)
+  (setq corfu-auto-delay 0.0)
+  (setq corfu-preview-current nil)    ;; Do not preview current candidate
+  (setq corfu-preselect-first nil)    ;; Do not preselect first candidate
+  (setq corfu-quit-no-match 'separator) ;; Do not quit if no match but separator inserted
   :config
-  (setq company-idle-delay 0.2
-        company-minimum-prefix-length 1
-        company-selection-wrap-around t
-        company-frontends '(company-pseudo-tooltip-frontend
-                            company-echo-metadata-frontend)))
+  (corfu-popupinfo-mode)
+  :bind
+  (:map corfu-map
+        ("TAB" . corfu-next)
+        ([tab] . corfu-next)
+        ("S-TAB" . corfu-previous)
+        ([backtab] . corfu-previous)
+        ("M-d" . corfu-popupinfo-toggle)   ;; Toggle documentation popup
+        ("M-n" . corfu-popupinfo-scroll-up)  ;; Scroll up in the popup
+        ("M-p" . corfu-popupinfo-scroll-down)))
+
+(use-package tree-sitter
+  :ensure t
+  :config
+  (global-tree-sitter-mode)
+  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
+
+(use-package tree-sitter-langs
+  :ensure t
+  :after tree-sitter)
+
+;; Enable Tree-sitter for R mode
+(add-hook 'ess-r-mode-hook #'tree-sitter-mode)
+(add-hook 'ess-r-mode-hook #'tree-sitter-hl-mode)
+
+;; Optionally configure orderless for better completion styles
+;;(use-package orderless
+;;  :ensure t
+;;  :init
+;;  (setq completion-styles '(orderless basic)
+;;        completion-category-defaults nil
+;;        completion-category-overrides '((file (styles partial-completion)))))
+
+
+
+;; (use-package company
+;;   :ensure t
+;;   :hook (after-init . global-company-mode)
+;;   :config
+;;   (setq company-idle-delay 0.2
+;;         company-minimum-prefix-length 1
+;;         company-selection-wrap-around t
+;;         company-frontends '(company-pseudo-tooltip-frontend
+;;                             company-echo-metadata-frontend)))
 
 (use-package company-auctex
   :ensure t
