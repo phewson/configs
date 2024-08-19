@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: psql
+# key: psql
+# --
+psql -U pgdocker -d official -h localhost -p 15432
