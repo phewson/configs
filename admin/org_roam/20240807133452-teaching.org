@@ -11,11 +11,17 @@
 - Some statistics tutorials (one hour a forthnight) / half a module (if grants succeed)
 - MSc Project Supervision.
 
-- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH1100&ay=2024&sys=1][MTH1100]] (0 Credits) 32 students
-- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH3100&ay=2024/5&sys=1][MTH3100]] (120 credits, CANDI module) 17 students
-- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTHM053&ay=2024&sys=1][MTHM053]] (60 credits) 6 students
-- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=EMP3001&ay=2024&sys=1][EMP3001]] (20 credits) 20 students
-- [[Dont know][MTH2100]]
+- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH1100&ay=2024&sys=1][MTH1100]] (0 Credits) 32 students Professional support
+- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH3100&ay=2024/5&sys=1][MTH3100]] (120 credits 17 students
+- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTHM053&ay=2024&sys=1][MTHM053]] (60 credits) 6 students Data Science - also doing a project John Bruun looks after the projects. We supervise the placements, but he looks after projects.  This is an electronic submission, we don't see the students. Presentation on Teams because they have left.
+- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=EMP3001&ay=2024&sys=1][EMP3001]] (20 credits) 37 students. Need reports marked by other people. email Layal / Nigel (maths director of education) computer science mark computer science. Employers feedback is a problem. External staff can't be assessing uni work, so all get 10 for doing the form.  Directors of Education asked for volunteers to help mark posters.  Min 6 weeks, usually all summer. Check with Jo what the minimum should be.
+- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH2100&ay=2022/3&sys=1][MTH2011]] (0 Credits) 240 students. Attend sessions and complete online ELE activities. Professional support  Give talk advertising EMP3001.
+- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=ECMM410&ay=2024/5&sys=1][ECMM410]] research methods course (15 credits) 41 students 
+Roger in Engineering has a printer, he prints the posters.
+w/c 3rd September on campus.
+
+Formative feedback - once only.
+Examples of prior reports - data protection / commercial confidential.
 
 
 *Kate Stockman* Faculty lead for all employability
@@ -24,7 +30,8 @@ Recruitment / Employers
 Alumni Panel: Monday 7th October 6:30, featuring 4 math alumni with interesting careers.
 Employability Strategy Group; I should have been added; one or two meetings a term - feedback on survey, new initiatives, next meeting maybe in November.
 
-
+*Ken Evans* Research methods module
+- Research students - assessment option. Taught students - assessment students compulsory. Prep for masters project..  Mixed programmes.1-15 Eng/Maths and 130ish computer science. 3 pieces of coursework. Ken to add me to ELE. ILPs may need modification.   Peer review: beginning of next term. Mark over xmas.  Big coursework - need supervisors - hand in middle of next term.
 
 *Jo Harris* also faculty wide.  Courses for 2nd year students around finding placements for the year in industry. Offers 1:1 sessions (20 minutes) in person or virtual. 
 CANDI module: might split poster assessments into smaller groups.
