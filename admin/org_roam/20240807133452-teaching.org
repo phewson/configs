@@ -3,6 +3,8 @@
 :END:
 #+title: Teaching
 
+
+
 -  [[https://ele.exeter.ac.uk/my/][VLE]]
  - [[https://mytimetable.exeter.ac.uk/schedule][Timetable]]
 
@@ -13,8 +15,44 @@
 - [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH3100&ay=2024/5&sys=1][MTH3100]] (120 credits, CANDI module) 17 students
 - [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTHM053&ay=2024&sys=1][MTHM053]] (60 credits) 6 students
 - [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=EMP3001&ay=2024&sys=1][EMP3001]] (20 credits) 20 students
+- [[Dont know][MTH2100]]
 
 
+*Kate Stockman* Faculty lead for all employability
+Organises events (the events team charge employers for access to Exeter Uni, Kate sometimes organises smaller events and doesn't charge)
+Recruitment / Employers
+Alumni Panel: Monday 7th October 6:30, featuring 4 math alumni with interesting careers.
+Employability Strategy Group; I should have been added; one or two meetings a term - feedback on survey, new initiatives, next meeting maybe in November.
+
+
+
+*Jo Harris* also faculty wide.  Courses for 2nd year students around finding placements for the year in industry. Offers 1:1 sessions (20 minutes) in person or virtual. 
+CANDI module: might split poster assessments into smaller groups.
+*_May need to find additional assessors_*
+Needs help marketing to students (no current marketing to employers).
+May need help making things more visible.
+Handshake is the place for posting job ads.
+
+Hannah Bunting - QStep / Greg Stride LGA 
+  Will running for first time.
+ - *Create Future*: tailored for each programme/discipline.
+-   Student Employability and Development Department (plus as s)
+Rachel Sloan (first leavers?) is head of Skills Team, writes content. Workshop 1; 2 hours (old library). 100 at a time. Skills team plus some external. Online guided independent learning 1.5 hours.
+Student interns help students complete activities.
+Workshop 2: 1 hour lecture. Review and next steps.  (with academic). Fill out reflection form.
+Good at attending, poor at completing online activities.
+
+Create Future 2. In second year.
+Handshake: online platform for discipline specific slides.
+
+Expectation that students do this
+Discipline specific document needs review (Christanne?)
+Attend Workshop 2.
+Slides
+First destination survey? Oli Laity - but I've been sent an MI link.
+
+- *Career zone* does drop ins.
+  - *Exeter award* (looked at comparators - cumulative work over duration) *Exeter leaders award*
 
   - Strengthen links with industrial partners and departmental business engagement portfolio (as in Eng and Bus school).
 - Mark Baldwin - arrange handover meetings

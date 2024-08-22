@@ -207,6 +207,9 @@ into a comma-separated one-liner surrounded by QUOTE."
     (("melpa" . "https://melpa.org/packages/")
      ("gnu" . "https://elpa.gnu.org/packages/"))))
 
+(setq package-archive-priorities '(("melpa" . 1)
+                                   ("gnu" . 2)))
+
 (package-initialize)
 
 
