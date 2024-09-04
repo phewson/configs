@@ -1,0 +1,97 @@
+:PROPERTIES:
+:ID:       e7a8970e-2642-4d81-a9ca-6d5988df256b
+:END:
+#+title: MTH3100Assessment
+
+From [[https://ele.exeter.ac.uk/course/view.php?id=12595][MTH3100 Industrial Placement ELE]] - Industrial Placement (MTH3100_A23_12_202324) 
+
+* Assessment Rubric
+
+| Summative Assessment | Weight |  Due date |
+|----------------------+--------+---------- |
+| Journal              |  15%   | 13.9.2024 |
+| Employer’s Report    | 10%    | 13.9.2024 |
+| Technical Report     | 60%    | 13.9.2024 |
+| Poster               | 15%    | 20.9.2024 |
+
+
+MTH3100 was a new module in 2021/22. As module leader, I learned a lot about what works well and what does not. Early due dates do not work well. Student placements can run June–June, September–September, or even June–September. Accordingly, most assignments are due 13 September 2024. This gives you the maximum time to work on your submissions, and also allows some time for the Department to progress you to the next year by mid-October, which is required. This date allows for students to request extensions (up to two weeks) to the due date. The date for poster submission is 20 September 2024, and the poster session will be timetabled for the first half of October. Note: The ELE page will have links to recorded lectures on the following topics: how to do a presentation, how to make figures, how to write a report, how to format a report, how to cite references, etc. Live lectures are not possible since you will be on placements.
+
+Make sure that you learn from the videos. The markers will know if, for example, you did not learn about typography.
+
+** Journal. 15% of total module mark.
+
+A journal reflects your thoughts as you progress through your placement. It should contain what is important to you. Typically, this includes reflection on problems, work issues, being treated well or unfairly, and how you plan to resolve issues. There is no limit on the number of words, but more words will not automatically earn higher marks. 2000-3000 words is
+plenty. You may choose to submit scans of your handwritten journal, as it was originally written. Or you may choose to create a document. The marking criteria are flexible. Markers are looking for evidence that you kept a journal as your placement progressed, and that it was useful to you. The journal is not a log of number of hours worked each day, or just facts. It is not a summary of what happened. It is a record of your thoughts.
+
+Hand in time and date for journal - ELE by 12.00 hours on Friday 13 September 2024
+
+** Employer’s Report. 10% of module mark.
+
+This is a form to be filled out by your employer about your placement. It is worth 10% of your module mark (0/10 if it is not submitted). However, note that submitting the form earns you 10/10. What your employer writes has no effect on your overall mark. It is available as a PDF and a Word document on the ELE page.
+
+Hand in time and date for employer’s report– ELE by 12.00 hours on Friday 13 September 2024
+
+** Technical Report. 60% of module mark.
+
+This report should not exceed 4000 words of text. You are required to write a report describing a specific project(s) or substantial piece of work that you undertook during your work placement. The 4000 words does not include references, figures, captions, etc. The report should include some references, using the academic style of your choice. These could be technical references, or resources you used to handle issues in your placement (e.g., a book on how to deal with office politics, or an article about discrimination in the workplace). The report must include the following sections, with the following titles – so do not do something different! Subsections are OK. You may include a brief summary (not marked) of the report, and include news such as being offered a job at your placement.
+
+1. Introduction (20 marks)
+    - The overall aim of the placement, including a description of the company’s structure and operations and an explanation of how the placement opportunity and work undertaken develops and extends your particular interests, skills and supports your career intentions.
+    - Specification of the particular task(s) you were charged with on the placement, including a clear description of a ‘problem(s)’ or challenge(s) you tackled.
+2. Technical Challenges (30 marks)
+    -  A clear outline of the strategy you employed to address the problem or challenge revealing how you have applied problem-solving skills and knowledge from your discipline area (link to the specific technical contents from specific modules you would have taken including module code). These are technical challenges and you must show how you applied discipline knowledge and expertise to solve them.
+    • An evaluation of your strategy which should determine and reveal your effectiveness in resolving the problem or challenge and makes recommendations for future enhancements. You should critically assess the professional technical skills you gained/developed during your internship.
+3. Interpersonal skills and workplace challenges (30 marks)
+    - This section will enable you to identify and reflect on interpersonal workplace challenges and particular events which you consider to be noteworthy whilst undertaking your placement. For example, a difficult boss, unrealistic expectations, co-workers plotting against you, sexism/racism/cultural challeges. • These are not technical problems, but rather “soft” challenges that arise from office/workplace interaction, conflict, work deadlines, etc.
+    -  The idea behind selecting and reflecting on these particular events is that you should be able to consider them in the light of the discipline-related and personal skills which you will have brought to the placement and also how they have helped develop these and new skills in the workplace setting. Your journal should help you to identify the critical incidents you want to write about. 
+    -  Reflection should be a critical process and you should be able to articulate your thoughts, ideas and perspectives to convey the process of learning which occurred during the placement. Write about what you were thinking at the time.
+4. Presentation (20 Marks)
+    - An appropriate professional presentation, layout, style, and readability – failure to keep within the maximum word count (4000 words will be penalised by 5 marks.
+    - Make sure you pay attention to the typography and data graphics videos.
+
+Hand in time and date for technical report – ELE by 12.00 hours on Friday 13 September 2024
+
+Poster. 15% of module mark.
+
+The poster session will take place during the first half of October after your placements are
+complete.
+There is no template for the poster—it is up to you to choose everything about the poster.
+The posters have been printed in past years at the A1 size, but since the aspect ratio for all A
+paper sizes is the same, it really does not matter. You will upload a PDF of your poster to
+ELE, and all the posters will be printed for you, and then hung for you on the day of the
+poster session.
+
+Poster marking. The poster session is designed for you explain to an interested person what
+you did, where, why, how the placement was related to your degree. Your poster will be
+printed and displayed for you. There is no required template for the poster. Be sure to have
+your name printed prominently at the top of the poster, so the markers can find you.
+Hand in time and date for poster – Student Services Office (E-BART) by 12:00 Friday 22
+September 2023.
+
+Markers will use the following score sheet to mark you:
+
+Student:
+
+|                           | Feedback | Mark |
+|---------------------------+----------+------|
+| /                                                               |                        |               |
+| *Visual impact*             |          | /5   |
+| /Professional look,/        |          |      |
+| /layout, visual aids etc./  |          |      |
+|---------------------------+----------+------|
+| *Content*                   |          | /10  |
+| /Contains all necessary/    |          |      |
+| /information. Well/         |          |      |
+| /organised. Clear and/      |          |      |
+| /legible. Easy to follow/   |          |      |
+| /for non-specialists/       |          |      |
+|---------------------------+----------+------|
+| *Interview*                 |          | /5   |
+| /Knowledge of project and/  |          |      |
+| /work undertaken. Ability/  |          |      |
+| /to convey  your placement/ |          |      |
+| /experience to an audience/ |          |      |
+|---------------------------+----------+------|
+|                           | Total    | /20  |
+

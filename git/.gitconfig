@@ -8,3 +8,5 @@
 
 [github]
 	user = phewson
+[credential]
+	helper = cache

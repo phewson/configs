@@ -2,8 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-
-
+(setq ess-style 'RStudio)
 ;; This is meant to be an accessible theme, but, ouch.
 (load-theme 'modus-operandi t)
 (set-frame-font "DejaVu Sans Mono-11" nil t)

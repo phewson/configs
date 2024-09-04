@@ -1,0 +1,95 @@
+:PROPERTIES:
+:ID:       0f492950-6e60-42f6-bd35-0b33b93e2bd4
+:END:
+#+title: EMP3001Assessment
+
+* Commercial and Industrial Experience in Mathematics and Computer Science: EPM3001 2024/25
+(for placements summer 2024)
+
+Module summary and marking guidelines
+
+Module leader: Prof Mark Baldwin
+
+Updated 6 August 2024
+
+| Summative Assessment | Weight |  Due date |
+|----------------------+--------+-----------|
+| Technical Report     |    70% | 13.9.2024 |
+| Poster               |    30% | 20.9.2024 |
+
+
+Summer student placements end before term starts 23 September 2024. Accordingly, the main assignment is due 13 September 2024. This gives you the maximum time to work on your submissions. This date allows for students to request extensions (up to two weeks) to the due date. The date for poster submission is 20 September 2024, and the poster session will be
+timetabled for the first half of October.
+
+Note: The ELE page has links to recorded lectures on: how to do a presentation, how to make figures, how to write a report, how to format a report, how to cite literature, etc. Live lectures are not possible since you will be on placements. The ELE page also has the Employer’s form in both PDF and Word formats.
+
+** Technical Report. 70% of module mark.
+This report should not exceed 4000 words of text. You are required to write a report describing
+a specific project(s) or substantial piece of work that you undertook during your work
+placement. The 4000 words does not include references, figures, captions, etc. The report
+should include some references, using the academic style of your choice. These could be
+technical references, or resources you used to handle issues in your placement (e.g., a book on
+how to deal with office politics, or an article about discrimination in the workplace).
+The report must include the following three sections, with the following titles – so do not do
+something different! Subsections are OK. You may include a brief summary (not marked) of the
+report, and include news such as being offered a job at your placement.
+
+1. Introduction (20 marks)
+    - The overall aim of the placement, including a description of the company’s structure and operations and an explanation of how the placement opportunity and work undertaken develops and extends your particular interests, skills and supports your career intentions.
+    • Specification of the particular task(s) you were charged with on the placement, including a clear description of a ‘problem(s)’ or challenge(s) you tackled.
+2. Technical Challenges (30 marks)
+    • A clear outline of the strategy you employed to address the problem or challenge revealing how you have applied problem-solving skills and knowledge from your discipline area (link to the specific technical contents from specific modules you would have taken including module code). These are technical challenges and you must show how you applied discipline knowledge and expertise to solve them.
+    • An evaluation of your strategy which should determine and reveal your effectiveness in resolving the problem or challenge and makes recommendations for future enhancements. You should critically assess the professional technical skills you gained/developed during your internship.
+3. Interpersonal skills and workplace challenges (30 marks)
+    • This section will enable you to identify and reflect on interpersonal workplace challenges and particular events which you consider to be noteworthy whilst undertaking your placement. For example, a difficult boss, unrealistic expectations, co- workers plotting against you, sexism/racism/cultural challeges.
+    • These are not technical problems, but rather “soft” challenges that arise from office/workplace interaction, conflict, work deadlines, etc.
+    • The idea behind selecting and reflecting on these particular events is that you should be able to consider them in the light of the discipline-related and personal skills which you will have brought to the placement and also how they have helped develop these and new skills in the workplace setting. Your jounal should help you to identify the critical incidents you want to write about.
+    • Reflection should be a critical process and you should be able to articulate your thoughts, ideas and perspectives to convey the process of learning which occurred during the placement. Write about what you were thinking at the time.
+4. In addition, your report should look professional (20 Marks)
+    • An appropriate professional presentation, layout, style, and readability – failure to keep within the maximum word count (4000 words will be penalised by 5 marks.
+    • Make sure you pay attention to the typography and data graphics videos.
+
+Also, you may add a short Summary or Conclusions section, but it is not marked.
+
+Hand in time and date for technical report – Student Services Office (E-BART) by 12.00 hours on Friday 13 September 2024
+
+** Poster. 30% of module mark.
+
+The poster session will take place during the first half of October after your placements are
+complete.
+
+There is no template for the poster—it is up to you to choose everything about the poster. The
+posters have been printed in past years at the A1 size, but since the aspect ratio for all A paper
+sizes is the same, it really does not matter. You will upload a PDF of your poster to BART, and all
+the posters will be printed for you, and then hung for you on the day of the poster session.
+Poster marking. The poster session is designed for you explain to an interested person what you
+did, where, why, how the placement was related to your degree. Your poster will be printed
+and displayed for you. There is no required template for the poster. Be sure to have your name
+printed prominently at the top of the poster, so the markers can find you.
+Hand in time and date for poster – Student Services Office (E-BART) by 12:00 Friday 20
+September 2024.
+Markers will use the following score sheet:
+
+Student:
+
+|                           | Feedback | Mark |
+|---------------------------+----------+------|
+| /                                                               |                        |               |
+| *Visual impact*             |          | /5   |
+| /Professional look,/        |          |      |
+| /layout, visual aids etc./  |          |      |
+|---------------------------+----------+------|
+| *Content*                   |          | /10  |
+| /Contains all necessary/    |          |      |
+| /information. Well/         |          |      |
+| /organised. Clear and/      |          |      |
+| /legible. Easy to follow/   |          |      |
+| /for non-specialists/       |          |      |
+|---------------------------+----------+------|
+| *Interview*                 |          | /5   |
+| /Knowledge of project and/  |          |      |
+| /work undertaken. Ability/  |          |      |
+| /to convey  your placement/ |          |      |
+| /experience to an audience/ |          |      |
+|---------------------------+----------+------|
+|                           | Total    | /20  |

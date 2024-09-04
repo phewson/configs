@@ -3,53 +3,58 @@
 :END:
 #+title: Teaching
 
-
-
 -  [[https://ele.exeter.ac.uk/my/][VLE]]
  - [[https://mytimetable.exeter.ac.uk/schedule][Timetable]]
 
+
+** Meeting with Layal 8/8/2024
+ 
 - Some statistics tutorials (one hour a forthnight) / half a module (if grants succeed)
 - MSc Project Supervision.
 
+** Modules
+
 - [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH1100&ay=2024&sys=1][MTH1100]] (0 Credits) 32 students Professional support
+- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH2100&ay=2022/3&sys=1][MTH2011]] (0 Credits) 240 students. Students attend sessions and complete online ELE activities. They can receive professional support  I will be asked to give a talk advertising EMP3001.
 - [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH3100&ay=2024/5&sys=1][MTH3100]] (120 credits 17 students
-- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTHM053&ay=2024&sys=1][MTHM053]] (60 credits) 6 students Data Science - also doing a project John Bruun looks after the projects. We supervise the placements, but he looks after projects.  This is an electronic submission, we don't see the students. Presentation on Teams because they have left.
 - [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=EMP3001&ay=2024&sys=1][EMP3001]] (20 credits) 37 students. Need reports marked by other people. email Layal / Nigel (maths director of education) computer science mark computer science. Employers feedback is a problem. External staff can't be assessing uni work, so all get 10 for doing the form.  Directors of Education asked for volunteers to help mark posters.  Min 6 weeks, usually all summer. Check with Jo what the minimum should be.
-- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH2100&ay=2022/3&sys=1][MTH2011]] (0 Credits) 240 students. Attend sessions and complete online ELE activities. Professional support  Give talk advertising EMP3001.
+- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTHM053&ay=2024&sys=1][MTHM053]] (60 credits) 6 students Data Science - also doing a project John Bruun looks after the projects. We supervise the placements, but he looks after projects.  This is an electronic submission, we don't see the students. Presentation on Teams because they have left.
 - [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=ECMM410&ay=2024/5&sys=1][ECMM410]] research methods course (15 credits) 41 students 
-Roger in Engineering has a printer, he prints the posters.
-w/c 3rd September on campus.
 
-Formative feedback - once only.
-Examples of prior reports - data protection / commercial confidential.
+** Contacts
+*Roger in Engineering* has a printer, he prints the posters.
+*Mark Baldwin* w/c 3rd September on campus.
+  - Formative feedback - once only.
+  - Examples of prior reports - data protection / commercial confidential.
 
+*Kate Stockman* 21/08/2024 Faculty lead for all employability
+   - Organises events (the events team charge employers for access to Exeter Uni, Kate sometimes organises smaller events and doesn't charge)
+  - Recruitment / Employers
+  - Alumni Panel: Monday 7th October 6:30, featuring 4 math alumni with interesting careers.
+  - Employability Strategy Group; I should have been added; one or two meetings a term - feedback on survey, new initiatives, next meeting maybe in November.
 
-*Kate Stockman* Faculty lead for all employability
-Organises events (the events team charge employers for access to Exeter Uni, Kate sometimes organises smaller events and doesn't charge)
-Recruitment / Employers
-Alumni Panel: Monday 7th October 6:30, featuring 4 math alumni with interesting careers.
-Employability Strategy Group; I should have been added; one or two meetings a term - feedback on survey, new initiatives, next meeting maybe in November.
-
-*Ken Evans* Research methods module
+*Ken Evans* 22/08/2024 Research methods module
 - Research students - assessment option. Taught students - assessment students compulsory. Prep for masters project..  Mixed programmes.1-15 Eng/Maths and 130ish computer science. 3 pieces of coursework. Ken to add me to ELE. ILPs may need modification.   Peer review: beginning of next term. Mark over xmas.  Big coursework - need supervisors - hand in middle of next term.
 
-*Jo Harris* also faculty wide.  Courses for 2nd year students around finding placements for the year in industry. Offers 1:1 sessions (20 minutes) in person or virtual. 
+*Jo Harris* 21/08/2014 also faculty wide.  Courses for 2nd year students around finding placements for the year in industry. Offers 1:1 sessions (20 minutes) in person or virtual. 
 CANDI module: might split poster assessments into smaller groups.
-*_May need to find additional assessors_*
+
+
+- *May need to find additional assessors_*
 Needs help marketing to students (no current marketing to employers).
 May need help making things more visible.
 Handshake is the place for posting job ads.
-
-Hannah Bunting - QStep / Greg Stride LGA 
+*Will King* 20/8/2024 Student employability. Sees all the first year students.
+ - *Create Future*: tailored for each programme/discipline. Will is running this for the first time.
+ - suggested Hannah Bunting - QStep / Greg Stride LGA might be useful contacts 
   Will running for first time.
- - *Create Future*: tailored for each programme/discipline.
 -   Student Employability and Development Department (plus as s)
-Rachel Sloan (first leavers?) is head of Skills Team, writes content. Workshop 1; 2 hours (old library). 100 at a time. Skills team plus some external. Online guided independent learning 1.5 hours.
-Student interns help students complete activities.
-Workshop 2: 1 hour lecture. Review and next steps.  (with academic). Fill out reflection form.
-Good at attending, poor at completing online activities.
+- Rachel Sloan (first leavers?) is head of Skills Team, writes content. Workshop 1; 2 hours (old library). 100 at a time. Skills team plus some external. Online guided independent learning 1.5 hours.
+- Student interns help students complete activities.
+- Workshop 2: 1 hour lecture. Review and next steps.  (with academic). Fill out reflection form.
+- Good at attending, poor at completing online activities.
 
-Create Future 2. In second year.
+- Create Future 2. In second year.
 Handshake: online platform for discipline specific slides.
 
 Expectation that students do this
@@ -62,13 +67,14 @@ First destination survey? Oli Laity - but I've been sent an MI link.
   - *Exeter award* (looked at comparators - cumulative work over duration) *Exeter leaders award*
 
   - Strengthen links with industrial partners and departmental business engagement portfolio (as in Eng and Bus school).
-- Mark Baldwin - arrange handover meetings
-  - Career Zone
-
     
 
   
 * MTH1100
+:PROPERTIES:
+:ID:       bf5f5168-55d1-4532-bce2-e43e398443ae
+:END:
+- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH1100&ay=2023/4&sys=1][Module descriptor]]
 - Term 1 and 2
 - 4 career zone workshops in year 1 semester 1 and 2 including CV and job application skills, searching for internships
 - Attend specific sessions for this module
@@ -79,33 +85,71 @@ First destination survey? Oli Laity - but I've been sent an MI link.
 - 30 minute interview with MTH3100 module leader late in year 1 (term 2 or 3)
 - Complete assessments/quizzes by end of August
 - Insufficient engagement will result in transfer to a different programme
+
+* MTH2100
+:PROPERTIES:
+:ID:       43bdf3c1-2b79-4a16-bdf7-3cd721235913
+:END:
+- No formal assessment, but all students are registered.
+- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH2100&ay=2023/4&sys=1][Module descriptor]]
+    
 * MTH3100
+:PROPERTIES:
+:ID:       8b651337-7fb0-46d0-babf-b3f31573e78a
+:END:
+- 120 credits
+- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH3100&ay=2023/4&sys=1][Module Descriptor 2023/2024]]  [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH3100&ay=2024/5&sys=1][Module Descriptor 2024/2025]] These are students returning from placement, or on placement now.
+  [[https://ele.exeter.ac.uk/course/view.php?id=12595][- ELE 2023/2024]] 12595
+[[https://ele.exeter.ac.uk/course/view.php?id=20159][- Parent ELE 2024/2025]] 20159 + [[https://ele.exeter.ac.uk/course/view.php?id=20160][Child? ELE 2024/2025]] 20160
+  [[id:e7a8970e-2642-4d81-a9ca-6d5988df256b][MTH3100Assessment]]
 - Term 1, 2 and 3
 - Practical work experience, normally for one year at least 6 months. No need to be paid a salary.
 - 1,194 hours work placement and preparation, 6 hours supervisory meetings.
-
 ** Assessment:
-- technical report 4,000 words (60%), journal 2,000 words (20%), poster, 20 minute discussion (20%)
+- The module descriptor for 2023  entry states: technical report 4,000 words (60%), journal 2,000 words (15%), poster and 20 minute discussion (15%), Employers report 200 words (10%)
+- For 2024 the entry states: Technical report 4,000 words (60%), journal 2,000 words (20%) and poster or presentation 20 minutes (20%) 
 
+
+* EMP3001 Commercial and Industrial Experience
+:PROPERTIES:
+:ID:       ce7235d9-980d-485d-87f7-b56e356977e2
+:END:
+- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=EMP3001&ay=2023/4&sys=1][Module record 2023]] [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=EMP3001&ay=2024/5&sys=1][Module Record 2024]]
+  I think the 2023 record is irrelevant; it's the 2025 one that matters. They do this module before the A/Y starts.
+[[https://ele.exeter.ac.uk/course/view.php?id=21279][ELE 2024/2025]]
+- Term 1
+- 80 hours on placement 6 weeks
+- 11 week duration. Preparation, reflective practice, project management, fortnightly progress review, debrief, assessment.
+** Assessment:
+[[id:0f492950-6e60-42f6-bd35-0b33b93e2bd4][EMP3001Assessment]]
+- project report 4,000 words (70%)
+- Poster (A1) (30%)
+- Re-assessment possible (capped to 40%)
 
 * MTHM053
+:PROPERTIES:
+:ID:       02e3636c-e7b1-46a6-8c11-3d5284e8349e
+:END:
+- [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTHM053&ay=2023/4&sys=1][Module Record 2023/2024]]
+[[id:c5090aa1-c87f-45d3-a81b-09166a11fcbc][MTHM053Assessment]]
 - Term 1, 2 and 3
 - 500 hours spread over placement
 - 80 hours research and report preparation
 - 20 hours meetings with academic supervisor
 - Ideally this will provide material for MSc dissertation
 ** Assessment
-- Work plan 2,000 words (20%)
-- Placement report 4,000 words (60%)
+For both 2023/2024 and 2024/2025 this states:
+- Work plan 1,000 words (20%) (This is replaced by a reflective log)
+- Placement report 6,000 words including reflective journal (60%)
 - Presentation/Interview, 30 minutes (20%)
+  
 
-* EMP3001 Commercial and Industrial Experience
-- Term 1
-- 80 hours on placement 6 weeks
-- 11 week duration. Preparation, reflective practice, project management, fortnightly progress review, debrief, assessment.
-** Assessment:
-- project report 4,000 words (70%)
-- Poster (A1) (30%)
-- Re-assessment possible (capped to 40%)
+* MTHM503 Applications of Data Science and Statistics
+[[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTHM503&ay=2024/5&sys=1][Module descriptor 2024]]
+- 10 page coursework (80%)
+- In class test (20%)
+  (request via email 3/9/2024)
 
-
+* Programmes
+- [[https://www.exeter.ac.uk/study/studyinformation/programmes/info/?sys=udb&programmeCode=Stats1&ay=2024][Applied Data Science and Statistics]] (September intake)
+- [[https://www.exeter.ac.uk/study/studyinformation/programmes/info/?sys=udb&programmeCode=STATDATMSC&ay=2024][Statistical Data Science]] (January intake)

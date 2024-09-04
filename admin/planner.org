@@ -3,23 +3,73 @@
 #+EMAIL: paul@insightsforaction.uk
 #+STARTUP: overview
 
-* Exeter Induction [1/8]
+* Exeter Induction [5/8]
 SCHEDULED: <2024-08-08 Thu>
 
 - [X] Mandatory Training
-- [ ] Collect IT
-- [ ] Meet Layal
-- [ ] Summarise modules
+- [X] Collect IT
+- [X] Meet Layal
+- [X] Summarise modules
 - [ ] Set out promotion criteria and senior fellowship criteria
 - [ ] Email to Debby Cotton
 - [ ] Set up some vlogging on LaTeX/Emacs (dummy run)
-- [ ] Mail Chaplain
-Can I construct a narrative around accessibility...
+- [X] Mail Chaplain
+- [ ]Can I construct a narrative around accessibility...
+- [ ] Meet Theo
+    - About annual leaving (doing a lot of marking during holiday periods, Term 3 teaching, maybe master's supervision)
+    - Can I install Linux?
+    - "Research"
+    - "Fainting"
+    - Tutees (maybe ask Joanne Mason)
+    - IAAP membership
+    
+* Teaching
+** Professional Development
+[[https://universityofexeteruk.sharepoint.com/sites/EducationToolkit/SitePages/Home.aspx][sharepoint site]]
+[[https://www.exeter.ac.uk/staff/learning-and-development/courses/][Courses]]
+
+** [[https://www.exeter.ac.uk/media/universityofexeter/wellbeing/documents/Signposting_and_Referral_Routes_for_Students.pdf][Mental health and suicide awareness]]
+** WAIT DMR needs amending for MTHM053 (need to remove reference to plan)
+** TODO Migrate material for MTHM053 to new website
+SCHEDULED: <2024-09-05 Thu>
+** TODO Migrate material for MATH3100
+SCHEDULED: <2024-09-10 Tue>
+** WAIT Find out when I can do the same for EMP3001
+** TODO Create booklet for EMP3001
+SCHEDULED: <2024-10-31 Thu>
+** TODO Team "away day" 
+SCHEDULED: <2024-09-09 Mon>
+** TODO Accessibility workshop
+SCHEDULED: <2024-09-12 Thu>
+** TODO Problem solving modes of operation (to be added to employability modules)
+** WAIT Concept tests in statistics
+- State "READY"      from              [2024-04-17 Wed 13:21]
+- [ ] Expand question bank
+** WAIT Assertion reason tests in Statistics
+** WAIT AI in education [1/1]
+** Tutees
+- [ ] From Joanne Mason
+This is a really useful general maths page for students:
+[[https://ele.exeter.ac.uk/course/view.php?id=2491][Mathematics - General Information and Resources]]
+There’s a tile on module choice.
+
+If students are thinking of changing their choice, then tutors can help by showing them the options according to the programme specification for the students chosen programme:
+[[https://www.exeter.ac.uk/study/studyinformation/][Study Information]]
+But then the student would need to contact the Harrison Hub to see how to change as they’re doing it at a non-standard time of year and the timetable has already been set.
+
+This is the link to the more substantial ‘changes to study’ form, for interrupting, changing programme, etc:
+[[https://www.exeter.ac.uk/students/infopoints/yourinfopointservices/changestostudy/#a0][Changes to Study]]
+
+The DESEs (Layal and Nigel) are always happy to help, as am I, so please do get in touch whenever you’re not sure of anything.
+- [ ] From Abby Horrocks
+Harrison Rm 324:
+- Monday - 2.30pm – 3.30pm
+- Friday - 8.30am – 9.30am
+[[https://forms.office.com/Pages/ResponsePage.aspx?id=d10qkZj77k6vMhM02PBKUxxH0QrSqhVMu0AJIQhuW_NUOUNMNVlSTUZTVEI0U1ZOMUZPNzFPREMyQi4u][Pastoral referral]]
+- [ ] Mental Health Training
+- [ ] Tutor training
 
 * Work
-** TODO Significance article on older drivers
-** TODO Map of road casualties (start of GitLab blog?)
-** SVLOC work
 ** INPROGRESS SFHEA application [1/5]
 - State "INPROGRESS" from              [2024-04-17 Wed 13:18]
 - [X] Information pack
@@ -44,17 +94,9 @@ CLOCK: [2024-04-18 Thu 12:48]--[2024-04-18 Thu 16:48] =>  4:00
 
 
 
-
-** READY Concept tests in statistics
-- State "READY"      from              [2024-04-17 Wed 13:21]
-- [ ] Expand question bank
-** TODO Assertion reason tests in Statistics
-** TODO AI in education [1/1]
-- [ ] Talk on 18th
 ** Org mode [[https://github.com/james-stoup/emacs-org-mode-tutorial][org-tutorial]] [[https://doc.norang.ca/org-mode.html][Norangdoc]]
 
 ** Exercism
-
 uname -m
 wget ex.....
 tar -xvzf exercism-3.2.0-linux-x86_64.tar.gz 
@@ -79,9 +121,13 @@ BATS_RUN_SKIPPED=true bats test-raindrops.batss
   
 ** Blogging
 
-** Domestic
-
 * Official [0/5]
+** DONE Significance article on older drivers
+** TODO Map of road casualties (start of GitLab blog?)
+** INPROGRESS SVLOC work
+- State "INPROGRESS" from "TODO"       [2024-09-04 Wed 16:08]
+
+** Database imports
 - [X]Need to attend to deploy nts scripts. Can I check differences between staging and final automatically.
   Check table definition is updated for 2002-2022 and that table ddl matches import query
   - [X] Tickets

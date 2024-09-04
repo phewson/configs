@@ -3,6 +3,47 @@
 :END:
 #+title: NTSEUL
 
+* History [[file:$DATASTORE/dft/nts/UKDA-5340-tab/mrdoc/pdf/5340_nts_data_extract_user_guide_2022.pdf][Data Extract User Guide]]
+- Commissioned first NTS in 1965/66
+- Repeated /ad hoc/ in 1972/73, 1975/76, 1978/79, 1985/86
+- Continuous from July 1988, with 5,040 addresses (rising to 5,796) and monthly fieldwork
+- From 2002, 15,048 addresses.
+- From 2012, England only (no longer Great Britain)
+- From 2016, short walk travel diary was changed from last day of sample to first day of sample
+
+* Survey method [[file:$DATASTORE/dft/nts/UKDA-5340-tab/mrdoc/pdf/5340_nts_data_extract_user_guide_2022.pdf][Data Extract User Guide]]
+Figure 1 (page 5-6)
+
+- "Continuous longitudinal survey of personal travel at a household level"
+- Postcode areas are randomly selected, then a random sample of households is taken, all of whom receive a letter inviting them to take part.
+    (a) Household interview (with "Household Reference Person")
+    (b) Individual interview (with every member; parents can act as proxy for children)
+- Every individual completes a seven day travel diary. Arranged so that there is an even spread of start dates
+- Short walks only recorded on one day to reduce burden (day 1)
+ - Analysis of the NTS Data Extract Chapter explains more about weights, more information including impact of COVID given in [[file:$DATASTORE/dft/nts/UKDA-5340-tab/mrdoc/pdf/5340_nts_technical_report_2021.pdf][NTS Technical Report]]
+ -  *partially productive*: household which completes interviews but not travel diaries; any partial interview completion records are removed before we see them.
+ -  *fully productive* where travel diaries are complete.   These latter have a weighting W1 of 1.  Also see OutCom_B02ID.
+   This means we have:
+   - *Interview sample* - consists of fully and partially productive households versus *diary sample* whichy is only fully
+     Table [[https://www.gov.uk/government/collections/national-travel-survey-statistics][NTS0001]] lists the sample sizes (might be useful for cross checking)
+
+
+* Definitions Chapter 2, page 8  [[file:$DATASTORE/dft/nts/UKDA-5340-tab/mrdoc/pdf/5340_nts_data_extract_user_guide_2022.pdf][Data Extract User Guide]]
+
+- *Trip*: one way course of travel having a single main purpose e.g., a walk to school or a trip to work, without any break in travel  Complex travel is broken into several *stages*.
+- NTS is about personal travel, commercial travel is captured elsewhere.
+- Travel within Great Britain, and by households in England.
+- Entirely secondary stops (e.g., to buy a newspaper) are disregarded.
+- Walks of under 50 yards are entirely discarded, and walks of under one mile are only recorded on one day
+- Deliveries and postal services are not counted as personal travel, nor are specially equipped vehicles (fire engines), people paid to walk (police or cycle couriers), nor the trips made by taxi drivers (only the passengers in them).
+- A trip consists of one of more stages, a new stage means a change in the form of transport or a separate ticket.
+- A number of stops serving the same main purpose (e.g., shopping) counts as a single "series of calls" trip.
+- Changing trains and buses but on the same ticket counts as a single stage.
+- Round trips (e.g., a bike ride) have a destination chosen by NatCen as the half way point and split into two.
+- Missing data. -8 question not asked due to question routing, -9 question was asked but respondent did not answer or the answer could not be coded, -10 question not asked in that year of the survey.
+
+  
+  
 #+begin_src R :eval no
 x <- read.table("attitudes_eul_2002-2022.tab",
                   sep = "\t", header=TRUE)
