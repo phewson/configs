@@ -108,7 +108,8 @@ First destination survey? Oli Laity - but I've been sent an MI link.
 ** Assessment:
 - The module descriptor for 2023  entry states: technical report 4,000 words (60%), journal 2,000 words (15%), poster and 20 minute discussion (15%), Employers report 200 words (10%)
 - For 2024 the entry states: Technical report 4,000 words (60%), journal 2,000 words (20%) and poster or presentation 20 minutes (20%) 
-
+** Degree classification weightings
+[[https://as.exeter.ac.uk/academic-policy-standards/tqa-manual/aph/classification/][Stages 2, 3, and 4 are weighted 2:1:4 hence 1/7th of final grade]]
 
 * EMP3001 Commercial and Industrial Experience
 :PROPERTIES:
