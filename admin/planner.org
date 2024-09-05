@@ -32,6 +32,9 @@ SCHEDULED: <2024-08-08 Thu>
 ** WAIT DMR needs amending for MTHM053 (need to remove reference to plan)
 ** TODO Migrate material for MTHM053 to new website
 SCHEDULED: <2024-09-05 Thu>
+:LOGBOOK:
+CLOCK: [2024-09-05 Thu 11:44]
+:END:
 ** TODO Migrate material for MATH3100
 SCHEDULED: <2024-09-10 Tue>
 ** WAIT Find out when I can do the same for EMP3001

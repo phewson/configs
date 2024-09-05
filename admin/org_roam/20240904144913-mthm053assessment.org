@@ -4,13 +4,13 @@
 #+title: MTHM053Assessment
 see [[id:02e3636c-e7b1-46a6-8c11-3d5284e8349e][MTHM053]] for module record, ele site location and so on.
 
-* Assessment Rubric
+* Assessment Rubric 2023/2024
 
 This document applies to placements during the 2023/24 academic year
 
 | Summative Assessment | Weight |  Due date |
 |----------------------+--------+---------- |
-| Journal              |  20%   | 6.9.2024  |
+| Journal              | 20%    | 6.9.2024  |
 | Technical Report     | 60%    | 6.9.2024  |
 | Presentation         | 20%    | 20.9.2024 |
 
@@ -51,6 +51,98 @@ be technical references, or resources you used to handle issues in your placemen
 book on how to deal with office politics, or an article about discrimination in the workplace).
 The report must include the following sections, with the following titles – so do not do
 something different! Subsections are OK. You may include a brief summary (not marked) of
+the report, and include news such as being offered a job at your placement.
+
+1. Introduction (20 marks)
+    - The overall aim of the placement, including a description of the company’s structure and operations and an explanation of how the placement opportunity and work undertaken develops and extends your particular interests, skills and supports your career intentions.
+    - Specification of the particular task(s) you were charged with on the placement, including a clear description of a ‘problem(s)’ or challenge(s) you tackled.
+2.  Technical Challenges (30 marks)
+    - A clear outline of the strategy you employed to address the problem or challenge revealing how you have applied problem-solving skills and knowledge from your discipline area (link to the specific technical contents from specific modules you would have taken including module code). These are technical challenges and you must show how you applied discipline knowledge and expertise to solve them.
+    - An evaluation of your strategy which should determine and reveal your effectiveness in resolving the problem or challenge and makes recommendations for future enhancements. You should critically assess the professional technical skills you gained/developed during your internship.
+3. Interpersonal skills and workplace challenges (30 marks)
+    - This section will enable you to identify and reflect on interpersonal workplace challenges and particular events which you consider to be noteworthy whilst undertaking your placement. For example, a difficult boss, unrealistic expectations, co-workers plotting against you, sexism/racism/cultural challenges.
+    - These are not technical problems, but rather “soft” challenges that arise from office/workplace interaction, conflict, work deadlines, etc.
+    - The idea behind selecting and reflecting on these particular events is that you should be able to consider them in the light of the discipline-related and personal skills which you will have brought to the placement and also how they have helped develop these and new skills in the workplace setting. Your journal should help you to identify the critical incidents you want to write about. Reflection should be a critical process and you should be able to articulate your thoughts, ideas and perspectives to convey the process of learning which occurred during the placement. Write about what you were thinking at the time.
+4. How your written report is presented (20 Marks)
+    -  An appropriate professional look, layout, style, and readability – failure to keep within the maximum word count (4000 words will be penalised by 5 marks.
+    - Make sure you pay attention to the typography and data graphics videos.
+      
+Report hand-in time and date - Student Services Office (E-BART) by 12:00 hours on Friday 6th September 2024
+
+Individual presentation to the module leader (Teams). 20% of module mark.
+
+This will take place during the first half of October, at a time that is convenient for you. Plan
+on about 10 minutes to present, and the 5-10 minutes to answer questions and have a
+discussion.
+
+This is a BART submission 20.9.2024.
+
+Content: there is a lot of flexibility, but you should discuss your placement and challenges
+you had, how you overcame them, including any experiences at Exeter that helped you. The
+audience should find your story interesting and engaging.
+
+Marking: The markers will be judging you in the following 10 categories, 10 points each, for
+a total of 100 points:
+
+1. Quality of slides; Colour use.
+2. Readability of the slides. Text too small?
+3. Illustrations in the slides. Be sure that all labels are readable.
+4. Your voice. Can everyone hear you? Are you speaking in a monotone?
+5. Are you speaking naturally, and not just reading your talk from cards?
+6. Timing. There will be a target time limit of 10:00 minutes for the presentation. Significantly shorter and longer presentations will lose marks.
+7. Include the background of your placement. Where did you live? For how long? Was it remote?
+8. Pace. Not too slow and not too fast.
+9. Is your placement story interesting and memorable??
+10. How did you handle questions from the module leader?  Non-native English speakers will not be marked down for language issues. You will not be marked down for being nervous. The order of the speakers will be determined before presentation day.
+
+If anything in this document is unclear, email m.baldwin@exeter.ac.uk
+
+* Assessment Rubric 2024/2025
+
+This document applies to placements during the 2024/25 academic year
+
+| Summative Assessment | Weight |  Due date |
+|----------------------+--------+---------- |
+| Work Plan (Journal)  | 20%    | 4.9.2025  |
+| Technical Report     | 60%    | 4.9.2025  |
+| Presentation         | 20%    | 18.9.2025 |
+
+The module descriptor specifies an element called "work plan", this has not proven feasible for many placements. For example, companies that use Agile methods cannot often write a plan for an entire placement.  Therefore, we are asking for a reflective journal instead.  You are also required to produce a technical report on *key* elements of your placement.  The due date has been set as 4th September 2025; this is intended to provide as much time as possible for you to prepare you submission while also giving us time to process the marks in line with the ADSS schedule and other University requirements.
+
+The presentation material (slides) should are 18th September 2025. You will be presenting individually online (Teams to the
+module leader) shortly after this date, at a time arranged with the module
+leader. You don't have to use slides if you don't want, but uploading something to ELE provides a mechanism for submitting marks and providing feedback.
+
+The ELE page has links to recorded lectures on: how to do a presentation, how to
+make figures, how to write a report, how to format a report, how to cite references, etc.
+Live lectures are not possible since you will be on placements. It is important to watch these
+videos. When I read your reports, I will be able to tell if you have not learned from the
+videos!
+
+** Reflective Journal. 20% of module mark.
+The journal reflects your thoughts as you progress through your placement. It should
+contain what is important to you. Typically, this includes reflection on problems, work
+issues, being treated well or unfairly, and how you plan to resolve issues. The ELE page
+lists 1,000 words for the Work Plan, but this limit does not apply.
+There is no limit on the number of words, but more words will not automatically earn higher
+marks. 3,000 words is plenty. You may choose to submit scans of your handwritten journal,
+as it was originally written. This could be a lot of words. Or you may choose to
+create a document. Markers are looking for evidence that
+you kept a journal as your placement progressed, and that it was useful to you. The journal
+is not a log of number of hours worked each day, or just facts. It is not a summary of what
+happened. It is a record of your thoughts and concerns, and what was son your mind.
+
+
+** Technical Report. 60% of module mark.
+
+This report should not exceed 4,000 words of text.
+
+You are required to write a report describing a specific project or substantial piece of work that you undertook during your
+work placement.  You may wish to refer to more than one specific project and more than one substantial piece of work.  Markers are looking that you present this work coherently, and not merely a listing of pieces of work in the order you included them.
+
+The 4,000 word limit does not include references, figures, captions, a table of contents or a glossary of acronyms.  Importantly, the report should include *some* references, using a referencing style of your choosing.  The aim of these references is to demonstrate scholarship and a growth mindset. When faced with a problem, do you try to solve it using the knowledge you have to date, or can you find and evaluate relevant research, blog postings, or other appropriate material and apply this to your work context.  These references could be entirely technical, or they could deal with more people related issues in your workplace.
+
+The report *must* include the following sections, with the following titles.   You may include a brief summary (not marked) of
 the report, and include news such as being offered a job at your placement.
 
 1. Introduction (20 marks)
