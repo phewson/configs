@@ -29,7 +29,6 @@ SCHEDULED: <2024-08-08 Thu>
 [[https://www.exeter.ac.uk/staff/learning-and-development/courses/][Courses]]
 
 ** [[https://www.exeter.ac.uk/media/universityofexeter/wellbeing/documents/Signposting_and_Referral_Routes_for_Students.pdf][Mental health and suicide awareness]]
-** WAIT DMR needs amending for MTHM053 (need to remove reference to plan)
 ** TODO Migrate material for MTHM053 to new website
 SCHEDULED: <2024-09-05 Thu>
 :LOGBOOK:
@@ -50,6 +49,18 @@ SCHEDULED: <2024-09-12 Thu>
 - [ ] Expand question bank
 ** WAIT Assertion reason tests in Statistics
 ** WAIT AI in education [1/1]
+** Module amendments
+- DMR needs amending for MTHM053 (need to remove reference to plan)
+SCHEDULED: <2025-04-01 Tue>
+** INPROGRESS Mark MTHM053 reflective logs
+:LOGBOOK:
+CLOCK: [2024-09-10 Tue 08:25]
+:END:
+** DONE Mark MTHM053 Technical Reports.
+** TODO Write MTHM053 reflective log marking criteria
+** DONE Mark MTHM053 Technical report
+** TODO Write MTHM053 Technical report marking criteria
+** DONE schedule MTHM053 INterviews
 ** Tutees
 - [ ] From Joanne Mason
 This is a really useful general maths page for students:
