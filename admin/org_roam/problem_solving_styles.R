@@ -24,7 +24,7 @@ plot_results <- function(results) {
   y_circ <- center_y + radius[2] * sin(theta)
   plot(x_circ, y_circ,
        col = "#2da13a", type = "l", xaxt = "n", xlab = "", ylab = "",
-       yaxt = "n", bty = "n", xlim = c(1, 11), ylim = c(1, 11),
+       yaxt = "n", bty = "n", xlim = c(0, 12), ylim = c(0, 12),
        main = "Preferred problem-solving style")
   x_circ <- center_x + radius[1] * cos(theta)
   y_circ <- center_y + radius[1] * sin(theta)
@@ -123,7 +123,7 @@ create_mc_question <- function(options) {
                      input_type = rep("mc", 5),
                      input_id = rep(question_number, 5),
                      dependence = rep(NA, 5), dependence_value = rep(NA, 5),
-                     required = rep(FALSE, 5))
+                     required = rep(TRUE, 5))
     return(df)
   }
   return(mc_question)
@@ -160,26 +160,31 @@ ui <- fluidPage(surveyOutput(df = df,
 server <- function(input, output, session) {
   renderSurvey()
   observeEvent(input$submit, {
-    analyst_r <- c(input$a1, input$a2, input$a3, input$a4, input$a5, input$a6,
-                   input$a7, input$a8, input$a9, input$a10, input$a11, input$a12)
-    engineer_r <- c(input$n1, input$n2, input$n3, input$n4, input$n5, input$n6,
-                    input$n7, input$n8, input$n9, input$n10, input$n11, input$n12)
-    explorer_r <- c(input$x1, input$x2, input$x3, input$x4, input$x5, input$x6,
-                    input$x7, input$x8, input$x9, input$x10, input$x11, input$x12)
-    designer_r <- c(input$d1, input$d2, input$d3, input$d4, input$d5, input$d6,
-                    input$d7, input$d8, input$d9, input$d10, input$d11, input$d12)
-    a_score <- length(grep("Strongly agree|Agree", analyst_r))
-    e_score <- length(grep("Strongly agree|Agree", engineer_r))
-    x_score <- length(grep("Strongly agree|Agree", explorer_r))
-    d_score <- length(grep("Strongly agree|Agree", designer_r))
-    results <- data.frame(a_score, e_score, x_score, d_score)
+                              analyst_r <- c(input$a1, input$a2, input$a3,
+                                             input$a4, input$a5, input$a6,
+                                             input$a7, input$a8, input$a9,
+                                             input$a10, input$a11, input$a12)
+                              engineer_r <- c(input$n1, input$n2, input$n3,
+                                              input$n4, input$n5, input$n6,
+                                              input$n7, input$n8, input$n9,
+                                              input$n10, input$n11, input$n12)
+                              explorer_r <- c(input$x1, input$x2, input$x3,
+                                              input$x4, input$x5, input$x6,
+                                              input$x7, input$x8, input$x9,
+                                              input$x10, input$x11, input$x12)
+                              designer_r <- c(input$d1, input$d2, input$d3,
+                                              input$d4, input$d5, input$d6,
+                                              input$d7, input$d8, input$d9,
+                                              input$d10, input$d11, input$d12)
+                              a_score <- length(grep("Strongly agree|Agree", analyst_r))
+                              e_score <- length(grep("Strongly agree|Agree", engineer_r))
+                              x_score <- length(grep("Strongly agree|Agree", explorer_r))
+                              d_score <- length(grep("Strongly agree|Agree", designer_r))
+                              results <- data.frame(a_score, e_score, x_score, d_score)
 
-    showModal(modalDialog(renderPlot({plot_results(results)})
-                 #  title = "Congrats, you completed your first shinysurvey!",
-                 #  "You can customize what actions happen when a user finishes a survey using input$submit."
-               ))
-  })
+                              showModal(modalDialog(title = "An interpretation of your results",
+                                                    renderPlot({
+                                                                plot_results(results)})))})
 }
 
 shinyApp(ui, server)
-

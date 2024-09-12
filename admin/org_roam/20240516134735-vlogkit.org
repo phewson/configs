@@ -20,8 +20,12 @@ I can focus, or not, as the need arises.
 sudo apt-get install flameshot
 #+end_src
 
-How to configure flameshot so I only get emacs screen and not the whole window
+How to configure flameshot so I only get emacs screen and not the whole window. - I don't know, I think this is beyond me for now.
+I just have to use full screen (or a large screen)
 
+To adjust font size before recording I can use  C-x C-+ or C-x C-=. To decrease it, type C-x C--. To restore the default (global) font size, type C-x C-0. These keys are all bound to the same command, /text-scale-adjust/
+
+I've saved this as flameshot_bash.sh under configs/bash.
 #+begin_src bash :eval no
 #!/bin/sh
 flameshot full -r>"$1"
@@ -29,17 +33,17 @@ flameshot full -r>"$1"
 Then
 
 #+begin_src bash :eval no
-chmod +x flameshot_bash
+chmod +x flameshot_bash.sh
 #+end_src
 
 Then we need:
 
 #+begin_src emacs-lisp :eval no
-(use-package gif-screencast
-  :ensure t)
+  (use-package gif-screencast
+    :ensure t)
 
-(setq gif-screencast-program "~/flameshot_bash")
-(setq gif-screencast-args '())
+  (setq gif-screencast-program "~/configs/bash/flameshot_bash.sh")
+  (setq gif-screencast-args '())
 #+end_src
 
 Screenshots get captures in /tmp/emacs1000/
@@ -50,5 +54,14 @@ Find the policy.xml with find / -name "policy.xml", something like /etc/ImageMag
 and change <policy domain="resource" name="disk" value="1GiB"/> to 
 <policy domain="resource" name="disk" value="8GiB"/>
 #+end_src
+
+Then I renamed the output file in ~/Videos (it seemed to struggle with the : in the time stamp) and ran:
+
+#+begin_src bash :eval no
+sudo apt-get install ffmpeg
+ffmpeg -f gif -i in.gif out.mp4
+#+end_src
+
+These videos can be edited in YouTube so presumably I can use A.N.Other editor and add voice to video snippets.
 
 [[https://metaredux.com/posts/2019/12/07/dead-simple-emacs-screencasts.html][Display emacs commands in modeline]]

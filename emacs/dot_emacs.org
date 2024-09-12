@@ -771,6 +771,14 @@ I keep org configs in a separate file (probably need to stop this)
          :bind ("C-h D" . devdocs-lookup))
  #+end_src
 
+* Screencasting
+gif-screencast
+
+#+begin_src bash :eval no
+sudo apt-get install scrot
+#+end_src
+
+ 
 * End note
 
 #+BEGIN_SRC emacs-lisp :tangle testing.el

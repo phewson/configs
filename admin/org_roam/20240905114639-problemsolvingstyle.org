@@ -1,0 +1,245 @@
+:PROPERTIES:
+:ID:       99e7d40f-9821-4041-9480-4d36152c33d0
+:END:
+#+title: ProblemSolvingStyle
+
+Reflection
+- Problems you've had in the last 24 hours
+- Problems you solved without thinking about them
+- Problems you solved by thinking about them
+- Problems you thought about but did not solve
+- Problems you haven't solved and don't know how to think about
+The point is, we are problem solving machines. We only worry about the ones we can't solve.
+
+We make sense of the world by pattern matching.
+- Bottom up processing (we don't recognise objects directly, we pattern match and we parallel process)
+- Top down processing (mental models that apply meaning)
+
+  Ulrich Neisser and the perpetual cycle
+  Environment (available information) -> (modifies) -> Mental Model (schemata)
+             ^                                                                                 /
+              \                                                                               v
+           (samples)                                                              (directs)
+                   ^                                                                       /
+                     \                                                                  v
+                                               Exploration
+
+Our natural urge is not to solve problems but look for solutions.
+
+Intuitive problem-solving
+
+1. Making sense of the problem by pattern matching always dictates a solution
+2. Solving the problem always means doing something
+3. Solving the problem is also a way of understanding the problem better.
+
+   Understand (the problem, pattern match) -> Act: try out a solution -> Review the effects of our action on the problem state 
+            ^                                                                                                                             v
+            ^                                                                                                                             v
+                     <---------------------------------------------------------------------------------------------------
+
+Understanding the problem and solving it are the same thing.
+
+BUT intuitive problem solving makes us specialists.
+It is vulnerable to bias
+It can generate false solutions (generative AI anyone)?  Pareidolia
+
+We notice we have a problem when we are stuck
+A person is confronted with a problem when he wants something and does not know immediately what series of actions he can perform to get it (Human Problem Solving Allen Newell and Herbert Simon)
+
+- focussed stuckness (can't take your mind off the problem) (makes us brood)
+- unfocussed stuckness (no idea where to start, induces panic)
+
+Stuckness makes problem solving concious
+Stuckness opens up a space in the problem solving cycle
+
+
+Solutions unstuck our thinking.
+
+| Intuitive problem-solving  | Rational problem-solving       |
+|----------------------------+--------------------------------|
+| To discover what to do     | To work out what's true        |
+| Recognises the truth       | Works out the truth logically  |
+| Pattern matches            | Challenges pattern matching    |
+| Accepts assumptions        | Questions assumptions          |
+| Trusting: what you see     | Sceptical: not the whole truth |
+| Finds evidence for hyp     | Seeks evidence to disprove hyp |
+| Seeks similarities         | Seeks differences              |
+| Combines info into pattern | Analysis info into parts       |
+| Spontaneous                | Deliberate                     |
+| Discontinuous              | Incremental                    |
+| Instantaneous              | Slow                           |
+| Polarised either/or        | Discriminating: many possibily |
+| Discards irrelevant info   | Investigates evidence exhaust  |
+| Decisive                   | Cautious                       |
+| Act swiftly                | Pauses                         |
+| Solution explains problem  | Solution removes problem       |
+
+
+
+
+** Stage 1 and Stage 2 thinking
+
+- stage 1; identify the problem (re-present it using symbols)
+- stage 2; decide what to do
+* Rational problem solving
+1. Understanding the problem and solving the problem are two separate stages
+2. Making sense of the problem means testing our understanding against objective criteria and evidence
+3. Generating a solution involves building feasibility into the action we propose to take
+
+   Use models, not mental models but constructed, objective models.
+
+   *The curse of the right answer*
+   - intuitive problem solving aims to identify what to do
+   - rational problem solving aims to identify what is true
+
+     Is a solution a conclusion, or a course of action.
+If we see a problem as bad, we need to fix it.
+
+
+Reasoning
+### Reasoning is purposeful
+- Define the problem you are trying to solve clearly
+- Distinguish the problem from similar or related problems
+- Review your problem definition regularly
+## Reasoning always starts from a point of view / position / assumption
+- Identify your point of view
+- Identify the assumptions behind your point of view and justify them
+- Ask how your assumptions are influencing your definition of the problem
+- Seek other points of view and identify their strengths and weaknesses
+## Reasons looks for different views of the problem
+- Express the problem in several ways to clarify its meaning and scope
+- Break the problem into sub-problems
+- Ask whether the problem is a question of truth or action
+- Ask whether you need to use different kinds of reasoning for different parts of the problem
+## Reasoning is expressed by and works with ideas
+- Identify the key ideas that inform your understanding of the problem
+- Express all key ideas as sentences. Headings or names are not concepts and cannot be assembled into arguments
+- Look for the assumptions underlying all your ideas and challenge them
+- Consider alternative ideas, especially ones that contradict your key ideas
+## Reasoning assembles ideas into arguments leading to conclusions
+- Identify the idea that is your conclusion, and the ideas that act as reasons to support your conclusion
+- Ask how the reasons connect to the conclusion
+  ## Reasoning is based on evidence
+  - Ask how the data and information you're using acts as evidence for your ideas
+  - Search for evidence to disprove your ideas
+  ## Reasoning has consequences
+  - Trace the implications of your conclusion
+  - Ask how your conclusion implies a course of action
+
+
+#+begin_src R :eval no
+install.packages("shinysurveys")
+#+end_src
+
+
+
+#+begin_src R :eval no
+            library(shiny)
+            library(shinysurveys)
+
+          LIKERT5 <- c("Strongly agree", "Agree", "Neither agree nor disagree",
+                       "Disagree", "Strongly disagree")
+
+          analyst <- c("I always or usually investigate throroughly before deciding",
+                   "I like to work precisely and slowly",
+                   "I will look for the causes of problems",
+                   "I prefer to prepare and study in advance",
+                   "I rely on and use facts to back my arguments (rather than hunches and intuition",
+          "A ask 'what?' and 'why?' questions",
+          "I am numerate",
+          "I organise information carefully",
+          "I know how to access appropriate databases to find relevant facts",
+          "I look for differences and distinctions",
+          "I apply rules in order to understand information",
+          "I prefer a lot of detail on which to base decisions")
+
+          engineer <- c("I like to be in control of my work",
+                        "I like to make firm decisions",
+                        "I dislike inaction",
+                        "I prefer maximum freedom to manage myself and others for whom I am responsible",
+                        "I apply clear protocols in order to implement a solution",
+                        "I have a low tolerance for the feelings, attitudes and advice of others",
+                        "I am technically proficient",
+                        "I look for permanent solutions rather than quick fixes",
+                        "I am good at finding faults",
+                        "I ask 'how?' questions",
+                        "I am focussed",
+                        "I do not like to waste time")
+
+          explorer <- c("I like to seek unknown territory and new ideas",
+                        "I am self-motivated, almost to the point of being restless",
+                        "I trust my spontaneous insights",
+                        "I am interested in analogies and resemblances",
+                        "I am extremely curious",
+                        "I seem out ambiguity and uncertainty",
+                        "I ask 'what else?' and 'what if?' questions",
+                        "I look for unanswered questions",
+                        "I enjoy breaking rules",
+                        "I enjoy taking risks and working at the limits of my competence",
+                        "I like to take risks",
+                        "I am easly bored; I can find it hard to follow through or finish projects")
+
+          designer <- c("I think in pictures",
+                        "I seek patterns in information",
+                        "I ask 'why not?' questions",
+                        "I regard failure as an interesting learning opportunity",
+                        "I tend to dream",
+                        "I like to think about the 'big picture'",
+                        "I seek inspiration",
+                        "I try to cultivate 'style'",
+                        "I thrive on feedback",
+                        "I value the simplest and most elegant solution",
+                        "I like selling solutions",
+                        "I am capable of judging my own ideas objectively")
+      problem_solving_questions <- data.frame(a = analyst, n = engineer, x = explorer, d = designer)
+
+
+            create_mc_question <- function(options) {
+              mc_question <- function(question_wording, question_category, question_number) {
+                df <- data.frame(
+                  question = rep(question_wording, 5), option = options, input_type = rep("mc", 5),
+                  input_id = rep(paste(question_category, question_number, sep = ""), 5),
+                  dependence = rep(NA, 5), dependence_value = rep(NA, 5), required = rep(TRUE, 5))
+                return(df)
+                }
+              return(mc_question)
+            }
+
+            mc_question <- create_mc_question(LIKERT5)
+
+      running_order <- sample(paste(rep(c("a", "n", "x", "d"), 12), formatC(sort(rep(1:12,4)), width = 2, format = "d", flag = "0")))
+  get_lookups <- function(running_order, i){
+    problem_solving_type <- substring(running_order[i], 1, 1)
+    colnum <- which(colnames(problem_solving_questions)==problem_solving_type)
+    rownum <- as.numeric(substring(running_order[i], 3, 4))
+    return(list(problem_solving_type = problem_solving_type, colnum = colnum, rownum = rownum))
+    }
+  gl <- get_lookups(running_order, 1)
+    df <- mc_question(problem_solving_questions[gl$rownum, gl$colnum], gl$problem_solving_type, 1)
+    for (i in c(2:4
+                )){
+      gl <- get_lookups(running_order, i)
+           df <- rbind(df, mc_question(problem_solving_questions[gl$rownum, gl$colnum], gl$problem_solving_type, i))
+        }
+
+
+            ui <- fluidPage(
+              surveyOutput(df = df,
+                           survey_title = "Preferred problem solving styles",
+                           survey_description = "There are 48 questions")
+            )
+
+            server <- function(input, output, session) {
+              renderSurvey()
+
+              observeEvent(input$submit, {
+                  showModal(modalDialog(
+                  renderTable({input$d1})
+                #  title = "Congrats, you completed your first shinysurvey!",
+                #  "You can customize what actions happen when a user finishes a survey using input$submit."
+                ))
+              })
+            }
+
+          shinyApp(ui, server)
+#+end_src
