@@ -1,0 +1,156 @@
+:PROPERTIES:
+:ID:       d700c2cf-84ca-4a5b-9cac-719f4ab4f6a6
+:END:
+#+title: ReflectiveMarking
+
+
+Intro: 16/20
+
+Technical challenges (21/30)
+
+
+Personnel challenges (22/30)
+Presentation (14/20)
+
+
+- Introduction (20 marks)
+
+ 
+
+• The overall aim of the placement, including a description of the company’s structure
+and operations and an explanation of how the placement opportunity and work
+undertaken develops and extends your particular interests, skills and supports your
+career intentions.
+• Specification of the particular task(s) you were charged with on the placement,
+including a clear description of a ‘problem(s)’ or challenge(s) you tackled.
+II.- Technical Challenges (30 marks)
+
+
+• A clear outline of the strategy you employed to address the problem or challenge
+revealing how you have applied problem-solving skills and knowledge from your
+discipline area (link to the specific technical contents from specific modules you
+would have taken including module code). These are technical challenges and you
+must show how you applied discipline knowledge and expertise to solve them.
+• An evaluation of your strategy which should determine and reveal your effectiveness
+in resolving the problem or challenge and makes recommendations for future
+enhancements. You should critically assess the professional technical skills you
+gained/developed during your internship.
+III.- Interpersonal skills and workplace challenges (30 marks)
+• This section will enable you to identify and reflect on interpersonal workplace
+challenges and particular events which you consider to be noteworthy whilst
+undertaking your placement. For example, a difficult boss, unrealistic expectations,
+co-workers plotting against you, sexism/racism/cultural challeges.
+• These are not technical problems, but rather “soft” challenges that arise from
+office/workplace interaction, conflict, work deadlines, etc.
+3
+• The idea behind selecting and reflecting on these particular events is that you should
+be able to consider them in the light of the discipline-related and personal skills
+which you will have brought to the placement and also how they have helped
+develop these and new skills in the workplace setting. Your journal should help you
+to identify the critical incidents you want to write about.
+• Reflection should be a critical process and you should be able to articulate your
+thoughts, ideas and perspectives to convey the process of learning which occurred
+during the placement. Write about what you were thinking at the time.
+IV.- Presentation (20 Marks)
+• An appropriate professional presentation, layout, style, and readability – failure to
+keep within the maximum word count (4000 words will be penalised by 5 marks.
+• Make sure you pay attention to the typography and data graphics videos.
+
+
+
+
+Clarity of purpose and structure (10-20%)
+Clear objectives: does the student clearly outline the purpose of the reflective account? Are the main points of reflection clear?
+Logical Structure: Is the account well organised with a clear introduction, body, and conclusion? Does the flow of the account make sense guiding the reader through their reflection?
+Focus on reflection: Ensure the account stays focussed on self-reflection rather than turning into a purely descriptive or academic piece
+
+High marks: well organised and easy to follow, clear purpose.
+Low marks: Lacks structure or purpose, disorganised
+
+Depth of reflection (30-40%)
+Critical reflection. Does the student go beyond mere description of events.  Are they critically analysing their experiences, thoughts and feelings?
+Learning from experience: Do they reflect on what they have learned and how it influenced their personal or academic development
+Self-awareness: Does the student demonstrate self-awareness, acknowledging strengths, weaknesses and areas for growth
+Insight: Does the reflection provide any deeper insights into their learning or behaviour
+
+High marks: deep critical analysis of the experience showing insight and self-awareness
+Low marks: surface level reflection with minimal analysis or self-critique
+
+Connection to theory or concepts (20-30%)
+Integration with academic knowledge: Does the student relate their experience to relevant theories, models or concepts learned in their course
+Use of evidence: Are academic ideas applied appropriately to support or challenge their reflections
+
+High marks: effective use of theory to support reflection demonstrating a strong understanding of course material
+Low marks: Little or no connection to academic concepts or misapplication of theory
+
+Personal and Professional Development (20-30%)
+Personal growth: does the student identify how the reflection has helped them grow either personally or professionally
+Plans for future development: Has the student outlined how they will apply what they learned to future situations or work
+Changes in attitudes/actions: Does the account show evidence of changing attitudes, behaviours or skills as a result of the experience
+
+High marks Demonstrates clear personal or professional growth with actionable plans for the future
+Low marks: little evidence of development or no plans for the future
+
+Writing quality and presentation
+Clarify and cohesion: Is the writing clear. concise and well articulated. Does it stay focussed and coherent throughout
+Grammar and spelling
+Propper referencing
+
+1
+This document applies to the academic year 2023/24
+MTH3100 assignments and marking guidelines 2023/24
+Module leader: Prof Mark Baldwin
+Updated August 2023
+Summative Assessment: Due date
+Journal 15% 13.9.2024
+Employer’s Report 10% (not marked. 10/10 if turned in) 13.9.2024
+Technical Report 60% 13.9.2024
+Poster 15% 20.9.2024
+MTH3100 was a new module in 2021/22. As module leader, I learned a lot about what
+works well and what does not. Early due dates do not work well. Student placements can
+run June–June, September–September, or even June–September. Accordingly, most
+assignments are due 13 September 2024. This gives you the maximum time to work on your
+submissions, and also allows some time for the Department to progress you to the next year
+by mid-October, which is required. This date allows for students to request extensions (up
+to two weeks) to the due date. The date for poster submission is 20 September 2024, and
+the poster session will be timetabled for the first half of October.
+Note: The ELE page will have links to recorded lectures on the following topics: how to do a
+presentation, how to make figures, how to write a report, how to format a report, how to
+cite references, etc. Live lectures are not possible since you will be on placements.
+Make sure that you learn from the videos. The markers will know if, for example, you did
+not learn about typography.
+Journal. 15% of total module mark.
+A journal reflects your thoughts as you progress through your placement. It should contain
+what is important to you. Typically, this includes reflection on problems, work issues, being
+treated well or unfairly, and how you plan to resolve issues. There is no limit on the number
+of words, but more words will not automatically earn higher marks. 2000-3000 words is
+plenty. You may choose to submit scans of your handwritten journal, as it was originally
+written. Or you may choose to create a document. The marking criteria are flexible. Markers
+are looking for evidence that you kept a journal as your placement progressed, and that it
+was useful to you. The journal is not a log of number of hours worked each day, or just facts.
+It is not a summary of what happened. It is a record of your thoughts.
+
+
+What I would have specified in advance.
+
+
+| Criterion             | Excellent (A)      | Good (B)           | Satisfactory (C)   | Needs Improvement (D-F) |
+|-----------------------+--------------------+--------------------+--------------------+-------------------------|
+| Clarity and structure | Clear, well        | Good structure     | Adequate structure | Disorganised. Difficult |
+|                       | organised. Easy    | but minor issues   | but lacks clarity  | to follow.              |
+|                       | to follow          |                    | or flow            |                         |
+|-----------------------+--------------------+--------------------+--------------------+-------------------------|
+| Depth of reflection   | Deep critical      | Good reflection    | Descriptive with   | Mostly descriptive.     |
+|                       | reflection.        | with some analysis | limited analysis   | Lacks reflection or     |
+|                       | Insightful.        |                    |                    | analysis.               |
+|-----------------------+--------------------+--------------------+--------------------+-------------------------|
+| Connection to theory  | Strong integration | Good integration   | Limited or unclear | No connection to        |
+|                       | of theory. Well    | of theory, some    | connection to      | theory or incorrect     |
+|                       | explained          | explanation        | theory             | usage                   |
+|-----------------------+--------------------+--------------------+--------------------+-------------------------|
+| Personal /            | Clear growth,      | Some growth        | Little evidence of | No evidence of growth   |
+| professional growth   | detailed future    | evidence, future   | growth, no future  | or future plans         |
+|                       | plans              | plans mentioned    | plans              |                         |
+|-----------------------+--------------------+--------------------+--------------------+-------------------------|
+| Writing quality       | Excellent writing  | Good writing with  | Some errors but    | Numerous errors,        |
+|                       | no errors          | minor errors       | readable           | difficult to read       |
