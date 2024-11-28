@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       d3653b76-2cfd-4a42-ad71-524ce8e408d8
+:END:
+#+title: Timesync
+[[https://phoenixnap.com/kb/debian-time-sync][Instructions]]
+sudo apt install systemd-timesyncd
+sudo systemctl start systemd-timesyncd
+sudo systemctl status systemd-timesyncd
+timedatectl

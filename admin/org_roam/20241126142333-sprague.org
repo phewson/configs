@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       ad03997c-195a-4b20-a2a3-6c72070337ee
+:END:
+#+title: Sprague
+Sprague’s interpolation method, 151, 687–688,
+702, 727

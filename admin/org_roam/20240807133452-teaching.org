@@ -159,3 +159,11 @@ For both 2023/2024 and 2024/2025 this states:
 * Programmes
 - [[https://www.exeter.ac.uk/study/studyinformation/programmes/info/?sys=udb&programmeCode=Stats1&ay=2024][Applied Data Science and Statistics]] (September intake)
 - [[https://www.exeter.ac.uk/study/studyinformation/programmes/info/?sys=udb&programmeCode=STATDATMSC&ay=2024][Statistical Data Science]] (January intake)
+
+  exams.exeter.ac.uk
+  Too many acronyms with no display (didn't get URL for exams ele for example).
+  Exams ELE directly, or make quiz in ELE2 and get exams team to transfer questions to Exams ELE.
+  Deadline 14th November.
+ ETQ (ELE times quiz)
+Exams ELE Jan/;May/August
+Quiz can be transferred into Exams ELE

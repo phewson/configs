@@ -2,7 +2,15 @@
 ;;; Commentary:
 ;;; Code:
 
-(setq ess-style 'RStudio)
+
+
+(use-package ox-reveal
+  :ensure t
+  :config
+  (setq org-reveal-root "https://cdn.jsdelivr.net/npm/reveal.js@4.3.1"))
+
+
+(setq ess-style 'RRR)
 ;; This is meant to be an accessible theme, but, ouch.
 (load-theme 'modus-operandi t)
 (set-frame-font "DejaVu Sans Mono-11" nil t)
@@ -342,10 +350,20 @@ into a comma-separated one-liner surrounded by QUOTE."
   :ensure t)
 
 ;; framemove (shift and arrow)
+(add-to-list 'load-path "~/configs/misc_el/")
 (use-package framemove
-    :load-path "~/configs/misc_el/")
+  :load-path "~/configs/misc_el/")
+:init (load "framemove")
+:config (setq framemove-hook-into-windmove t))
+;;(require 'framemove)
+;;(load "~/configs/misc_el/framemove.el")
+;;(describe-key (kbd "S-<down>"))
+;;(framemove-mode 1)
+;;(featurep 'framemove)
+;;(load-path)
+
 (windmove-default-keybindings)
-(setq framemove-hook-into-windmove t)
+;;(setq framemove-hook-into-windmove t)
 ;; (when (fboundp 'windmove-default-keybindings)
 ;;  (windmove-default-keybindings))
 ;; right width for liniting rules?

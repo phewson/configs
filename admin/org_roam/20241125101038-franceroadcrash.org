@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       1f75d877-a465-450c-b3fd-19635f4c8778
+:END:
+#+title: FranceRoadCrash
+[[file:///home/phewson/Downloads/description-des-bases-de-donnees-annuelles.pdf][Variable descriptions]]
+[[https://www.data.gouv.fr/fr/datasets/bases-de-donnees-annuelles-des-accidents-corporels-de-la-circulation-routiere-annees-de-2005-a-2023/#/information][Data]]
