@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       75b6d44c-5ce2-4003-b3dc-811baee6d80f
+:END:
+#+title: PopsHistoric
+
+[[https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/estimatesofthepopulationforenglandandwales][Parent page]]
+
+[[https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/estimatesofthepopulationforenglandandwales/ukpopulationestimates1838to2023editionofthisdataset/ukpopulationestimates18382023.xlsx][UK population estimates 1839 to 2023 edition of this dataset edition of this dataset]]

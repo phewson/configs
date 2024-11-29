@@ -352,7 +352,7 @@ into a comma-separated one-liner surrounded by QUOTE."
 ;; framemove (shift and arrow)
 (add-to-list 'load-path "~/configs/misc_el/")
 (use-package framemove
-  :load-path "~/configs/misc_el/")
+  :load-path "~/configs/misc_el/"
 :init (load "framemove")
 :config (setq framemove-hook-into-windmove t))
 ;;(require 'framemove)
