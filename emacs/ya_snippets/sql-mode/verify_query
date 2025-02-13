@@ -1,11 +1,13 @@
 # -*- mode: snippet -*-
-# name: Set up a simple verify numbers query
-# key: vernum
+# name: verify
+# key: vfy
 # --
-DO \$\$
+DO $$
 DECLARE
-    result ${1:int};
+result ${1:integer};
 BEGIN
-   result := (`yas-selected-text`);
-   ASSERT result =$2;
-END \$\$;
+result := (
+${2}
+);
+ASSERT result = ${3};
+END $$;

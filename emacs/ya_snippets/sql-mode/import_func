@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: Importer function
+# key: func
+# --
+CREATE OR REPLACE FUNCTION ${1}.import_${2}() RETURNS void
+AS $$
+DECLARE
+BEGIN
+TRUNCATE TABLE ${1}.${2};
+INSERT INTO ${1}.${2}(
+${3}
+FROM staging.${1}_${2};
+END
+$$ LANGUAGE plpgsql;

@@ -1,0 +1,401 @@
+*- mode: org; coding: utf-8 -*-
+#+STARTUP: showall
+
+
+* Subjunctive
+
+** Subjunctive :drill:
+Doubt/Denial/Negation
+ [Dudo que] sea capaz de saltar diez veces 8,50 en una temporada.
+[No creo que] la pobreza mundial sea una cuestión que deba tomarse a broma o con la que hacer juegos de palabras.
+[No niego que] se puedan hacer mejoras en estos edificios.
+No creer / No estar seguro / No parecer / No pensar
+
+** Subjunctive                                                       :drill:
+Recommendations/Requests
+[Te aconsejo que] trabajes con moderación.
+Cuando [te pido que] me escuches
+Insistir / Ordenar / Mandar / Preferir / Recomendar / Requerir / Sugerir / Querer
+
+** Subjunctive :drill:
+
+Impersonal/valoraciones
+[es facil] encontrar gente que hable Inglés y otros idiomas europeos.
+[Es fantástico que] estén alineando criterios para superar la revisión en el proceso de revisión por homólogos.
+[Es bueno que] haya un control exhaustivo de calidad y de transporte
+[Es importante que] también den prioridad a la asistencia sanitaria.
+Sin embargo, [es necesario que] repasemos juntos una serie de puntos de evaluación.
+[Es extraño que] sean nuestros niños, los miembros más vulnerables de nuestra comunidad, los que a menudo corran riesgos
+[Es maravilloso que] estén aquí para que puedan ver los resultados del trabajo en que invierten y que apoyan.
+
+** Subjunctive :drill:
+
+También [me parece bien que] hayamos sido visionarios e incluido nuevos ámbitos de protección en el cuadro general.
+[Me parece bien] ir al cine
+
+** Subjunctive :drill:
+Emotions
+Por otro lado, [siento que] los políticos alemanes sean un poco más tibios al respecto.
+ [Lamento que] el debate sobre los problemas que plantea la ampliación de la zona del euro haya recibido tan poca atención.
+[Me enoja que] el Consejo no esté representado aquí en la Cámara en estos momentos
+[Me encanta que] me den masaje, pero mis pies son muy sensibles.
+[Me temo que] después tengamos que volver a empezar desde cero
+[Me temo que] la respuesta es simplemente «no».
+ Sin embargo, por otra parte, [me entristece que] los diputados de los nuevos países miembros no hayan obtenido, una vez más, el suficiente apoyo.
+[sorprender]
+
+** Subjunctive :drill:
+Wishes
+[Le pido que] aclare qué procedimiento estamos utilizando.[pedir]
+[Exijo que] se emprendan acciones para hacer frente a este problema. [Exigir]
+Hoy, [deseo que] todas las estrellas del universo brillen para ti
+[Espero que] podamos decir al final de este debate que lo hemos logrado.
+Le [insistimos que] envíe a la escuela de su niño, su información de contacto y las actualizaciones cuando ocurran cambios.
+Y [necesito que] dicho doctor tenga información sobre lo que estoy haciendo.
+No [queremos que] vuelva la turbulencia al Oriente Medio.
+
+** Subjunctive :skill:
+
+Busco pantalones que [sea] rayas rojas y [tenga]  bolsillos.
+Busco pantalones con rayas rojas y bolsillos
+
+* Miscellaneous vocabulary
+
+** Phrase :drill:
+:PROPERTIES:
+:ID:       f15ace58-820a-417f-95a1-648147cd359c
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-02-12 Wed 12:%]
+:END:
+[[./img/handwriting.jpeg]]
+Para evitar multas, los dependientes de las tiendas deben
+entregar boletas [de puño y letra] por cada compra, no importa cuán pequeña sea.
+
+** Phrase :drill:
+SCHEDULED: <2025-02-16 Sun>
+:PROPERTIES:
+:ID:       1a3493b3-def0-4dd1-b6d8-de788956dc08
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-02-12 Wed 12:%]
+:END:
+[[./img/swallow.jpg]]
+Cola de [golondrina], inspirada en las teorías de René Thom.
+Nos trasladamos de una isla a otra en [una golondrina]
+
+** Phrase :drill:
+SCHEDULED: <2025-02-16 Sun>
+:PROPERTIES:
+:ID:       a6eb13ff-daf3-4c28-8677-0bf3003f7d77
+:DRILL_LAST_INTERVAL: 3.86
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 3.0
+:DRILL_EASE: 2.36
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-02-12 Wed 12:%]
+:END:
+
+[[./img/internal_dialogue.jpeg]]
+Se congratula también por los progresos logrados en [el diálogo interno].
+
+** Phrase :drill:
+:PROPERTIES:
+:ID:       b0c82ed6-5425-48f5-9e9f-833d08da8ff2
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 2.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 2
+:DRILL_LAST_REVIEWED: [Y-02-12 Wed 12:%]
+:END:
+[[./img/test.jpeg]]
+Los resultados de este [ensayo] se obtendrán a finales del año próximo.
+
+** Phrase :drill:
+SCHEDULED: <2025-02-16 Sun>
+:PROPERTIES:
+:ID:       669160b3-9f93-4ded-906e-642edf7aaeaf
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-02-12 Wed 12:%]
+:END:
+[[./img/rehearsal.jpeg]]
+Nos queda [un ensayo] más antes del estreno
+
+** Phrase :drill:
+SCHEDULED: <2025-02-16 Sun>
+:PROPERTIES:
+:ID:       64c04942-e7bb-4737-a132-157c54ce70dd
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 2.5
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-02-12 Wed 12:%]
+:END:
+[[./img/blockers.jpeg]]
+A pesar de grandes [bloqueos] y divisiones sobre los asuntos de Singapur, parece haber un creciente consenso sobre la capacitación
+
+** Phrase :drill:
+:PROPERTIES:
+:ID:       9022b708-7411-4a9c-8963-322658ac7020
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 2.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 2
+:DRILL_LAST_REVIEWED: [Y-02-12 Wed 12:%]
+:END:
+[[./img/within_reach.jpeg]]
+Creo que [está a nuestro alcance] pero hemos de asegurarnos que este acuerdo entre en vigor.
+
+** Word :drill:
+SCHEDULED: <2025-02-16 Sun>
+:PROPERTIES:
+:ID:       f5910d50-b48e-4795-a7b6-53c4db50582a
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-02-12 Wed 12:%]
+:END:
+
+Me diste un [susto]
+Habéis llevado un [susto]
+
+** Word :drill:
+:PROPERTIES:
+:ID:       0e470c8d-6b08-47b6-b22e-030e2ad69782
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-02-12 Wed 12:%]
+:END:
+[[./img/fascinated.jpeg]]
+Y también me [quedé prendada] de todos aquellos pollitos de albatros
+
+** Science :drill:
+SCHEDULED: <2025-02-16 Sun>
+:PROPERTIES:
+:ID:       17843bef-0a3c-49ec-bc21-488c87e0ba9c
+:DRILL_LAST_INTERVAL: 3.86
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 3.0
+:DRILL_EASE: 2.36
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-02-12 Wed 12:%]
+:END:
+[[./img/carrying_out.jpeg]]
+[Se llevaron a cabo] estudios de referencia y se aplicaron protocolos de seguimiento a largo plazo para la continuación de la conservación
+
+
+** Environment :drill:
+SCHEDULED: <2025-02-16 Sun>
+:PROPERTIES:
+:ID:       a25ecdae-7fea-4e8c-88e3-e468295aeb5d
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 2.5
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-02-12 Wed 12:%]
+:END:
+[[./img/waste.jpeg]]
+Debemos fomentar prácticas e invertir en tecnologías diseñadas para reducir el [despilfarro] y aumentar la recuperación de aguas.
+Las élites y los políticos se dedican más al consumismo y al [derroche] que a las inversiones. 
+
+* Verbs
+
+** Verbs :drill:
+
+El libro [abarca] el periodo entre 1939 y 1945 [abarcar]
+Su reino [abarcaba] varias de las actuales provincias andaluzas
+El parque natural [abarca] un territorio más de 2,820 hectares [incluir] [englobar]
+
+** Verbs :drill:
+
+Dada la cantidad casi ilimitada de agua de mar, con la desalinización se podría [abastecer] de agua a muchos municipios e industrias.[suministrar]
+
+** Verbs :drill:
+De las 15 pregunatas en la prueba, solo [acerté] cuatro
+Todavía gano algún dinero si [acerté] cinco de los números de la lotería
+
+** Verbs :drill:
+
+La prensa pretende [achacar] la crisis que atraviesa el campo mexicano al campesino
+La investigación oficial traté de [achacarle] la culpa del accidente al maquinista
+
+** Verbs :drill:
+
+Sara [adivinó] la carta que había elegido
+
+** Verbs :drill:
+
+Políticas de esa índole [afectarán] negativamente el desempeñó de nuestras acciones
+
+** Verbs :drill:
+
+Receptor de GPS puede [agotar] la batería más
+
+** Verbs :drill:
+
+Ese columpio no [aguantará] tu peso [aguantar]
+
+
+** Verbs :drill:
+
+Su abogado [alegó] falta de prueba [alegar]
+
+** Verbs :drill:
+
+Sara decidió [alejarse] de Rafa
+En caso de incendio, [alejarte] del área y cierra puertas como puedas
+
+** Verbs :drill:
+
+Las buenas notas lo [alentaron] a seguir estudiando [alentar]
+Agradezco a mi esposa que creyera a mí y me [alentara] a seguir adelante
+
+** Verbs :drill:
+
+[Hemos apartado] las cosas más importantes que necesitamos para el viaje [apartar]
+Por favor, [aparta] esa botella del borde de la mesa
+
+** Verbs :drill:
+
+Este medicamento lo va a [aletargar]
+Comer un almuerzo pesado siempre me [aletarga]
+
+** Verbs :drill:
+
+La compañía [aportó] mil euros a la fundación
+El abogado [aportó] la evidencia necesaria
+
+** Verbs :drill:
+
+El dentista le [arrancará] una muela a mi hermano el lunes [arrancar]
+Tu padre está en el huerto [arrancado] las malas hierbas
+
+** Verbs :drill:
+
+El niño no [se atreve] a meterse en el agua [atreverse]
+Recibir asistencia es [atreverse] a preguntar
+
+** Verbs :drill:
+
+   El banco [denegó] su préstamo [denegar]
+   [Negar] una pensión a las personas que ya no pueden soportar la presión del trabajo crea problemas que no se pueden solucionar.
+   No se puede [rechazar] una solicitud de interconexión si ésta es razonable
+
+** Verbs :drill:
+
+No tenemos ninguna evidencia que nos permita [cuestionar] la decisión del juez
+Yo lo creí. No tenía por qué [cuestionar] su sinceridad
+
+** Verbs :drill:
+
+Su nieto [creció] una pulgada entera durante el verano
+[Crecí] en España durante la época de Franco
+Así como [crecía] el desempleo, también lo hacía el desdén por los poderes políticos
+En solo tres años, las oficinas de la compañía [crecieron] por todo el país
+
+** Verbs :drill:
+
+Las viejas amigas se pasaron la tarde [cotilleando] sobre sus antiguos compañeros de clase [Cotillear]
+
+** Verbs :drill:
+
+[Consiguió] su licencia de conducir en junio [Conseguir]
+Ese hombre [consiguió] todas sus metas
+No [conseguí] convencerlo para que se viniera a la playa con nosotros
+
+** Verbs :drill:
+
+Honestamente, [corroborar] su historia va a ser un poco difícil
+Hay personas en España que pueden [corroborar] este episodio
+Los testigos [corroboran] el testimonio de Juan respeto de que el coche paso con el semáforo en rojo
+
+** Verbs :drill:
+
+Decenas de manifestantes [se congregaron] a las puertas del ayuntamiento. [congregarse]
+Todos los años en julio [se congregan] miles do motoristas en esta ciudad
+
+** Verbs :drill:
+
+Muchos jubilados cometieron el error de [confiar] sus ahorros a esa empresa que ayer quebró
+[Confió] en que van a hacer bien el trabajo
+[Confía] en mí, todo estaré bien
+Dara me [confió] su mayor secreto
+
+** Verbs :drill:
+
+Los horarios en España hacen difícil [compaginar] la vida familiar y la profesional
+Las negociaciones intentaron [compaginar] los intereses de los distintos países miembros
+
+** Verbs :drill:
+
+  El candidato presidencial se comprometió a reducir el desempleo
+  El estudiante [se ha comprometido] a estudiar para el examen
+
+** Verbs :drill:
+
+Federico [cató] el vino y dijo "está agrio" [catar]
+[Catamos] los bocadillos y el champán que servirán en nuestra boda
+
+** Verbs :drill:
+
+Hemos de [aunar esfuerzos] para aislar políticamente a Cuba.
+Hemos de [aunar esfuerzos] porque la salud mental nos afecta a todos.
+Seremos más poderoso si [aunamos fuerzas]
+
+** Verbs :drill:
+SCHEDULED: <2025-02-17 Mon>
+:PROPERTIES:
+:ID:       bea11081-33e1-4a58-960d-7edcc52b3be9
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-02-13 Thu 16:%]
+:END:
+
+¿Quién [arbitra] el partido del sábado?
+Un funcionario del Estado [arbitrará] la disputo

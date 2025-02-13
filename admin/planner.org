@@ -131,6 +131,7 @@ make
 ~/Downloads/exercism submit ../last_will.cpp
 
 BATS_RUN_SKIPPED=true bats test-raindrops.batss
+BATS_RUN_SKIPPED=true bats test-secret-handshake.bats 
 
   
 ** Blogging

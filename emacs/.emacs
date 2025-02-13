@@ -380,7 +380,9 @@ into a comma-separated one-liner surrounded by QUOTE."
 
 (use-package elfeed
   :ensure t)
-(setq elfeed-feeds '("https://martinfowler.com/feed.atom"
+(setq elfeed-feeds '("https://www.joanwestenberg.com/feed"
+                     "https://martinfowler.com/feed.atom"
+		     "https://uk.fedimeteo.com/plymouth.rss"
 		     "https://opensource.com/feed"
 		     "https://feeds.feedburner.com/RBloggers"
 		     "https://planet.debian.org/rss20.xml"
@@ -396,6 +398,15 @@ into a comma-separated one-liner surrounded by QUOTE."
  (use-package ess
   :ensure t
   :init (require 'ess-site))
+
+(add-hook 'ess-r-mode-hook
+	  (lambda ()
+	    (setq-local eglot-ignored-server-capabilities ('documentFormattingProvider
+							   :documentRangeFormattingProvider)))
+	  )
+(add-hook 'ess-r-mode-hook
+	  (lambda () (remove-hook 'before-save-hook 'eglot-format-buffer t)))
+(setq ess-indent-offset 2)
 
 (use-package poly-R
   :ensure t
@@ -524,7 +535,7 @@ into a comma-separated one-liner surrounded by QUOTE."
 (add-hook 'latex-mode-hook 'eglot-ensure)
 
 
-(add-hook 'ess-r-mode-hook 'eglot-ensure)
+(add-hook 'ess-r-mode-hook #'eglot-ensure)
 (add-hook 'eglot-managed-mode-hook (lambda () (corfu-mode 1)))
 
 (use-package corfu

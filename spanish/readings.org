@@ -1,0 +1,21 @@
+# -*- mode: org; coding: utf-8 -*-
+#+STARTUP: showall
+
+# examples of card definitions for use with org-drill.
+# Cards, AKA topics, have the 'drill' tag. Note that the higher-level headings
+# in the file do NOT have this tag.
+
+* Advanced vocabulary
+
+** Adjective :drill:
+:PROPERTIES:
+:DRILL_CARD_TYPE: twosided
+:ID:       1d97cb9d-cfa5-4334-8266-7eef0c45e11d
+:END:
+
+Write a sentence including this word
+*** Es
+enmarañado
+Sentence
+*** Sentence
+mientras en el español estaba enmarañado por localismos que ofrecían muchos sinónimos, pero no más posibilidades de expresarse con precisión.
