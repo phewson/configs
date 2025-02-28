@@ -243,5 +243,9 @@
   (gscholar-bibtex-default-source "Google Scholar")
   (gscholar-bibtex-database-file "~/configs/admin/papers/regression.bib"))
 
+;;Indentation in Babel has been getting on my nerves, this should prevent it?
+(setq org-src-preserve-indentation t)
+(setq org-edit-src-content-indentation 0)
+
 (provide '.orgconfigs)
 ;;; .orgconfigs.el ends here

@@ -129,8 +129,12 @@ Found out that expecting utf-8 can be really helpful
 
 
 ** Tree-sitter and lsp
+I want gnu style code formatting
+#+begin_src emacs-lisp :tangle testing.el
+(setq ess-style 'RRR)
+#+end_src
 
-#+BEGIN_SRC emacs-lisp :tangle testing.el
+,#+BEGIN_SRC emacs-lisp :tangle testing.el
 (setq treesit-language-source-alist
    '((bash "https://github.com/tree-sitter/tree-sitter-bash")
      (cmake "https://github.com/uyha/tree-sitter-cmake")
@@ -223,12 +227,13 @@ There are two sets of postgres variables. One set is environmental variables whi
 #+BEGIN_SRC emacs-lisp :tangle testing.el
 ;;(setenv "TEST_DATA_HOME" "/home/phewson/analytics-queries/ci/tests/sim_data")
 ;;(setenv "HOME" "~/")
-(setenv "PGUSER" "vagrant")
+(setenv "DATASTORE" "/home/phewson/DATA")
+(setenv "PGUSER" "pgdocker")
 (setenv "PGHOST" "localhost")
 (setenv "PGDATABASE" "official")
 (setenv "PGPORT" "15432")
 (setq sql-postgres-login-params
-      '((user :default "vagrant")
+      '((user :default "pgdocker")
         (database :default "official")
         (server :default "localhost")
         (port :default 15452)))
@@ -289,6 +294,7 @@ So, the first thing is, I'm not sure I have any configs/misc_el anymore?
 #+BEGIN_SRC emacs-lisp :tangle testing.el
 (add-to-list 'load-path (expand-file-name "~/configs/misc_el/"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/elpa/"))
+
 #+END_SRC
 
 I need to check out how much of this is needed. Should all be superceded by things like
@@ -300,6 +306,8 @@ straight.el?
    (quote
     (("melpa" . "https://melpa.org/packages/")
      ("gnu" . "https://elpa.gnu.org/packages/"))))
+(setq package-archive-priorities '(("melpa" . 1)
+                                   ("gnu" . 2)))
 (package-initialize)
 (eval-when-compile
 #+END_SRC
@@ -318,6 +326,22 @@ I need a better way of updating packages.
   (auto-package-update-maybe))
 #+END_SRC
 
+** ESS
+
+ #+begin_src emacs-lisp :tangle testing.el
+ (use-package ess
+  :ensure t
+  :init (require 'ess-site))
+(add-hook 'ess-r-mode-hook
+	  (lambda ()
+	    (setq-local eglot-ignored-server-capabilities
+			('documentFormattingProvider
+			 :documentRangeFormattingProvider))))
+(add-hook 'ess-r-mode-hook
+	  (lambda () (remove-hook 'before-save-hook 'eglot-format-buffer t)))
+(setq ess-indent-offset 2)
+#+end_src
+
 ** Standard packages
 
 #+BEGIN_SRC emacs-lisp :tangle testing.el
@@ -335,9 +359,6 @@ I need a better way of updating packages.
     :ensure t)
   (use-package stan-mode
     :ensure t)
-  (use-package ess
-    :ensure t
-    :init (require 'ess-site))
   (use-package poly-R
     :ensure t)
   (use-package academic-phrases
@@ -346,25 +367,31 @@ I need a better way of updating packages.
     :ensure t
     :hook (prog-mode . rainbow-delimiters-mode)
   )
+  (use-package consult
+    :ensure t)
 #+END_SRC
 
 ** RSS reading
 
 #+BEGIN_SRC emacs-lisp :tangle testing.el
-(use-package elfeed
-  :ensure t)
-(setq elfeed-feeds '("https://martinfowler.com/feed.atom"
-		     "https://opensource.com/feed"
-		     "https://feeds.feedburner.com/RBloggers"
-		     "https://planet.debian.org/rss20.xml"
-		     "https://sachachua.com/blog/feed/index.xml"
-		     "https://karthinks.com/tags/elfeed/index.xml"
-		     "https://ctan.org/ctan-ann/rss"))
+  (use-package elfeed
+    :ensure t)
+  (setq elfeed-feeds '(("https://www.joanwestenberg.com/feed"
+		   "https://martinfowler.com/feed.atom"
+		   "https://uk.fedimeteo.com/plymouth.rss"
+		       "https://opensource.com/feed"
+		       "https://feeds.feedburner.com/RBloggers"
+		       "https://planet.debian.org/rss20.xml"
+		       "https://sachachua.com/blog/feed/index.xml"
+		       "https://karthinks.com/tags/elfeed/index.xml"
+		       "https://ctan.org/ctan-ann/rss"))
+      )
 #+END_SRC
 ** Completions
 
 This is also a work in progress. I think it could be simplified if I stopped trying to get
 icons in *C-x C-f*
+I have a note, M-x all-the-icons-install-fonts
 
 #+BEGIN_SRC emacs-lisp :tangle testing.el
 (use-package vertico
@@ -475,17 +502,31 @@ Here's a list of some standard packages and basic configs.
 #+END_SRC
 
   #+BEGIN_SRC emacs-lisp :tangle testing.el
-    (use-package auctex
-      :ensure t)
-    (setq auto-mode-alist
-          (append '(("\\.tex\\'" . LaTeX-mode)) auto-mode-alist))
-    (use-package cdlatex
-      :ensure t)
-    (use-package xenops
+(use-package auctex
+  :ensure t)
+(setq auto-mode-alist
+  (append '(("\\.tex\\'" . LaTeX-mode)) auto-mode-alist))
+;; Custom function to split window vertically and display PDF
+(defun my-TeX-revert-document-buffer (file)
+  "Revert the buffer corresponding to FILE in another window."
+  (let ((buf (find-buffer-visiting file)))
+    (if buf
+        (progn
+          (select-window (split-window-right))
+          (switch-to-buffer buf)
+          (pdf-view-mode)
+          (pdf-view-fit-page-to-window))
+      (message "No buffer associated with %s" file))))
+
+(setq TeX-view-program-selection '((output-pdf "PDF Tools"))
+    TeX-source-correlate-start-server t)
+
+(add-hook 'TeX-after-compilation-finished-functions
+        #'TeX-revert-document-buffer)
+(use-package cdlatex
     :ensure t)
-    (require 'ob-python)
-    (use-package consult
-      :ensure t)
+(use-package xenops
+  :ensure t)
     ;;(setq TeX-view-program-list
     ;;      '(("Okular" "okular %o")
     ;;       ("Firefox" "firefox %o")
@@ -778,7 +819,6 @@ gif-screencast
 sudo apt-get install scrot
 #+end_src
 
- 
 * End note
 
 #+BEGIN_SRC emacs-lisp :tangle testing.el

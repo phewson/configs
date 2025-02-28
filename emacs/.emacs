@@ -2,78 +2,26 @@
 ;;; Commentary:
 ;;; Code:
 
-
-
-(use-package ox-reveal
-  :ensure t
-  :config
-  (setq org-reveal-root "https://cdn.jsdelivr.net/npm/reveal.js@4.3.1"))
-
-
-(setq ess-style 'RRR)
-;; This is meant to be an accessible theme, but, ouch.
 (load-theme 'modus-operandi t)
 (set-frame-font "DejaVu Sans Mono-11" nil t)
-(use-package pulsar
-  :ensure t
-  :config
-  ;; Enable pulsar-mode globally
-  (pulsar-global-mode 1)
 
-  ;; Optionally, customize pulsar's behavior
-  (setq pulsar-pulse t)
-  (setq pulsar-delay 0.05)
-  (setq pulsar-iterations 10)
-  (setq pulsar-face 'pulsar-magenta)
-  (setq pulsar-highlight-face 'pulsar-yellow)
-
-  ;; Optionally, set up key bindings for pulsar commands
-  (global-set-key (kbd "C-x l") 'pulsar-pulse-line)  (global-set-key (kbd "C-x C-l") 'pulsar-pulse-buffer))
-
-;; Remember and restore the last cursor location of opened files
-(save-place-mode 1)
-
-(setq custom-file (locate-user-emacs-file "~/configs/emacs/.custom-vars.el"))
-(load custom-file 'noerror 'nomessage)
-
-;; Don't pop up UI dialogs when prompting
 (setq use-dialog-box nil)
 
-;; Revert buffers when the underlying file has changed
-(global-auto-revert-mode 1)
-
-;; Revert Dired and other buffers
-(setq global-auto-revert-non-file-buffers t)
-
-;; set various environmental variables
-;;(setenv "TEST_DATA_HOME" "/home/phewson/analytics-queries/ci/tests/sim_data")
-;;(setenv "HOME" "~/")
-(setenv "DATASTORE" "/home/phewson/DATA")
-(setenv "PGUSER" "pgdocker")
-(setenv "PGHOST" "localhost")
-(setenv "PGDATABASE" "official")
-(setenv "PGPORT" "15432")
-(setq sql-postgres-login-params
-      '((user :default "pgdocker")
-        (database :default "official")
-        (server :default "localhost")
-        (port :default 15432)))
-(setq sql-product 'postgres)
-
-;; open with an org mode file as default
 (setq inhibit-splash-screen t
-      initial-buffer-choice "~/configs/admin/planner.org")
-;;(find-file "~/configs/admin/planner.org")
+        initial-buffer-choice "~/configs/admin/planner.org")
+(add-to-list 'initial-frame-alist '(width . 101))
+(add-to-list 'default-frame-alist '(width . 101))
 
-;; turn on visual icon toolbar
 (tool-bar-mode 0)
 
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
+(column-number-mode t)
+(global-display-line-numbers-mode t)
 
 (setq-default line-spacing 0.4)
-;;(setq-default custom-set-faces
-;;   '((t (:family "Ubuntu" :foundry "DAMA" :slant normal :weight
-;;     normal :height 143 :width normal))))
 
 (use-package writeroom-mode
   :ensure t
@@ -91,10 +39,26 @@
 )
 (global-set-key (kbd "<f9>") 'writeroom-mode)
 
-;; default to pdflatex
-(setq latex-run-command "pdflatex")
+(setf dired-kill-when-opening-new-dired-buffer t)
+(setq dired-listing-switches "-lah --group-directories-first")
 
-;; use utf-8
+(use-package pulsar
+    :ensure t
+    :config
+    ;; Enable pulsar-mode globally
+    (pulsar-global-mode 1)
+
+    ;; Optionally, customize pulsar's behavior
+    (setq pulsar-pulse t)
+    (setq pulsar-delay 0.05)
+    (setq pulsar-iterations 10)
+    (setq pulsar-face 'pulsar-magenta)
+    (setq pulsar-highlight-face 'pulsar-yellow)
+
+    ;; Optionally, set up key bindings for pulsar commands
+    (global-set-key (kbd "C-x l") 'pulsar-pulse-line)
+)
+
 (prefer-coding-system 'utf-8-unix)
 (set-default-coding-systems 'utf-8-unix)
 (set-terminal-coding-system 'utf-8)
@@ -102,61 +66,11 @@
 ;; Treat clipboard input as UTF-8 string first; compound text next, etc.
 (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))
 
-;; allow opening of recent files via menu or Ctrl-x Ctrl-r
-(recentf-mode 1)
-(setq recentf-max-menu-items 25)
-(global-set-key "\C-x\ \C-r" 'recentf-open-files)
-
-;; include column numbers for cursor in modeline
-;;(setq column-number-mode t)
-;; linum mode
-;;(global-linum-mode t)
-;;(global-display-line-numbers-mode)
-(column-number-mode t)
-(global-display-line-numbers-mode t)
-
-;; stop shell duplicating history
-(defvar comint-input-ignoredups)
-(setq comint-input-ignoredups t)
-
-;; idf files handled by config mode
-;;(add-to-list 'auto-mode-alist '("\\.idf\\'" . conf-mode))
-
-;; needed for some applications
 (setq require-final-newline t)
 
-;; set transparency
-;;(set-frame-parameter (selected-frame) 'alpha '(85 85))
-;;(add-to-list 'default-frame-alist '(alpha 85 85))
+(setq ess-style 'RRR)
 
-;; tree sitter mode source grammars
-(setq treesit-language-source-alist
-   '((bash "https://github.com/tree-sitter/tree-sitter-bash")
-     (cmake "https://github.com/uyha/tree-sitter-cmake")
-     (c "https://github.com/tree-sitter/tree-sitter-c")
-     (cpp "https://github.com/tree-sitter/tree-sitter-cpp")
-     (css "https://github.com/tree-sitter/tree-sitter-css")
-     (elisp "https://github.com/Wilfred/tree-sitter-elisp")
-     (go "https://github.com/tree-sitter/tree-sitter-go")
-     (html "https://github.com/tree-sitter/tree-sitter-html")
-     (javascript "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src")
-     (json "https://github.com/tree-sitter/tree-sitter-json")
-     (latex "https://github.com/tree-sitter/tree-sitter-latex")
-     (make "https://github.com/alemuller/tree-sitter-make")
-     (markdown "https://github.com/ikatyang/tree-sitter-markdown")
-     (python "https://github.com/tree-sitter/tree-sitter-python")
-     (r "https://github.com/tree-sitter/tree-sitter-r")
-     (toml "https://github.com/tree-sitter/tree-sitter-toml")
-     (tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src")
-     (typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
-     (yaml "https://github.com/ikatyang/tree-sitter-yaml")))
-
-;; make c++ mode tree sitter mode
-(setq major-mode-remap-alist
- '((c++-mode . c++-ts-mode)
-   )
- )
-
+(require 'eglot)
 
 (setq erc-server "irc.libera.chat"
       erc-nick "texhewson"
@@ -166,8 +80,6 @@
       erc-kill-buffer-on-part t
             erc-auto-query 'bury)
 
-;; I forgot why I wrote this, turns a column of data into a comma separated
-;;list for use in R?
 (defun arrayify (start end quote)
     "Turn strings on newlines between START and END \
 into a comma-separated one-liner surrounded by QUOTE."
@@ -179,32 +91,41 @@ into a comma-separated one-liner surrounded by QUOTE."
       (delete-region start end)
       (insert insertion)))
 
+;; make c++ mode tree sitter mode
+(setq major-mode-remap-alist '((c++-mode . c++-ts-mode)))
 
-;; touch function
-(defun touch ()
-     "Update timestamp on target buffer."
-     (interactive)
-     (shell-command (concat "touch " (shell-quote-argument (buffer-file-name))))
-     (clear-visited-file-modtime))
+(save-place-mode 1)
 
-(setq abbrev-file-name             ;; tell emacs where to read abbrev
-       "~/configs/emacs/abbrev/.abbrev_defs")
-(setq save-abbrevs 'silent)
+(global-auto-revert-mode 1)
+(setq global-auto-revert-non-file-buffers t)
 
-;; I don't think I work with XML anymore
-;;(add-hook 'nxml-mode-hook 'abbrev-mode)
+(setq custom-file (locate-user-emacs-file "~/configs/emacs/.custom-vars.el"))
+(load custom-file 'noerror 'nomessage)
 
-;;(require 'emamux)
-;;(add-hook 'nxml-mode-hook
-;;          (lambda () (add-to-list
-;;                      'write-file-functions 'delete-trailing-whitespace)))
+;;(setenv "TEST_DATA_HOME" "/home/phewson/analytics-queries/ci/tests/sim_data")
+;;(setenv "HOME" "~/")
+(setenv "DATASTORE" "/home/phewson/DATA")
+(setenv "PGUSER" "pgdocker")
+(setenv "PGHOST" "localhost")
+(setenv "PGDATABASE" "official")
+(setenv "PGPORT" "15432")
+(setq sql-postgres-login-params
+      '((user :default "pgdocker")
+        (database :default "official")
+        (server :default "localhost")
+        (port :default 15452)))
+(setq sql-product 'postgres)
 
-;; needed for python/conda
-;;(add-to-list 'exec-path "~/miniconda/bin")
-;; needed for windows
-;;(add-to-list 'exec-path "/c/mingw/bin")
+(use-package framemove
+    :load-path "~/configs/misc_el/")
+(windmove-default-keybindings)
+(setq framemove-hook-into-windmove t)
+;; (when (fboundp 'windmove-default-keybindings)
+;;  (windmove-default-keybindings))
 
-;; where to find elisp pacakges
+(defvar comint-input-ignoredups)
+(setq comint-input-ignoredups t)
+
 (add-to-list 'load-path (expand-file-name "~/configs/misc_el/"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/elpa/"))
 
@@ -213,51 +134,97 @@ into a comma-separated one-liner surrounded by QUOTE."
    (quote
     (("melpa" . "https://melpa.org/packages/")
      ("gnu" . "https://elpa.gnu.org/packages/"))))
-
 (setq package-archive-priorities '(("melpa" . 1)
                                    ("gnu" . 2)))
-
 (package-initialize)
-
-
 (eval-when-compile
-;;  ;; Following line is not needed if use-package.el is in ~/.emacs.d
+
 (require 'use-package))
 (require 'bind-key)
 (setq use-package-always-ensure t)
-;; (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/"))
-
 (use-package auto-package-update
   :config
   (setq auto-package-update-delete-old-versions t)
   (setq auto-package-update-hide-results t)
   (auto-package-update-maybe))
 
+(use-package ess
+  :ensure t
+  :init (require 'ess-site))
+(add-hook 'ess-r-mode-hook
+	  (lambda ()
+	    (setq-local eglot-ignored-server-capabilities
+			('documentFormattingProvider
+			 :documentRangeFormattingProvider))))
+(add-hook 'ess-r-mode-hook
+	  (lambda () (remove-hook 'before-save-hook 'eglot-format-buffer t)))
+(setq ess-indent-offset 2)
+
+(use-package wgrep
+  :ensure t)
 (use-package magit
   :ensure t)
-
-;;(add-to-list 'load-path "~/.emacs.d/elpa/emacs-reveal")
-;;(require 'emacs-reveal)
-;;(require 'org-re-reveal)
-;;(require 'ox-reveal)
-
 (use-package docker
   :ensure t)
-
 (use-package docker-compose-mode
   :ensure t)
-
-;; json mode
 (use-package json-mode
   :ensure t)
+(use-package hackernews
+  :ensure t)
+(use-package stan-mode
+  :ensure t)
+(use-package poly-R
+  :ensure t)
+(use-package academic-phrases
+  :ensure t)
+(use-package rainbow-delimiters
+  :ensure t
+  :hook (prog-mode . rainbow-delimiters-mode)
+)
+(use-package consult
+  :ensure t)
 
-;; whitespace mode
+(use-package elfeed
+  :ensure t)
+(setq elfeed-feeds '(("https://www.joanwestenberg.com/feed"
+		 "https://martinfowler.com/feed.atom"
+		 "https://uk.fedimeteo.com/plymouth.rss"
+		     "https://opensource.com/feed"
+		     "https://feeds.feedburner.com/RBloggers"
+		     "https://planet.debian.org/rss20.xml"
+		     "https://sachachua.com/blog/feed/index.xml"
+		     "https://karthinks.com/tags/elfeed/index.xml"
+		     "https://ctan.org/ctan-ann/rss"))
+    )
+
+(use-package vertico
+  :init
+  (vertico-mode))
+
+(use-package general
+  :ensure t)
+
+(use-package marginalia
+  :general
+  (:keymaps 'minibuffer-local-map
+   "M-A" 'marginalia-cycle)
+  :custom
+  (marginalia-max-relative-age 0)
+  (marginalia-align 'right)
+  :init
+  (marginalia-mode))
+
+(use-package all-the-icons-completion
+  :ensure t
+  :after (marginalia all-the-icons)
+  :hook (marginalia-mode . all-the-icons-completion-marginalia-setup)
+  :init
+  (all-the-icons-completion-mode))
+
 (use-package whitespace
   :ensure t)
-;; (global-whitespace-mode)
 (setq-default whitespace-line-column 101)
-;; (global-whitespace-mode 1)
-;;(setq whitespace-global-modes '(not org-mode))
 (add-hook 'emacs-lisp-mode-hook
           (function (lambda()
                       (whitespace-mode t))))
@@ -268,19 +235,18 @@ into a comma-separated one-liner surrounded by QUOTE."
           (function (lambda()
                       (whitespace-mode t))))
 
-;;THis never seemed to work?
-;;(use-package dired-single
-;;  :ensure t)
-(setf dired-kill-when-opening-new-dired-buffer t)
+(use-package which-key
+  :init (which-key-mode)
+  :diminish which-key-mode
+  :config
+  (setq which-key-idle-delay 0.3))
 
-(setq dired-listing-switches "-lah --group-directories-first")
 (when (display-graphic-p)
   (require 'all-the-icons))
 (use-package all-the-icons-dired
   :hook (dired-mode . all-the-icons-dired-mode)
   :config (setq all-the-icons-dired-monochrome nil)
   )
-;; M-x all-the-icons-install-fonts
 
 (use-package browse-kill-ring
   :ensure t
@@ -298,133 +264,12 @@ into a comma-separated one-liner surrounded by QUOTE."
   (setq vundo-roll-back-on-quit t)
 )
 
-;; (use-package powerline
-;;   :ensure t)
-;; (defun my-powerline-setup ()
-;;   (interactive)
-;;   (setq-default mode-line-format
-;;                 '("%e"
-;;                   (:eval
-;;                    (let* ((active (powerline-selected-window-active))
-;;                           (mode-line (if active 'mode-line 'mode-line-inactive))
-;;                           (face1 (if active 'powerline-active1 'powerline-inactive1))
-;;                           (face2 (if active 'powerline-active2 'powerline-inactive2))
-;;                           (separator-left (intern (format "powerline-%s-%s"
-;;                                                           powerline-default-separator
-;;                                                           (car powerline-default-separator-dir))))
-;;                           (separator-right (intern (format "powerline-%s-%s"
-;;                                                            powerline-default-separator
-;;                                                            (cdr powerline-default-separator-dir))))
-;;                           (lhs (list (powerline-raw "%*" nil 'l)
-;;                                      (powerline-buffer-id nil 'l)
-;;                                      (powerline-raw " ")
-;;                                      (funcall separator-left mode-line face1)
-;;                                      (powerline-narrow face1 'l)
-;;                                      (powerline-vc face1)))
-;;                           (rhs (list (powerline-raw global-mode-string face1 'r)
-;;                                      (funcall separator-right face1 face2)
-;;                                      (powerline-raw "%4l" face2 'r)
-;;                                      (powerline-raw ":" face2 'r)
-;;                                      (powerline-raw "%3c" face2 'r)
-;;                                      (funcall separator-right face2 mode-line)
-;;                                      (powerline-raw " ")
-;;                                      (powerline-raw "%6p" nil 'r)
-;;                                      (powerline-hud face2 face1)))
-;;                           (center (list (powerline-raw " " face1)
-;;                                         (powerline-raw (all-the-icons-icon-for-buffer) face1 'l)
-;;                                         (powerline-major-mode face1 'l)
-;;                                         (powerline-process face1)
-;;                                         (powerline-minor-modes face1 'l)
-;;                                         (powerline-raw " " face1))))
-;;                      (concat (powerline-render lhs)
-;;                              (powerline-fill-center face1 (/ (powerline-width center) 2.0))
-;;                              (powerline-render center)
-;;                              (powerline-fill face1 (powerline-width rhs))
-;;                              (powerline-render rhs)))))))
-
-;; ;; Apply custom powerline setup
-;; (my-powerline-setup)
-
-;; wgrep mode
-(use-package wgrep
-  :ensure t)
-
-;; framemove (shift and arrow)
-(add-to-list 'load-path "~/configs/misc_el/")
-(use-package framemove
-  :load-path "~/configs/misc_el/"
-:init (load "framemove")
-:config (setq framemove-hook-into-windmove t))
-;;(require 'framemove)
-;;(load "~/configs/misc_el/framemove.el")
-;;(describe-key (kbd "S-<down>"))
-;;(framemove-mode 1)
-;;(featurep 'framemove)
-;;(load-path)
-
-(windmove-default-keybindings)
-;;(setq framemove-hook-into-windmove t)
-;; (when (fboundp 'windmove-default-keybindings)
-;;  (windmove-default-keybindings))
-;; right width for liniting rules?
-(add-to-list 'initial-frame-alist '(width . 101))
-(add-to-list 'default-frame-alist '(width . 101))
-
-;;(require 'dired-x)
-;;(setq-default dired-omit-files-p t)
-;;(setq dired-omit-files
-;;      (concat dired-omit-files "\\.doc$"))
-
-(use-package hackernews
-  :ensure t)
-
-(use-package elfeed
-  :ensure t)
-(setq elfeed-feeds '("https://www.joanwestenberg.com/feed"
-                     "https://martinfowler.com/feed.atom"
-		     "https://uk.fedimeteo.com/plymouth.rss"
-		     "https://opensource.com/feed"
-		     "https://feeds.feedburner.com/RBloggers"
-		     "https://planet.debian.org/rss20.xml"
-		     "https://sachachua.com/blog/feed/index.xml"
-		     "https://karthinks.com/tags/elfeed/index.xml"
-		     "https://ctan.org/ctan-ann/rss"))
-
-;; stan mode
-(use-package stan-mode
-    :ensure t)
-
-;; ess
- (use-package ess
-  :ensure t
-  :init (require 'ess-site))
-
-(add-hook 'ess-r-mode-hook
-	  (lambda ()
-	    (setq-local eglot-ignored-server-capabilities ('documentFormattingProvider
-							   :documentRangeFormattingProvider)))
-	  )
-(add-hook 'ess-r-mode-hook
-	  (lambda () (remove-hook 'before-save-hook 'eglot-format-buffer t)))
-(setq ess-indent-offset 2)
-
-(use-package poly-R
-  :ensure t
-)
+(setq latex-run-command "pdflatex")
 
 (use-package auctex
   :ensure t)
-(setq auto-mode-alist (append '(("\\.tex\\'" . LaTeX-mode)) auto-mode-alist))
-
-;;(setq TeX-view-program-list
-;;      '(("Okular" "okular %o")
-;;       ("Firefox" "firefox %o")
-;;       ("Zathura" "zathura %o"))
-;;)
-
-;;(setq TeX-view-program-selection
-;;      '((output-pdf "Okular")))
-
+(setq auto-mode-alist
+  (append '(("\\.tex\\'" . LaTeX-mode)) auto-mode-alist))
 ;; Custom function to split window vertically and display PDF
 (defun my-TeX-revert-document-buffer (file)
   "Revert the buffer corresponding to FILE in another window."
@@ -438,67 +283,93 @@ into a comma-separated one-liner surrounded by QUOTE."
       (message "No buffer associated with %s" file))))
 
 (setq TeX-view-program-selection '((output-pdf "PDF Tools"))
-      TeX-source-correlate-start-server t)
+    TeX-source-correlate-start-server t)
 
 (add-hook 'TeX-after-compilation-finished-functions
-          #'TeX-revert-document-buffer)
-
+        #'TeX-revert-document-buffer)
 (use-package cdlatex
+    :ensure t)
+(use-package xenops
   :ensure t)
+    ;;(setq TeX-view-program-list
+    ;;      '(("Okular" "okular %o")
+    ;;       ("Firefox" "firefox %o")
+    ;;       ("Zathura" "zathura %o"))
+    ;;)
 
-(use-package consult
-  :ensure t)
+    ;;(setq TeX-view-program-selection
+    ;;      '((output-pdf "Okular")))
 
-(use-package projectile
-  :diminish projectile-mode
-  :config (projectile-mode)
-  :bind-keymap
-  ("C-c p" . projectile-command-map)
-  :init
-  (when (file-directory-p "~/Documents")
-    (setq projectile-project-search-path '("~/Documents")))
-  (setq projectile-switch-project-action #'projectile-dired))
+    ;; Custom function to split window vertically and display PDF
+    (defun my-TeX-revert-document-buffer (file)
+      "Revert the buffer corresponding to FILE in another window."
+      (let ((buf (find-buffer-visiting file)))
+        (if buf
+            (progn
+              (select-window (split-window-right))
+              (switch-to-buffer buf)
+              (pdf-view-mode)
+              (pdf-view-fit-page-to-window))
+          (message "No buffer associated with %s" file))))
 
-;;(use-package counsel-projectile
-;; :after projectile
-;; :config
-;; (counsel-projectile-mode 1))
+    (setq TeX-view-program-selection '((output-pdf "PDF Tools"))
+          TeX-source-correlate-start-server t)
 
+    (add-hook 'TeX-after-compilation-finished-functions
+              #'TeX-revert-document-buffer)
 
-;; Enable tab-bar-mode
-;;(tab-bar-mode 1)
+;;; wget https://github.com/latex-lsp/texlab/releases/download/v5.16.1/texlab-x86_64-linux.tar.gz in Downloads (need to change the location)
+      ;; tar -xvf texlab-x86_64-linux.tar.gz 
+    (use-package company
+      :ensure t
+      :config
+      (global-company-mode)
+      (setq company-backends '(company-capf))
+      (setq company-idle-delay 0.2
+          company-minimum-prefix-length 1
+          company-selection-wrap-around t
+          company-frontends '(company-pseudo-tooltip-frontend
+                              company-echo-metadata-frontend))
+      )  ; Use only company-capf for completions
 
-;;(use-package tabspaces
-;;  :ensure t
-;;  :hook (after-init . tabspaces-mode)
-;;  :commands (tabspaces-switch-or-create-workspace
-;;             tabspaces-open-or-create-project-and-workspace)
-;;  :custom
-;;  (tabspaces-use-filtered-buffers-as-default t)
-;;  (tabspaces-default-tab "Default")
-;;  (tabspaces-remove-to-default t)
-;;  (tabspaces-include-buffers '("*scratch*"))
-;;  (tabspaces-initialize-project-with-todo t)
-;;  (tabspaces-todo-file-name "project-todo.org")
-;;  (tabspaces-session t)
-;;  (tabspaces-session-auto-restore t))
-;;
-;;(global-set-key (kbd "C-c t s") 'tabspaces-switch-or-create-workspace)
-;;(global-set-key (kbd "C-c t o") 'tabspaces-open-or-create-project-and-workspace)
-;;(global-set-key (kbd "C-c t r") 'tabspaces-remove-current-buffer)
+    ;; Install and configure eglot
+    (use-package eglot
+      :ensure t
+      :hook ((latex-mode . eglot-ensure)
+             (LaTeX-mode . eglot-ensure))  ; Ensure eglot starts for LaTeX modes
+      :config
+      (add-to-list 'eglot-server-programs '(latex-mode . ("~/Downloads/texlab"))))
 
-;; yasnippet
+    ;; Optional: Additional settings for LaTeX editing (e.g., AUCTeX)
+    (use-package auctex
+      :ensure t
+      :defer t
+      :hook (LaTeX-mode . (lambda ()
+                            (turn-on-reftex)
+                            (flyspell-mode)
+                            (TeX-fold-mode))))
+
+      (use-package company-auctex
+        :ensure t
+        :config
+        (company-auctex-init))
+;; this is for minted I think
+      (eval-after-load "tex" 
+        '(setcdr (assoc "LaTeX" TeX-command-list)
+                '("%`%l%(mode) -shell-escape%' %t"
+                TeX-run-TeX nil (latex-mode doctex-mode) :help "Run LaTeX")
+          )
+        )
+
 (use-package yasnippet
     :ensure t)
 (setq yas-snippet-dirs '("~/configs/emacs/ya_snippets/"))
 (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
-(add-hook 'splunk-mode-hook 'yas-minor-mode)
 (add-hook 'sql-interactive-mode-hook
           #'(lambda () (setq yas--extra-modes '(sql-mode))))
 (yas-global-mode 1)
 
-;; flycheck
 ;;(setq flycheck-flake8rc "~/configs/splunk/.flake8")
 (use-package flycheck
      :ensure t)
@@ -517,107 +388,12 @@ into a comma-separated one-liner surrounded by QUOTE."
 (setq flycheck-python-mypy-executable "~/miniconda3/envs/splunk/bin/mypy")
 (setq magit-log-arguments '("--graph" "--color" "--decorate" "-n256"))
 
-
 (dolist (hook '(text-mode-hook))
   (add-hook hook (lambda () (flyspell-mode 1))))
 
 ;; stack exchange hack, ubuntu has old version of shell linter
 (setq flycheck-shellcheck-follow-sources nil)
 (add-hook 'sh-mode-hook 'flycheck-mode)
-
-
-;;(add-to-list 'load-path "~/Downloads")
-;;; wget https://github.com/latex-lsp/texlab/releases/download/v5.16.1/texlab-x86_64-linux.tar.gz in Downloads (need to change the location)
-;; tar -xvf texlab-x86_64-linux.tar.gz 
-
-(require 'eglot)
-(add-to-list 'eglot-server-programs '(latex-mode . ("~/Downloads/texlab")))
-(add-hook 'latex-mode-hook 'eglot-ensure)
-
-
-(add-hook 'ess-r-mode-hook #'eglot-ensure)
-(add-hook 'eglot-managed-mode-hook (lambda () (corfu-mode 1)))
-
-(use-package corfu
-  :ensure t
-  :init
-  (global-corfu-mode)
-  ;; Optionally use TAB for cycling, compatible with both lsp-mode and eglot
-  (setq corfu-cycle t)
-  (setq corfu-auto t)                 ;; Enable auto completion
-  (setq corfu-auto-prefix 2)
-  (setq corfu-auto-delay 0.0)
-  (setq corfu-preview-current nil)    ;; Do not preview current candidate
-  (setq corfu-preselect-first nil)    ;; Do not preselect first candidate
-  (setq corfu-quit-no-match 'separator) ;; Do not quit if no match but separator inserted
-  :config
-  (corfu-popupinfo-mode)
-  :bind
-  (:map corfu-map
-        ("TAB" . corfu-next)
-        ([tab] . corfu-next)
-        ("S-TAB" . corfu-previous)
-        ([backtab] . corfu-previous)
-        ("M-d" . corfu-popupinfo-toggle)   ;; Toggle documentation popup
-        ("M-n" . corfu-popupinfo-scroll-up)  ;; Scroll up in the popup
-        ("M-p" . corfu-popupinfo-scroll-down)))
-
-(use-package tree-sitter
-  :ensure t
-  :config
-  (global-tree-sitter-mode)
-  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
-
-(use-package tree-sitter-langs
-  :ensure t
-  :after tree-sitter)
-
-;; Enable Tree-sitter for R mode
-(add-hook 'ess-r-mode-hook #'tree-sitter-mode)
-(add-hook 'ess-r-mode-hook #'tree-sitter-hl-mode)
-
-;; Optionally configure orderless for better completion styles
-;;(use-package orderless
-;;  :ensure t
-;;  :init
-;;  (setq completion-styles '(orderless basic)
-;;        completion-category-defaults nil
-;;        completion-category-overrides '((file (styles partial-completion)))))
-
-
-
-;; (use-package company
-;;   :ensure t
-;;   :hook (after-init . global-company-mode)
-;;   :config
-;;   (setq company-idle-delay 0.2
-;;         company-minimum-prefix-length 1
-;;         company-selection-wrap-around t
-;;         company-frontends '(company-pseudo-tooltip-frontend
-;;                             company-echo-metadata-frontend)))
-
-(use-package company-auctex
-  :ensure t
-  :config
-  (company-auctex-init))
-
-(eval-after-load "tex" 
-  '(setcdr (assoc "LaTeX" TeX-command-list)
-          '("%`%l%(mode) -shell-escape%' %t"
-          TeX-run-TeX nil (latex-mode doctex-mode) :help "Run LaTeX")
-    )
-  )
-(use-package xenops
-  :ensure t)
-
-(require 'ob-python)
-
-(use-package which-key
-  :init (which-key-mode)
-  :diminish which-key-mode
-  :config
-  (setq which-key-idle-delay 0.3))
-
 
 (use-package languagetool
   :ensure t
@@ -638,77 +414,6 @@ into a comma-separated one-liner surrounded by QUOTE."
 	)
 )
 
-(use-package vertico
-  :init
-  (vertico-mode))
-
-(use-package general
-  :ensure t)
-
-(use-package marginalia
-  :general
-  (:keymaps 'minibuffer-local-map
-   "M-A" 'marginalia-cycle)
-  :custom
-  (marginalia-max-relative-age 0)
-  (marginalia-align 'right)
-  :init
-  (marginalia-mode))
-
-
-
-(use-package all-the-icons-completion
-  :ensure t
-  :after (marginalia all-the-icons)
-  :hook (marginalia-mode . all-the-icons-completion-marginalia-setup)
-  :init
-  (all-the-icons-completion-mode))
-
-
-
-(load-file "~/configs/emacs/.orgconfigs.el")
-
-;;(use-package counsel
-;;     :ensure t)
-
-;;(use-package all-the-icons-ivy-rich
-;;  :ensure t
-;;  :init (all-the-icons-ivy-rich-mode 1))
-;;(setq all-the-icons-ivy-rich-icon t)
-
-;;(use-package ivy-rich
-;;  :init (ivy-rich-mode 1)
-;;)
-
-;;(ivy-mode 1)
-;;(counsel-mode 1)
-
-(use-package academic-phrases
-  :ensure t)
-
-(use-package rainbow-delimiters
-  :ensure t
-  :hook (prog-mode . rainbow-delimiters-mode)
-  )
-
-;; I think this is useless
-;; requires manual source from emacs wiki
-;;(add-to-list 'load-path "~/.emacs.d/elpa/hl-line+")
-;;(require 'hl-line+)
-
-;; Enable command logging
-;;(setq message-log-max t)
-
-;; Function to print a message to *Messages*
-;;(defun my-echo-command (command)
-;;  (message "Command executed: %s" command))
-
-;; Hook into the post-command-hook to log every command
-;;(add-hook 'post-command-hook
-;;          (lambda ()
-;;            (my-echo-command this-command)))
-
-
 (use-package citar
 :custom
   (citar-bibliography '("~/configs/admin/papers/regression.bib"))
@@ -721,10 +426,8 @@ into a comma-separated one-liner surrounded by QUOTE."
 
 ;;(use-package biblio
 ;;  :ensure t)
-;;https://lucidmanager.org/productivity/emacs-bibtex-mode/
-;;https://github.com/pprevos/emacs-writing-studio
+
+(load-file "~/configs/emacs/.orgconfigs.el")
+
 (provide '.emacs)
 ;;; .emacs ends here
- ;; If there is more than one, they won't work right.
-
-;; (update emacs)
