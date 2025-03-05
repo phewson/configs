@@ -164,6 +164,20 @@ BATS_RUN_SKIPPED=true bats test-secret-handshake.bats
 - [ ] Life expectancy data
 
 
+Keyboard
+  GNU nano 7.2                                                                  /etc/default/keyboard                                                                            
+# KEYBOARD CONFIGURATION FILE
+
+# Consult the keyboard(5) manual page.
+
+XKBMODEL="pc105"
+XKBLAYOUT="gb"
+XKBVARIANT=""
+XKBOPTIONS=""
+
+BACKSPACE="guess"
+
+
 * LaTeX
 
 - [ ] LaTeX language tool https://github.com/valentjn/ltex-ls

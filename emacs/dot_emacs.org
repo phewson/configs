@@ -335,7 +335,7 @@ I need a better way of updating packages.
 (add-hook 'ess-r-mode-hook
 	  (lambda ()
 	    (setq-local eglot-ignored-server-capabilities
-			('documentFormattingProvider
+			'(documentFormattingProvider
 			 :documentRangeFormattingProvider))))
 (add-hook 'ess-r-mode-hook
 	  (lambda () (remove-hook 'before-save-hook 'eglot-format-buffer t)))
@@ -376,15 +376,14 @@ I need a better way of updating packages.
 #+BEGIN_SRC emacs-lisp :tangle testing.el
   (use-package elfeed
     :ensure t)
-  (setq elfeed-feeds '(("https://www.joanwestenberg.com/feed"
-		   "https://martinfowler.com/feed.atom"
-		   "https://uk.fedimeteo.com/plymouth.rss"
-		       "https://opensource.com/feed"
-		       "https://feeds.feedburner.com/RBloggers"
-		       "https://planet.debian.org/rss20.xml"
-		       "https://sachachua.com/blog/feed/index.xml"
-		       "https://karthinks.com/tags/elfeed/index.xml"
-		       "https://ctan.org/ctan-ann/rss"))
+  (setq elfeed-feeds '(("https://martinfowler.com/feed.atom")
+		        ("https://uk.fedimeteo.com/plymouth.rss")
+		        ("https://opensource.com/feed")
+		        ("https://feeds.feedburner.com/RBloggers")
+		        ("https://planet.debian.org/rss20.xml")
+		        ("https://sachachua.com/blog/feed/index.xml")
+		        ("https://karthinks.com/tags/elfeed/index.xml")
+		        ("https://ctan.org/ctan-ann/rss"))
       )
 #+END_SRC
 ** Completions
