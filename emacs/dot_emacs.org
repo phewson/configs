@@ -236,7 +236,7 @@ There are two sets of postgres variables. One set is environmental variables whi
       '((user :default "pgdocker")
         (database :default "official")
         (server :default "localhost")
-        (port :default 15452)))
+        (port :default 15432)))
 (setq sql-product 'postgres)
 #+END_SRC
 
