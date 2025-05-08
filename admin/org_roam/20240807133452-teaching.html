@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-04 Wed 16:01 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Teaching</title>
+<meta name="author" content="Paul Hewson" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Teaching</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org1f005a4">0.1. Meeting with Layal 8/8/2024</a></li>
+<li><a href="#org0e994e7">0.2. Modules</a></li>
+<li><a href="#org9e8ffb2">0.3. Contacts</a></li>
+</ul>
+</li>
+<li><a href="#org4d0d315">1. MTH1100</a>
+<ul>
+<li><a href="#orgeda34e9">1.1. Assessment</a></li>
+</ul>
+</li>
+<li><a href="#orgcc96684">2. MTH2100</a></li>
+<li><a href="#orge1d8469">3. MTH3100</a>
+<ul>
+<li><a href="#org023a49c">3.1. Assessment:</a></li>
+</ul>
+</li>
+<li><a href="#org92562ba">4. EMP3001 Commercial and Industrial Experience</a>
+<ul>
+<li><a href="#org62df813">4.1. Assessment:</a></li>
+</ul>
+</li>
+<li><a href="#orgc2365de">5. MTHM053</a>
+<ul>
+<li><a href="#orgc97d30d">5.1. Assessment</a></li>
+</ul>
+</li>
+<li><a href="#org051183d">6. MTHM503 Applications of Data Science and Statistics</a></li>
+<li><a href="#org0a5e16c">7. Programmes</a></div>
+</div>
+<ul class="org-ul">
+<li><a href="https://ele.exeter.ac.uk/my/">VLE</a>
+<ul class="org-ul">
+<li><a href="https://mytimetable.exeter.ac.uk/schedule">Timetable</a></li>
+</ul></li>
+</ul>
+
+
+<div id="outline-container-org1f005a4" class="outline-3">
+<h3 id="org1f005a4"><span class="section-number-3">0.1.</span> Meeting with Layal 8/8/2024</h3>
+<div class="outline-text-3" id="text-0-1">
+<ul class="org-ul">
+<li>Some statistics tutorials (one hour a forthnight) / half a module (if grants succeed)</li>
+<li>MSc Project Supervision.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0e994e7" class="outline-3">
+<h3 id="org0e994e7"><span class="section-number-3">0.2.</span> Modules</h3>
+<div class="outline-text-3" id="text-0-2">
+<ul class="org-ul">
+<li><a href="https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH1100&amp;ay=2024&amp;sys=1">MTH1100</a> (0 Credits) 32 students Professional support</li>
+<li><a href="https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH2100&amp;ay=2022/3&amp;sys=1">MTH2011</a> (0 Credits) 240 students. Students attend sessions and complete online ELE activities. They can receive professional support  I will be asked to give a talk advertising EMP3001.</li>
+<li><a href="https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH3100&amp;ay=2024/5&amp;sys=1">MTH3100</a> (120 credits 17 students</li>
+<li><a href="https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=EMP3001&amp;ay=2024&amp;sys=1">EMP3001</a> (20 credits) 37 students. Need reports marked by other people. email Layal / Nigel (maths director of education) computer science mark computer science. Employers feedback is a problem. External staff can't be assessing uni work, so all get 10 for doing the form.  Directors of Education asked for volunteers to help mark posters.  Min 6 weeks, usually all summer. Check with Jo what the minimum should be.</li>
+<li><a href="https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTHM053&amp;ay=2024&amp;sys=1">MTHM053</a> (60 credits) 6 students Data Science - also doing a project John Bruun looks after the projects. We supervise the placements, but he looks after projects.  This is an electronic submission, we don't see the students. Presentation on Teams because they have left.</li>
+<li><a href="https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=ECMM410&amp;ay=2024/5&amp;sys=1">ECMM410</a> research methods course (15 credits) 41 students</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9e8ffb2" class="outline-3">
+<h3 id="org9e8ffb2"><span class="section-number-3">0.3.</span> Contacts</h3>
+<div class="outline-text-3" id="text-0-3">
+<p>
+<b>Roger in Engineering</b> has a printer, he prints the posters.
+<b>Mark Baldwin</b> w/c 3rd September on campus.
+</p>
+<ul class="org-ul">
+<li>Formative feedback - once only.</li>
+<li>Examples of prior reports - data protection / commercial confidential.</li>
+</ul>
+
+<p>
+<b>Kate Stockman</b> 21/08/2024 Faculty lead for all employability
+</p>
+<ul class="org-ul">
+<li>Organises events (the events team charge employers for access to Exeter Uni, Kate sometimes organises smaller events and doesn't charge)</li>
+</ul>
+<ul class="org-ul">
+<li>Recruitment / Employers</li>
+<li>Alumni Panel: Monday 7th October 6:30, featuring 4 math alumni with interesting careers.</li>
+<li>Employability Strategy Group; I should have been added; one or two meetings a term - feedback on survey, new initiatives, next meeting maybe in November.</li>
+</ul>
+
+<p>
+<b>Ken Evans</b> 22/08/2024 Research methods module
+</p>
+<ul class="org-ul">
+<li>Research students - assessment option. Taught students - assessment students compulsory. Prep for masters project..  Mixed programmes.1-15 Eng/Maths and 130ish computer science. 3 pieces of coursework. Ken to add me to ELE. ILPs may need modification.   Peer review: beginning of next term. Mark over xmas.  Big coursework - need supervisors - hand in middle of next term.</li>
+</ul>
+
+<p>
+<b>Jo Harris</b> 21/08/2014 also faculty wide.  Courses for 2nd year students around finding placements for the year in industry. Offers 1:1 sessions (20 minutes) in person or virtual. 
+CANDI module: might split poster assessments into smaller groups.
+</p>
+
+
+<ul class="org-ul">
+<li><b>May need to find additional assessors_</b></li>
+</ul>
+<p>
+Needs help marketing to students (no current marketing to employers).
+May need help making things more visible.
+Handshake is the place for posting job ads.
+<b>Will King</b> 20/8/2024 Student employability. Sees all the first year students.
+</p>
+<ul class="org-ul">
+<li><b>Create Future</b>: tailored for each programme/discipline. Will is running this for the first time.</li>
+<li>suggested Hannah Bunting - QStep / Greg Stride LGA might be useful contacts 
+Will running for first time.</li>
+</ul>
+<ul class="org-ul">
+<li>Student Employability and Development Department (plus as s)</li>
+<li>Rachel Sloan (first leavers?) is head of Skills Team, writes content. Workshop 1; 2 hours (old library). 100 at a time. Skills team plus some external. Online guided independent learning 1.5 hours.</li>
+<li>Student interns help students complete activities.</li>
+<li>Workshop 2: 1 hour lecture. Review and next steps.  (with academic). Fill out reflection form.</li>
+<li>Good at attending, poor at completing online activities.</li>
+
+<li>Create Future 2. In second year.</li>
+</ul>
+<p>
+Handshake: online platform for discipline specific slides.
+</p>
+
+<p>
+Expectation that students do this
+Discipline specific document needs review (Christanne?)
+Attend Workshop 2.
+Slides
+First destination survey? Oli Laity - but I've been sent an MI link.
+</p>
+
+<ul class="org-ul">
+<li><b>Career zone</b> does drop ins.
+<ul class="org-ul">
+<li><b>Exeter award</b> (looked at comparators - cumulative work over duration) <b>Exeter leaders award</b></li>
+
+<li>Strengthen links with industrial partners and departmental business engagement portfolio (as in Eng and Bus school).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+
+<div id="outline-container-org4d0d315" class="outline-2">
+<h2 id="org4d0d315"><span class="section-number-2">1.</span> MTH1100</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li><a href="https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH1100&amp;ay=2023/4&amp;sys=1">Module descriptor</a></li>
+<li>Term 1 and 2</li>
+<li>4 career zone workshops in year 1 semester 1 and 2 including CV and job application skills, searching for internships</li>
+<li>Attend specific sessions for this module</li>
+<li>Attend 2 or more extra-curricular EMPS-specific employability or alumni events</li>
+<li>1-1 meeting with careers consultant</li>
+<li>Work through online ELE resources (including all quizzes)</li>
+</ul>
+</div>
+<div id="outline-container-orgeda34e9" class="outline-3">
+<h3 id="orgeda34e9"><span class="section-number-3">1.1.</span> Assessment</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>30 minute interview with MTH3100 module leader late in year 1 (term 2 or 3)</li>
+<li>Complete assessments/quizzes by end of August</li>
+<li>Insufficient engagement will result in transfer to a different programme</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcc96684" class="outline-2">
+<h2 id="orgcc96684"><span class="section-number-2">2.</span> MTH2100</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>No formal assessment, but all students are registered.</li>
+<li><a href="https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH2100&amp;ay=2023/4&amp;sys=1">Module descriptor</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge1d8469" class="outline-2">
+<h2 id="orge1d8469"><span class="section-number-2">3.</span> MTH3100</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>120 credits</li>
+<li><a href="https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH3100&amp;ay=2023/4&amp;sys=1">Module Descriptor 2023/2024</a>  <a href="https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH3100&amp;ay=2024/5&amp;sys=1">Module Descriptor 2024/2025</a> These are students returning from placement, or on placement now.
+<a href="https://ele.exeter.ac.uk/course/view.php?id=12595">- ELE 2023/2024</a> 12595</li>
+</ul>
+<p>
+<a href="https://ele.exeter.ac.uk/course/view.php?id=20159">- Parent ELE 2024/2025</a> 20159 + <a href="https://ele.exeter.ac.uk/course/view.php?id=20160">Child? ELE 2024/2025</a> 20160
+  <a href="20240904151910-mth3100assessment.html#ID-e7a8970e-2642-4d81-a9ca-6d5988df256b">MTH3100Assessment</a>
+</p>
+<ul class="org-ul">
+<li>Term 1, 2 and 3</li>
+<li>Practical work experience, normally for one year at least 6 months. No need to be paid a salary.</li>
+<li>1,194 hours work placement and preparation, 6 hours supervisory meetings.</li>
+</ul>
+</div>
+<div id="outline-container-org023a49c" class="outline-3">
+<h3 id="org023a49c"><span class="section-number-3">3.1.</span> Assessment:</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>The module descriptor for 2023  entry states: technical report 4,000 words (60%), journal 2,000 words (15%), poster and 20 minute discussion (15%), Employers report 200 words (10%)</li>
+<li>For 2024 the entry states: Technical report 4,000 words (60%), journal 2,000 words (20%) and poster or presentation 20 minutes (20%)</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org92562ba" class="outline-2">
+<h2 id="org92562ba"><span class="section-number-2">4.</span> EMP3001 Commercial and Industrial Experience</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li><a href="https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=EMP3001&amp;ay=2023/4&amp;sys=1">Module record 2023</a> <a href="https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=EMP3001&amp;ay=2024/5&amp;sys=1">Module Record 2024</a>
+I think the 2023 record is irrelevant; it's the 2025 one that matters. They do this module before the A/Y starts.</li>
+</ul>
+<p>
+<a href="https://ele.exeter.ac.uk/course/view.php?id=21279">ELE 2024/2025</a>
+</p>
+<ul class="org-ul">
+<li>Term 1</li>
+<li>80 hours on placement 6 weeks</li>
+<li>11 week duration. Preparation, reflective practice, project management, fortnightly progress review, debrief, assessment.</li>
+</ul>
+</div>
+<div id="outline-container-org62df813" class="outline-3">
+<h3 id="org62df813"><span class="section-number-3">4.1.</span> Assessment:</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>project report 4,000 words (70%)</li>
+<li>Poster (A1) (30%)</li>
+<li>Re-assessment possible (capped to 40%)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc2365de" class="outline-2">
+<h2 id="orgc2365de"><span class="section-number-2">5.</span> MTHM053</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li><a href="https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTHM053&amp;ay=2023/4&amp;sys=1">Module Record 2023/2024</a></li>
+</ul>
+<p>
+<a href="20240904144913-mthm053assessment.html#ID-c5090aa1-c87f-45d3-a81b-09166a11fcbc">MTHM053Assessment</a>
+</p>
+<ul class="org-ul">
+<li>Term 1, 2 and 3</li>
+<li>500 hours spread over placement</li>
+<li>80 hours research and report preparation</li>
+<li>20 hours meetings with academic supervisor</li>
+<li>Ideally this will provide material for MSc dissertation</li>
+</ul>
+</div>
+<div id="outline-container-orgc97d30d" class="outline-3">
+<h3 id="orgc97d30d"><span class="section-number-3">5.1.</span> Assessment</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+For both 2023/2024 and 2024/2025 this states:
+</p>
+<ul class="org-ul">
+<li>Work plan 1,000 words (20%) (This is replaced by a reflective log)</li>
+<li>Placement report 6,000 words including reflective journal (60%)</li>
+<li>Presentation/Interview, 30 minutes (20%)</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org051183d" class="outline-2">
+<h2 id="org051183d"><span class="section-number-2">6.</span> MTHM503 Applications of Data Science and Statistics</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+<a href="https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTHM503&amp;ay=2024/5&amp;sys=1">Module descriptor 2024</a>
+</p>
+<ul class="org-ul">
+<li>10 page coursework (80%)</li>
+<li>In class test (20%)
+(request via email 3/9/2024)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0a5e16c" class="outline-2">
+<h2 id="org0a5e16c"><span class="section-number-2">7.</span> Programmes</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li><a href="https://www.exeter.ac.uk/study/studyinformation/programmes/info/?sys=udb&amp;programmeCode=Stats1&amp;ay=2024">Applied Data Science and Statistics</a> (September intake)</li>
+<li><a href="https://www.exeter.ac.uk/study/studyinformation/programmes/info/?sys=udb&amp;programmeCode=STATDATMSC&amp;ay=2024">Statistical Data Science</a> (January intake)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Paul Hewson</p>
+<p class="date">Created: 2024-09-04 Wed 16:01</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

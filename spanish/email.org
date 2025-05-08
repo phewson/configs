@@ -1,0 +1,128 @@
+
+
+* Email
+
+** Formal Greetings :drill:
+:PROPERTIES:
+:ID:       c965160e-2dea-46af-9afc-609d6bcdac3b
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 2.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 2
+:DRILL_LAST_REVIEWED: [Y-03-24 Mon 15:%]
+:END:
+
+[A quien corresponda]
+[Muy señor mío]
+[Estimado señor (apellido)]
+[Don (nombre)]
+
+** Formal sign offs :drill:
+:PROPERTIES:
+:ID:       7f0c8954-dbf9-4623-8306-995dd680ee41
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-24 Mon 15:%]
+:END:
+[Saludos cordiales]
+[Atentamente]
+[Cordialmente]
+[Sinceramente]
+[Para cualquier cosa estoy a su disposición]
+[Agradeciéndole de antemano su cooperación]
+
+** Informal greetings                                                :drill:
+:PROPERTIES:
+:ID:       77502437-1cfc-4f00-a5cb-3de62c7c495a
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-24 Mon 15:%]
+:END:
+[Querido (nombre)]
+[Buenos (dias / tardes)]
+
+** Informal sign off :drill:
+:PROPERTIES:
+:ID:       6d6e55f8-0d68-426d-b9b4-1cb62b38812e
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 2.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 2
+:DRILL_LAST_REVIEWED: [Y-03-24 Mon 15:%]
+:END:
+
+[Gracias]
+[Muchas gracias]
+[Un saludo]
+[Espero tus noticias]
+[Espero tu respuesta pronto]
+[Avísame]
+[Nos vemos pronto]
+[¡Ya hablaremos!]
+[Mantenme informado]
+
+** Casual / Close opening :drill:
+:PROPERTIES:
+:ID:       61dd1bc2-a6f2-42ac-89c4-2f90435de9d9
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 2.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 2
+:DRILL_LAST_REVIEWED: [Y-03-24 Mon 15:%]
+:END:
+[Hola]
+[Buenas]
+[Ey]
+[Cariño]
+[Guapo]
+
+** Casual / Close sign off
+
+[Que tengas un buen …]
+[Pásalo bien]
+[Cuidate]
+[Un beso]
+[Un abrazo (fuerte)]
+[Con cariño]
+[Te quiero / Te amo]
+
+** Frases :drill:
+:PROPERTIES:
+:ID:       4047688b-9d94-40df-a016-5adc9034122c
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 2.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 2
+:DRILL_LAST_REVIEWED: [Y-03-24 Mon 15:%]
+:END:
+[Adjunto]
+[Hazme saber si tienes alguna pregunta]
+[Quedo a su disposición para cualquier aclaración]
+[Espero que todo vaya bien]
+[Puedes contactarme en el (numero)]
+[Fue un placer conocerte]
+[Según nuestra conversación]
+[Me haré cargo de ello]
+[Le agradezco por dedicar su tiempo]

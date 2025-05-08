@@ -4,17 +4,17 @@
 * Nouns or adjectives
 
 ** Adjective :drill:
-SCHEDULED: <2025-04-02 Wed>
+SCHEDULED: <2025-05-31 Sat>
 :PROPERTIES:
 :ID:       7f93d0fd-1492-427a-83f3-a124f320dbb1
-:DRILL_LAST_INTERVAL: 8.568
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 6
+:DRILL_LAST_INTERVAL: 33.1533
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 8
 :DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 2.833
-:DRILL_EASE: 2.08
+:DRILL_AVERAGE_QUALITY: 2.875
+:DRILL_EASE: 1.8
 :DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 
 El tronco del árbol está [torcido]
@@ -37,19 +37,40 @@ Como tenía la muñeca [torcida], el alumno no pudo tomar apuntes en clase
 El joven que no es reconocido en su persona, en sus vivencias y en su saber es un [ser negado].
 Los recursos son acumulados por unos pocos y [negados] a los otros. 
 
+** Expression :drill:
+SCHEDULED: <2025-05-14 Wed>
+:PROPERTIES:
+:ID:       95a18c7e-4d68-4164-b512-fa1e1b7d7d65
+:DRILL_LAST_INTERVAL: 7.979
+:DRILL_REPEATS_SINCE_FAIL: 3
+:DRILL_TOTAL_REPEATS: 7
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 2.428
+:DRILL_EASE: 2.08
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
+:END:
+You don't need to come
+[No hay necesidad de que vengas]
+
+Ella te habría aydando si le hubieras dicho (a ella) que la necesitabas
+Viajaría más si tuviera un sueldo mejor
+Es maravilloso que hayas comprado un coche neuvo
+
+
 
 ** Verb expressions :drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       20ddb55d-8d9d-451e-9863-115318584a57
-:DRILL_LAST_INTERVAL: 3.86
+:DRILL_LAST_INTERVAL: 4.0
 :DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 3
-:DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 2.0
-:DRILL_EASE: 2.36
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_TOTAL_REPEATS: 21
+:DRILL_FAILURE_COUNT: 14
+:DRILL_AVERAGE_QUALITY: 2.332
+:DRILL_EASE: 1.66
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 Me hermano pequeño [se puso a] llorar [ponerse a]
 El niño estaba jugando y, de repente, [rompió a] llorar [romper a]
@@ -59,51 +80,51 @@ Estábamos tomándonos una copa tranquilamente y Ana [arranco a] bailar [arranca
 Álvaro estaba harto de la decoración de su casa y, este fin de semana, [se ha liado a] tirar todos los muebles que no te gustaban [liarse a]
 
 ** Noun :drill:
-SCHEDULED: <2025-04-24 Thu>
+SCHEDULED: <2025-07-23 Wed>
 :PROPERTIES:
 :ID:       59bf8bc3-dec1-414d-9599-709331d44841
-:DRILL_LAST_INTERVAL: 30.8887
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 89.5155
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
 :DRILL_AVERAGE_QUALITY: 5.0
-:DRILL_EASE: 2.8
+:DRILL_EASE: 2.9
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-24 Thu 09:%]
 :END:
 El solicitante tiene un perfil ideal para el [puesto]. 
 El candidato debe tener experiencia previa en un [puesto] similar.
 
 
 ** Noun :drill:
-SCHEDULED: <2025-04-04 Fri>
+SCHEDULED: <2025-05-07 Wed>
 :PROPERTIES:
 :ID:       fe8510bb-1988-447f-986b-d47b4bc59dc1
-:DRILL_LAST_INTERVAL: 10.352
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 12
+:DRILL_LAST_INTERVAL: 27.733
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 13
 :DRILL_FAILURE_COUNT: 8
-:DRILL_AVERAGE_QUALITY: 2.083
-:DRILL_EASE: 2.6
+:DRILL_AVERAGE_QUALITY: 2.307
+:DRILL_EASE: 2.7
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_REVIEWED: [Y-04-09 Wed 17:%]
 :END:
 Como darse vuelta es un comportamiento que se puede prever, es posible desarrollar una [pauta] para evitar la caída.
 Esta puntuación mide la capacidad de la configuración del software y el hardware del equipo y es una [pauta] general del rendimiento.
 Estos planes deberán marcar una [pauta], que potenciará la imagen de solidaridad y eficacia a nivel internacional.
 
 ** Words                                                             :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-11 Sun>
 :PROPERTIES:
 :ID:       5cea50c0-681b-458b-a17e-2f0544f8a22e
-:DRILL_LAST_INTERVAL: 9.648
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 4
-:DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 3.0
-:DRILL_EASE: 2.36
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_INTERVAL: 19.0698
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 8
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 2.876
+:DRILL_EASE: 2.08
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-22 Tue 10:%]
 :END:
 El artista [ha muerto], pero su legado artístico sobrevive.
 Me inquieta profundamente este punto [muerto] por encima de las prioridades.
@@ -111,80 +132,79 @@ Heredé la casa de mi abuelo cuando falleció. [fallecer]
 Cualquier opinión sobre las últimas proezas del Presidente de Estados Unidos se vuelve [fiambre] en cuestión de horas.
 
 ** Verb :drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-05-21 Wed>
 :PROPERTIES:
 :ID:       ead9ec34-bec6-4f67-9cba-86296030b157
-:DRILL_LAST_INTERVAL: 4.14
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 7
+:DRILL_LAST_INTERVAL: 30.7556
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 9
 :DRILL_FAILURE_COUNT: 5
-:DRILL_AVERAGE_QUALITY: 2.0
-:DRILL_EASE: 2.6
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_AVERAGE_QUALITY: 2.667
+:DRILL_EASE: 2.8
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-20 Sun 09:%]
 :END:
 Hamlet era incapaz de vencer el sentimiento de [incertidumbre] que le carcomía por dentro
 Existen diferentes posibilidades para estimar la [incertidumbre] ampliada
 
-** Noun/Verb expression                                              :drill:
-SCHEDULED: <2025-03-29 Sat>
+** Noun/Verb expression                                        :drill:leech:
 :PROPERTIES:
 :ID:       d6a7bbde-492a-4326-aead-38fb4630847e
-:DRILL_LAST_INTERVAL: 3.86
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 13
-:DRILL_FAILURE_COUNT: 11
-:DRILL_AVERAGE_QUALITY: 1.538
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 18
+:DRILL_FAILURE_COUNT: 16
+:DRILL_AVERAGE_QUALITY: 1.389
 :DRILL_EASE: 2.36
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-04-08 Tue 13:%]
 :END:
 También debería haber un diálogo o permanente entre la OSSA y los clientes para [fijar unos plazos] de aplicación realistas
 
 ** Noun :drill:
-SCHEDULED: <2025-04-04 Fri>
+SCHEDULED: <2025-05-29 Thu>
 :PROPERTIES:
 :ID:       610519dc-9b40-495e-9da8-37d8f5112cd3
-:DRILL_LAST_INTERVAL: 10.7143
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 3
-:DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 3.333
-:DRILL_EASE: 2.6
+:DRILL_LAST_INTERVAL: 27.5989
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 9
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 3.111
+:DRILL_EASE: 2.56
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-05-01 Thu 15:%]
 :END:
 El recepcionista dice que hay [una entrega] para ti, Señorita Jones
 [La entrega] de los documentos se realizará en presencia e cinco testigos
 Este domingo sacan [la] primera [entrega] de una nueva colección de libros en el periódico
 
 ** Adjective :drill:
-SCHEDULED: <2025-04-04 Fri>
+SCHEDULED: <2025-05-30 Fri>
 :PROPERTIES:
 :ID:       7688b812-648a-46c3-b54c-3f7fcd2c5a1e
-:DRILL_LAST_INTERVAL: 10.0
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 2
-:DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.0
-:DRILL_EASE: 2.5
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_INTERVAL: 30.7556
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 6
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 4.167
+:DRILL_EASE: 2.8
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-29 Tue 09:%]
 :END:
 Por favor, acepta este regalo como un símbolo de [agradecimiento] por todo lo que has hecho por nosotros
 
 ** Noun :drill:
-SCHEDULED: <2025-04-04 Fri>
+SCHEDULED: <2025-05-15 Thu>
 :PROPERTIES:
 :ID:       8e71fd55-7a3b-4331-a18c-602571653bbc
-:DRILL_LAST_INTERVAL: 11.0911
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 30.7556
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 3.667
-:DRILL_EASE: 2.7
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.8
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 
 Mi empresa ha contratado a un nuevo [empleado]
@@ -192,34 +212,34 @@ Cada [empleado] tiene un armario propio
 El jefe sabe que sus [empleados] son de fiar
 
 ** Verb :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-15 Thu>
 :PROPERTIES:
 :ID:       23a66af3-ba24-454a-bf23-ab8a358990fb
-:DRILL_LAST_INTERVAL: 4.0
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 4
+:DRILL_LAST_INTERVAL: 26.791
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 6
 :DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 2.5
-:DRILL_EASE: 2.5
+:DRILL_AVERAGE_QUALITY: 3.167
+:DRILL_EASE: 2.6
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-18 Fri 13:%]
 :END:
 [Despidieron] el empleado acusado de acoso sexual
 Un empleador no puede [despedir] a un empleado fijo sin tener un motivo de peso
 [Perder los papeles]
 
 ** Verb :drill:
-SCHEDULED: <2025-04-03 Thu>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       9c5b1159-1785-4ba0-af0b-8af09d60cf90
-:DRILL_LAST_INTERVAL: 10.0
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 4
-:DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 2.5
-:DRILL_EASE: 2.5
+:DRILL_LAST_INTERVAL: 3.86
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 7
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 2.571
+:DRILL_EASE: 2.36
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 Hay que [ligar] la salsa con un trozo de manteca
 Esta harina es ideal para [ligar] salsas
@@ -228,239 +248,237 @@ Me dicen que [ligaste] anoche. ¿Quién era?
 [Ligar] con compañeros de trabajo
 
 ** Noun :drill:
-SCHEDULED: <2025-04-04 Fri>
+SCHEDULED: <2025-05-07 Wed>
 :PROPERTIES:
 :ID:       fb09739a-ddf8-4e8f-b727-7488710027c6
-:DRILL_LAST_INTERVAL: 10.352
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 2
+:DRILL_LAST_INTERVAL: 27.733
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 3
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.5
-:DRILL_EASE: 2.6
+:DRILL_AVERAGE_QUALITY: 4.667
+:DRILL_EASE: 2.7
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_REVIEWED: [Y-04-09 Wed 17:%]
 :END:
 Un cliente de la empresa nos envió [una cesta] de frutas para Navidad
 
 ** Noun expression :drill:
-SCHEDULED: <2025-04-03 Thu>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       5e15ecf3-f5f3-470f-bd82-926f56ecf421
-:DRILL_LAST_INTERVAL: 10.0
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 4
-:DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 2.5
-:DRILL_EASE: 2.5
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 7
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 2.857
+:DRILL_EASE: 2.6
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 Solía enseñar [valoración crítica] a los médicos y dudo que la haga bien la IA
 
 ** Verb expression :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       13546ed3-f1ec-4a2e-bd21-dc040dcc702e
 :DRILL_LAST_INTERVAL: 4.0
 :DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 4
-:DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 2.75
+:DRILL_TOTAL_REPEATS: 16
+:DRILL_FAILURE_COUNT: 9
+:DRILL_AVERAGE_QUALITY: 2.375
 :DRILL_EASE: 2.5
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 Deseamos [hacer hincapié] en que la desmovilización de los niños debe incluir atención primaria de la salud y apoyo psicológic
  Es importante [hacer hincapié] en que los proyectos son realizados por agentes formados y capacitados que trabajan en el ámbito de la juventud.
 
 ** Noun :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-06-02 Mon>
 :PROPERTIES:
 :ID:       684700dc-d2ca-4771-aeb6-f3ca4d7c13b5
-:DRILL_LAST_INTERVAL: 4.0
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 4
-:DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 2.75
-:DRILL_EASE: 2.5
+:DRILL_LAST_INTERVAL: 26.791
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 9
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 3.222
+:DRILL_EASE: 2.6
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 Conozco a [una redactora] que se preocupa mucho por esto
 
 ** Noun :drill:
-SCHEDULED: <2025-04-05 Sat>
+SCHEDULED: <2025-05-15 Thu>
 :PROPERTIES:
 :ID:       38a0463b-1155-4ec8-85d0-c2204297167e
-:DRILL_LAST_INTERVAL: 11.0911
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 30.7556
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 3.667
-:DRILL_EASE: 2.7
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.8
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 Comer las cinco [raciones] diarias recomendadas de fruta y verdura es el elemento más importante de cualquier plan de alimentación
 Los clientes pidieron al camarero dos [raciones] de pulpo
 
 ** Verb :drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-06-04 Wed>
 :PROPERTIES:
 :ID:       8cd1bfc6-1330-4925-ab45-8f56a57f6c85
-:DRILL_LAST_INTERVAL: 4.285
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 7
-:DRILL_FAILURE_COUNT: 3
-:DRILL_AVERAGE_QUALITY: 3.0
-:DRILL_EASE: 2.7
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_INTERVAL: 37.2468
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 11
+:DRILL_FAILURE_COUNT: 4
+:DRILL_AVERAGE_QUALITY: 3.364
+:DRILL_EASE: 2.9
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 Me gustaría [narrar] a la Cámara la historia de Lumo.
 En la obra [narro] esa parte de su historia. 
 
 ** Noun :drill:
-SCHEDULED: <2025-04-03 Thu>
+SCHEDULED: <2025-05-07 Wed>
 :PROPERTIES:
 :ID:       92d4a7e7-5375-449f-b16d-ca079d3a39e9
-:DRILL_LAST_INTERVAL: 10.352
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 10
+:DRILL_LAST_INTERVAL: 27.733
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 11
 :DRILL_FAILURE_COUNT: 6
-:DRILL_AVERAGE_QUALITY: 2.4
-:DRILL_EASE: 2.6
+:DRILL_AVERAGE_QUALITY: 2.636
+:DRILL_EASE: 2.7
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-09 Wed 17:%]
 :END:
 Quiero saber [el paradero] de mi pedido.
 No hay rastro oficial de su [paradero] o su suerte.
 [El paradero] de sus hijos era desconocido en el momento de presentación de la comunicación.
 
 ** Noun expression :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-13 Tue>
 :PROPERTIES:
 :ID:       63dd4d90-d525-46f5-924e-410627d40d92
-:DRILL_LAST_INTERVAL: 3.86
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 17
-:DRILL_FAILURE_COUNT: 13
-:DRILL_AVERAGE_QUALITY: 1.706
-:DRILL_EASE: 2.36
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_INTERVAL: 19.9491
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 21
+:DRILL_FAILURE_COUNT: 14
+:DRILL_AVERAGE_QUALITY: 2.0
+:DRILL_EASE: 2.22
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-23 Wed 14:%]
 :END:
 En tanto que Parlamento Europeo debemos tener el valor de reconocer que estamos ante [una auténtica proeza].
 Semejante desarrollo constituye [una auténtica proeza] técnica
 
-** Noun :drill:
-SCHEDULED: <2025-03-28 Fri>
+** Noun                                                        :drill:leech:
 :PROPERTIES:
 :ID:       2f5f0fac-66fc-4856-8433-a5b4970ee844
-:DRILL_LAST_INTERVAL: 3.995
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 17
-:DRILL_FAILURE_COUNT: 13
-:DRILL_AVERAGE_QUALITY: 1.706
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 21
+:DRILL_FAILURE_COUNT: 16
+:DRILL_AVERAGE_QUALITY: 1.81
 :DRILL_EASE: 2.46
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 La actitud del Gobierno suscitó [un torbellino] de críticas.
 Algunos jóvenes son arrojados [al torbellino] de la guerra o el conflicto civil
 Cualquier indecisión hace que uno se sujete al poder [del torbellino] del caos. 
 
-** Adjective :drill:
-SCHEDULED: <2025-03-29 Sat>
+** Adjective                                                   :drill:leech:
 :PROPERTIES:
 :ID:       54bb90ab-0511-41df-a48f-9ce9ccf2ae28
-:DRILL_LAST_INTERVAL: 4.0
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 15
-:DRILL_FAILURE_COUNT: 11
-:DRILL_AVERAGE_QUALITY: 1.867
-:DRILL_EASE: 2.5
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 21
+:DRILL_FAILURE_COUNT: 16
+:DRILL_AVERAGE_QUALITY: 1.762
+:DRILL_EASE: 2.36
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 Ese último día, ese último minuto es [desgarrador] para todos.
  Era [desgarrador] asistir a las escenas de destrucción de los hogares de tantas personas y conocer los problemas que experimentaban 
 
 ** Noun :drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-07-12 Sat>
 :PROPERTIES:
 :ID:       0f17e9b6-c42e-408c-8160-4e3a8044e668
-:DRILL_LAST_INTERVAL: 10.7143
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 4
+:DRILL_LAST_INTERVAL: 66.777
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 6
 :DRILL_FAILURE_COUNT: 1
 :DRILL_AVERAGE_QUALITY: 3.5
-:DRILL_EASE: 2.6
+:DRILL_EASE: 2.46
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 La empresa tiene [una hoja de ruta] que detalla sus objetivos.
 La presente [hoja de ruta] indica las principales de estas medidas o decisiones, así como el calendario correspondiente.
 Parece no haber otra alternativa que volver a [la hoja de ruta]. 
 
 ** Noun expression :drill:
-SCHEDULED: <2025-04-03 Thu>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       0c7a48cc-b5bf-4a7a-b81f-8f84c84007e5
-:DRILL_LAST_INTERVAL: 9.6346
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 6
-:DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 3.0
-:DRILL_EASE: 2.46
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_INTERVAL: 4.135
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 9
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 3.111
+:DRILL_EASE: 2.56
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 [La conciencia plena] del Ser, que puede ser alcanzada mediante la práctica del yoga, es en sí misma la Dicha.
 [La conciencia plena] es la observación momento a momento, con atención calmada, de lo que está ocurriendo en el cuerpo y en la mente.
 
 ** Verb expression :drill:
-SCHEDULED: <2025-04-14 Mon>
+SCHEDULED: <2025-06-15 Sun>
 :PROPERTIES:
 :ID:       70b71a8c-c28c-45d4-97e3-95834fe097cd
-:DRILL_LAST_INTERVAL: 25.0
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 60.3
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.0
-:DRILL_EASE: 2.5
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-20 Thu 08:%]
+:DRILL_AVERAGE_QUALITY: 3.75
+:DRILL_EASE: 2.36
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-16 Wed 15:%]
 :END:
 Mi novio [sale de copas] con sus compañeros de trabajo todos los jueves por la noche
 
 ** Noun :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       39d80d29-4b44-4cff-a8eb-996c677ef018
-:DRILL_LAST_INTERVAL: 9.9755
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 4
-:DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 3.25
-:DRILL_EASE: 2.46
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_INTERVAL: 3.99
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 7
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 3.143
+:DRILL_EASE: 2.42
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 Solo me pongo [chándal] cuando salgo a correr en invierno.
 
 ** Noun :drill:
-SCHEDULED: <2025-03-30 Sun>
+SCHEDULED: <2025-05-13 Tue>
 :PROPERTIES:
 :ID:       503b037b-d4f4-417a-b38f-6abefd77055d
-:DRILL_LAST_INTERVAL: 11.8823
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 4
+:DRILL_LAST_INTERVAL: 34.4349
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 5
 :DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 4.25
-:DRILL_EASE: 2.8
+:DRILL_AVERAGE_QUALITY: 4.4
+:DRILL_EASE: 2.9
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_REVIEWED: [Y-04-09 Wed 17:%]
 :END:
 Nuestros [asientos] están en el nivel superior del estadio
 El piloto pide que todos regresen a sus [asientos]
@@ -468,163 +486,162 @@ Hay [un asiento] vacante en el consejo de Administración
 Los últimos [asientos] en el diario del criminal son preocupantes
 
 ** Noun :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       8ab6b35e-5130-41a0-81e3-a007de2f6cba
-:DRILL_LAST_INTERVAL: 3.725
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 7
-:DRILL_FAILURE_COUNT: 3
-:DRILL_AVERAGE_QUALITY: 2.428
-:DRILL_EASE: 1.94
+:DRILL_LAST_INTERVAL: 9.56
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 15
+:DRILL_FAILURE_COUNT: 6
+:DRILL_AVERAGE_QUALITY: 2.533
+:DRILL_EASE: 1.38
 :DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-30 Wed 12:%]
 :END:
 ¿Abordan los análisis de datos los principales propósitos de [la investigación]? 
 Antes de ser publicados, los artículos están sujetos a [una evaluación por los pares]
 
 ** Expression :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-20 Tue>
 :PROPERTIES:
 :ID:       4c0628a4-a69b-4bbf-9503-528e0717ce9a
-:DRILL_LAST_INTERVAL: 3.86
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 12
-:DRILL_FAILURE_COUNT: 8
-:DRILL_AVERAGE_QUALITY: 2.0
-:DRILL_EASE: 2.36
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_INTERVAL: 21.6655
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 20
+:DRILL_FAILURE_COUNT: 12
+:DRILL_AVERAGE_QUALITY: 2.201
+:DRILL_EASE: 2.32
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 Me tranquiliza algo porque, [leyendo entre líneas], creo que el Comisario ha captado el mensaje.
 [Leyendo entre líneas], podemos ver su verdadero objetivo: crear un clima que sea más favorable para la actividad empresarial.
 
 ** Expression :drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-05-24 Sat>
 :PROPERTIES:
 :ID:       39f8b433-5fad-4010-9f1b-b50ef9f178f0
-:DRILL_LAST_INTERVAL: 3.86
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 12
-:DRILL_FAILURE_COUNT: 8
-:DRILL_AVERAGE_QUALITY: 2.0
-:DRILL_EASE: 2.36
+:DRILL_LAST_INTERVAL: 25.8689
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 20
+:DRILL_FAILURE_COUNT: 12
+:DRILL_AVERAGE_QUALITY: 2.35
+:DRILL_EASE: 2.46
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 Para crear un discurso se necesita [sintetizar el conocimiento]
 Recopilar y [sintetizar conocimiento] universal para contribuir a reorientar y mejorar los modelos y sistemas vigentes en materia de agua y desarrollo sostenible 
 
 ** Word :drill:
-SCHEDULED: <2025-03-30 Sun>
+SCHEDULED: <2025-05-11 Sun>
 :PROPERTIES:
 :ID:       4bdcb3a0-891c-470b-913f-6b982a092808
-:DRILL_LAST_INTERVAL: 11.8823
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 6
+:DRILL_LAST_INTERVAL: 32.106
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 7
 :DRILL_FAILURE_COUNT: 3
-:DRILL_AVERAGE_QUALITY: 3.333
-:DRILL_EASE: 2.8
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_AVERAGE_QUALITY: 3.285
+:DRILL_EASE: 2.66
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-09 Wed 17:%]
 :END:
 Algunos turistas vestidos con coloridas camisas avanzan por [los montículos] de grava para llegar hasta la Basílica.
 Son sólo dos [montículos] de carne, pero reciben mucha atención.
 Muchos trabajaban alrededor de [montículos] de polvo sin equipo de protección.
 
-** Word :drill:
-SCHEDULED: <2025-03-29 Sat>
+** Word                                                        :drill:leech:
 :PROPERTIES:
 :ID:       179689f1-af2e-4a9f-83c9-8a6c329860a7
-:DRILL_LAST_INTERVAL: 3.86
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 20
-:DRILL_FAILURE_COUNT: 14
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 23
+:DRILL_FAILURE_COUNT: 16
 :DRILL_AVERAGE_QUALITY: 2.0
-:DRILL_EASE: 2.08
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_EASE: 1.94
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 
 ¿Somos nosotros [indagadores] genuinos que buscan comprender?
 Soy muy [indagador]
 
 ** Noun :drill:
-SCHEDULED: <2025-04-03 Thu>
+SCHEDULED: <2025-05-23 Fri>
 :PROPERTIES:
 :ID:       196a58a7-7c94-4ea1-aa2e-d96aa7450892
-:DRILL_LAST_INTERVAL: 9.9715
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 9
-:DRILL_FAILURE_COUNT: 5
-:DRILL_AVERAGE_QUALITY: 2.333
-:DRILL_EASE: 2.46
+:DRILL_LAST_INTERVAL: 22.6838
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 15
+:DRILL_FAILURE_COUNT: 7
+:DRILL_AVERAGE_QUALITY: 2.534
+:DRILL_EASE: 2.32
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-30 Wed 12:%]
 :END:
 
 Contituyó sin duda [la estafa] politica más grande 
 
 ** Adjetive :drill:
-SCHEDULED: <2025-04-24 Thu>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       7d5512d7-69c2-4229-aacb-40408cd77515
-:DRILL_LAST_INTERVAL: 30.8887
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
-:DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 5.0
-:DRILL_EASE: 2.8
+:DRILL_LAST_INTERVAL: 11.592
+:DRILL_REPEATS_SINCE_FAIL: 3
+:DRILL_TOTAL_REPEATS: 6
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 4.333
+:DRILL_EASE: 2.9
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 
 Cada personal tiene su visión [particular] de la vida
 
 ** Adjective :drill:
-SCHEDULED: <2025-04-22 Tue>
+SCHEDULED: <2025-07-11 Fri>
 :PROPERTIES:
 :ID:       0a72afe6-e559-41c4-979b-00e041d4b78e
-:DRILL_LAST_INTERVAL: 28.8322
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 80.2977
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.667
-:DRILL_EASE: 2.7
+:DRILL_AVERAGE_QUALITY: 4.75
+:DRILL_EASE: 2.8
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-22 Tue 10:%]
 :END:
 
 Todos los hombres en mi familia tienen el cabello negro y la barba [pelliroja]
 
 ** Noun :drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-05-31 Sat>
 :PROPERTIES:
 :ID:       d03e3db5-6c63-4230-9fca-2f103e9abe93
-:DRILL_LAST_INTERVAL: 10.7143
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 5
-:DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 3.0
-:DRILL_EASE: 2.6
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_INTERVAL: 31.8327
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 12
+:DRILL_FAILURE_COUNT: 5
+:DRILL_AVERAGE_QUALITY: 3.083
+:DRILL_EASE: 2.8
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-29 Tue 09:%]
 :END:
 
 ¿No le haría esa [merced] a un amigo?
 
 ** Adverb :drill:
-SCHEDULED: <2025-04-14 Mon>
+SCHEDULED: <2025-06-15 Sun>
 :PROPERTIES:
 :ID:       8f0fe873-5370-4b8b-a379-8fbf6294ef57
-:DRILL_LAST_INTERVAL: 25.0
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 60.3
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.0
-:DRILL_EASE: 2.5
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-20 Thu 08:%]
+:DRILL_AVERAGE_QUALITY: 3.75
+:DRILL_EASE: 2.36
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-16 Wed 15:%]
 :END:
 
 La jefa me dijo unas palabras muy [halagadores] sobre mi proyecto
@@ -632,17 +649,17 @@ EL discurso del primer ministro fue muy [halagador] con su predecesor
 Eso es muy [halagador], pero tendrán que hacerlo ustedes solos
 
 ** Adverb :drill:
-SCHEDULED: <2025-04-22 Tue>
+SCHEDULED: <2025-07-06 Sun>
 :PROPERTIES:
 :ID:       1879fefc-f798-4aa5-a208-3e46653f0fce
-:DRILL_LAST_INTERVAL: 28.8322
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 74.8772
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.667
-:DRILL_EASE: 2.7
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_AVERAGE_QUALITY: 4.25
+:DRILL_EASE: 2.56
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-22 Tue 10:%]
 :END:
 
 Este pollo es muy [tierno], iría muy bien con mole
@@ -650,17 +667,17 @@ Mi novio es muy [tierno], me trae rosas todos los días
 Es increíble que pueda caminar a su [tierna] edad
 
 ** Adverb :drill:
-SCHEDULED: <2025-04-16 Wed>
+SCHEDULED: <2025-06-25 Wed>
 :PROPERTIES:
 :ID:       4d1b6669-2ec8-42f8-abef-86d319501b23
-:DRILL_LAST_INTERVAL: 26.9152
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 69.9795
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.333
+:DRILL_AVERAGE_QUALITY: 4.25
 :DRILL_EASE: 2.6
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-20 Thu 08:%]
+:DRILL_LAST_REVIEWED: [Y-04-16 Wed 15:%]
 :END:
 
 El café sin azúcar tiene un sabor [amargo]
@@ -668,17 +685,17 @@ La receta pide chocolate [amargo]
 Su infancia está llena de recuerdos [amargos]
 
 ** Adjective :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-06-04 Wed>
 :PROPERTIES:
 :ID:       3d4c18f1-2bb8-4b8a-ae1b-be878ef9bb45
-:DRILL_LAST_INTERVAL: 4.28
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 8
-:DRILL_FAILURE_COUNT: 4
-:DRILL_AVERAGE_QUALITY: 2.876
-:DRILL_EASE: 2.66
+:DRILL_LAST_INTERVAL: 37.4632
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 12
+:DRILL_FAILURE_COUNT: 5
+:DRILL_AVERAGE_QUALITY: 3.334
+:DRILL_EASE: 2.96
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 
 Es dificil enseñarle trucos al perro. Es muy [frustante]
@@ -686,51 +703,51 @@ Vivir con una enfermedad crónica puede ser muy [frustante]
 LLegar a otra simplicidad ha sido una tarea [frustante] aunque...
 
 ** Adverb :drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-05-15 Thu>
 :PROPERTIES:
 :ID:       f34bd4ff-9a0e-4b9d-9b6f-9396524c6505
-:DRILL_LAST_INTERVAL: 3.99
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 6
+:DRILL_LAST_INTERVAL: 27.4962
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 8
 :DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 3.333
-:DRILL_EASE: 2.42
+:DRILL_AVERAGE_QUALITY: 3.75
+:DRILL_EASE: 2.62
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_REVIEWED: [Y-04-18 Fri 13:%]
 :END:
 
 Me quedaré siempre con la imagen [impactante] de Arturo montado sobre un camello
 La exposición sobre la historia de los faraones es [impactante]. Mu gustó muchisimo.
 
 ** Verb :drill:
-SCHEDULED: <2025-04-01 Tue>
+SCHEDULED: <2025-05-20 Tue>
 :PROPERTIES:
 :ID:       8432e15a-d528-4634-8f8a-e6614e5ca6a9
-:DRILL_LAST_INTERVAL: 7.9786
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 6
+:DRILL_LAST_INTERVAL: 25.9437
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 8
 :DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 2.667
-:DRILL_EASE: 1.94
+:DRILL_AVERAGE_QUALITY: 2.751
+:DRILL_EASE: 1.66
 :DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-24 Thu 09:%]
 :END:
 
 ¿Conoces a Alice? [Estivimos de cháchara] en tu boda pero en realidad no lo conozco.
 Los padres [parloteaban] a la entrada de la escuela
 
 ** Noun:drill:
-SCHEDULED: <2025-04-13 Sun>
+SCHEDULED: <2025-06-12 Thu>
 :PROPERTIES:
 :ID:       e68f7720-66ff-465f-b146-1523ce7a2df9
-:DRILL_LAST_INTERVAL: 23.5701
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 56.7804
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.0
-:DRILL_EASE: 2.46
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-20 Thu 08:%]
+:DRILL_AVERAGE_QUALITY: 3.75
+:DRILL_EASE: 2.32
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-16 Wed 15:%]
 :END:
 
 [La intimidación] no me parece la mejor forma de conseguir lo que se quiere
@@ -738,33 +755,33 @@ SCHEDULED: <2025-04-13 Sun>
 
 
 ** Frase                                                             :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-19 Mon>
 :PROPERTIES:
 :ID:       de88a87c-537c-48a5-b554-ddaf0d65345f
-:DRILL_LAST_INTERVAL: 10.0
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 3
-:DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 3.0
-:DRILL_EASE: 2.5
+:DRILL_LAST_INTERVAL: 25.0269
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 7
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 3.143
+:DRILL_EASE: 2.36
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_REVIEWED: [Y-04-24 Thu 09:%]
 :END:
 
 Tengo que estar muy pendiente de mis niños porque siempre [están haciendo travesuras]
 
 ** Adjective :drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       d520eb78-084e-4596-a6ce-27439aa1d078
-:DRILL_LAST_INTERVAL: 10.3376
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 4
-:DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 2.5
-:DRILL_EASE: 2.46
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-19 Wed 16:%]
+:DRILL_LAST_INTERVAL: 3.855
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 8
+:DRILL_FAILURE_COUNT: 4
+:DRILL_AVERAGE_QUALITY: 2.499
+:DRILL_EASE: 2.32
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 
 La manera que tu novio te mintió era [engañoso] y de malintencionado
@@ -772,17 +789,17 @@ Las señales del metro son [engañosas], more fíjate del mapa
 Las apariencias son [engañosas]
 
 ** Noun frase :drill:
-SCHEDULED: <2025-03-30 Sun>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       a7e51aae-f9b4-4498-a5bb-03e3c7209f5e
-:DRILL_LAST_INTERVAL: 11.0911
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 2
+:DRILL_LAST_INTERVAL: 30.7556
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 3
 :DRILL_FAILURE_COUNT: 0
 :DRILL_AVERAGE_QUALITY: 5.0
-:DRILL_EASE: 2.7
+:DRILL_EASE: 2.8
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-19 Wed 16:%]
+:DRILL_LAST_REVIEWED: [Y-04-09 Wed 17:%]
 :END:
 
 [La empresa matriz] de Overleaf es Digital Science
@@ -820,17 +837,17 @@ Se siguen [echando en falta], además, políticas más activas para la promoció
 Por supuesto que [echan en falta] a sus padres, pero han mejorado mucho desde que han vuelto a reunirse", dice Thevika
 
 ** Perifrases :drill:
-SCHEDULED: <2025-04-02 Wed>
+SCHEDULED: <2025-05-29 Thu>
 :PROPERTIES:
 :ID:       f2deb9fa-e634-4cab-949c-e8545b123595
-:DRILL_LAST_INTERVAL: 7.979
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 6
+:DRILL_LAST_INTERVAL: 30.8741
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 8
 :DRILL_FAILURE_COUNT: 3
-:DRILL_AVERAGE_QUALITY: 2.167
-:DRILL_EASE: 2.08
+:DRILL_AVERAGE_QUALITY: 2.375
+:DRILL_EASE: 1.8
 :DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 
 A mi hermana [le resulta sencillo tocar] el violín
@@ -838,17 +855,17 @@ A mi perro [le resulta complicado viajar] en avíon
 [POS resultar facil/sencillo/dificil/complicado  + infinitivo/sustantivo]
 
 ** Perifrases :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-09 Fri>
 :PROPERTIES:
 :ID:       f550cf5a-cc1f-4bea-8c14-00696414db5c
-:DRILL_LAST_INTERVAL: 3.86
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 8
-:DRILL_FAILURE_COUNT: 5
-:DRILL_AVERAGE_QUALITY: 2.0
-:DRILL_EASE: 2.08
+:DRILL_LAST_INTERVAL: 11.1679
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 13
+:DRILL_FAILURE_COUNT: 6
+:DRILL_AVERAGE_QUALITY: 2.231
+:DRILL_EASE: 1.52
 :DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 
 [Aparñarse bien/mal + gerundio/sustantivo]
@@ -858,17 +875,17 @@ Yo [me apaño mal] cocinando
 Yo [me arreglo mal] jugando al baloncesto
 
 ** Nouns :drill:
-SCHEDULED: <2025-04-01 Tue>
+SCHEDULED: <2025-05-09 Fri>
 :PROPERTIES:
 :ID:       8c65ad29-792c-4697-8fc0-0a259f8ffe54
-:DRILL_LAST_INTERVAL: 7.979
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 9
-:DRILL_FAILURE_COUNT: 6
-:DRILL_AVERAGE_QUALITY: 1.777
-:DRILL_EASE: 2.08
+:DRILL_LAST_INTERVAL: 14.9359
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 14
+:DRILL_FAILURE_COUNT: 8
+:DRILL_AVERAGE_QUALITY: 2.142
+:DRILL_EASE: 1.8
 :DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-24 Thu 09:%]
 :END:
 
 [Las arrugas y las canas]
@@ -880,33 +897,33 @@ El bebé se rio cuando hice una mueca [arrugando] la nariz
 A mi hermana menor ya le están saliendo [canas]
 
 ** Noun :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-15 Thu>
 :PROPERTIES:
 :ID:       555691d7-c38b-4890-a0be-6d2681516e5f
-:DRILL_LAST_INTERVAL: 9.648
+:DRILL_LAST_INTERVAL: 8.9861
 :DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 4
-:DRILL_FAILURE_COUNT: 1
+:DRILL_TOTAL_REPEATS: 8
+:DRILL_FAILURE_COUNT: 2
 :DRILL_AVERAGE_QUALITY: 3.0
-:DRILL_EASE: 2.36
+:DRILL_EASE: 2.22
 :DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 Yo no pienso que soy una persona [autoritaria]
 Su hijo es muy [mandón], en el patio siempre mangoneando a los demas niños
 
 ** Verb :drill:
-SCHEDULED: <2025-04-03 Thu>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       4b6d2dc4-7cf3-4650-b3a8-0e7f356df29c
-:DRILL_LAST_INTERVAL: 10.0
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 11
-:DRILL_FAILURE_COUNT: 7
-:DRILL_AVERAGE_QUALITY: 2.091
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 14
+:DRILL_FAILURE_COUNT: 8
+:DRILL_AVERAGE_QUALITY: 2.286
 :DRILL_EASE: 2.5
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 
 En esos tres añitos [he estado currando] y ...
@@ -914,51 +931,51 @@ A cobrar nada bromea Michelle, pero [me lo estoy currando]
 [Hemos estado currando] un montón estos ultimos meses...
 
 ** Noun:drill:
-SCHEDULED: <2025-04-03 Thu>
+SCHEDULED: <2025-07-03 Thu>
 :PROPERTIES:
 :ID:       7fd44eb6-268a-4fe5-a21e-ea86befb57c4
-:DRILL_LAST_INTERVAL: 9.624
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 6
+:DRILL_LAST_INTERVAL: 57.9781
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 8
 :DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 3.167
-:DRILL_EASE: 2.32
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_AVERAGE_QUALITY: 3.5
+:DRILL_EASE: 2.42
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 
 [El sanamiento] de este río es esencial porque las aguas están muy sucios
 El agua potable y [sanamiento] básico deberían ser prioridades mundiales
 
 ** Adjective :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-22 Thu>
 :PROPERTIES:
 :ID:       0cfa0dbb-beaa-4861-9712-0674310ed073
-:DRILL_LAST_INTERVAL: 4.285
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 4
+:DRILL_LAST_INTERVAL: 32.106
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 6
 :DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 3.75
-:DRILL_EASE: 2.7
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_AVERAGE_QUALITY: 3.833
+:DRILL_EASE: 2.66
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-20 Sun 09:%]
 :END:
 
 El entrenador dio un discurso [motivador] a los jugadores antes del partido
 Pero en el mundo digital no todos es interesante ni [motivador]
 
 ** Noun:drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-05-30 Fri>
 :PROPERTIES:
 :ID:       d4d4995c-464e-4cb2-a0a7-a0f1ad7b6416
-:DRILL_LAST_INTERVAL: 11.0911
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 5
-:DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 3.2
-:DRILL_EASE: 2.7
+:DRILL_LAST_INTERVAL: 31.8327
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 9
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 3.333
+:DRILL_EASE: 2.8
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 
 No importa cuántas veces repase [el guion], siempre me olvido de mis lineas
@@ -969,17 +986,17 @@ Las linear del diálogo en español van precididas por [un guion]
 * Subjunctive
 
 ** Subjunctive :drill:
-SCHEDULED: <2025-03-27 Thu>
+SCHEDULED: <2025-06-02 Mon>
 :PROPERTIES:
 :ID:       668851fb-2278-4683-a9dc-2d85814d72a6
-:DRILL_LAST_INTERVAL: 21.9723
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 54.8429
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 3.667
-:DRILL_EASE: 2.36
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-05 Wed 11:%]
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.46
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-08 Tue 13:%]
 :END:
 Doubt/Denial/Negation
  [Dudo que] sea capaz de saltar diez veces 8,50 en una temporada.
@@ -1006,17 +1023,17 @@ Cuando [te pido que] me escuches
 Insistir / Ordenar / Mandar / Preferir / Recomendar / Requerir / Sugerir / Querer
 
 ** Subjunctive :drill:
-SCHEDULED: <2025-03-31 Mon>
+SCHEDULED: <2025-06-10 Tue>
 :PROPERTIES:
 :ID:       0e44eeda-d091-45f5-a1ff-8870e1cd4d2a
-:DRILL_LAST_INTERVAL: 25.0
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 62.5
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
 :DRILL_AVERAGE_QUALITY: 4.0
 :DRILL_EASE: 2.5
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-06 Thu 08:%]
+:DRILL_LAST_REVIEWED: [Y-04-09 Wed 17:%]
 :END:
 
 Impersonal/valoraciones
@@ -1046,17 +1063,17 @@ También [me parece bien que] hayamos sido visionarios e incluido nuevos ámbito
 [Me parece bien] ir al cine
 
 ** Subjunctive :drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-05-07 Wed>
 :PROPERTIES:
 :ID:       c604d0c9-c2d1-4f97-8367-1085a0fc00c9
-:DRILL_LAST_INTERVAL: 3.725
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 7
-:DRILL_FAILURE_COUNT: 3
-:DRILL_AVERAGE_QUALITY: 2.143
-:DRILL_EASE: 1.94
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_INTERVAL: 9.0706
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 13
+:DRILL_FAILURE_COUNT: 5
+:DRILL_AVERAGE_QUALITY: 2.462
+:DRILL_EASE: 1.52
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 Emotions
 Por otro lado, [siento que] los políticos alemanes sean un poco más tibios al respecto.
@@ -1069,17 +1086,17 @@ Por otro lado, [siento que] los políticos alemanes sean un poco más tibios al 
 [sorprender]
 
 ** Subjunctive :drill:
-SCHEDULED: <2025-03-27 Thu>
+SCHEDULED: <2025-05-29 Thu>
 :PROPERTIES:
 :ID:       5e009758-ae9b-4cbb-baa6-f8f0dfbe0d00
-:DRILL_LAST_INTERVAL: 21.9723
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 4
+:DRILL_LAST_INTERVAL: 51.1515
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 5
 :DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 3.25
-:DRILL_EASE: 2.36
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-05 Wed 11:%]
+:DRILL_AVERAGE_QUALITY: 3.2
+:DRILL_EASE: 2.22
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-08 Tue 13:%]
 :END:
 Wishes
 [Le pido que] aclare qué procedimiento estamos utilizando.[pedir]
@@ -1099,34 +1116,34 @@ Busco pantalones con rayas rojas y bolsillos
 * Miscellaneous vocabulary
 
 ** Phrase :drill:
-SCHEDULED: <2025-04-10 Thu>
+SCHEDULED: <2025-05-21 Wed>
 :PROPERTIES:
 :ID:       f15ace58-820a-417f-95a1-648147cd359c
-:DRILL_LAST_INTERVAL: 21.9723
+:DRILL_LAST_INTERVAL: 23.4729
 :DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 7
-:DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 3.143
-:DRILL_EASE: 2.36
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-19 Wed 16:%]
+:DRILL_TOTAL_REPEATS: 11
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 3.273
+:DRILL_EASE: 2.42
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 [[./img/handwriting.jpeg]]
 Para evitar multas, los dependientes de las tiendas deben
 entregar boletas [de puño y letra] por cada compra, no importa cuán pequeña sea.
 
 ** Phrase :drill:
-SCHEDULED: <2025-03-27 Thu>
+SCHEDULED: <2025-06-25 Wed>
 :PROPERTIES:
 :ID:       1a3493b3-def0-4dd1-b6d8-de788956dc08
-:DRILL_LAST_INTERVAL: 27.8572
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 77.833
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.667
-:DRILL_EASE: 2.7
+:DRILL_AVERAGE_QUALITY: 4.75
+:DRILL_EASE: 2.8
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-02-27 Thu 09:%]
+:DRILL_LAST_REVIEWED: [Y-04-08 Tue 13:%]
 :END:
 [[./img/swallow.jpg]]
 Cola de [golondrina], inspirada en las teorías de René Thom.
@@ -1150,17 +1167,17 @@ SCHEDULED: <2025-05-10 Sat>
 Se congratula también por los progresos logrados en [el diálogo interno].
 
 ** Phrase :drill:
-SCHEDULED: <2025-04-27 Sun>
+SCHEDULED: <2025-08-06 Wed>
 :PROPERTIES:
 :ID:       b0c82ed6-5425-48f5-9e9f-833d08da8ff2
-:DRILL_LAST_INTERVAL: 34.4349
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 7
+:DRILL_LAST_INTERVAL: 99.7923
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 8
 :DRILL_FAILURE_COUNT: 2
 :DRILL_AVERAGE_QUALITY: 4.0
 :DRILL_EASE: 2.9
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 [[./img/test.jpeg]]
 Los resultados de este [ensayo] se obtendrán a finales del año próximo.
@@ -1182,33 +1199,33 @@ SCHEDULED: <2025-05-24 Sat>
 Nos queda [un ensayo] más antes del estreno
 
 ** Phrase :drill:
-SCHEDULED: <2025-04-18 Fri>
+SCHEDULED: <2025-07-13 Sun>
 :PROPERTIES:
 :ID:       64c04942-e7bb-4737-a132-157c54ce70dd
-:DRILL_LAST_INTERVAL: 30.8887
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 7
+:DRILL_LAST_INTERVAL: 86.4884
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 8
 :DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 3.571
+:DRILL_AVERAGE_QUALITY: 3.625
 :DRILL_EASE: 2.8
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-18 Fri 13:%]
 :END:
 [[./img/blockers.jpeg]]
 A pesar de grandes [bloqueos] y divisiones sobre los asuntos de Singapur, parece haber un creciente consenso sobre la capacitación
 
 ** Phrase :drill:
-SCHEDULED: <2025-05-03 Sat>
+SCHEDULED: <2025-07-17 Thu>
 :PROPERTIES:
 :ID:       9022b708-7411-4a9c-8963-322658ac7020
-:DRILL_LAST_INTERVAL: 38.6311
-:DRILL_REPEATS_SINCE_FAIL: 5
-:DRILL_TOTAL_REPEATS: 6
+:DRILL_LAST_INTERVAL: 72.3174
+:DRILL_REPEATS_SINCE_FAIL: 6
+:DRILL_TOTAL_REPEATS: 7
 :DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 2.667
-:DRILL_EASE: 1.94
+:DRILL_AVERAGE_QUALITY: 2.715
+:DRILL_EASE: 1.8
 :DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 [[./img/within_reach.jpeg]]
 Creo que [está a nuestro alcance] pero hemos de asegurarnos que este acuerdo entre en vigor.
@@ -1217,67 +1234,67 @@ Para [alcanzar] un bienestar emocional es necesario mantener un equilibrio en nu
 
 
 ** Word :drill:
-SCHEDULED: <2025-04-21 Mon>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       f5910d50-b48e-4795-a7b6-53c4db50582a
-:DRILL_LAST_INTERVAL: 34.4349
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 8
-:DRILL_FAILURE_COUNT: 3
-:DRILL_AVERAGE_QUALITY: 3.375
-:DRILL_EASE: 2.9
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_INTERVAL: 12.4008
+:DRILL_REPEATS_SINCE_FAIL: 3
+:DRILL_TOTAL_REPEATS: 11
+:DRILL_FAILURE_COUNT: 4
+:DRILL_AVERAGE_QUALITY: 3.364
+:DRILL_EASE: 2.86
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 
 Me diste un [susto]
 Habéis llevado un [susto]
 
 ** Word :drill:
-SCHEDULED: <2025-04-06 Sun>
+SCHEDULED: <2025-05-31 Sat>
 :PROPERTIES:
 :ID:       0e470c8d-6b08-47b6-b22e-030e2ad69782
-:DRILL_LAST_INTERVAL: 12.418
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 13
-:DRILL_FAILURE_COUNT: 7
-:DRILL_AVERAGE_QUALITY: 2.77
-:DRILL_EASE: 2.8
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_INTERVAL: 32.4576
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 18
+:DRILL_FAILURE_COUNT: 9
+:DRILL_AVERAGE_QUALITY: 2.834
+:DRILL_EASE: 2.9
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-29 Tue 09:%]
 :END:
 [[./img/fascinated.jpeg]]
 Y también me [quedé prendada] de todos aquellos pollitos de albatros
 
 ** Science :drill:
-SCHEDULED: <2025-04-05 Sat>
+SCHEDULED: <2025-05-15 Thu>
 :PROPERTIES:
 :ID:       17843bef-0a3c-49ec-bc21-488c87e0ba9c
-:DRILL_LAST_INTERVAL: 17.7101
+:DRILL_LAST_INTERVAL: 15.0544
 :DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 11
-:DRILL_FAILURE_COUNT: 5
-:DRILL_AVERAGE_QUALITY: 2.455
+:DRILL_TOTAL_REPEATS: 18
+:DRILL_FAILURE_COUNT: 8
+:DRILL_AVERAGE_QUALITY: 2.612
 :DRILL_EASE: 1.94
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-30 Wed 12:%]
 :END:
 [[./img/carrying_out.jpeg]]
 [Se llevaron a cabo] estudios de referencia y se aplicaron protocolos de seguimiento a largo plazo para la continuación de la conservación
 
 
 ** Environment :drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-06-07 Sat>
 :PROPERTIES:
 :ID:       a25ecdae-7fea-4e8c-88e3-e468295aeb5d
-:DRILL_LAST_INTERVAL: 3.86
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 7
+:DRILL_LAST_INTERVAL: 32.1702
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 10
 :DRILL_FAILURE_COUNT: 3
-:DRILL_AVERAGE_QUALITY: 2.571
-:DRILL_EASE: 2.08
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_AVERAGE_QUALITY: 3.0
+:DRILL_EASE: 2.04
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 [[./img/waste.jpeg]]
 Debemos fomentar prácticas e invertir en tecnologías diseñadas para reducir el [despilfarro] y aumentar la recuperación de aguas.
@@ -1286,17 +1303,17 @@ Las élites y los políticos se dedican más al consumismo y al [derroche] que a
 * Verbs
 
 ** Verb :drill:
-SCHEDULED: <2025-04-06 Sun>
+SCHEDULED: <2025-07-03 Thu>
 :PROPERTIES:
 :ID:       70cd5110-6b31-47af-bc24-7877a3a5ea19
-:DRILL_LAST_INTERVAL: 29.8462
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 4
+:DRILL_LAST_INTERVAL: 80.3161
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 5
 :DRILL_FAILURE_COUNT: 1
 :DRILL_AVERAGE_QUALITY: 4.0
 :DRILL_EASE: 2.7
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-07 Fri 07:%]
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 
 El libro [abarca] el periodo entre 1939 y 1945 [abarcar]
@@ -1304,33 +1321,33 @@ Su reino [abarcaba] varias de las actuales provincias andaluzas
 El parque natural [abarca] un territorio más de 2,820 hectares [incluir] [englobar]
 
 ** Verb :drill:
-SCHEDULED: <2025-04-04 Fri>
+SCHEDULED: <2025-05-11 Sun>
 :PROPERTIES:
 :ID:       960d311a-0cff-402b-b20e-e93006fbe16a
-:DRILL_LAST_INTERVAL: 10.771
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 21
+:DRILL_LAST_INTERVAL: 27.2291
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 22
 :DRILL_FAILURE_COUNT: 14
-:DRILL_AVERAGE_QUALITY: 2.239
-:DRILL_EASE: 2.62
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_AVERAGE_QUALITY: 2.274
+:DRILL_EASE: 2.48
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 
 Dada la cantidad casi ilimitada de agua de mar, con la desalinización se podría [abastecer] de agua a muchos municipios e industrias.[suministrar]
 
 ** Verb :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-07 Wed>
 :PROPERTIES:
 :ID:       c7782a3e-d5b1-495a-a285-39a84e9eb4f1
-:DRILL_LAST_INTERVAL: 3.855
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 16
+:DRILL_LAST_INTERVAL: 18.8659
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 18
 :DRILL_FAILURE_COUNT: 10
-:DRILL_AVERAGE_QUALITY: 2.314
-:DRILL_EASE: 2.32
+:DRILL_AVERAGE_QUALITY: 2.39
+:DRILL_EASE: 2.04
 :DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-18 Fri 13:%]
 :END:
 De las 15 pregunatas en la prueba, solo [acerté] cuatro
 Todavía gano algún dinero si [acerté] cinco de los números de la lotería
@@ -1352,82 +1369,81 @@ La prensa pretende [achacar] la crisis que atraviesa el campo mexicano al campes
 La investigación oficial traté de [achacarle] la culpa del accidente al maquinista
 
 ** Verb :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-22 Thu>
 :PROPERTIES:
 :ID:       0a17d038-0170-458d-950e-2ef6588eb41f
-:DRILL_LAST_INTERVAL: 4.0
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 13
+:DRILL_LAST_INTERVAL: 32.4576
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 15
 :DRILL_FAILURE_COUNT: 7
-:DRILL_AVERAGE_QUALITY: 2.692
-:DRILL_EASE: 2.8
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_AVERAGE_QUALITY: 2.933
+:DRILL_EASE: 2.9
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-20 Sun 09:%]
 :END:
 
 Sara [adivinó] la carta que había elegido
 
 ** Verb :drill:
-SCHEDULED: <2025-04-04 Fri>
+SCHEDULED: <2025-06-16 Mon>
 :PROPERTIES:
 :ID:       7f252a61-f779-4907-9caa-e7c61582113d
-:DRILL_LAST_INTERVAL: 25.228
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 6
+:DRILL_LAST_INTERVAL: 67.8129
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 7
 :DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 3.5
-:DRILL_EASE: 2.56
+:DRILL_AVERAGE_QUALITY: 3.714
+:DRILL_EASE: 2.66
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-10 Mon 11:%]
+:DRILL_LAST_REVIEWED: [Y-04-09 Wed 17:%]
 :END:
 
 Políticas de esa índole [afectarán] negativamente el desempeñó de nuestras acciones
 
-** Verb :drill:
-SCHEDULED: <2025-04-25 Fri>
+** Verb                                                        :drill:leech:
 :PROPERTIES:
 :ID:       9f909ac4-eb06-4d64-8227-0b59d9ea71e9
-:DRILL_LAST_INTERVAL: 31.9704
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 20
-:DRILL_FAILURE_COUNT: 14
-:DRILL_AVERAGE_QUALITY: 2.051
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 22
+:DRILL_FAILURE_COUNT: 16
+:DRILL_AVERAGE_QUALITY: 1.956
 :DRILL_EASE: 2.8
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 
 Receptor de GPS puede [agotar] la batería más
 
 ** Verb :drill:
-SCHEDULED: <2025-03-27 Thu>
+SCHEDULED: <2025-05-31 Sat>
 :PROPERTIES:
 :ID:       be0e5c39-7b3a-44cd-b889-88bb39aded76
-:DRILL_LAST_INTERVAL: 21.9723
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 4
+:DRILL_LAST_INTERVAL: 52.9972
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 5
 :DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 3.25
+:DRILL_AVERAGE_QUALITY: 3.4
 :DRILL_EASE: 2.36
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-05 Wed 11:%]
+:DRILL_LAST_REVIEWED: [Y-04-08 Tue 13:%]
 :END:
 
 Ese columpio no [aguantará] tu peso [aguantar]
 
 
 ** Verb :drill:
-SCHEDULED: <2025-04-11 Fri>
+SCHEDULED: <2025-06-16 Mon>
 :PROPERTIES:
 :ID:       3dd85fd7-c31f-48a1-af17-499517430d53
-:DRILL_LAST_INTERVAL: 24.3701
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 9
+:DRILL_LAST_INTERVAL: 60.8278
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 10
 :DRILL_FAILURE_COUNT: 4
-:DRILL_AVERAGE_QUALITY: 2.778
+:DRILL_AVERAGE_QUALITY: 2.9
 :DRILL_EASE: 2.46
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_REVIEWED: [Y-04-16 Wed 15:%]
 :END:
 
 Su abogado [alegó] falta de prueba [alegar]
@@ -1465,51 +1481,51 @@ Las buenas notas lo [alentaron] a seguir estudiando [alentar]
 Agradezco a mi esposa que creyera a mí y me [alentara] a seguir adelante
 
 ** Verb :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       75d6bfec-8d8e-4753-94dd-77cf61085b45
-:DRILL_LAST_INTERVAL: 9.648
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 16
-:DRILL_FAILURE_COUNT: 11
-:DRILL_AVERAGE_QUALITY: 2.001
-:DRILL_EASE: 2.36
+:DRILL_LAST_INTERVAL: 3.725
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 21
+:DRILL_FAILURE_COUNT: 13
+:DRILL_AVERAGE_QUALITY: 2.097
+:DRILL_EASE: 1.94
 :DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 
 [Hemos apartado] las cosas más importantes que necesitamos para el viaje [apartar]
 Por favor, [aparta] esa botella del borde de la mesa
 
 ** Verb :drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-05-09 Fri>
 :PROPERTIES:
 :ID:       3ab7eb05-163f-4486-a244-029356b0df79
-:DRILL_LAST_INTERVAL: 22.7693
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 5
-:DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 2.8
-:DRILL_EASE: 2.36
+:DRILL_LAST_INTERVAL: 10.6807
+:DRILL_REPEATS_SINCE_FAIL: 3
+:DRILL_TOTAL_REPEATS: 11
+:DRILL_FAILURE_COUNT: 4
+:DRILL_AVERAGE_QUALITY: 3.273
+:DRILL_EASE: 2.56
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-06 Thu 08:%]
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 
 Este medicamento lo va a [aletargar]
 Comer un almuerzo pesado siempre me [aletarga]
 
 ** Verb :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-15 Thu>
 :PROPERTIES:
 :ID:       871786cd-8d04-4828-a18b-aa23f5b54714
-:DRILL_LAST_INTERVAL: 9.6296
+:DRILL_LAST_INTERVAL: 8.868
 :DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 10
-:DRILL_FAILURE_COUNT: 4
-:DRILL_AVERAGE_QUALITY: 2.9
+:DRILL_TOTAL_REPEATS: 14
+:DRILL_FAILURE_COUNT: 5
+:DRILL_AVERAGE_QUALITY: 3.0
 :DRILL_EASE: 2.18
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 
 La compañía [aportó] mil euros a la fundación
@@ -1517,34 +1533,34 @@ El abogado [aportó] la evidencia necesaria
 Más allá de solo demonizar las creencias limitantes, vale la pena reconocer lo que nos [aportan]. 
 
 ** Verb :drill:
-SCHEDULED: <2025-04-05 Sat>
+SCHEDULED: <2025-05-11 Sun>
 :PROPERTIES:
 :ID:       0f28b02b-691e-4b48-aee9-f1c153d0dbdb
-:DRILL_LAST_INTERVAL: 10.6807
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 17
+:DRILL_LAST_INTERVAL: 26.6377
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 18
 :DRILL_FAILURE_COUNT: 10
-:DRILL_AVERAGE_QUALITY: 2.412
-:DRILL_EASE: 2.56
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_AVERAGE_QUALITY: 2.445
+:DRILL_EASE: 2.42
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 
 El dentista le [arrancará] una muela a mi hermano el lunes [arrancar]
 Tu padre está en el huerto [arrancado] las malas hierbas
 
 ** Verb :drill:
-SCHEDULED: <2025-04-14 Mon>
+SCHEDULED: <2025-06-15 Sun>
 :PROPERTIES:
 :ID:       c80af4ba-92ba-424e-8d14-b67378486701
-:DRILL_LAST_INTERVAL: 25.0
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 7
+:DRILL_LAST_INTERVAL: 60.3
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 8
 :DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 3.143
-:DRILL_EASE: 2.5
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-20 Thu 08:%]
+:DRILL_AVERAGE_QUALITY: 3.125
+:DRILL_EASE: 2.36
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-16 Wed 15:%]
 :END:
 
 El niño no [se atreve] a meterse en el agua [atreverse]
@@ -1552,17 +1568,17 @@ Recibir asistencia es [atreverse] a preguntar
 Hay personas que [se atreven]
 
 ** Verb :drill:
-SCHEDULED: <2025-03-27 Thu>
+SCHEDULED: <2025-05-31 Sat>
 :PROPERTIES:
 :ID:       0b1d4fef-eaaa-496d-ae0c-a13e5d31d51e
-:DRILL_LAST_INTERVAL: 21.9723
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 4
+:DRILL_LAST_INTERVAL: 52.9972
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 5
 :DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 3.25
+:DRILL_AVERAGE_QUALITY: 3.4
 :DRILL_EASE: 2.36
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-05 Wed 11:%]
+:DRILL_LAST_REVIEWED: [Y-04-08 Tue 13:%]
 :END:
 
    El banco [denegó] su préstamo [denegar]
@@ -1570,34 +1586,34 @@ SCHEDULED: <2025-03-27 Thu>
    No se puede [rechazar] una solicitud de interconexión si ésta es razonable
 
 ** Verb :drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-05-16 Fri>
 :PROPERTIES:
 :ID:       4776ce98-b186-439e-b5fe-f0cbdd5fc832
-:DRILL_LAST_INTERVAL: 3.86
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 6
-:DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 2.5
-:DRILL_EASE: 2.08
+:DRILL_LAST_INTERVAL: 9.965
+:DRILL_REPEATS_SINCE_FAIL: 3
+:DRILL_TOTAL_REPEATS: 13
+:DRILL_FAILURE_COUNT: 4
+:DRILL_AVERAGE_QUALITY: 2.999
+:DRILL_EASE: 2.28
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 
 No tenemos ninguna evidencia que nos permita [cuestionar] la decisión del juez
 Yo lo creí. No tenía por qué [cuestionar] su sinceridad
 
 ** Verb :drill:
-SCHEDULED: <2025-04-08 Tue>
+SCHEDULED: <2025-05-30 Fri>
 :PROPERTIES:
 :ID:       de7c4ba8-81a9-4875-8b61-d1bb77f9486b
-:DRILL_LAST_INTERVAL: 27.8572
+:DRILL_LAST_INTERVAL: 30.7536
 :DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 6
-:DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 3.167
-:DRILL_EASE: 2.6
+:DRILL_TOTAL_REPEATS: 10
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 3.3
+:DRILL_EASE: 2.7
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-11 Tue 09:%]
+:DRILL_LAST_REVIEWED: [Y-04-29 Tue 09:%]
 :END:
 
 Su nieto [creció] una pulgada entera durante el verano
@@ -1606,33 +1622,33 @@ Así como [crecía] el desempleo, también lo hacía el desdén por los poderes 
 En solo tres años, las oficinas de la compañía [crecieron] por todo el país
 
 ** Verb :drill:
-SCHEDULED: <2025-04-05 Sat>
+SCHEDULED: <2025-05-27 Tue>
 :PROPERTIES:
 :ID:       f487ff22-c159-4c1c-a32f-7b160cc54422
-:DRILL_LAST_INTERVAL: 11.7971
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 9
-:DRILL_FAILURE_COUNT: 3
-:DRILL_AVERAGE_QUALITY: 3.333
-:DRILL_EASE: 2.62
+:DRILL_LAST_INTERVAL: 28.3395
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 13
+:DRILL_FAILURE_COUNT: 4
+:DRILL_AVERAGE_QUALITY: 3.385
+:DRILL_EASE: 2.58
 :DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-29 Tue 09:%]
 :END:
 
 Las viejas amigas se pasaron la tarde [cotilleando] sobre sus antiguos compañeros de clase [Cotillear]
 
 ** Verb :drill:
-SCHEDULED: <2025-04-17 Thu>
+SCHEDULED: <2025-07-10 Thu>
 :PROPERTIES:
 :ID:       1f5d76ba-1119-4d2c-b992-910d22857343
-:DRILL_LAST_INTERVAL: 29.8462
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 6
+:DRILL_LAST_INTERVAL: 83.1217
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 7
 :DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 4.0
-:DRILL_EASE: 2.7
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_AVERAGE_QUALITY: 4.143
+:DRILL_EASE: 2.8
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-18 Fri 13:%]
 :END:
 
 [Consiguió] su licencia de conducir en junio [Conseguir]
@@ -1640,17 +1656,17 @@ Ese hombre [consiguió] todas sus metas
 No [conseguí] convencerlo para que se viniera a la playa con nosotros
 
 ** Verb :drill:
-SCHEDULED: <2025-04-06 Sun>
+SCHEDULED: <2025-06-28 Sat>
 :PROPERTIES:
 :ID:       19cc535f-7be5-499b-82ec-4890f167bdd4
-:DRILL_LAST_INTERVAL: 27.0259
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 7
+:DRILL_LAST_INTERVAL: 75.1861
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 8
 :DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 3.571
-:DRILL_EASE: 2.66
+:DRILL_AVERAGE_QUALITY: 3.75
+:DRILL_EASE: 2.76
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-10 Mon 11:%]
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 
 Honestamente, [corroborar] su historia va a ser un poco difícil
@@ -1658,34 +1674,34 @@ Hay personas en España que pueden [corroborar] este episodio
 Los testigos [corroboran] el testimonio de Juan respeto de que el coche paso con el semáforo en rojo
 
 ** Verb :drill:
-SCHEDULED: <2025-04-04 Fri>
+SCHEDULED: <2025-06-13 Fri>
 :PROPERTIES:
 :ID:       ef1151c6-6d09-403b-aba2-58e7d6fc86be
-:DRILL_LAST_INTERVAL: 25.0
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 7
+:DRILL_LAST_INTERVAL: 60.3
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 8
 :DRILL_FAILURE_COUNT: 3
-:DRILL_AVERAGE_QUALITY: 2.857
-:DRILL_EASE: 2.5
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-10 Mon 11:%]
+:DRILL_AVERAGE_QUALITY: 2.875
+:DRILL_EASE: 2.36
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 
 Decenas de manifestantes [se congregaron] a las puertas del ayuntamiento. [congregarse]
 Todos los años en julio [se congregan] miles do motoristas en esta ciudad
 
 ** Verb :drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-05-24 Sat>
 :PROPERTIES:
 :ID:       617b262e-ce29-49e4-a457-44231b3d541a
-:DRILL_LAST_INTERVAL: 4.0
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 5
-:DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 3.4
-:DRILL_EASE: 2.5
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_INTERVAL: 25.88
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 11
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 3.273
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 
 Muchos jubilados cometieron el error de [confiar] sus ahorros a esa empresa que ayer quebró
@@ -1694,68 +1710,68 @@ Muchos jubilados cometieron el error de [confiar] sus ahorros a esa empresa que 
 Dara me [confió] su mayor secreto
 
 ** Verb :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-29 Thu>
 :PROPERTIES:
 :ID:       e720da64-3252-488d-bd7d-0b56813adc9a
-:DRILL_LAST_INTERVAL: 22.7451
+:DRILL_LAST_INTERVAL: 30.5944
 :DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 4
-:DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 3.25
-:DRILL_EASE: 2.46
+:DRILL_TOTAL_REPEATS: 8
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 3.625
+:DRILL_EASE: 2.76
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-05 Wed 11:%]
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 
 Los horarios en España hacen difícil [compaginar] la vida familiar y la profesional
 Las negociaciones intentaron [compaginar] los intereses de los distintos países miembros
 
 ** Verb :drill:
-SCHEDULED: <2025-03-27 Thu>
+SCHEDULED: <2025-05-29 Thu>
 :PROPERTIES:
 :ID:       acffa6aa-3eec-4b41-a4a3-df807f279172
-:DRILL_LAST_INTERVAL: 21.9723
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 51.1515
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 3.667
-:DRILL_EASE: 2.36
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-05 Wed 11:%]
+:DRILL_AVERAGE_QUALITY: 3.5
+:DRILL_EASE: 2.22
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-08 Tue 13:%]
 :END:
 
   El candidato presidencial se comprometió a reducir el desempleo
   El estudiante [se ha comprometido] a estudiar para el examen
 
 ** Verb :drill:
-SCHEDULED: <2025-04-03 Thu>
+SCHEDULED: <2025-06-23 Mon>
 :PROPERTIES:
 :ID:       8460cc20-6a9d-4cce-9c87-b5fb2670f6d7
-:DRILL_LAST_INTERVAL: 27.8572
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 74.9637
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.667
+:DRILL_AVERAGE_QUALITY: 4.5
 :DRILL_EASE: 2.7
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-06 Thu 09:%]
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-09 Wed 17:%]
 :END:
 
 Federico [cató] el vino y dijo "está agrio" [catar]
 [Catamos] los bocadillos y el champán que servirán en nuestra boda
 
 ** Verb :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       71f2cadd-35c4-4d4a-ae1c-00854fd3511e
-:DRILL_LAST_INTERVAL: 9.9755
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 12
-:DRILL_FAILURE_COUNT: 7
+:DRILL_LAST_INTERVAL: 3.995
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 16
+:DRILL_FAILURE_COUNT: 9
 :DRILL_AVERAGE_QUALITY: 2.5
 :DRILL_EASE: 2.46
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 
 Hemos de [aunar esfuerzos] para aislar políticamente a Cuba.
@@ -1782,34 +1798,34 @@ SCHEDULED: <2025-05-26 Mon>
 ¿Quién [arbitra] el partido del sábado?
 Un funcionario del Estado [arbitrará] la disputo
 ** Verb                                                             :drill:
-SCHEDULED: <2025-04-09 Wed>
+SCHEDULED: <2025-05-17 Sat>
 :PROPERTIES:
 :ID:       c6135233-07c3-41bb-a9c1-be5268cee683
-:DRILL_LAST_INTERVAL: 21.9685
+:DRILL_LAST_INTERVAL: 18.6556
 :DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 8
-:DRILL_FAILURE_COUNT: 4
-:DRILL_AVERAGE_QUALITY: 2.625
-:DRILL_EASE: 2.22
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_TOTAL_REPEATS: 13
+:DRILL_FAILURE_COUNT: 6
+:DRILL_AVERAGE_QUALITY: 2.693
+:DRILL_EASE: 2.18
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 Siempre quise hacer paracaidismo, pero el precio me [desanimó].
 No te [desanimes] por haber perdido un partido
 
 
 ** Verb :drill:
-SCHEDULED: <2025-04-04 Fri>
+SCHEDULED: <2025-05-14 Wed>
 :PROPERTIES:
 :ID:       6bfab445-1926-4031-9a1e-6c3a40763a53
-:DRILL_LAST_INTERVAL: 11.0767
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 8
+:DRILL_LAST_INTERVAL: 29.6191
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 9
 :DRILL_FAILURE_COUNT: 4
-:DRILL_AVERAGE_QUALITY: 2.875
-:DRILL_EASE: 2.56
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_AVERAGE_QUALITY: 3.111
+:DRILL_EASE: 2.66
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 El final del libro me pareció algo [desconcertante]
 Para ser honesto, hubo momentos cuando esto fue un poco [desconcertante]
@@ -1817,17 +1833,17 @@ Fue una divertida, entendida y a veces [desconcertante] experiencia
 
 
 ** Verb :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-07 Wed>
 :PROPERTIES:
 :ID:       11d3ab31-99a7-48c9-85d0-55cd986d5ffc
-:DRILL_LAST_INTERVAL: 10.0
+:DRILL_LAST_INTERVAL: 9.192
 :DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 5
-:DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 2.8
-:DRILL_EASE: 2.5
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_TOTAL_REPEATS: 11
+:DRILL_FAILURE_COUNT: 4
+:DRILL_AVERAGE_QUALITY: 3.001
+:DRILL_EASE: 2.32
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 
 [Ralentiza] la grabación para qué podemos identificar esa persona en el fondo
@@ -1836,34 +1852,34 @@ El arquitecto quiere [acelerar] la construcción del puente
 El medicamento alivia el dolor y [acelera] la recuperación de los pacientes que presentan dicho síndrome
 
 ** Verb :drill:
-SCHEDULED: <2025-04-02 Wed>
+SCHEDULED: <2025-06-01 Sun>
 :PROPERTIES:
 :ID:       335667b9-8ec9-4b61-977e-56346928f18e
-:DRILL_LAST_INTERVAL: 22.7693
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 5
+:DRILL_LAST_INTERVAL: 53.0069
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 6
 :DRILL_FAILURE_COUNT: 2
 :DRILL_AVERAGE_QUALITY: 3.0
-:DRILL_EASE: 2.36
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-10 Mon 11:%]
+:DRILL_EASE: 2.22
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-09 Wed 17:%]
 :END:
 
 Esto [desemboca] en unos niveles superiores a los niveles mínimos fijados por los reguladores o los Gobiernos.
 El Danubio es el río más importante que [desemboca en] el Mar Negro.
 
 ** Verb :drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-05-16 Fri>
 :PROPERTIES:
 :ID:       37286c47-6055-4caf-95e3-8d7f83b6b1fe
-:DRILL_LAST_INTERVAL: 3.995
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 18
-:DRILL_FAILURE_COUNT: 12
-:DRILL_AVERAGE_QUALITY: 2.111
-:DRILL_EASE: 2.46
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_INTERVAL: 9.6039
+:DRILL_REPEATS_SINCE_FAIL: 3
+:DRILL_TOTAL_REPEATS: 24
+:DRILL_FAILURE_COUNT: 14
+:DRILL_AVERAGE_QUALITY: 2.292
+:DRILL_EASE: 2.28
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 
 Es talentoso, pero disperso: Escribe dos frases y [desiste de] seguir escribiendo. [Desistir de]
@@ -1873,33 +1889,33 @@ Julián [desistió de] intentar conquistar a María después de que le rechazara
 Se pregunta cómo reaccionan las autoridades si los niños romaníes [abandonan] la escuela. [abandonar]
 
 ** Verb :drill:
-SCHEDULED: <2025-04-13 Sun>
+SCHEDULED: <2025-06-11 Wed>
 :PROPERTIES:
 :ID:       37f469f9-3e7e-4b26-8761-fac00a35ef67
-:DRILL_LAST_INTERVAL: 24.12
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 56.1514
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 3.667
-:DRILL_EASE: 2.36
+:DRILL_AVERAGE_QUALITY: 3.5
+:DRILL_EASE: 2.22
 :DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-20 Thu 08:%]
+:DRILL_LAST_REVIEWED: [Y-04-16 Wed 15:%]
 :END:
 [Se desplazaban] a pie por largas distancias, ya que aún no dominaban el caballo.
 Por eso, más de la mitad de la población [se desplaza] a pie por la ciudad.
 
 ** Verb :drill:
-SCHEDULED: <2025-04-06 Sun>
+SCHEDULED: <2025-06-05 Thu>
 :PROPERTIES:
 :ID:       d6afabf7-2beb-4b86-a525-0a35ef1ad63e
-:DRILL_LAST_INTERVAL: 12.8526
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 9
-:DRILL_FAILURE_COUNT: 4
-:DRILL_AVERAGE_QUALITY: 3.556
-:DRILL_EASE: 2.9
+:DRILL_LAST_INTERVAL: 35.9811
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 13
+:DRILL_FAILURE_COUNT: 5
+:DRILL_AVERAGE_QUALITY: 3.539
+:DRILL_EASE: 3.0
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-30 Wed 12:%]
 :END:
 La celebridad [desmintió] las acusaciones
 
@@ -1920,17 +1936,17 @@ La celebridad [desmintió] las acusaciones
 Se puede hablar con la gente de forma totalmente personal mientras se [despeja] sus dudas
 
 ** Verb :drill:
-SCHEDULED: <2025-04-02 Wed>
+SCHEDULED: <2025-06-15 Sun>
 :PROPERTIES:
 :ID:       a9bffa7c-9a2f-44d0-94b3-7845d95e9fac
-:DRILL_LAST_INTERVAL: 26.1438
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 66.9281
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.333
+:DRILL_AVERAGE_QUALITY: 4.25
 :DRILL_EASE: 2.56
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-07 Fri 07:%]
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-09 Wed 17:%]
 :END:
 No le gusta mucho [dirigir] el hotel, prefería trabajar en un restaurante
 Eso ocurrió cuando Barack Obama [dirigía] a los demócratas
@@ -1953,34 +1969,34 @@ Si se registran cinco ocurrencias consecutivas de circuito abierto, se [dispara]
 No es la primera vez que un cataclismo de la naturaleza [dispara] una rebelión popular.
 
 ** Verb :drill:
-SCHEDULED: <2025-04-02 Wed>
+SCHEDULED: <2025-06-10 Tue>
 :PROPERTIES:
 :ID:       2cde0339-ad15-4205-ab1d-1554934ec0fd
-:DRILL_LAST_INTERVAL: 8.88
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 11
+:DRILL_LAST_INTERVAL: 42.2265
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 13
 :DRILL_FAILURE_COUNT: 5
-:DRILL_AVERAGE_QUALITY: 2.636
-:DRILL_EASE: 2.22
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_AVERAGE_QUALITY: 2.769
+:DRILL_EASE: 2.08
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-29 Tue 09:%]
 :END:
 Los padres no dejaban que su hijo pequeño [se distanciara] demasiado de ellos en la playa [distanciarse]
 Jenny y yo nos [distanciamos porque] dejarnos de tener cosas en común
 Decidí [distanciarme] de las ideas del grupo
 
 ** Verb :drill:
-SCHEDULED: <2025-03-30 Sun>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       5eb98f53-651f-4ade-bb6d-348ec938198f
-:DRILL_LAST_INTERVAL: 11.4795
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 17
-:DRILL_FAILURE_COUNT: 11
-:DRILL_AVERAGE_QUALITY: 2.236
-:DRILL_EASE: 2.7
+:DRILL_LAST_INTERVAL: 4.285
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 24
+:DRILL_FAILURE_COUNT: 14
+:DRILL_AVERAGE_QUALITY: 2.5
+:DRILL_EASE: 3.0
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-19 Wed 16:%]
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 Más frustrado a [distraerse] con el sistema
 Que simplemente [distraerse] juntos
@@ -1988,17 +2004,17 @@ Su meta puede ser [distraerse]
 La gente suele [distraerse] por las muchos
 
 ** Verb :drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-06-04 Wed>
 :PROPERTIES:
 :ID:       93650fff-d13d-4ab3-9c2b-5d583b379c42
-:DRILL_LAST_INTERVAL: 22.7451
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 56.7718
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
 :DRILL_AVERAGE_QUALITY: 4.0
 :DRILL_EASE: 2.46
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-06 Thu 08:%]
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-08 Tue 13:%]
 :END:
 La peor de [emborracharse] es la horrible resaca del día siguiente
 Cuidado con esa cerveza, [te emborracha] muy rápido
@@ -2006,17 +2022,17 @@ En la receta, indica que hay que [emborracharse] la tarta con licor
 
 
 ** Verb :drill:
-SCHEDULED: <2025-04-06 Sun>
+SCHEDULED: <2025-07-03 Thu>
 :PROPERTIES:
 :ID:       b6fb93da-997b-462d-8774-07f0a2434f64
-:DRILL_LAST_INTERVAL: 29.8462
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 4
+:DRILL_LAST_INTERVAL: 80.3161
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 5
 :DRILL_FAILURE_COUNT: 1
 :DRILL_AVERAGE_QUALITY: 4.0
 :DRILL_EASE: 2.7
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-07 Fri 07:%]
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 La lluvia [empapó] a los turistas en la playa [empapar]
 El papel absorbente [empapó] la leche que derrame en la mesa
@@ -2024,111 +2040,111 @@ El aguacero [empapó] la tierra del jardín con agua de lluvia fresca
 Por eso esperaba con la carita [empapada]
 
 ** Verb :drill:
-SCHEDULED: <2025-04-15 Tue>
+SCHEDULED: <2025-06-30 Mon>
 :PROPERTIES:
 :ID:       ef5c9e82-542d-4537-90ce-21f89192d5bb
-:DRILL_LAST_INTERVAL: 27.8572
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 5
+:DRILL_LAST_INTERVAL: 74.9637
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 6
 :DRILL_FAILURE_COUNT: 1
 :DRILL_AVERAGE_QUALITY: 4.0
 :DRILL_EASE: 2.7
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-16 Wed 15:%]
 :END:
 Los movimientos para [empoderar] a la mujer son necesarias porque se les sigue discriminando [empoderarse]
 
 ** Verb :drill:
-SCHEDULED: <2025-04-05 Sat>
+SCHEDULED: <2025-05-28 Wed>
 :PROPERTIES:
 :ID:       db8aeb41-ccac-468a-bec5-bc0c080eb6b7
-:DRILL_LAST_INTERVAL: 11.0911
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 14
-:DRILL_FAILURE_COUNT: 9
-:DRILL_AVERAGE_QUALITY: 2.643
-:DRILL_EASE: 2.7
+:DRILL_LAST_INTERVAL: 28.5602
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 18
+:DRILL_FAILURE_COUNT: 10
+:DRILL_AVERAGE_QUALITY: 2.833
+:DRILL_EASE: 2.66
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_REVIEWED: [Y-04-29 Tue 09:%]
 :END:
 Las políticas de educación superior deberían [enfocarse] a maximizar el potencial de las personas en cuanto a su desarrollo
 Reconozco que muchos tienen todavía el fuerte deseo de [enfocarse] en el pasado.
 
 ** Verb :drill:
-SCHEDULED: <2025-03-27 Thu>
+SCHEDULED: <2025-05-25 Sun>
 :PROPERTIES:
 :ID:       11d2de9a-8fb3-4989-a5fd-6d37d676f083
-:DRILL_LAST_INTERVAL: 21.1996
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 4
+:DRILL_LAST_INTERVAL: 47.0631
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 5
 :DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 2.75
+:DRILL_AVERAGE_QUALITY: 3.0
 :DRILL_EASE: 2.22
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-06 Thu 08:%]
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-08 Tue 13:%]
 :END:
 Debes [enfrentarte] a tus miedos y abordar ese avión
 
 ** Verb :drill:
-SCHEDULED: <2025-04-06 Sun>
+SCHEDULED: <2025-07-06 Sun>
 :PROPERTIES:
 :ID:       7785f1e8-9ff6-497c-b8cf-278a7bec2f68
-:DRILL_LAST_INTERVAL: 29.8462
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 83.1217
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.667
-:DRILL_EASE: 2.7
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-07 Fri 07:%]
+:DRILL_AVERAGE_QUALITY: 4.75
+:DRILL_EASE: 2.8
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 Mi padre me [enseñó] a pescar
 Ana me [enseñó] su casa nueva
 
 ** Verb :drill:
-SCHEDULED: <2025-04-02 Wed>
+SCHEDULED: <2025-06-20 Fri>
 :PROPERTIES:
 :ID:       6424c743-9fee-4f35-ad08-36505d7f4307
-:DRILL_LAST_INTERVAL: 26.9152
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 72.4288
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.333
-:DRILL_EASE: 2.6
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-06 Thu 09:%]
+:DRILL_AVERAGE_QUALITY: 4.5
+:DRILL_EASE: 2.7
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-09 Wed 17:%]
 :END:
 
 Exigimos que el gobierno haga algo por el cambio climático.
 
 ** Verb :drill:
-SCHEDULED: <2025-04-03 Thu>
+SCHEDULED: <2025-06-20 Fri>
 :PROPERTIES:
 :ID:       cfcff946-a361-48b0-a202-9ab345ab2b46
-:DRILL_LAST_INTERVAL: 27.8572
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 72.3451
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.667
-:DRILL_EASE: 2.7
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-06 Thu 09:%]
+:DRILL_AVERAGE_QUALITY: 4.25
+:DRILL_EASE: 2.56
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-09 Wed 17:%]
 :END:
 
 Los tulipanes [florecen] en la primavera
 
 ** Verb :drill:
-SCHEDULED: <2025-04-08 Tue>
+SCHEDULED: <2025-07-01 Tue>
 :PROPERTIES:
 :ID:       1381b5d3-258f-4207-b5ce-8cfbcaca319a
-:DRILL_LAST_INTERVAL: 28.8322
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 77.5875
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.667
+:DRILL_AVERAGE_QUALITY: 4.5
 :DRILL_EASE: 2.7
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-10 Mon 11:%]
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 
 Imágenes. ¡Nuevas capturas de pantalla que [flipes]!
@@ -2136,17 +2152,17 @@ La primera vez que fui a un concierto de Los Despreciables [flipé]
 Los fans del artista [fliparon] cuando empezó a romper sus guitarras en el escenario
 
 ** Verb :drill:
-SCHEDULED: <2025-04-06 Sun>
+SCHEDULED: <2025-07-01 Tue>
 :PROPERTIES:
 :ID:       53956fbe-a53d-46f4-860e-e37bde26fee8
-:DRILL_LAST_INTERVAL: 29.8462
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 4
+:DRILL_LAST_INTERVAL: 77.5106
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 5
 :DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 4.0
-:DRILL_EASE: 2.7
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-07 Fri 07:%]
+:DRILL_AVERAGE_QUALITY: 3.8
+:DRILL_EASE: 2.56
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 
 El jefe trabajó duro porque no quería [fracasar]
@@ -2155,66 +2171,66 @@ El proyecto no [fracasó] gracias a todos los empleados
 
 
 ** Verb :drill:
-SCHEDULED: <2025-04-06 Sun>
+SCHEDULED: <2025-07-03 Thu>
 :PROPERTIES:
 :ID:       dfc3a280-f7d8-4dce-bf87-6a66c490c90f
-:DRILL_LAST_INTERVAL: 29.8462
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 80.3161
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.667
+:DRILL_AVERAGE_QUALITY: 4.5
 :DRILL_EASE: 2.7
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-07 Fri 07:%]
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 
 A mi abuela le encantaba [guisar] para toda la familia los domingos
 Julián [estuvo guisando] la carne toda la mañana y aun así estaban dura
 
 ** Verb :drill:
-SCHEDULED: <2025-04-10 Thu>
+SCHEDULED: <2025-07-15 Tue>
 :PROPERTIES:
 :ID:       c89c385e-31c2-4a67-bb90-b8a1294c4d00
-:DRILL_LAST_INTERVAL: 30.8887
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 89.5155
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
 :DRILL_AVERAGE_QUALITY: 5.0
-:DRILL_EASE: 2.8
+:DRILL_EASE: 2.9
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-10 Mon 11:%]
+:DRILL_LAST_REVIEWED: [Y-04-16 Wed 15:%]
 :END:
 
 Necesito que me ayudes a [hinchar] 100 globos para la fiesta
 Diana siempre [hincha] las historias que nos cuenta. Solo le creo la mitad de lo que dice
 
 ** Verb :drill:
-SCHEDULED: <2025-04-02 Wed>
+SCHEDULED: <2025-06-07 Sat>
 :PROPERTIES:
 :ID:       2413e15e-a228-49d7-958f-5e01c0fe7fe1
-:DRILL_LAST_INTERVAL: 22.7451
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 5
+:DRILL_LAST_INTERVAL: 58.7506
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 6
 :DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 3.4
-:DRILL_EASE: 2.46
+:DRILL_AVERAGE_QUALITY: 3.667
+:DRILL_EASE: 2.56
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-10 Mon 11:%]
+:DRILL_LAST_REVIEWED: [Y-04-09 Wed 17:%]
 :END:
 Es importante [inculcar] en los niños una actitud positiva hacia las matemáticas y las ciencias (la física, la biología y la química)
 
 ** Verb :drill:
-SCHEDULED: <2025-03-31 Mon>
+SCHEDULED: <2025-05-15 Thu>
 :PROPERTIES:
 :ID:       fac74dbb-8406-4435-83b9-cdddafb9d167
-:DRILL_LAST_INTERVAL: 12.418
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 8
+:DRILL_LAST_INTERVAL: 35.9874
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 9
 :DRILL_FAILURE_COUNT: 3
-:DRILL_AVERAGE_QUALITY: 3.375
-:DRILL_EASE: 2.8
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-19 Wed 16:%]
+:DRILL_AVERAGE_QUALITY: 3.556
+:DRILL_EASE: 2.9
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-09 Wed 17:%]
 :END:
 
 El lenguaje [influye] en nuestra percepción de la realidad [influir]
@@ -2222,17 +2238,17 @@ Las obras de Picasso [influyen] su estilo
 Le [influye] demasiado la opinión de los demás
 
 ** Verb :drill:
-SCHEDULED: <2025-04-07 Mon>
+SCHEDULED: <2025-06-28 Sat>
 :PROPERTIES:
 :ID:       8d140575-04d2-41ed-9d28-4f62dc9816e6
-:DRILL_LAST_INTERVAL: 27.8572
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 74.9637
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.333
-:DRILL_EASE: 2.6
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-10 Mon 11:%]
+:DRILL_AVERAGE_QUALITY: 4.5
+:DRILL_EASE: 2.7
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 
 [Marca] la respuesta que considere correcta
@@ -2258,17 +2274,17 @@ El lapicero estaba goteando y me [manchó] la camiseta de tinta [manchar]
 Tristemente, el comportamiento de unos pocos estudiantes [manchó] la reputación de todo el colegio
 
 ** Verb :drill:
-SCHEDULED: <2025-04-05 Sat>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       c848b7b7-8831-4e6f-a11f-578ac30badc4
-:DRILL_LAST_INTERVAL: 11.4795
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 11
-:DRILL_FAILURE_COUNT: 5
+:DRILL_LAST_INTERVAL: 4.28
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 18
+:DRILL_FAILURE_COUNT: 8
 :DRILL_AVERAGE_QUALITY: 3.0
-:DRILL_EASE: 2.7
+:DRILL_EASE: 2.66
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 
 Les [ligaron] los pies con cinta para que no se escapan [ligar]
@@ -2276,33 +2292,33 @@ Le [ligué] a ana el tobillo con un pañuelo
 El equipaje [estaba atado] encima del coche [esta atada]
 
 ** Verb :drill:
-SCHEDULED: <2025-04-03 Thu>
+SCHEDULED: <2025-05-29 Thu>
 :PROPERTIES:
 :ID:       85688e22-5a79-429d-8073-266c024ec9e9
-:DRILL_LAST_INTERVAL: 26.9152
+:DRILL_LAST_INTERVAL: 30.7536
 :DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 4
-:DRILL_FAILURE_COUNT: 1
+:DRILL_TOTAL_REPEATS: 8
+:DRILL_FAILURE_COUNT: 2
 :DRILL_AVERAGE_QUALITY: 3.5
-:DRILL_EASE: 2.6
+:DRILL_EASE: 2.7
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-07 Fri 07:%]
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 
 Les [percibimos] según nuestras creencias [percibir]
 
 ** Verb :drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-06-04 Wed>
 :PROPERTIES:
 :ID:       1a748493-37c8-4c18-9729-442eb63e05ec
-:DRILL_LAST_INTERVAL: 4.28
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 11
-:DRILL_FAILURE_COUNT: 5
-:DRILL_AVERAGE_QUALITY: 2.818
-:DRILL_EASE: 2.66
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_INTERVAL: 37.4632
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 15
+:DRILL_FAILURE_COUNT: 6
+:DRILL_AVERAGE_QUALITY: 3.133
+:DRILL_EASE: 2.96
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 No nos podemos [limitar] a un grupo ni excluir a ninguno.
 ¿Está la Unión Europea dispuesta a gastar dinero a escala mundial para [limitar] la propagación de la epizootia?
@@ -2324,80 +2340,80 @@ El premio [fue otorgado] al ganador ayer.
 Las velas -[otorgan] una atmósfera íntima a la sala de estar.
 
 ** Verb :drill:
-SCHEDULED: <2025-04-19 Sat>
+SCHEDULED: <2025-05-11 Sun>
 :PROPERTIES:
 :ID:       de21b084-bd22-41ba-9425-5d8213ba6b12
-:DRILL_LAST_INTERVAL: 25.88
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 9
-:DRILL_FAILURE_COUNT: 4
-:DRILL_AVERAGE_QUALITY: 3.222
-:DRILL_EASE: 2.6
+:DRILL_LAST_INTERVAL: 12.8526
+:DRILL_REPEATS_SINCE_FAIL: 3
+:DRILL_TOTAL_REPEATS: 14
+:DRILL_FAILURE_COUNT: 6
+:DRILL_AVERAGE_QUALITY: 3.429
+:DRILL_EASE: 2.9
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 El reciclaje ayuda a [mitigar] los impactos medioambientales.
 Mi madre se tomó una aspirina para [mitigar] su dolor de cabeza.
 
 ** Verb :drill:
-SCHEDULED: <2025-04-09 Wed>
+SCHEDULED: <2025-05-18 Sun>
 :PROPERTIES:
 :ID:       ac3500f3-fc77-4012-a756-000420ecafa9
-:DRILL_LAST_INTERVAL: 22.3277
+:DRILL_LAST_INTERVAL: 20.1483
 :DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 5
-:DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 3.4
-:DRILL_EASE: 2.32
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_TOTAL_REPEATS: 10
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 3.3
+:DRILL_EASE: 2.38
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 La meditación es una buena manera de [disminuir] el estrés.
 La intensidad de los dolores de cabeza [disminuye] con el tiempo.
 
 ** Verb :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-06-16 Mon>
 :PROPERTIES:
 :ID:       d93a258b-50bb-4c71-9920-bd3b9a23f307
-:DRILL_LAST_INTERVAL: 8.9861
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 10
+:DRILL_LAST_INTERVAL: 48.0115
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 12
 :DRILL_FAILURE_COUNT: 6
-:DRILL_AVERAGE_QUALITY: 2.2
-:DRILL_EASE: 2.22
+:DRILL_AVERAGE_QUALITY: 2.5
+:DRILL_EASE: 2.18
 :DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-19 Wed 16:%]
+:DRILL_LAST_REVIEWED: [Y-04-29 Tue 09:%]
 :END:
 [Los] policías [pillaron] al criminal.
 
 ** Verb :drill:
-SCHEDULED: <2025-04-11 Fri>
+SCHEDULED: <2025-06-16 Mon>
 :PROPERTIES:
 :ID:       83f96f81-d2e0-47a5-ab41-c5960416a292
-:DRILL_LAST_INTERVAL: 24.3701
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 7
+:DRILL_LAST_INTERVAL: 60.8278
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 8
 :DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 3.286
+:DRILL_AVERAGE_QUALITY: 3.375
 :DRILL_EASE: 2.46
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_REVIEWED: [Y-04-16 Wed 15:%]
 :END:
 El zorro era tan veloz que no pudimos [atraparlo]
 El escalador [atrapó] la cuerda para no caer.
 
 ** Verb :drill:
-SCHEDULED: <2025-04-03 Thu>
+SCHEDULED: <2025-06-02 Mon>
 :PROPERTIES:
 :ID:       2a860f37-d990-4fd5-9c00-06369440357d
-:DRILL_LAST_INTERVAL: 27.8572
+:DRILL_LAST_INTERVAL: 34.7704
 :DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
-:DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.667
-:DRILL_EASE: 2.7
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-06 Thu 09:%]
+:DRILL_TOTAL_REPEATS: 7
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.8
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 La jefa [se plantea] cambiar la estrategia.
 Me tomé algo de tiempo para [plantearme] mis opciones.
@@ -2422,49 +2438,49 @@ Los guantes de goma [proporcionan] un buen agarre.
 El balcón [proporciona] unas vistas preciosas.
 
 ** Verb                                                              :drill:
-SCHEDULED: <2025-04-07 Mon>
+SCHEDULED: <2025-07-13 Sun>
 :PROPERTIES:
 :ID:       786827b1-9f50-4b5d-b575-25b98a8c54db
-:DRILL_LAST_INTERVAL: 30.8887
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 89.5155
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
 :DRILL_AVERAGE_QUALITY: 5.0
-:DRILL_EASE: 2.8
+:DRILL_EASE: 2.9
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-07 Fri 07:%]
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 Necesito [pulir] mi comunicación oral antes de la entrevista
 Hay que [pulir] la lámpara; el dorado no tiene brillo
 
 ** Verb :drill:
-SCHEDULED: <2025-04-06 Sun>
+SCHEDULED: <2025-06-23 Mon>
 :PROPERTIES:
 :ID:       7aa4087b-f9d4-4c86-b429-bb23e5fa3d00
-:DRILL_LAST_INTERVAL: 26.9152
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 7
+:DRILL_LAST_INTERVAL: 69.9795
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 8
 :DRILL_FAILURE_COUNT: 4
-:DRILL_AVERAGE_QUALITY: 2.714
+:DRILL_AVERAGE_QUALITY: 2.875
 :DRILL_EASE: 2.6
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-10 Mon 11:%]
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 La académica [puntualizó] los detalles de su tesis.
 Sin embargo, se debe [puntualizar] que la iglesia administraba documentos con información de individuos.
 
 ** Verb :drill:
-SCHEDULED: <2025-04-06 Sun>
+SCHEDULED: <2025-06-12 Thu>
 :PROPERTIES:
 :ID:       d8a32be7-fe4c-4eea-b3ea-36d899c0fede
-:DRILL_LAST_INTERVAL: 29.8462
+:DRILL_LAST_INTERVAL: 37.2468
 :DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
-:DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.667
-:DRILL_EASE: 2.7
+:DRILL_TOTAL_REPEATS: 10
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 3.5
+:DRILL_EASE: 2.9
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-07 Fri 07:%]
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 Pudo [reconocer] al ladrón en cuanto lo vio
 ¿Me [reconoces] esta foto?
@@ -2472,33 +2488,33 @@ Mi padre [reconoció] que se había equivocado
 El médico [reconoció] al paciente
 
 ** Verb :drill:
-SCHEDULED: <2025-03-30 Sun>
+SCHEDULED: <2025-05-15 Thu>
 :PROPERTIES:
 :ID:       b0a88cf5-92b8-4223-96d0-937cc8beab76
-:DRILL_LAST_INTERVAL: 12.418
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 5
+:DRILL_LAST_INTERVAL: 35.9874
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 6
 :DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 4.0
-:DRILL_EASE: 2.8
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_AVERAGE_QUALITY: 4.167
+:DRILL_EASE: 2.9
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-09 Wed 17:%]
 :END:
 Hay que poner una viga cada metro para [reforzar] la pared
 Necesitamos convencer a un consejero más para [reforzar] nuestro plan estratégico
 
 ** Verb :drill:
-SCHEDULED: <2025-03-29 Sat>
+SCHEDULED: <2025-05-26 Mon>
 :PROPERTIES:
 :ID:       4ebac2bd-dad7-41fc-a6ca-bae7fa8e0268
-:DRILL_LAST_INTERVAL: 9.6346
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 15
-:DRILL_FAILURE_COUNT: 10
-:DRILL_AVERAGE_QUALITY: 2.266
-:DRILL_EASE: 2.46
+:DRILL_LAST_INTERVAL: 27.5933
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 21
+:DRILL_FAILURE_COUNT: 12
+:DRILL_AVERAGE_QUALITY: 2.571
+:DRILL_EASE: 2.66
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-19 Wed 16:%]
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 [[./img/remontar.jpeg]]
 Vamos a [remontar] esta crisis trabajando codo con codo
@@ -2507,17 +2523,17 @@ Un flamenco de pronto se levantó y se [remontó] en el cielo
 Sus problemas se [remontan] a la infancia
 
 ** Verb :drill:
-SCHEDULED: <2025-04-18 Fri>
+SCHEDULED: <2025-07-13 Sun>
 :PROPERTIES:
 :ID:       0f225535-759e-4516-89e2-decc0d245c53
-:DRILL_LAST_INTERVAL: 30.8887
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 86.4884
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_AVERAGE_QUALITY: 4.75
 :DRILL_EASE: 2.8
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-18 Fri 13:%]
 :END:
 Me fui a Panamá a [rodar] esa peli
 Cuando el director pide "¡acción!", las cameras empiezan a [rodar]
@@ -2525,66 +2541,66 @@ El autobús fue ganado velocidad a medida que [rodaban] las ruedas
 Los copos de nieve flotaban lentamente, [rodando] Eal caer
 
 ** Verb :drill:
-SCHEDULED: <2025-04-04 Fri>
+SCHEDULED: <2025-05-28 Wed>
 :PROPERTIES:
 :ID:       317868ff-bd0b-4fe9-95f0-5403ed7a13af
-:DRILL_LAST_INTERVAL: 10.6807
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 8
-:DRILL_FAILURE_COUNT: 3
-:DRILL_AVERAGE_QUALITY: 3.25
-:DRILL_EASE: 2.56
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_INTERVAL: 28.5602
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 12
+:DRILL_FAILURE_COUNT: 4
+:DRILL_AVERAGE_QUALITY: 3.334
+:DRILL_EASE: 2.66
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-29 Tue 09:%]
 :END:
 Estaban [rodeados] por enemigo y tuvieron que rendirse [rodear]
 Nos vimos [rodeados] por la multitud
 
 ** Verb :drill:
-SCHEDULED: <2025-04-07 Mon>
+SCHEDULED: <2025-05-29 Thu>
 :PROPERTIES:
 :ID:       dab8795a-33e6-4aec-a388-5d23c8d1cd32
-:DRILL_LAST_INTERVAL: 26.9152
+:DRILL_LAST_INTERVAL: 29.7131
 :DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
-:DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.333
-:DRILL_EASE: 2.6
+:DRILL_TOTAL_REPEATS: 8
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 3.75
+:DRILL_EASE: 2.7
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-11 Tue 09:%]
+:DRILL_LAST_REVIEWED: [Y-04-29 Tue 09:%]
 :END:
 Caminamos juntos hasta la biblioteca, allí [nos separamos]. Miguel se fue al supermercado y yo me fui al parque [separarse]
 En mi ciudad se acaba de lanzar un proyecto para [separar] la basura orgánica e inorgánica
 
 ** Verb :drill:
-SCHEDULED: <2025-04-04 Fri>
+SCHEDULED: <2025-05-13 Tue>
 :PROPERTIES:
 :ID:       d6d75dd4-3611-4f51-929b-664040274d51
-:DRILL_LAST_INTERVAL: 10.689
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 6
+:DRILL_LAST_INTERVAL: 28.5824
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 7
 :DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 3.167
-:DRILL_EASE: 2.56
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_AVERAGE_QUALITY: 3.429
+:DRILL_EASE: 2.66
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 Perfecto para [soltarse] el pelo en una noche
 Permiten al disparador [soltarse] automáticamente
 [Suéltate] el pelo
 
 ** Verb :drill:
-SCHEDULED: <2025-04-08 Tue>
+SCHEDULED: <2025-05-18 Sun>
 :PROPERTIES:
 :ID:       941ff741-0fec-4f7e-9479-d306062e1c02
-:DRILL_LAST_INTERVAL: 21.1996
+:DRILL_LAST_INTERVAL: 20.4775
 :DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 4
-:DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 2.75
-:DRILL_EASE: 2.22
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_TOTAL_REPEATS: 8
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 3.0
+:DRILL_EASE: 2.08
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 [[./img/talar.jpeg]]
 Ayer [talé] un árbol de mi jardín. [talar]
@@ -2592,33 +2608,33 @@ El hombre [cortó] la rama del árbol y la puso en la chimenea [cortar]
 [pordar]
 
 ** Verb :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-30 Fri>
 :PROPERTIES:
 :ID:       507dbb24-0695-4614-ae21-56b73747eec8
-:DRILL_LAST_INTERVAL: 4.285
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 16
-:DRILL_FAILURE_COUNT: 11
-:DRILL_AVERAGE_QUALITY: 2.062
-:DRILL_EASE: 2.7
+:DRILL_LAST_INTERVAL: 30.5944
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 23
+:DRILL_FAILURE_COUNT: 14
+:DRILL_AVERAGE_QUALITY: 2.347
+:DRILL_EASE: 2.76
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-29 Tue 09:%]
 :END:
 La niña se [tapó] la boca con la mano cuando se rio. [tapar]
 Mi hermana [tapó] la botella de vino con el corcho.
 
-** Verb :drill:
-SCHEDULED: <2025-04-12 Sat>
+** Verb :drill: 
+SCHEDULED: <2025-06-15 Sun>
 :PROPERTIES:
 :ID:       4b3dcefb-756a-457d-8594-e8e946f83f06
-:DRILL_LAST_INTERVAL: 25.0
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 4
+:DRILL_LAST_INTERVAL: 60.3
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 5
 :DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 3.5
-:DRILL_EASE: 2.5
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_AVERAGE_QUALITY: 3.4
+:DRILL_EASE: 2.36
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-16 Wed 15:%]
 :END:
 
 El perro [escondió] un hueso bajo un montón de hojas. [esconder] 
@@ -2626,212 +2642,211 @@ Mi familia [escondió] a muchos refugiados durante la guerra.
 
 
 ** Verb :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-29 Thu>
 :PROPERTIES:
 :ID:       e1960910-1570-4884-a2fd-382269bbddbc
-:DRILL_LAST_INTERVAL: 3.99
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 16
-:DRILL_FAILURE_COUNT: 10
-:DRILL_AVERAGE_QUALITY: 2.25
-:DRILL_EASE: 2.42
+:DRILL_LAST_INTERVAL: 30.4792
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 23
+:DRILL_FAILURE_COUNT: 13
+:DRILL_AVERAGE_QUALITY: 2.522
+:DRILL_EASE: 2.72
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-04-29 Tue 09:%]
 :END:
 El banquero debería [tener en cuenta] todos los riesgos antes de invertir.
 Siempre [tengo en cuenta] el clima cuando preparo un viaje.
 
 ** Verb :drill:
-SCHEDULED: <2025-04-15 Tue>
+SCHEDULED: <2025-06-27 Fri>
 :PROPERTIES:
 :ID:       14faff5a-ee72-4465-946a-81be588c677d
-:DRILL_LAST_INTERVAL: 27.8572
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 5
+:DRILL_LAST_INTERVAL: 72.4287
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 6
 :DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 3.2
+:DRILL_AVERAGE_QUALITY: 3.333
 :DRILL_EASE: 2.6
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_REVIEWED: [Y-04-16 Wed 15:%]
 :END:
 Durante la conversación nos [dimos cuenta] de que éramos de la misma ciudad.
 Me [di cuenta] de que no tenía las llaves cuando llegué a casa. 
 Me [di cuenta] de que me observaban mientras comía.
 
 ** Verb :drill:
-SCHEDULED: <2025-04-17 Thu>
+SCHEDULED: <2025-07-02 Wed>
 :PROPERTIES:
 :ID:       c684d07a-0b34-41a1-af7f-7dcf2f176cf4
-:DRILL_LAST_INTERVAL: 28.8036
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 4
+:DRILL_LAST_INTERVAL: 74.8029
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 5
 :DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 3.5
+:DRILL_AVERAGE_QUALITY: 3.6
 :DRILL_EASE: 2.56
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-19 Wed 16:%]
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-18 Fri 13:%]
 :END:
 No sé necesariamente se es que la gente no [me tomaba] en serio [tomarse]
 Necesito [tomarme] un respiro del trabajo
 No [te lo tomes] a pecho, pero no me gusta tu corte de pelo
 
 ** Verb :drill:
-SCHEDULED: <2025-04-18 Fri>
+SCHEDULED: <2025-07-13 Sun>
 :PROPERTIES:
 :ID:       0bbb10fc-1420-4a7c-86b2-ce2087489911
-:DRILL_LAST_INTERVAL: 30.8887
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 4
+:DRILL_LAST_INTERVAL: 86.4884
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 5
 :DRILL_FAILURE_COUNT: 1
 :DRILL_AVERAGE_QUALITY: 4.0
 :DRILL_EASE: 2.8
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-18 Fri 13:%]
 :END:
 Los hermanos decidieron [zanjar] sus diferencias
 
 ** Verb :drill:
-SCHEDULED: <2025-04-16 Wed>
+SCHEDULED: <2025-05-27 Tue>
 :PROPERTIES:
 :ID:       e0eb8526-7ac0-4894-bb4b-3e85424df063
-:DRILL_LAST_INTERVAL: 27.8572
+:DRILL_LAST_INTERVAL: 26.7735
 :DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 5
-:DRILL_FAILURE_COUNT: 1
-:DRILL_AVERAGE_QUALITY: 3.4
-:DRILL_EASE: 2.6
+:DRILL_TOTAL_REPEATS: 9
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 3.222
+:DRILL_EASE: 2.46
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-19 Wed 16:%]
+:DRILL_LAST_REVIEWED: [Y-04-30 Wed 12:%]
 :END:
 Simule estar en calma cuando me dijo que estaba embarazada, pero mi cara me [traicionó] [traiconar]
 Esto me parece el billete de lotería ganador o ¿Me [traicionan] los ojos?
 Si no me [traiciona] la memoria, aquí es el lugar donde enterré el tesoro
 
-** Verb :drill:
-SCHEDULED: <2025-03-29 Sat>
+** Verb                                                        :drill:leech:
 :PROPERTIES:
 :ID:       ba06c695-3c3f-495a-ac4c-8c69d58a5497
-:DRILL_LAST_INTERVAL: 4.14
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 21
-:DRILL_FAILURE_COUNT: 15
-:DRILL_AVERAGE_QUALITY: 1.857
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 22
+:DRILL_FAILURE_COUNT: 16
+:DRILL_AVERAGE_QUALITY: 1.818
 :DRILL_EASE: 2.6
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-04-08 Tue 13:%]
 :END:
 El agradecimiento que sentía no [mermó] con el paso de los años. [mermar]
 La controversia ha tenido el resultado directo de [mermar] la eficacia de ambos socios.
 
 ** Verb :drill:
-SCHEDULED: <2025-04-04 Fri>
+SCHEDULED: <2025-06-18 Wed>
 :PROPERTIES:
 :ID:       d3249c0f-84a3-4131-9f97-01362042c205
-:DRILL_LAST_INTERVAL: 24.3659
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 65.4955
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 4.333
-:DRILL_EASE: 2.56
+:DRILL_AVERAGE_QUALITY: 4.5
+:DRILL_EASE: 2.66
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-11 Tue 09:%]
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 Reforesta un bosque para [mitigar] el cambio climático
 
 ** Verb :drill:
-SCHEDULED: <2025-04-05 Sat>
+SCHEDULED: <2025-05-21 Wed>
 :PROPERTIES:
 :ID:       c97f9219-2838-4092-9672-e7031ee89758
-:DRILL_LAST_INTERVAL: 12.4159
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 12
+:DRILL_LAST_INTERVAL: 37.2353
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 13
 :DRILL_FAILURE_COUNT: 7
-:DRILL_AVERAGE_QUALITY: 2.916
+:DRILL_AVERAGE_QUALITY: 2.999
 :DRILL_EASE: 3.0
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 [[./img/refutar.jpeg]]
 
 Como [refutar] la teoría conspiratoria
 ** Verb :drill:
-SCHEDULED: <2025-04-18 Fri>
+SCHEDULED: <2025-06-12 Thu>
 :PROPERTIES:
 :ID:       18def1f3-532e-47e8-adf1-64b2efa8f3a1
-:DRILL_LAST_INTERVAL: 30.8887
+:DRILL_LAST_INTERVAL: 37.2353
 :DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
-:DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 5.0
-:DRILL_EASE: 2.8
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_TOTAL_REPEATS: 7
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 4.429
+:DRILL_EASE: 3.0
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 [Amasa] la mezcla, añadiendo un poco de agua sobre la marcha, hasta obtener una masa suave [amasar]
 
 ** Verb :drill:
-SCHEDULED: <2025-04-05 Sat>
+SCHEDULED: <2025-05-13 Tue>
 :PROPERTIES:
 :ID:       36cda9b6-fcca-478b-be6a-9a45a5ef85b0
-:DRILL_LAST_INTERVAL: 11.0529
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 8
+:DRILL_LAST_INTERVAL: 28.5165
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 9
 :DRILL_FAILURE_COUNT: 3
-:DRILL_AVERAGE_QUALITY: 3.125
-:DRILL_EASE: 2.66
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_AVERAGE_QUALITY: 3.111
+:DRILL_EASE: 2.52
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-04-14 Mon 18:%]
 :END:
 Tienes que [dejar ir] el pasado y vivir el presente
 Mi mamá no me [deja ir] al cine, estoy castigada
 
 
 ** Verb :drill:
-SCHEDULED: <2025-04-04 Fri>
+SCHEDULED: <2025-05-17 Sat>
 :PROPERTIES:
 :ID:       9c3e0533-1766-4e99-ab50-83a1a79037e1
-:DRILL_LAST_INTERVAL: 11.4795
+:DRILL_LAST_INTERVAL: 11.2
 :DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 8
-:DRILL_FAILURE_COUNT: 4
-:DRILL_AVERAGE_QUALITY: 2.875
-:DRILL_EASE: 2.7
+:DRILL_TOTAL_REPEATS: 15
+:DRILL_FAILURE_COUNT: 7
+:DRILL_AVERAGE_QUALITY: 2.999
+:DRILL_EASE: 2.8
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 
 La nueva legislación no [constreñirá] la libertad de expresión.
 Quite anillos cercanos y artículos que puedan [constreñir] debido a que el área afectada se puede hinchar.
 
 ** Verb :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-31 Sat>
 :PROPERTIES:
 :ID:       b0b6c704-6fcf-4fe0-9c78-437cdeccc21b
-:DRILL_LAST_INTERVAL: 4.14
-:DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 6
-:DRILL_FAILURE_COUNT: 2
-:DRILL_AVERAGE_QUALITY: 3.0
-:DRILL_EASE: 2.32
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_INTERVAL: 24.818
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 11
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 3.273
+:DRILL_EASE: 2.42
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 
 El Gobierno [revocó] la ley porque era injusta. [revocar]
 El testigo [revocó] su declaración porque era una mentira.
 
 ** Verb :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-30 Fri>
 :PROPERTIES:
 :ID:       b9e17ff2-2390-461e-a15b-758213cf863b
-:DRILL_LAST_INTERVAL: 10.3231
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 6
-:DRILL_FAILURE_COUNT: 3
-:DRILL_AVERAGE_QUALITY: 2.833
-:DRILL_EASE: 2.56
+:DRILL_LAST_INTERVAL: 30.5944
+:DRILL_REPEATS_SINCE_FAIL: 4
+:DRILL_TOTAL_REPEATS: 16
+:DRILL_FAILURE_COUNT: 9
+:DRILL_AVERAGE_QUALITY: 2.813
+:DRILL_EASE: 2.76
 :DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-18 Tue 11:%]
+:DRILL_LAST_REVIEWED: [Y-04-29 Tue 09:%]
 :END:
 [Erradicar] la pobreza es una empresa difícil pero posible. 
 La Unión Europea, con su ayuda al desarrollo, participa en esfuerzos mundiales para [erradicar] el analfabetismo. 
@@ -2841,17 +2856,17 @@ La Unión Europea, con su ayuda al desarrollo, participa en esfuerzos mundiales 
 * Frases
 
 ** Frase :drill:
-SCHEDULED: <2025-04-03 Thu>
+SCHEDULED: <2025-05-15 Thu>
 :PROPERTIES:
 :ID:       eafe33b1-acac-412c-aa56-9811c55cbd3b
 :DRILL_LAST_INTERVAL: 8.88
 :DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 10
-:DRILL_FAILURE_COUNT: 5
-:DRILL_AVERAGE_QUALITY: 2.3
+:DRILL_TOTAL_REPEATS: 14
+:DRILL_FAILURE_COUNT: 6
+:DRILL_AVERAGE_QUALITY: 2.5
 :DRILL_EASE: 2.22
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-25 Tue 08:%]
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 [[./img/irsedegarete.jpeg]]
 [Irse al garete] El domingo pasado íbamos a hacer una ruta por el campo, pero todo [se fue al garete] porque no paró de llover en todo el día
@@ -2859,68 +2874,68 @@ Mis planes de irme de vacaciones en junio [se fueron al garete] porque justo en 
 Si una relación sentimental no se cuida [se va al garete]
 
 ** Frase :drill:
-SCHEDULED: <2025-04-03 Thu>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       f445dd91-af8e-42cb-9e75-8b38aaaf34a5
-:DRILL_LAST_INTERVAL: 10.3191
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 7
-:DRILL_FAILURE_COUNT: 3
-:DRILL_AVERAGE_QUALITY: 2.857
+:DRILL_LAST_INTERVAL: 4.135
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 10
+:DRILL_FAILURE_COUNT: 4
+:DRILL_AVERAGE_QUALITY: 2.9
 :DRILL_EASE: 2.56
-:DRILL_LAST_QUALITY: 5
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 [ser un arma de doble filo]
 La inteligencia artificial puede [ser un arma de doble filo].  Si se usa bien nos puede ayudar muchísimo y hacernos ganar tiempo, pero si se usa mal pede traer muchísimos problemas
 La libertad de expresión es un derecho fundamental y considero que es completamente necesaria, pero hay personas que, difunden discursos de odio e incitan a la violencia, por lo que también puede [ser un arma de doble filo]
 
 ** Frase :drill:
-SCHEDULED: <2025-04-10 Thu>
+SCHEDULED: <2025-05-23 Fri>
 :PROPERTIES:
 :ID:       d3e03463-c30b-481c-afa3-dfb49e8f00c8
-:DRILL_LAST_INTERVAL: 21.9723
+:DRILL_LAST_INTERVAL: 24.9982
 :DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 7
-:DRILL_FAILURE_COUNT: 3
-:DRILL_AVERAGE_QUALITY: 2.571
-:DRILL_EASE: 2.36
-:DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-19 Wed 16:%]
+:DRILL_TOTAL_REPEATS: 11
+:DRILL_FAILURE_COUNT: 4
+:DRILL_AVERAGE_QUALITY: 2.909
+:DRILL_EASE: 2.46
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 [Poner (algo) patas arriba]
 La nueva directora de marketing [ha puesto] la empresa [patas arriba]. Ha despedido a tres compañeros, ha replanificado el sistema de ventas y ahora tenemos que enviarlo un informe semanal sobre el cumplimiento de objetivos.
 La noticia de su embarazo [puso] su vida [patas arriba], ya que los proyectos que tenía no eran compatibles con ser madre, así que decidió posponerlos y vivir plenamente su maternidad.
 
 ** Frase :drill:
-SCHEDULED: <2025-03-28 Fri>
+SCHEDULED: <2025-05-10 Sat>
 :PROPERTIES:
 :ID:       4ca32239-dfcb-4fc2-813e-8efac1a1e671
-:DRILL_LAST_INTERVAL: 4.0
+:DRILL_LAST_INTERVAL: 3.86
 :DRILL_REPEATS_SINCE_FAIL: 2
-:DRILL_TOTAL_REPEATS: 7
-:DRILL_FAILURE_COUNT: 3
-:DRILL_AVERAGE_QUALITY: 2.857
-:DRILL_EASE: 2.22
+:DRILL_TOTAL_REPEATS: 16
+:DRILL_FAILURE_COUNT: 7
+:DRILL_AVERAGE_QUALITY: 2.937
+:DRILL_EASE: 2.08
 :DRILL_LAST_QUALITY: 4
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_LAST_REVIEWED: [Y-05-06 Tue 12:%]
 :END:
 [De cabo a rabo]
 Me conozco mi ciudad [de cabo a rabo]: puedes preguntarme lo que quieras
 Recuerdo que, para sacarme el carné de conducir, me estudie el libro de la autoescuela de [cabo a rabo]. Me lo sabía todo, por eso fui muy tranquila al examen (y aprobé a la primera)
 
 ** Frase :drill:
-SCHEDULED: <2025-04-04 Fri>
+SCHEDULED: <2025-05-08 Thu>
 :PROPERTIES:
 :ID:       bcc4a624-83c3-4a64-837e-159dca470573
-:DRILL_LAST_INTERVAL: 16.4926
+:DRILL_LAST_INTERVAL: 10.2646
 :DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 8
-:DRILL_FAILURE_COUNT: 4
-:DRILL_AVERAGE_QUALITY: 2.125
-:DRILL_EASE: 1.94
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-19 Wed 16:%]
+:DRILL_TOTAL_REPEATS: 15
+:DRILL_FAILURE_COUNT: 7
+:DRILL_AVERAGE_QUALITY: 2.333
+:DRILL_EASE: 1.66
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 [[./img/maldemuchos.jpeg]]
 [Mal de muchos, consuelo de tontos]
@@ -2928,32 +2943,32 @@ Aunque me digas que el 80% de las personas que se han presentado el examen lo ha
 Que haya gente en peores condiciones que yo no significa que yo deba conformarme. Para mí eso es [mal de muchos, consuelo de tontos]. Yo quiero superarme.
 
 ** Frases :drill:
-SCHEDULED: <2025-04-02 Wed>
+SCHEDULED: <2025-05-28 Wed>
 :PROPERTIES:
 :ID:       3524799d-9acb-4fe9-b40a-b0d10a3d70a6
-:DRILL_LAST_INTERVAL: 21.9685
-:DRILL_REPEATS_SINCE_FAIL: 4
-:DRILL_TOTAL_REPEATS: 3
+:DRILL_LAST_INTERVAL: 48.7701
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 4
 :DRILL_FAILURE_COUNT: 0
-:DRILL_AVERAGE_QUALITY: 3.333
+:DRILL_AVERAGE_QUALITY: 3.5
 :DRILL_EASE: 2.22
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-11 Tue 09:%]
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-04-09 Wed 17:%]
 :END:
 Soy un [pasajero]. El vuelo [despegó] [despegar] a la hora y [aterrizó] [aterrizar] con 10 minutos de [retraso]. La [azafata] nos sirvió café. No encontraba mi [maleta] con el resto del [equipaje] en la [sala de recogida], entonces fui a la [reclamación].
 
 ** Frases :drill:
-SCHEDULED: <2025-04-01 Tue>
+SCHEDULED: <2025-05-31 Sat>
 :PROPERTIES:
 :ID:       55cdf233-c4b0-4b8a-832e-da4da751e446
-:DRILL_LAST_INTERVAL: 7.979
-:DRILL_REPEATS_SINCE_FAIL: 3
-:DRILL_TOTAL_REPEATS: 8
+:DRILL_LAST_INTERVAL: 33.1171
+:DRILL_REPEATS_SINCE_FAIL: 5
+:DRILL_TOTAL_REPEATS: 10
 :DRILL_FAILURE_COUNT: 4
-:DRILL_AVERAGE_QUALITY: 2.125
-:DRILL_EASE: 2.08
-:DRILL_LAST_QUALITY: 3
-:DRILL_LAST_REVIEWED: [Y-03-24 Mon 13:%]
+:DRILL_AVERAGE_QUALITY: 2.5
+:DRILL_EASE: 2.04
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-04-28 Mon 12:%]
 :END:
 Puede ser [un bicho raro]!
 Controle su propia reacción cuando vea un [bicho] o algo que la asuste cuando esté con niños.
@@ -2992,3 +3007,121 @@ SELECT gid, area_weighted_avg_temp FROM weighted_avg;
 --- Difference between two rasters
 SELECT ST_MapAlgebra(t1.rast,t2.rast, '([rast1]-[rast2])') AS rast INTO diffrence FROM table1 t1, table2 t2;
 #+end_src
+* DELE
+** Family
+Abuelo/a, Gemelo/a, Hijo/a, Madre, Madrina, Mellizo/a, Nieto/a, Padre, Padrino, Primo/a, Sobrino/a, Tio/a
+Cuñado/a, Nuero/a, Suegro/a, Yerno
+Amigo/a, Colega (el,la), Compañero/a, Conocido/a, Desconocido/a, Pandilla, Pareja, Pariente, Vecino/a (+de estudios, de piso, de trabaja)
+
+Alto/a, Bajo/a, Delgado/a, Fuerte, Gordo/a, Calvo, Canoso, Castaño, Corto, Largo, Liso, Moreno, Pelirrojo, Rizado, Rubio, Ojos (Claros -azules, verdes, grises), Oscuros (negros, marrones)
+
+Defectos, Virtudes
+Abierto/a \ Cerrado/a
+Aburrido/a \ Divertido/a, Atento/a, Detallista, Egoista \ Generoso/a, Nervioso/a \ Tranquilo/a, Optimista \ Pesimista, Puntual \ Impuntual, Responsable \ Irresponsable, Simpático \ Antipático, Timido/a \ Sociable, Trabajador/a \ Vago/a
+El egoísmo, El generosidad, El optimismo, El pesimismo, La simpatía, La timidez
+
+Caer bien/mal a, Casarse con, Diviorciarse de, Enamorarse de, Gustar, Llevarse bien/mal con, Parecerse a, Pelearse con, Quedar con, Romper con, Separarse de.
+
+Ser almas gemelas, To be soul mates,
+Ser como dos gotas de agua, To be like two peas in a pod,
+Ser uña y carne, To be thick as thieves,
+Llevarse como el perro y el gato To get along like cats and dogs.
+
+1i
+2 a
+3f
+4c 1
+5h
+6e 1
+
+7c
+8c 1
+9b 1
+10a
+11a 1
+12a 1
+
+13a 1
+14b 1
+15c 1
+16a 1
+17c 1
+18b 1
+
+19d 1
+20c 
+21a 1
+22b
+23g 
+24e 1
+
+25a 1
+26c 
+27c 1
+28c 
+29a 1
+30b
+
+
+1b
+2a
+3c
+4b
+5a
+6c
+
+7c
+8a
+9c
+10c
+11c
+12a
+
+13b
+14b
+15b
+16a
+17a
+18b
+
+
+19 a
+20b
+21f
+22j
+23e
+24i
+
+25 a
+26 b
+27 a
+28c
+29 b
+30b
+
+
+
+0 j
+1f
+2a
+3c
+4g
+5e
+6b
+
+7b
+8a
+9c
+10b
+11c
+12a
+
+13a
+14c
+15a
+16b
+17c
+18b
+
+
+

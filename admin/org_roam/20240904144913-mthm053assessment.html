@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-04 Wed 15:32 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MTHM053Assessment</title>
+<meta name="author" content="Paul Hewson" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">MTHM053Assessment</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org2bedccf">1. Assessment Rubric</a>
+<ul>
+<li><a href="#org8d49b68">1.1. Journal. 20% of module mark.</a></li>
+<li><a href="#orgfc22ec5">1.2. Technical Report. 60% of module mark.</a></li>
+<li><a href="#org37c9f1b">1.3. Journal. 15% of total module mark.</a></li>
+<li><a href="#org96938fb">1.4. Employer’s Report. 10% of module mark.</a></li>
+<li><a href="#org47be11d">1.5. Technical Report. 60% of module mark.</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org2bedccf" class="outline-2">
+<h2 id="org2bedccf"><span class="section-number-2">1.</span> Assessment Rubric</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This document applies to placements during the 2023/24 academic year
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Summative Assessment</th>
+<th scope="col" class="org-right">Weight</th>
+<th scope="col" class="org-right">Due date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Journal</td>
+<td class="org-right">20%</td>
+<td class="org-right">6.9.2024</td>
+</tr>
+
+<tr>
+<td class="org-left">Technical Report</td>
+<td class="org-right">60%</td>
+<td class="org-right">6.9.2024</td>
+</tr>
+
+<tr>
+<td class="org-left">Presentation</td>
+<td class="org-right">20%</td>
+<td class="org-right">20.9.2024</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+The module descriptor lists writing a ‘work plan,’ a journal will be more useful, and for some
+placements a work plan may not be practical. The due date for the journal and technical
+report is 6 September 2024. This gives you the maximum time to prepare your submissions
+while meeting the ADSS schedule and University requirements to progress. The
+presentation is due 20.9.2024, but you will be presenting individually online (Teams to the
+module leader) during after it is due, in late September, at a time arranged with the module
+leader. Uploading to BART provides a way for the module leader to provide feedback.
+Note: The ELE-2 page has links to recorded lectures on: how to do a presentation, how to
+make figures, how to write a report, how to format a report, how to cite references, etc.
+Live lectures are not possible since you will be on placements. It is important to watch these
+videos. When I read your reports, I will be able to tell if you have not learned from the
+videos!
+</p>
+</div>
+
+<div id="outline-container-org8d49b68" class="outline-3">
+<h3 id="org8d49b68"><span class="section-number-3">1.1.</span> Journal. 20% of module mark.</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+The journal reflects your thoughts as you progress through your placement. It should
+contain what is important to you. Typically, this includes reflection on problems, work
+issues, being treated well or unfairly, and how you plan to resolve issues. The ELE-2 page
+lists 1000 words for the Work Plan, but this limit does not apply.
+There is no limit on the number of words, but more words will not automatically earn higher
+marks. 3000 words is plenty. You may choose to submit scans of your handwritten journal,
+as it was originally written—which could be a lot of words—this is OK. Or you may choose to
+create a document. The marking criteria are flexible. Markers are looking for evidence that
+you kept a journal as your placement progressed, and that it was useful to you. The journal
+is not a log of number of hours worked each day, or just facts. It is not a summary of what
+happened. It is a record of your thoughts and concerns, and what was son your mind.
+Journal turn-in time and date - Student Services Office (E-BART) by 12:00 hours on Friday
+6th September 2024
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc22ec5" class="outline-3">
+<h3 id="orgfc22ec5"><span class="section-number-3">1.2.</span> Technical Report. 60% of module mark.</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+This report should not exceed 4000 words of text. You are required to write a report
+describing a specific project(s) or substantial piece of work that you undertook during your
+work placement. The 4000 words does not include references, figures, captions, etc. The
+report should include some references, using the academic style of your choice. These could
+be technical references, or resources you used to handle issues in your placement (e.g., a
+book on how to deal with office politics, or an article about discrimination in the workplace).
+The report must include the following sections, with the following titles – so do not do
+something different! Subsections are OK. You may include a brief summary (not marked) of
+the report, and include news such as being offered a job at your placement.
+</p>
+
+<ol class="org-ol">
+<li>Introduction (20 marks)
+<ul class="org-ul">
+<li>The overall aim of the placement, including a description of the company’s structure and operations and an explanation of how the placement opportunity and work undertaken develops and extends your particular interests, skills and supports your career intentions.</li>
+<li>Specification of the particular task(s) you were charged with on the placement, including a clear description of a ‘problem(s)’ or challenge(s) you tackled.</li>
+</ul></li>
+<li>Technical Challenges (30 marks)
+<ul class="org-ul">
+<li>A clear outline of the strategy you employed to address the problem or challenge revealing how you have applied problem-solving skills and knowledge from your discipline area (link to the specific technical contents from specific modules you would have taken including module code). These are technical challenges and you must show how you applied discipline knowledge and expertise to solve them.</li>
+<li>An evaluation of your strategy which should determine and reveal your effectiveness in resolving the problem or challenge and makes recommendations for future enhancements. You should critically assess the professional technical skills you gained/developed during your internship.</li>
+</ul></li>
+<li>Interpersonal skills and workplace challenges (30 marks)
+<ul class="org-ul">
+<li>This section will enable you to identify and reflect on interpersonal workplace challenges and particular events which you consider to be noteworthy whilst undertaking your placement. For example, a difficult boss, unrealistic expectations, co-workers plotting against you, sexism/racism/cultural challenges.</li>
+<li>These are not technical problems, but rather “soft” challenges that arise from office/workplace interaction, conflict, work deadlines, etc.</li>
+<li>The idea behind selecting and reflecting on these particular events is that you should be able to consider them in the light of the discipline-related and personal skills which you will have brought to the placement and also how they have helped develop these and new skills in the workplace setting. Your journal should help you to identify the critical incidents you want to write about. Reflection should be a critical process and you should be able to articulate your thoughts, ideas and perspectives to convey the process of learning which occurred during the placement. Write about what you were thinking at the time.</li>
+</ul></li>
+<li>How your written report is presented (20 Marks)
+<ul class="org-ul">
+<li>An appropriate professional look, layout, style, and readability – failure to keep within the maximum word count (4000 words will be penalised by 5 marks.</li>
+<li>Make sure you pay attention to the typography and data graphics videos.</li>
+</ul></li>
+</ol>
+
+<p>
+Report hand-in time and date - Student Services Office (E-BART) by 12:00 hours on Friday 6th September 2024
+</p>
+
+<p>
+Individual presentation to the module leader (Teams). 20% of module mark.
+</p>
+
+<p>
+This will take place during the first half of October, at a time that is convenient for you. Plan
+on about 10 minutes to present, and the 5-10 minutes to answer questions and have a
+discussion.
+</p>
+
+<p>
+This is a BART submission 20.9.2024.
+</p>
+
+<p>
+Content: there is a lot of flexibility, but you should discuss your placement and challenges
+you had, how you overcame them, including any experiences at Exeter that helped you. The
+audience should find your story interesting and engaging.
+</p>
+
+<p>
+Marking: The markers will be judging you in the following 10 categories, 10 points each, for
+a total of 100 points:
+</p>
+
+<ol class="org-ol">
+<li>Quality of slides; Colour use.</li>
+<li>Readability of the slides. Text too small?</li>
+<li>Illustrations in the slides. Be sure that all labels are readable.</li>
+<li>Your voice. Can everyone hear you? Are you speaking in a monotone?</li>
+<li>Are you speaking naturally, and not just reading your talk from cards?</li>
+<li>Timing. There will be a target time limit of 10:00 minutes for the presentation. Significantly shorter and longer presentations will lose marks.</li>
+<li>Include the background of your placement. Where did you live? For how long? Was it remote?</li>
+<li>Pace. Not too slow and not too fast.</li>
+<li>Is your placement story interesting and memorable??</li>
+<li>How did you handle questions from the module leader?  Non-native English speakers will not be marked down for language issues. You will not be marked down for being nervous. The order of the speakers will be determined before presentation day.</li>
+</ol>
+
+<p>
+If anything in this document is unclear, email m.baldwin@exeter.ac.uk
+</p>
+
+
+
+<p>
+MTH3100 was a new module in 2021/22. As module leader, I learned a lot about what works well and what does not. Early due dates do not work well. Student placements can run June–June, September–September, or even June–September. Accordingly, most assignments are due 13 September 2024. This gives you the maximum time to work on your submissions, and also allows some time for the Department to progress you to the next year by mid-October, which is required. This date allows for students to request extensions (up to two weeks) to the due date. The date for poster submission is 20 September 2024, and the poster session will be timetabled for the first half of October. Note: The ELE page will have links to recorded lectures on the following topics: how to do a presentation, how to make figures, how to write a report, how to format a report, how to cite references, etc. Live lectures are not possible since you will be on placements.
+</p>
+
+<p>
+Make sure that you learn from the videos. The markers will know if, for example, you did not learn about typography.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org37c9f1b" class="outline-3">
+<h3 id="org37c9f1b"><span class="section-number-3">1.3.</span> Journal. 15% of total module mark.</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+A journal reflects your thoughts as you progress through your placement. It should contain what is important to you. Typically, this includes reflection on problems, work issues, being treated well or unfairly, and how you plan to resolve issues. There is no limit on the number of words, but more words will not automatically earn higher marks. 2000-3000 words is
+plenty. You may choose to submit scans of your handwritten journal, as it was originally written. Or you may choose to create a document. The marking criteria are flexible. Markers are looking for evidence that you kept a journal as your placement progressed, and that it was useful to you. The journal is not a log of number of hours worked each day, or just facts. It is not a summary of what happened. It is a record of your thoughts.
+</p>
+
+<p>
+Hand in time and date for journal - ELE by 12.00 hours on Friday 13 September 2024
+</p>
+</div>
+</div>
+
+<div id="outline-container-org96938fb" class="outline-3">
+<h3 id="org96938fb"><span class="section-number-3">1.4.</span> Employer’s Report. 10% of module mark.</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+This is a form to be filled out by your employer about your placement. It is worth 10% of your module mark (0/10 if it is not submitted). However, note that submitting the form earns you 10/10. What your employer writes has no effect on your overall mark. It is available as a PDF and a Word document on the ELE page.
+</p>
+
+<p>
+Hand in time and date for employer’s report– ELE by 12.00 hours on Friday 13 September 2024
+</p>
+</div>
+</div>
+
+<div id="outline-container-org47be11d" class="outline-3">
+<h3 id="org47be11d"><span class="section-number-3">1.5.</span> Technical Report. 60% of module mark.</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+This report should not exceed 4000 words of text. You are required to write a report describing a specific project(s) or substantial piece of work that you undertook during your work placement. The 4000 words does not include references, figures, captions, etc. The report should include some references, using the academic style of your choice. These could be technical references, or resources you used to handle issues in your placement (e.g., a book on how to deal with office politics, or an article about discrimination in the workplace). The report must include the following sections, with the following titles – so do not do something different! Subsections are OK. You may include a brief summary (not marked) of the report, and include news such as being offered a job at your placement.
+</p>
+
+<ol class="org-ol">
+<li>Introduction (20 marks)
+i. The overall aim of the placement, including a description of the company’s structure and operations and an explanation of how the placement opportunity and work undertaken develops and extends your particular interests, skills and supports your</li>
+</ol>
+<p>
+career intentions.
+  ii Specification of the particular task(s) you were charged with on the placement, including a clear description of a ‘problem(s)’ or challenge(s) you tackled.
+2.- Technical Challenges (30 marks)
+ i  A clear outline of the strategy you employed to address the problem or challenge revealing how you have applied problem-solving skills and knowledge from your discipline area (link to the specific technical contents from specific modules you
+would have taken including module code). These are technical challenges and you must show how you applied discipline knowledge and expertise to solve them. • An evaluation of your strategy which should determine and reveal your effectiveness
+in resolving the problem or challenge and makes recommendations for future enhancements. You should critically assess the professional technical skills you gained/developed during your internship.
+</p>
+<ol class="org-ol">
+<li>Interpersonal skills and workplace challenges (30 marks)
+i This section will enable you to identify and reflect on interpersonal workplace challenges and particular events which you consider to be noteworthy whilst undertaking your placement. For example, a difficult boss, unrealistic expectations,</li>
+</ol>
+<p>
+co-workers plotting against you, sexism/racism/cultural challeges. • These are not technical problems, but rather “soft” challenges that arise from office/workplace interaction, conflict, work deadlines, etc.
+  ii  The idea behind selecting and reflecting on these particular events is that you should be able to consider them in the light of the discipline-related and personal skills which you will have brought to the placement and also how they have helped develop these and new skills in the workplace setting. Your journal should help you to identify the critical incidents you want to write about. 
+  iii  Reflection should be a critical process and you should be able to articulate your thoughts, ideas and perspectives to convey the process of learning which occurred during the placement. Write about what you were thinking at the time.
+</p>
+
+<ol class="org-ol">
+<li>Presentation (20 Marks)
+i  An appropriate professional presentation, layout, style, and readability – failure to keep within the maximum word count (4000 words will be penalised by 5 marks.
+ii Make sure you pay attention to the typography and data graphics videos.</li>
+</ol>
+
+<p>
+Hand in time and date for technical report – ELE by 12.00 hours on Friday 13 September 2024
+</p>
+
+<p>
+Poster. 15% of module mark.
+</p>
+
+<p>
+The poster session will take place during the first half of October after your placements are
+complete.
+There is no template for the poster—it is up to you to choose everything about the poster.
+The posters have been printed in past years at the A1 size, but since the aspect ratio for all A
+paper sizes is the same, it really does not matter. You will upload a PDF of your poster to
+ELE, and all the posters will be printed for you, and then hung for you on the day of the
+poster session.
+</p>
+
+<p>
+Poster marking. The poster session is designed for you explain to an interested person what
+you did, where, why, how the placement was related to your degree. Your poster will be
+printed and displayed for you. There is no required template for the poster. Be sure to have
+your name printed prominently at the top of the poster, so the markers can find you.
+Hand in time and date for poster – Student Services Office (E-BART) by 12:00 Friday 22
+September 2023.
+</p>
+
+<p>
+Markers will use the following score sheet to mark you:
+</p>
+
+<p>
+Student:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">Feedback</th>
+<th scope="col" class="org-left">Mark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Visual impact</b></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">/5</td>
+</tr>
+
+<tr>
+<td class="org-left"><i>Professional look,</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><i>layout, visual aids etc.</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Content</b></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">/10</td>
+</tr>
+
+<tr>
+<td class="org-left"><i>Contains all necessary</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><i>information. Well</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><i>organised. Clear and</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><i>legible. Easy to follow</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><i>for non-specialists</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"><b>Interview</b></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">/5</td>
+</tr>
+
+<tr>
+<td class="org-left"><i>Knowledge of project and</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><i>work undertaken. Ability</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><i>to convey  your placement</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><i>experience to an audience</i></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Total</td>
+<td class="org-left">/20</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Paul Hewson</p>
+<p class="date">Created: 2024-09-04 Wed 15:32</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       f988870d-8a2e-4a0f-b20f-2eb4b6b25b1c
+:END:
+#+title: PlacementQuestions
+
+"Can you walk me through what a typical week looks like for you at your placement?"
+Why ask this: Helps you understand how they’re spending their time, and whether their role aligns with expectations or learning goals.
+
+"What’s one thing you’ve learned so far that you didn’t expect?"
+Why ask this: Encourages reflection and gives insight into their learning experience, especially in terms of soft skills or workplace culture.
+
+"Do you feel supported by your supervisor and team? Is there anything you're struggling with?"
+Why ask this: Assesses wellbeing, supervision quality, and whether any interventions or guidance might be needed.
+
+"Have you had opportunities to apply your academic knowledge in the workplace? Can you give an example?"
+Why ask this: Links theory to practice—important for evaluating the educational value of the placement.
+
+"What skills (technical or soft) do you feel you're developing the most right now?"
+Why ask this: Encourages self-awareness and helps track growth areas, which can be useful for both university reporting and future development.
+
+"Is there anything you’d like to get more experience with before your placement ends?"
+Why ask this: Opens the door for them to be proactive about shaping the rest of their placement and encourages goal-setting.
+
+[[id:8b651337-7fb0-46d0-babf-b3f31573e78a][MTH3100]] [[id:02e3636c-e7b1-46a6-8c11-3d5284e8349e][MTHM053]]

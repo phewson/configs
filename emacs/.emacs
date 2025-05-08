@@ -113,7 +113,7 @@ into a comma-separated one-liner surrounded by QUOTE."
       '((user :default "pgdocker")
         (database :default "official")
         (server :default "localhost")
-        (port :default 15452)))
+        (port :default 15432)))
 (setq sql-product 'postgres)
 
 (use-package framemove

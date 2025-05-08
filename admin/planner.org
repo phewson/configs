@@ -3,6 +3,18 @@
 #+EMAIL: paul@insightsforaction.uk
 #+STARTUP: overview
 
+* Personal Worry List
+
+** Weds 8th
+- Didn't sleep (nightmare about knife attacccker and I couldn' t get my feet inside the car quickly enough to lock the door).
+
+** Thurs 9th
+- Felt rough getting up, worried I wouldn't have enough energy for the day. Didn't faint.
+- Paid visa bill, was OK considering.
+- OH phoned, agreed to meeting tomorrow (usually my  day off)
+  
+
+
 * Possibly invite second year placement students (40ish) to meet returning students.
 
 * Exeter Induction [5/8]
@@ -176,6 +188,17 @@ XKBVARIANT=""
 XKBOPTIONS=""
 
 BACKSPACE="guess"
+
+
+* Coaching supports a child's right to play, develop and be heard
+
+** Be approachable
+** Patience (to be a person you can talk to)
+** Element of play within a session, free play at start and end of sessions
+** Consistency of coaches to build up trust
+** Rights based approach (right to play)
+** Children's coaching collaborative
+** Voice Choice Journey
 
 
 * LaTeX

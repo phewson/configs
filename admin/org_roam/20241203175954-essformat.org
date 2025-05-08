@@ -1,0 +1,59 @@
+:PROPERTIES:
+:ID:       d6237a59-36ea-4abf-8411-357b118af0c8
+:END:
+#+title: ESSFormat
+
+1. M-x describe-mode (let's me check if ess-r-mode is active). It is.
+2. Check for hooks
+   M-x describe-variable RET ess-r-mode-hook
+   M-x describe-variable RET prog-mode-hook
+  M-x describe-variable RET before-save-hoom
+  I'm looking for formatting functions like format-all-mode, lsp-format-buffer, ess-format-buffer
+ 3. Check formatting backend
+    (setq ess-indent-level 2) ess-offset-arguments and ess-offset-continuations
+    Check if styler is available install.packages("styler") (setq ess-R-style 'styler)
+    LSP: check lsp-mode is isntalled and active, check if lsp-format-buffer is being called (add-hook 'ess-r-mode-hook #'lsp)
+    If using format-all package ensure format-all-mode is active (add-hook 'ess-r-mode-hook #'format-all-mode) run M-x format-all-buffer to see if it works as investigated
+  4. Check key formatting commands C-h k following by keybinding e.g., C-M-\ or C-c C-f
+
+   5. Manually invoke formatting functions
+      M-x ess-indent-buffer
+      M-x styler-format-buffer
+      M-x lsp-format-buffer
+
+6. Check for conflicts
+   M-x ess-toggle-underscore
+M-x lsp-toggle-trace RET t
+M-x prog-mode
+
+
+7. M-x toggle-debug-on-error
+
+   8 configs
+   (use-package ess
+  :config
+  (setq ess-indent-level 2)
+  (add-hook 'ess-r-mode-hook
+            (lambda ()
+              (add-hook 'before-save-hook #'ess-indent-buffer nil t))))
+
+;; Optional: Styler integration
+(use-package styler
+  :after ess
+  :config
+  (add-hook 'ess-r-mode-hook #'styler-format-buffer-on-save))
+
+;; Optional: LSP setup
+(use-package lsp-mode
+  :config
+  (add-hook 'ess-r-mode-hook #'lsp))
+
+
+  Test formatting M-x format-all-buffer
+
+
+M-x indent-region does the ESS formatting
+M-x eglot-format does the LSP formatting
+
+Need this in my .Rprofile
+options(languageserver.formatting.style = "R-base")

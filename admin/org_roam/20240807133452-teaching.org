@@ -102,6 +102,7 @@ First destination survey? Oli Laity - but I've been sent an MI link.
 :PROPERTIES:
 :ID:       8b651337-7fb0-46d0-babf-b3f31573e78a
 :END:
+- There are prompts for placement questions [[id:f988870d-8a2e-4a0f-b20f-2eb4b6b25b1c][PlacementQuestions]]
 - 120 credits
 - [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH3100&ay=2023/4&sys=1][Module Descriptor 2023/2024]]  [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTH3100&ay=2024/5&sys=1][Module Descriptor 2024/2025]] These are students returning from placement, or on placement now.
   [[https://ele.exeter.ac.uk/course/view.php?id=12595][- ELE 2023/2024]] 12595
@@ -138,6 +139,7 @@ First destination survey? Oli Laity - but I've been sent an MI link.
 :END:
 - [[https://www.exeter.ac.uk/study/studyinformation/modules/info/?moduleCode=MTHM053&ay=2023/4&sys=1][Module Record 2023/2024]]
 [[id:c5090aa1-c87f-45d3-a81b-09166a11fcbc][MTHM053Assessment]]
+- [[id:f988870d-8a2e-4a0f-b20f-2eb4b6b25b1c][Promps for PlacementQuestions]]
 - Term 1, 2 and 3
 - 500 hours spread over placement
 - 80 hours research and report preparation
