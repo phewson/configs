@@ -2,6 +2,19 @@
 ;;; Commentary:
 ;;; Code:
 
+(require 'package)
+(setq package-archives
+   (quote
+    (("melpa" . "https://melpa.org/packages/")
+     ("gnu" . "https://elpa.gnu.org/packages/"))))
+(setq package-archive-priorities '(("melpa" . 1)
+                                   ("gnu" . 2)))
+(package-initialize)
+(eval-when-compile
+
+(require 'use-package))
+
+
 (load-theme 'modus-operandi t)
 (set-frame-font "DejaVu Sans Mono-11" nil t)
 
@@ -129,17 +142,6 @@ into a comma-separated one-liner surrounded by QUOTE."
 (add-to-list 'load-path (expand-file-name "~/configs/misc_el/"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/elpa/"))
 
-(require 'package)
-(setq package-archives
-   (quote
-    (("melpa" . "https://melpa.org/packages/")
-     ("gnu" . "https://elpa.gnu.org/packages/"))))
-(setq package-archive-priorities '(("melpa" . 1)
-                                   ("gnu" . 2)))
-(package-initialize)
-(eval-when-compile
-
-(require 'use-package))
 (require 'bind-key)
 (setq use-package-always-ensure t)
 (use-package auto-package-update

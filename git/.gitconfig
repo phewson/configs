@@ -3,10 +3,13 @@
 	name = Paul Hewson
 	username = phewson
 [alias]
-    s = status
+        s = status
+        ll = log --graph --abbrev-commit --decorate --all
 
 
 [github]
 	user = phewson
 [credential]
 	helper = cache
+[init]
+	defaultBranch = main

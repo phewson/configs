@@ -1,17 +1,21 @@
-version: '3'
 services:
  db:
   image: postgis/postgis:16-master
   container_name: postgis_container
   restart: always
   environment:
-   POSTGRES_DB: official
-   POSTGRES_USER: pgdocker
-   POSTGRES_PASSWORD: pgdocker 
+   POSTGRES_DB: ${POSTGRES_DB}
+   POSTGRES_USER: ${POSTGRES_USER}
+   POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
   ports:
       - '15432:5432'
   volumes: 
-      - db:/var/lib/postgresql/data
+      - db_data:/var/lib/postgresql/data
+  healthcheck:
+    test: ["CMD", "pg_isready", "-U", "pgdocker"]
+    interval: 30s
+    timeout: 10s
+    retries: 5
 volumes:
-  db:
+  db_data:
     driver: local

@@ -134,6 +134,12 @@ fi
 #     start_agent;
 # fi
 
+ENV_FILE="$HOME/configs/bash/.env"
+if [ -f "$ENV_FILE" ]; then
+    source "$ENV_FILE"
+fi
+
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/phewson/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
