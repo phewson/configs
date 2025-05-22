@@ -328,6 +328,65 @@ I need a better way of updating packages.
 
 ** ESS
 
+Options are:
+
+1. Launch emacs from the command line within a nix shell, i.e.,
+
+  #+begin_src bash :eval no
+nix shell
+emacs
+#+end_src
+
+Or if I ever get round to using flakes
+
+#+begin_src bash :eval no
+nix develop
+emacs
+#+end_src
+
+2.  Alternatively, call emacs with some arguments
+
+   #+begin_src bash :eval no
+#!/bin/bash
+# ~/bin/emacs-nix
+exec nix-shell -p R --run "emacs $@"
+#+end_src
+
+Make it executable
+#+begin_src bash :eval no
+chmod +x ~/bin/emacs-nix
+#+end_src
+
+Then I can just run `emacs-nix`
+
+3. Set the inferior ESS process manually
+#+begin_src emacs-lisp :eval no
+   (setq inferior-ess-r-program "/nix/store/abc123-r-4.3.1/bin/R")
+#+end_src
+
+To find that address, I need to run
+#+begin_src bash :eval no
+nix build nixpkgs#R --no-link --print-out-paths
+#+end_src
+
+4. You can use `direnv` (new tool to me).
+   Install `direnv`
+   do the following in the project dir:
+
+#+begin_src bash :eval no
+echo "use nix" > .envrc
+direnv allow
+#+end_src
+
+And then in emacs
+#+begin_src emacs-lisp :eval no
+(use-package direnv
+  :config
+  (direnv-mode))
+#+end_src
+
+Short answer here seems to be to use emacs within the nix-shell.
+
  #+begin_src emacs-lisp :tangle testing.el
  (use-package ess
   :ensure t

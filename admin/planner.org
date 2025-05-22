@@ -9,14 +9,85 @@ find -H . -type d \( -path \*/SCCS -o -path \*/RCS -o -path \*/CVS -o -path \*/M
 
 * Personal Worry List
 
-** Weds 8th
-- Didn't sleep (nightmare about knife attacccker and I couldn' t get my feet inside the car quickly enough to lock the door).
+** weds 7th
+- Didn't sleep (nightmare about knife attacker and I couldn' t get my feet inside the car quickly enough to lock the door).
 
-** Thurs 9th
+** Thurs 8th
 - Felt rough getting up, worried I wouldn't have enough energy for the day. Didn't faint.
-- Paid visa bill, was OK considering.
-- OH phoned, agreed to meeting tomorrow (usually my  day off)
+- Paid visa bill, was OK considering we just returned from holiday.
+- OH phoned, agreed to meeting tomorrow (usually my  day off), was worried Debbie wouldn't approve if I put meeting off until a working day next week.
+- Lost argument about working all weekend on the garden
+- Worried about finding toilet quickly enough after concert. Did think about leaving early.
+
+** Fri 9th
+- anxious about fainting when getting up, did faint, didn't hurt much
+- Fitted in quick walk around Honeybag Tor (very nice) despite not wanting to leave house.
+- Didn't enjoy OH meeting; clearly the advisor knew a lot but equally clearly it was a legal meeting. Have to speak to Rhian about advice on keyboards
+- Saw optician, when rinsing sinuses I should avoid getting steroid rinses in my eyes. Should be able to close my eyes or block the tear duct with finger pressure. I wonder what else I don't know.
+
+** Sat 10th
+- Trouble putting in temporary post, hurt a lot and don't know what to do (Dupuytren's). Didn't think I'd be able to finish job but the temporary fence is there. Done something to my right hand though (which is the better hand).  Had to use weird technique to move pebble bags.
+
+** Sunday 11th
+- Anxious about fainting when getting up, did faint (twice) did hurt myself (once).
+- Fell in canal. All my fault, Debbie changed her mind where to land, I was half way out the kayak and should have completely got out before trying to get back in again.  Bit bothered about how to recover, decided to swim to the other bank.
+  - Dog was fine waiting for us while we were out. I had been worrying about him. I'm worrying myself into wanting to find a doggy day care before some of my long work days (I think the second friday in june is a long day).
+** Monday 12th
+- Went for 5k run, did have problems with stringers after about 3k and had to take it easy.
+
+** Tuesday 13th
+- Didn't worry about fainting, didn't have a problem getting up but had a nasty one picking up dog mess on Roary's walk.
+- It definitely hurts playing the piano now, even on a well adjusted seat.
+** Wednesday 14th
+- Took today off instead of Friday to visit Hannah and family in Perranport. Difficult drive down (needed toilet, straining to hold it together despite repeat stops). Decided to return via the A30 as more service stations.
+  - Worried about dog but he was fine (that's almost 7 hours on his own).
+
+** Thursday 15th
+- Anxious about getting up in case I faint, did faint, didn't hurt much.
+- Anxious about cows in field on dog walk. Debbie had joined me, was in a bad mood and wasn't prepared to turn round (it's a circular walk and we were past half way). Carried Roary past cows and he didn't react.
+- Ran 5k a little worried about heat. No asthma problems though.
+** Friday 16th
+- Anxious about getting up in case I faint, did faint, have really hurt my hand.
+- Can't get supabase working, beginning to wonder if this was a bad idea. If the Uni IT can't help, maybe I shouldn't bother either
+ - Follow up meeting with Rhian, she seems very nice but now I can't figure out how to fill in the form.
+ - Sneaked out for contact lens check. Just have backlog of old lenses to use up, the new ones are much better.
+ - I am a little worried about what's going on with Saul's MOT
+** Saturday 17th
+- Anxious about fainting, did faint, didn't hurt
+- Anxious about going Kayaking because I don't think Debbie wants me to go. Had a nice time though.  Came back to flaked out dog.  Very uncomfortable needed toilet badly (see note later, must take blood pressure pill later in the day)
+ - Upset someone who wanted my parking space because I went to the loo after I'd strapped kayak to the car...ho hum. Hurt to lift kayak off.  Do need to sort out new boots (with thicker soles this time).
+** Sunday 18th
+- Anxious about fainting, didn't faint.
+- Definitely having a lot of dizzy spells when working in the garden. Debbie won't accept I can't hear a thing she says after I've stood up.
+ - Little bit worried about Roary running off when that other dog appeared. Possibly correctly.
+- Cooked the wrong veg for dinner, but apparently it was OK. Didn't feel like eating.
+  - Removed skeg cable (that was easy) just need to order replacement. Not worth worrying about, definite kink in cable stops it working.
+  - Do worry about what Roary is up to in the garden when i can't see him (he's usually only allowed completely free roaming in the back yard, we do tend to loosely supervise him in the garden
+
+** Monday 19th
+- Superanxious feeling this morning for no reason. Also, very bad tummy this morning (I really think this is Bile Acid Diarrhoea). However, needed to do Dog Walk, take Oliver to school and put on slow cooker. Maybe just anxious about stuff additional to routine.
+- 11:24 Still feeling super-anxious. I have supabase working, although it could be improved it's ready for teaching. Going to go for a run a little early and see if that helps any.
+  - Not for later, haven't taken blood pressure tablet yet and don't seem to have same need for a toilet break all the time. I'm sure I tried this before. Must take it later in the day, especially on days I might not have loo access. Think I worked this out before and forgot.
+  - Not completely relaxed about teaching, but I can see my way through to making it work. Need to sort out linters.
+    - Have to sort out "pile" (references, feedback etc.) - that was actually not bad at all
+      - Not feel super-anxious any more.
+      - Oh dear, and MSc Financial Maths student got a placement confirm *after* the dumb deadline for the project. Anyway, I sent him a very warm email congratulating him and bouncing him off to the project module supervisor who can make all the fuss she wants.
+      - New contact lenses are great, but I don't feel confident about financial things (I can't quite read well enough for that), so I don't think I'll be moving over the permanent contact lenses and I don't think this is really an anxiety thing.
+      - Saul just announced his car gets final work for MOT next Tuesday (he's getting it done at mates rates hence the slow progress)
+** Tuesday 20th
+- Not anxious about fainting, didn't faint, feel particularly rough.
+- worrying about toilet cistern in bathroom (I should get a plumber in)
+- Debbie wants me to put dining room table on eBay, I don't always understand the small print. Turns out the phots aren't high quality enough.
+  - Realised the afternoon pill taking means I forget more often, I've missed a day somewhere.
+- Worrying about the ergonomic keyboard form, I'm just going to make a best guess and get it done. Post script, I did, and ten auto-emails later it looks like it's been ordered. Maybe I should order another for home use.  There's a procrastination lesson here, maybe I should check my self-assessment again (I've had a letter saying I don't need to do it anymore, but I'm not sure which year is the last year)
+- Now I'm feeling super-anxious again
+- I usually get a bit uncomfortable leaving the dog; do note after I went to do some printing in the library, we had a quick drink in the garden. When we came back in he decided to go and sleep on the sofa while I worked upstairs (after 30 minutes he did come up and think about sleeping in the back bedroom but changed his mind). I'm not convinced I'm nervous about leaving the dog so much as using him as an excuse (I don't feel great about leaving him, but I don't feel that bad either).
+- Bought fish in Jacksons, super-expensive. Ho hum. (I worry a bit buying fish from there, but I'm trying to broaden my horizons a bit)
   
+** Wednesday 21st
+
+- Woke up super-anxious, think now it's just a feeling and nothing to do with worrying about fainting (I did faint, I've hurt my thumb but feel just the same now I'm up and about).
+- Tummy is definitely not right
 
 
 * Possibly invite second year placement students (40ish) to meet returning students.
