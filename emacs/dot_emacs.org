@@ -109,6 +109,78 @@ This is meant to provide a blink when I'm moving the cursor from one window to a
 #+END_SRC
 
 
+** Nix compatibility
+
+Updating nix. I had to change some ownership (put it in my name), The chown is only needed because you had a half-installed system already, this was slow. Also, I had to move some profiles. Then I could run the installation daemon.  I don't really like doing this without shasums or something.
+
+#+BEGIN_SRC
+sudo chown -R phewson /nix
+
+
+mv ~/.local/state/nix/profiles/profile ~/.local/state/nix/profiles/profile.bak
+
+sh <(curl -L https://nixos.org/nix/install) --no-daemon
+#+END_SRC
+
+So I need to install direnv to the system. I could do this:
+
+#+BEGIN_SRC bash :eval false
+sudo apt-get install direnv
+#+END_SRC
+
+Or I could to tell nix to use direnv. We had a lot of fun with this trying to install nix-direnv but seemingly the relevant binaries are in direnv
+
+#+BEGIN_SRC bash :eval false
+nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
+nix-channel --update
+nix-env -iA nixpkgs.direnv
+#+END_SRC
+
+
+And we need to hook direnv into the shell, this is added to .bashrc
+
+#+BEGIN_SRC bash :eval false
+eval "$(direnv hook bash)"
+#+END_SRC
+
+
+Now I need to add this file in the folder (I don't think it exists already, could be wrong)
+
+
+~/official_stats/pg/.envrc
+
+And it needs to contain
+#+BEGIN_SRC bash :eval false
+use nix
+#+END_SRC
+
+And I think this needs to be run manually on any folder with a .envrc
+
+#+BEGIN_SRC bash :eval false
+direnv allow
+#+END_SRC
+
+
+Finally, .emacs needs to contain
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(use-package direnv
+  :ensure t
+  :config
+  (direnv-mode))  ;; enable immediately
+#+END_SRC
+
+
+
+#+BEGIN_SRC emacs-lisp :tangle testing.el
+(use-package exec-path-from-shell
+  :ensure t
+  :config
+  (exec-path-from-shell-initialize))
+#+END_SRC
+
+
+
 
 ** Text coding
 
@@ -550,7 +622,28 @@ I'm not sure I want to do this, or *consult-yank-from-kill-ring*
 #+END_SRC
 
 
+** ispell (actually hunspell)
+#+begin_src bash :eval no
+sudo apt-get install hunspell hunspell-es
+#+end_src
 
+Use either of #+SPANISH: t or #+PROPERTY: DICTIONARY es_ES at the start of the file
+
+#+begin_src emacs-lisp :tangle testing.el
+(setq ispell-program-name "hunspell")
+(setq ispell-dictionary "en_GB") ;; Default dictionary
+
+(defun toggle-ispell-dictionary ()
+  "Toggle between English and Spanish dictionaries."
+  (interactive)
+  (let ((current ispell-local-dictionary))
+    (if (string= current "en_GB")
+        (ispell-change-dictionary "es_ES")
+      (ispell-change-dictionary "en_GB"))))
+
+(global-set-key (kbd "C-c d t") 'toggle-ispell-dictionary)
+(global-set-key (kbd "C-c f b") 'flyspell-buffer)
+#+end_src
 ** LaTeX
 
 Here's a list of some standard packages and basic configs.

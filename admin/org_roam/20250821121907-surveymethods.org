@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       d73a109d-0f86-4a9f-895b-372fa405d6f5
+:END:
+#+title: SurveyMethods
+
+https://tidy-survey-r.github.io/tidy-survey-book/
+

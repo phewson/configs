@@ -2,6 +2,9 @@
 ;;; Commentary:
 ;;; Code:
 
+(use-package compat
+  :ensure t)
+
 (require 'package)
 (setq package-archives
    (quote
@@ -35,6 +38,11 @@
 (global-display-line-numbers-mode t)
 
 (setq-default line-spacing 0.4)
+
+(use-package direnv
+  :ensure t
+  :config
+  (direnv-mode))  ;; enable immediately
 
 (use-package writeroom-mode
   :ensure t

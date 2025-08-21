@@ -2,4 +2,44 @@
 :ID:       5596f4b5-cfe0-49d7-a152-db705d863fa4
 :END:
 #+title: Accessibility
+
+Newcastle guide on accessible maths
+https://www.mas.ncl.ac.uk/accessible-teaching/index.html
+
+Accessible maths group
+https://sites.google.com/view/accessible-maths/home
+
+Quarto and LaTeX accessibility notes
+https://remlapmot.github.io/post/2025/quarto-accessibility/
+
+
 [[https://sites.exeter.ac.uk/udlstaffconference/][EduExe conference]]
+
+https://sirkotsky.substack.com/p/how-to-write-accessible-text
+
+https://www.accessibilityassociation.org/
+
+https://sirkotsky.substack.com/p/universal-design-and-paperwork-vol
+
+Evidnece for font effectiveness
+https://pmc.ncbi.nlm.nih.gov/articles/PMC5629233/
+
+Review of fonts
+https://sirkotsky.substack.com/p/inclusive-typefaces-that-we-know?publication_id=1657025
+
+https://www.brailleinstitute.org/freefont/
+
+Bionic reading converter
+https://10015.io/tools/bionic-reading-converter
+
+
+Equatio (maths)
+https://www.texthelp.com/en-gb/products/equatio/
+
+https://github.com/accessibility/Axioms
+
+
+ADHD and GTD
+https://neurolaunch.com/gtd-for-adhd/
+
+https://workbrighter.co/gtd-adhd/

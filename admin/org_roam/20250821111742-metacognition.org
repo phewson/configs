@@ -1,0 +1,37 @@
+:PROPERTIES:
+:ID:       4c4fd749-e249-407d-9a07-70f962376b7c
+:END:
+#+title: Metacognition
+
+
+https://www.youtube.com/watch?v=PPCfDe8TfJQ
+
+https://ideas.ted.com/how-to-explain-anything-to-anyone-4-steps-to-clearer-communication/?utm_source=pocket&utm_medium=email&utm_campaign=pockethits
+
+https://getpocket.com/explore/item/3-ways-to-study-better-according-to-cognitive-research?utm_source=pocket-newtab-global-en-GB
+
+https://www.youtube.com/watch?v=4J3eqGceGBE
+BANI (critical thinking)
+https://www.youtube.com/watch?v=oVWQINTJ5-Q
+
+VUCA (critical thinking)
+https://www.youtube.com/watch?v=MqQh9t-VLIY&t=51s
+
+Questions to provoke critical thinking
+https://sheridan.brown.edu/resources/classroom-practices/discussions-seminars/questions-provoke-critical-thinking
+
+* Lower Levels
+| Thinking Skills | Purpose                 | Sample Action Prompts                         | Example Questions                                                                                           |
+|-----------------|------------------------|----------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| Remembering     | memorize & recall facts | recognize, list, describe, identify, retrieve, name | What do we already know about ... ?  \n What are the principles of ... ?  \n How does ... tie in with what we learned before? |
+| Understanding   | interpret meaning       | describe, generalize, explain, estimate, predict | Summarize ... or Explain ...  \n What will happen if ... ?  \n What does ... mean?                        |
+
+* Higher Levels
+| Thinking Skills | Purpose                        | Sample Action Prompts                       | Example Questions                                                                                           |
+|-----------------|--------------------------------|--------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| Applying        | apply knowledge to new situations | implement, carry out, use, apply, show, solve, hypothesize | What would happen if ... ?  \n What is a new example of ... ?  \n How could ... be used to ... ?  \n What is the counterargument for ... ? |
+| Analyzing       | break down or examine information | compare, organize, deconstruct             | Why is ... important?  \n What is the difference between ... and ... ?  \n What are the implications of ... ?  \n Explain why / explain how?  \n What is ... analogous to?  \n How are ... and ... similar? |
+| Evaluating      | judge or decide according to a set of criteria | check, critique, judge, conclude, explain | How does ... affect ... ?  \n Why is ... happening?  \n What is the best ... and why?  \n Do you agree or disagree with the statement ... ? What evidence is there to support your answer?  \n What are the strengths and weakness of ... ?  \n What is the nature of ... ? |
+| Creating        | combine elements into a new pattern | design, construct, plan, produce           | What is the solution to the problem of ... ?  \n What do you think causes ... ?  \n What is another way to look at ... ? |
+
+1 From Alison King, “Inquiring Minds Really Do Want to Know: Using Questioning to Teach Critical Thinking,” Teaching of Psychology 22 (1995): 14.

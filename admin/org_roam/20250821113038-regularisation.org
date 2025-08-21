@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       18ea11e3-6f17-4352-8bf1-d0fc677dd676
+:END:
+#+title: Regularisation
+https://explained.ai/regularization/index.html

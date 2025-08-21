@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       594c669e-2f67-46f6-a077-50e199122287
+:END:
+#+title: FiveWhys
+First Principles Thinking, Aristotle

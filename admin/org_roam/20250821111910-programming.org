@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       aa8944bc-98e7-498b-ab7c-04c8921cb2e9
+:END:
+#+title: Programming
+https://www.benkuhn.net/progessays

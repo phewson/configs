@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       f94f4646-7e89-41e6-b4f4-ba4a4e2c6364
+:END:
+#+title: LinearAlgebra
+Nice book https://personal.math.ubc.ca/~tbjw/ila/index2.html
