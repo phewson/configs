@@ -1,3 +1,6 @@
+
+
+
 :PROPERTIES:
 :ID:       998c5142-6b32-490a-824e-72793914eea8
 :END:
@@ -42,3 +45,7 @@ increasing X1 by one unit, if the values of all other X's are held constant. It
 argued that the term 'independent variable' is an unfortunate one but, s
 widely used, it would seem more reasonable to attempt to correct misunderst
 the assumptions made than to change th
+
+
+
+https://bbolker.github.io/bbmisc/elliptope.html

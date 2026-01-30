@@ -3,3 +3,6 @@
 :END:
 #+title: LinearAlgebra
 Nice book https://personal.math.ubc.ca/~tbjw/ila/index2.html
+
+
+https://evangelinereynolds.netlify.app/post/geometric-covariance/

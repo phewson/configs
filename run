@@ -46,12 +46,14 @@ function cmd_stow(){
     stow -S bash/ -t ~/
     stow -S git/ -t ~/
     stow -S emacs/ -t ~/
+    stow -t $HOME pgdocker_dotfiles
 }
 
 function cmd_mock(){
     echo $(stow -n -S bash/ -t ~/ -vvv)
     echo $(stow -n -S git/ -t ~/ -vvv)
     echo $(stow -n -S emacs/ -t ~/ -vvv)
+    echo $(stow -n -t $HOME pgdocker_dotfiles -vvv)
 }
 
 main "$@"

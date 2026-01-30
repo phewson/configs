@@ -3,3 +3,14 @@
 :END:
 #+title: Programming
 https://www.benkuhn.net/progessays
+
+
+Why numbering should start at zero
+https://www.cs.utexas.edu/~EWD/transcriptions/EWD08xx/EWD831.html
+
+Greg Wilson, teaching tech together
+https://educarencomunidad.tech/en/index.html
+
+Games for learning
+https://www.sqlnoir.com
+https://www.sqlnoir.com/blog/games-to-learn-sql

@@ -247,5 +247,14 @@
 (setq org-src-preserve-indentation t)
 (setq org-edit-src-content-indentation 0)
 
+(use-package persist
+  :ensure t)
+
+;;Then your org-drill block:
+
+(use-package org-drill
+  :ensure t
+  :after org)
+
 (provide '.orgconfigs)
 ;;; .orgconfigs.el ends here
