@@ -1,177 +1,16 @@
 #+AUTHOR: Paul Hewson
 #+TITLE: Work planning
 #+EMAIL: paul@insightsforaction.uk
+
 #+STARTUP: overview
 
-find -H . -type d \( -path \*/SCCS -o -path \*/RCS -o -path \*/CVS -o -path \*/MCVS -o -path \*/.src -o -path \*/.svn -o -path \*/.git -o -path \*/.hg -o -path \*/.bzr -o -path \*/_MTN -o -path \*/_darcs -o -path \*/\{arch\} \) -prune -o  -type f \( -name \*.R \) \! \( -name .\#\* -o -name \*.o -o -name \*\~ -o -name \*.bin -o -name \*.lbin -o -name \*.so -o -name \*.a -o -name \*.ln -o -name \*.blg -o -name \*.bbl -o -name \*.elc -o -name \*.lof -o -name \*.glo -o -name \*.idx -o -name \*.lot -o -name \*.fmt -o -name \*.tfm -o -name \*.class -o -name \*.fas -o -name \*.lib -o -name \*.mem -o -name \*.x86f -o -name \*.sparcf -o -name \*.dfsl -o -name \*.pfsl -o -name \*.d64fsl -o -name \*.p64fsl -o -name \*.lx64fsl -o -name \*.lx32fsl -o -name \*.dx64fsl -o -name \*.dx32fsl -o -name \*.fx64fsl -o -name \*.fx32fsl -o -name \*.sx64fsl -o -name \*.sx32fsl -o -name \*.wx64fsl -o -name \*.wx32fsl -o -name \*.fasl -o -name \*.ufsl -o -name \*.fsl -o -name \*.dxl -o -name \*.lo -o -name \*.la -o -name \*.gmo -o -name \*.mo -o -name \*.toc -o -name \*.aux -o -name \*.cp -o -name \*.fn -o -name \*.ky -o -name \*.pg -o -name \*.tp -o -name \*.vr -o -name \*.cps -o -name \*.fns -o -name \*.kys -o -name \*.pgs -o -name \*.tps -o -name \*.vrs -o -name \*.pyc -o -name \*.pyo \) -exec grep --color=auto -nH --null -e RPostgreSQL \{\} +
-./analytics/casualties/fr_comparison.R:1:library(RPostgreSQL)
-./analytics/working_sketches/energy.R:3:library(RPostgreSQL)
-
-* Personal Worry List
-
-** weds 7th
-- Didn't sleep (nightmare about knife attacker and I couldn' t get my feet inside the car quickly enough to lock the door).
-
-** Thurs 8th
-- Felt rough getting up, worried I wouldn't have enough energy for the day. Didn't faint.
-- Paid visa bill, was OK considering we just returned from holiday.
-- OH phoned, agreed to meeting tomorrow (usually my  day off), was worried Debbie wouldn't approve if I put meeting off until a working day next week.
-- Lost argument about working all weekend on the garden
-- Worried about finding toilet quickly enough after concert. Did think about leaving early.
-
-** Fri 9th
-- anxious about fainting when getting up, did faint, didn't hurt much
-- Fitted in quick walk around Honeybag Tor (very nice) despite not wanting to leave house.
-- Didn't enjoy OH meeting; clearly the advisor knew a lot but equally clearly it was a legal meeting. Have to speak to Rhian about advice on keyboards
-- Saw optician, when rinsing sinuses I should avoid getting steroid rinses in my eyes. Should be able to close my eyes or block the tear duct with finger pressure. I wonder what else I don't know.
-
-** Sat 10th
-- Trouble putting in temporary post, hurt a lot and don't know what to do (Dupuytren's). Didn't think I'd be able to finish job but the temporary fence is there. Done something to my right hand though (which is the better hand).  Had to use weird technique to move pebble bags.
-
-** Sunday 11th
-- Anxious about fainting when getting up, did faint (twice) did hurt myself (once).
-- Fell in canal. All my fault, Debbie changed her mind where to land, I was half way out the kayak and should have completely got out before trying to get back in again.  Bit bothered about how to recover, decided to swim to the other bank.
-  - Dog was fine waiting for us while we were out. I had been worrying about him. I'm worrying myself into wanting to find a doggy day care before some of my long work days (I think the second friday in june is a long day).
-** Monday 12th
-- Went for 5k run, did have problems with stringers after about 3k and had to take it easy.
-
-** Tuesday 13th
-- Didn't worry about fainting, didn't have a problem getting up but had a nasty one picking up dog mess on Roary's walk.
-- It definitely hurts playing the piano now, even on a well adjusted seat.
-** Wednesday 14th
-- Took today off instead of Friday to visit Hannah and family in Perranport. Difficult drive down (needed toilet, straining to hold it together despite repeat stops). Decided to return via the A30 as more service stations.
-  - Worried about dog but he was fine (that's almost 7 hours on his own).
-
-** Thursday 15th
-- Anxious about getting up in case I faint, did faint, didn't hurt much.
-- Anxious about cows in field on dog walk. Debbie had joined me, was in a bad mood and wasn't prepared to turn round (it's a circular walk and we were past half way). Carried Roary past cows and he didn't react.
-- Ran 5k a little worried about heat. No asthma problems though.
-** Friday 16th
-- Anxious about getting up in case I faint, did faint, have really hurt my hand.
-- Can't get supabase working, beginning to wonder if this was a bad idea. If the Uni IT can't help, maybe I shouldn't bother either
- - Follow up meeting with Rhian, she seems very nice but now I can't figure out how to fill in the form.
- - Sneaked out for contact lens check. Just have backlog of old lenses to use up, the new ones are much better.
- - I am a little worried about what's going on with Saul's MOT
-** Saturday 17th
-- Anxious about fainting, did faint, didn't hurt
-- Anxious about going Kayaking because I don't think Debbie wants me to go. Had a nice time though.  Came back to flaked out dog.  Very uncomfortable needed toilet badly (see note later, must take blood pressure pill later in the day)
- - Upset someone who wanted my parking space because I went to the loo after I'd strapped kayak to the car...ho hum. Hurt to lift kayak off.  Do need to sort out new boots (with thicker soles this time).
-** Sunday 18th
-- Anxious about fainting, didn't faint.
-- Definitely having a lot of dizzy spells when working in the garden. Debbie won't accept I can't hear a thing she says after I've stood up.
- - Little bit worried about Roary running off when that other dog appeared. Possibly correctly.
-- Cooked the wrong veg for dinner, but apparently it was OK. Didn't feel like eating.
-  - Removed skeg cable (that was easy) just need to order replacement. Not worth worrying about, definite kink in cable stops it working.
-  - Do worry about what Roary is up to in the garden when i can't see him (he's usually only allowed completely free roaming in the back yard, we do tend to loosely supervise him in the garden
-
-** Monday 19th
-- Superanxious feeling this morning for no reason. Also, very bad tummy this morning (I really think this is Bile Acid Diarrhoea). However, needed to do Dog Walk, take Oliver to school and put on slow cooker. Maybe just anxious about stuff additional to routine.
-- 11:24 Still feeling super-anxious. I have supabase working, although it could be improved it's ready for teaching. Going to go for a run a little early and see if that helps any.
-  - Not for later, haven't taken blood pressure tablet yet and don't seem to have same need for a toilet break all the time. I'm sure I tried this before. Must take it later in the day, especially on days I might not have loo access. Think I worked this out before and forgot.
-  - Not completely relaxed about teaching, but I can see my way through to making it work. Need to sort out linters.
-    - Have to sort out "pile" (references, feedback etc.) - that was actually not bad at all
-      - Not feel super-anxious any more.
-      - Oh dear, and MSc Financial Maths student got a placement confirm *after* the dumb deadline for the project. Anyway, I sent him a very warm email congratulating him and bouncing him off to the project module supervisor who can make all the fuss she wants.
-      - New contact lenses are great, but I don't feel confident about financial things (I can't quite read well enough for that), so I don't think I'll be moving over the permanent contact lenses and I don't think this is really an anxiety thing.
-      - Saul just announced his car gets final work for MOT next Tuesday (he's getting it done at mates rates hence the slow progress)
-** Tuesday 20th
-- Not anxious about fainting, didn't faint, feel particularly rough.
-- worrying about toilet cistern in bathroom (I should get a plumber in)
-- Debbie wants me to put dining room table on eBay, I don't always understand the small print. Turns out the phots aren't high quality enough.
-  - Realised the afternoon pill taking means I forget more often, I've missed a day somewhere.
-- Worrying about the ergonomic keyboard form, I'm just going to make a best guess and get it done. Post script, I did, and ten auto-emails later it looks like it's been ordered. Maybe I should order another for home use.  There's a procrastination lesson here, maybe I should check my self-assessment again (I've had a letter saying I don't need to do it anymore, but I'm not sure which year is the last year)
-- Now I'm feeling super-anxious again
-- I usually get a bit uncomfortable leaving the dog; do note after I went to do some printing in the library, we had a quick drink in the garden. When we came back in he decided to go and sleep on the sofa while I worked upstairs (after 30 minutes he did come up and think about sleeping in the back bedroom but changed his mind). I'm not convinced I'm nervous about leaving the dog so much as using him as an excuse (I don't feel great about leaving him, but I don't feel that bad either).
-- Bought fish in Jacksons, super-expensive. Ho hum. (I worry a bit buying fish from there, but I'm trying to broaden my horizons a bit)
-  
-** Wednesday 21st
-
-- Woke up super-anxious, think now it's just a feeling and nothing to do with worrying about fainting (I did faint, I've hurt my thumb but feel just the same now I'm up and about).
-- Tummy is definitely not right
-
-
-* Possibly invite second year placement students (40ish) to meet returning students.
-
-* Exeter Induction [5/8]
-SCHEDULED: <2024-08-08 Thu>
-
-- [X] Mandatory Training
-- [X] Collect IT
-- [X] Meet Layal
-- [X] Summarise modules
-- [ ] Set out promotion criteria and senior fellowship criteria
-- [ ] Email to Debby Cotton
-- [ ] Set up some vlogging on LaTeX/Emacs (dummy run)
-- [X] Mail Chaplain
-- [ ]Can I construct a narrative around accessibility...
-- [ ] Meet Theo
-    - About annual leaving (doing a lot of marking during holiday periods, Term 3 teaching, maybe master's supervision)
-    - Can I install Linux?
-    - "Research"
-    - "Fainting"
-    - Tutees (maybe ask Joanne Mason)
-    - IAAP membership
-    
+   
 * Teaching
-** Professional Development
-[[https://universityofexeteruk.sharepoint.com/sites/EducationToolkit/SitePages/Home.aspx][sharepoint site]]
-[[https://www.exeter.ac.uk/staff/learning-and-development/courses/][Courses]]
-
-** [[https://www.exeter.ac.uk/media/universityofexeter/wellbeing/documents/Signposting_and_Referral_Routes_for_Students.pdf][Mental health and suicide awareness]]
-** TODO Migrate material for MTHM053 to new website
-SCHEDULED: <2024-09-05 Thu>
-:LOGBOOK:
-CLOCK: [2024-09-05 Thu 11:44]--[2024-09-05 Thu 17:45] =>  6:01
-:END:
-** TODO Migrate material for MATH3100
-SCHEDULED: <2024-09-10 Tue>
-** WAIT Find out when I can do the same for EMP3001
-** TODO Create booklet for EMP3001
-SCHEDULED: <2024-10-31 Thu>
-** TODO Team "away day" 
-SCHEDULED: <2024-09-09 Mon>
-** TODO Accessibility workshop
-SCHEDULED: <2024-09-12 Thu>
-** TODO Problem solving modes of operation (to be added to employability modules)
-** WAIT Concept tests in statistics
-- State "READY"      from              [2024-04-17 Wed 13:21]
-- [ ] Expand question bank
-** WAIT Assertion reason tests in Statistics
-** WAIT AI in education [1/1]
-** Module amendments
-- DMR needs amending for MTHM053 (need to remove reference to plan)
-SCHEDULED: <2025-04-01 Tue>
-** INPROGRESS Mark MTHM053 reflective logs
-:LOGBOOK:
-CLOCK: [2024-09-10 Tue 08:25]
-:END:
-** DONE Mark MTHM053 Technical Reports.
-** TODO Write MTHM053 reflective log marking criteria
-** DONE Mark MTHM053 Technical report
-** TODO Write MTHM053 Technical report marking criteria
-** DONE schedule MTHM053 INterviews
-** Tutees
-- [ ] From Joanne Mason
-This is a really useful general maths page for students:
-[[https://ele.exeter.ac.uk/course/view.php?id=2491][Mathematics - General Information and Resources]]
-There’s a tile on module choice.
-
-If students are thinking of changing their choice, then tutors can help by showing them the options according to the programme specification for the students chosen programme:
-[[https://www.exeter.ac.uk/study/studyinformation/][Study Information]]
-But then the student would need to contact the Harrison Hub to see how to change as they’re doing it at a non-standard time of year and the timetable has already been set.
-
-This is the link to the more substantial ‘changes to study’ form, for interrupting, changing programme, etc:
-[[https://www.exeter.ac.uk/students/infopoints/yourinfopointservices/changestostudy/#a0][Changes to Study]]
-
-The DESEs (Layal and Nigel) are always happy to help, as am I, so please do get in touch whenever you’re not sure of anything.
-- [ ] From Abby Horrocks
-Harrison Rm 324:
-- Monday - 2.30pm – 3.30pm
-- Friday - 8.30am – 9.30am
-[[https://forms.office.com/Pages/ResponsePage.aspx?id=d10qkZj77k6vMhM02PBKUxxH0QrSqhVMu0AJIQhuW_NUOUNMNVlSTUZTVEI0U1ZOMUZPNzFPREMyQi4u][Pastoral referral]]
-- [ ] Mental Health Training
-- [ ] Tutor training
-
+- [ ] Jimmy's tutees
+- [ ] Speak to Abby about engagement
+  - [ ] Propose course on Product Analytics (short course)
+- [ ] Update MTHM503 for new delivery, bug fix, find new applications
+    
 * Work
 ** INPROGRESS SFHEA application [1/5]
 - State "INPROGRESS" from              [2024-04-17 Wed 13:18]
@@ -196,7 +35,9 @@ CLOCK: [2024-04-18 Thu 12:48]--[2024-04-18 Thu 16:48] =>  4:00
 - manim -pql scene.py CreateCircle
 
 
-
+** INPROGRESS Select committee submission
+- [ ] Re-read and re-write
+- [ ] Add Lexis diagram
 ** Org mode [[https://github.com/james-stoup/emacs-org-mode-tutorial][org-tutorial]] [[https://doc.norang.ca/org-mode.html][Norangdoc]]
 
 ** Exercism
@@ -227,30 +68,12 @@ BATS_RUN_SKIPPED=true bats test-secret-handshake.bats
 
 * Official [0/5]
 ** DONE Significance article on older drivers
-** TODO Map of road casualties (start of GitLab blog?)
 ** INPROGRESS SVLOC work
 - State "INPROGRESS" from "TODO"       [2024-09-04 Wed 16:08]
-
 ** Database imports
-- [X]Need to attend to deploy nts scripts. Can I check differences between staging and final automatically.
-  Check table definition is updated for 2002-2022 and that table ddl matches import query
-  - [X] Tickets
-  - [X] Individual
-  - [X] Household
-  - [X] Trip
-  - [X] Stage
-  - [X] LDJ
-  - [X] Attitudes
-  - [X] Vehicles
-  - [X] PSU
-- [ ]Import MOSAIC
-- [ ] Backup routine for data (rsync)
-- [ ] Import and tidy population data
-- [ ] Other NTS data
-- [ ] Active People survey (longer term)
-- [ ] Life expectancy data
+- [X] Write R package to help create DDL / Importers for STATs19
 
-
+  
 Keyboard
   GNU nano 7.2                                                                  /etc/default/keyboard                                                                            
 # KEYBOARD CONFIGURATION FILE
@@ -265,23 +88,6 @@ XKBOPTIONS=""
 BACKSPACE="guess"
 
 
-* Coaching supports a child's right to play, develop and be heard
-
-** Be approachable
-** Patience (to be a person you can talk to)
-** Element of play within a session, free play at start and end of sessions
-** Consistency of coaches to build up trust
-** Rights based approach (right to play)
-** Children's coaching collaborative
-** Voice Choice Journey
-
-
-* LaTeX
-
-- [ ] LaTeX language tool https://github.com/valentjn/ltex-ls
-- [ ] Float control [[https://robjhyndman.com/hyndsight/latex-floats/][Rob Hyndman]]
-      Why it's difficult [[https://aty.sdsu.edu/bibliog/latex/floats.html][SDSU]]
-- [ ] Line 33 of doc-settings.sty \captionsetup*{labelformat=simple}
 
 * Emacs
 **  TODO Fix annoying indent problems in Org mode
