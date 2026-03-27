@@ -3,6 +3,82 @@
 ;;; These are my org configs
 ;;; Code:
 
+;; org-ui
+(use-package org
+  :hook (org-mode . my/org-ui-setup)
+  :config
+  (setq org-ellipsis " ▾"
+        org-hide-emphasis-markers t))
+
+(defun my/org-ui-setup ()
+  (org-indent-mode)
+  (variable-pitch-mode 1)
+  (visual-line-mode 1))
+
+(use-package org-bullets
+  :hook (org-mode . org-bullets-mode))
+
+;; Font setup (keep this, it's good)
+(set-face-attribute 'fixed-pitch nil
+                    :family "DejaVu Sans Mono"
+                    :height 120)
+
+(with-eval-after-load 'org
+  (set-face-attribute 'org-table nil :inherit 'fixed-pitch)
+  (set-face-attribute 'org-block nil :inherit 'fixed-pitch))
+
+
+
+;;---------------------------------------------------
+;; org-gtd
+
+(setq org-directory "~/configs/admin")
+
+(setq org-agenda-files
+      '("~/configs/admin/planner.org"
+        "~/configs/admin/schedule.org"
+        "~/configs/admin/github_projects.org"))
+
+(setq org-default-notes-file "~/configs/admin/refile.org")
+
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "|" "DONE(d)")
+        (sequence "READY(r!)" "INPROGRESS(i!)" "|"
+                  "REVIEW(v!)" "WAIT(w!)" "SHIPPED(s!)")))
+
+(setq org-capture-templates
+      '(("t" "Todo" entry (file "~/configs/admin/refile.org")
+         "* TODO %?\n%U\n")
+        ("n" "Note" entry (file "~/configs/admin/refile.org")
+         "* %?\n%U\n")))
+
+
+;; org-knowledge
+(use-package org-roam
+  :after org
+  :custom
+  (org-roam-directory "~/configs/admin/org_roam/")
+  :config
+  (org-roam-setup))
+
+(use-package org-drill
+  :after org)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (use-package org
   :ensure t
   :hook (org-mode . dw/org-mode-setup)

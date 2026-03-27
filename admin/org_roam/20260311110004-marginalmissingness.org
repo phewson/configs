@@ -1,0 +1,121 @@
+:PROPERTIES:
+:ID:       6b098025-bb9a-4b9e-9881-c4b823d80050
+:END:
+#+title: MarginalMissingness
+
+For missing driver age, the mixture likelihood is:
+$p(y) = \sum_{a=1}^A w_a p(y|a)
+
+with mixture weights $w_a$​ satisfying:
+$\sum_a w_a = 1, $w_a geq 0$
+
+If the weights are proportional to $\exp(\eta_a)$:
+
+$w_a = \frac{\exp(\eta_a)}{\sum_{a'} \exp(\eta_{a'})},$ i.e., the softmax.
+
+In stan we do:
+
+lp_mix[a] = eta[a] + log p(y | a);
+then
+target += log_sum_exp(lp_mix);
+i.e., $\log \sum_a exp(\eta_a + \log(p(y|a))$, or  $\log \sum_a exp(\eta_a) p(y|a)$
+Factor out the softmax denominator
+
+$=\log \left( \sum_a \exp(\eta_a) \right) + \log \sum_a \frac{\exp(\eta_a)}{\sum_a' \exp(\eta_a')} p(y|a)$
+$\log \sum_a exp(\eta_a) + \log(\sum_a w_a p(y|a))$ which differs from the trus mixture likelihood only by an additive constant.
+
+
+
+The first naive attempt tried
+
+Complete (a > 0, v > 0)  | mu_surface[a,v]       | Very specific cell-level rate                  
+ Missing driver age        | mu_sum_over_a[v] | Total over all driver ages at fixed vehicle age
+Missing vehicle age     | mu_sum_over_v[a]  |Total over all vehicle ages at fixed driver age
+
+That may be too crude, sum over driver age isn't necessarily the correct answer.  A missing driver age means that this count could have come from any driver age, with equal prior probability, weighted only by the Poisson mean in that age.  If the missingness is informative, then marginalising over all ages is too crude and will systematically bias the column/row sums.  I worry about this "missingness is informative".
+
+So, instead of assuming uniform prior over the ages, we need to introduce *latent categorical variables*. This prior should depend on some covariate. 
+$P(age=a | v, missing) \propto exp(η_surface[a,v])$  This makes the predictive mean mu_marginal[v] = sum_a [ mu[a,v] * softmax(η_surface[,v])[a] ].  This (apparently) allows the model to infer which ages plausibly generated the missing entry.
+
+OR, we could treat the missing ages as latent discrete parameters. Stan cannot sample discrete directly, but we could marginalise them as mixtures at the likelihood level.
+target += log_sum_exp( log_mu[a,v]  for all a consistent with missingness ). This is what we do, but we need to introduce some kind of data-driven weights.
+
+poisson_lpmf(y | mu_sum) implies that if a count had missing driver age, we assume it equals: "a Poisson observation of the sum of all cell means" But another plausible generative mechanism is: "one unobserved cell produces the count, but we don’t know which".
+
+todo
+- vectorise the entire missing‑data block for even more speed
+- add softmax priors for missing categories
+- add diagnostics to check whether missingness is informative
+
+
+## Raking-style priors (iterative proportional fitting)
+
+Use the marginal totals of observed data to infer what the age distribution should look like, then use that distribution to weight the mixture.
+real log_prior_driver[a] = log(driver_age_marginal[a]);
+real log_prior_vehicle[v] = log(vehicle_age_marginal[v]);
+
+So the likelihood becomes
+lp_mix = log_prior_driver + log_mu_col
+         + poisson_log_lpmf(rep_array(y[i], A1) | log_mu_col);
+
+ ## Offset priors for missing cells (“structural priors”)
+The generative probability of an age depends on its underlying exposure or expected counts.
+
+So instead of a flat prior, we use:
+log_prior_driver[a] = log_pop[a, v];   // or row totals
+or
+log_prior_driver[a] = eta_surface[a,v];   // softmax of the smooth surface
+This gives us:
+lp_mix = log_prior_driver[a]
+       + poisson_log_lpmf(y[i] | log_mu[a, v]);
+
+ The most principled is the softmax
+
+vector[A1] log_prior_driver = eta_surface[, v];
+
+ which gives us a mixture:
+ lp_mix = log_prior_driver
+         + poisson_log_lpmf(rep_array(y[i], A1) | log_mu_col);
+target += log_sum_exp(lp_mix);
+
+i.e., $P(age = a | v missing) \propto exp(eta(a, v))$
+The missing age is more likely to be an age with a high underlying rate.
+
+
+Normalising w on a log scale in stan
+
+
+vector[A2] log_w = to_vector(eta_surface[a, ]);
+log_w = log_w - log_sum_exp(log_w);   // normalise
+These get used as
+
+lp_mix = log_w + poisson_log_lpmf(...);
+target += log_sum_exp(lp_mix);
+
+
+
+Count data modelling is fundamental in various fields (epidemiology, demography, transportation safety).   2d splines might reveal patterns.   However, missing labels (unobserved covariates due to incomplete recording, aggregation or structural gaps in contingency tables). Complete-case analysis can lead to biased estimates.
+
+Marginalisation over missing values offers a principled alternative, integrating out unobserved components by summing Poisson probabilities across margins to derive likelihood for observed aggregates. This preserves the Poisson mean-variance relationship and avoids ad-hoc imputation. However, implementing in spline models requires careful handling, often via mixture representations where the observed count is a finite mixture of latent Poisson components weighted by marginal probabilities.  The validity of this strategy (i.e., consistency, bias reduction and robustness under model mis-specficiation) remain underexplored.  This is particularly true of 2d splines where smoothness penalties interact with incomplete data structures. Prior work has advanced mixture models for overdispersed counts and Bayesian inference for flexible distributions. Synthesis across these strands is rare.
+
+1. Marginalisation for missing labels in poisson models.
+
+   Marginalisation over missing covariate labels or categories in Poisson count models involves summing Poisson probabilities across unobserved margins to derive the observed likelihood, enabling full maximum likelihood estimation without imputation. This approach assumes MAR and indepdendence of latent counts, yielding ubniased estimates of incidence densities and risk rations e.g. Ryan et al 1999.  In spline contexts, 2d P splines integrte this by treating unobserved age-year cells as latent, summing contributions to fit smoothed surfaces with penalties on second differences, achieving dimensions of 10-20 parameters for mortality trends (Camarda 2012). Peres-Ruiz and escarela 2018.  It is computationally slow Shyamalkumar 2005.
+
+D Lin, P Arbogast et al. (1999) "Poisson Regression with Missing Durations of Exposure" Biometrics 1999
+C. Camarda (2012) MortalitySooth; An R Package for Smoothing Poisson COunts with P-Splines. Journal of Statistical Software
+L Peres-Ruiz and Gabriel Escarela (2018) "Joint regression modelling for missing categorical covariates in generalised linear models" Journal of Applied Statistics
+N Shyamalkumar (2005) "Analysis of Mortality Data using Smoothing Spline Poisson Regression"
+
+   2. Role of mixture models in summing poisson distirbutions over marings.
+
+      Represent observed counts as weighted sums of latent Poisson components. Weights are marginal probabilities of missing labels, allowing closed form likelihood for incomplete data. This has been studies for ZIP (MZIP) Benecha 2018.  For bivariate splines this manifests as convolvultions over splines (e.g. summing Poisson intensities for driver vehicle pars shyamalkumar 2005 Camarda 2012. Works with EM. Initial values affect convergence of EM (cohen 1964). Overestimation of components is mitagated by penalisation (Doukhan et a 2018).  Some outsdanding issues around overdisperstion.
+
+H K Benecha, J. Preisser, K. Divaris et al. (2018) "Marginalised zzero-inflated Poisson models with missing covariates" Biometrical Journal
+A Cohen (1964) "Estimation in mixtures of two poisson distributions" 
+   
+      3. Validity assessments and bias in marginalisation.
+
+         Simulations show consistent estimators and approx bayeian intervals but misspecification introduces more bias Shyamalkumar Benecha.  Penalised splines enhance robustness to outliers and sparisty.
+
+ 4. Limitations and alternatives. Sensitivity to MAR and compute time. Unaddressed overdispersion.
