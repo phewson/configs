@@ -1,0 +1,45 @@
+#+TITLE: Weekly Time Report
+#+AUTHOR: Paul Hewson
+#+DATE: <2026-03-30 Mon>
+#+OPTIONS: toc:nil
+
+* Weekly Report :report:
+
+** Fixed Commitments (scheduled)
+This section includes all scheduled and recurring events from `fixed.org`.
+
+#+BEGIN: agenda
+
+#+END:
+
+** Active Tasks (clocked)
+This table sums all clocked time from `tasks.org` and `refile.org`. Only include discretionary work.
+
+#+BEGIN: clocktable
+#+CAPTION: Clock summary at [2026-03-30 Mon 17:39]
+| Headline   | Time |
+|------------+------|
+| *Total time* | *0:00* |
+#+END:
+
+** Deferred / Longgrass Tasks
+Tasks that are on hold but worth reviewing.
+
+#+BEGIN: agenda
+
+#+END:
+
+** Summary by Tag
+This section automatically totals time spent per tag.
+
+#+BEGIN: clocktable
+#+CAPTION: Clock summary at [2026-03-30 Mon 11:39]
+| Headline   | Time |
+|------------+------|
+| *Total time* | *0:00* |
+#+END:
+
+** Notes
+- Make sure all SCHEDULED entries in `fixed.org` have `:CLOCKSUM:` set if you want them included in total time.
+- Clock only discretionary work in `tasks.org` and `refile.org`.
+- Review longgrass items for promotion to tasks if relevant.

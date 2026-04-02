@@ -1,0 +1,250 @@
+* Email under emacs (mu4e and gmail)
+
+
+There are four components
+
+1. mbsync (The Mover) Its only job is to talk to Google’s servers and make sure the files on your hard drive match the files in the cloud.      What it does: It logs in via IMAP, sees what is new, and downloads the actual email files into your ~/Mail/gmail directory.  Key Detail: It doesn't know how to "read" or "search" mail; it just moves bits back and forth.
+2. mu (The Librarian)  The name stands for "Mail Indexer." If mbsync is the mover who drops boxes in your house, mu is the librarian who opens every box, reads every letter, and creates a massive, lightning-fast search index. What it does: When you run mu index, it scans your ~/Mail folder. it remembers exactly which file contains an email from "IAAP" or which one has the word "electrons."    Key Detail: This is why searching in your setup is nearly instantaneous, even with 50,000 emails. You aren't searching the files; you're searching the index mu built.
+3. mu4e (The Interface) The "4e" stands for "for Emacs." This is just the visual skin and command center.     What it does: When you press j then i to see your Inbox, mu4e asks mu: "Hey, give me a list of all files the librarian marked as being in the Inbox." It then displays that list in an Emacs buffer.     Key Detail: mu4e doesn't actually "have" your mail; it just shows you what mu found.
+4. msmtp (The Outbox) This is a tiny, separate tool used only for sending.    What it does: When you finish a reply and hit C-c C-c, Emacs hands that text to msmtp. msmtp logs into Google’s SMTP server and flings the email out into the world.
+
+**    How the "Chain" Works in Practice
+
+When you press g (the update key) in your config:
+
+ - mu4e sends a signal to the system.
+-     mbsync runs, talks to Gmail, and downloads new files.
+-     mu automatically wakes up and "indexes" those new files.
+-   mu4e refreshes your screen to show the new results found in the index.
+
+* Binary installs
+
+Install the following
+
+#+begin_src bash :eval no
+sudo apt-get install --reinstall mu4e
+sudo apt-get install isync
+sudo apt install msmtp msmtp-mta ca-certificates
+#+end_src
+
+Installing mu4e as a Debian binary also provides mu.
+I also need /jq/ and /curl/ to parse the tokens from Google, but I think these are part of my standard install.
+Do note that I need to set /chmod +x ~/configs/emacs/get-refresh-token.sh/ and there is one other file (the gpg-agent.conf I think) that needed /chmod 600/.  Or maybe that was the /.authinfo.gpg/
+Remember to run mkdir -p ~/Mail/gmail before the first sync.
+
+** I think this is all i need in .emacs
+
+Note, this will change according to the particular version of mu4e installed (this feels like a fragile install to me, oh well)
+
+#+BEGIN_SRC emacs-lisp
+;; 1. Load mu4e from your specific path
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/elpa-src/mu4e-1.8.14")
+(require 'mu4e)
+
+;; 2. Simplified OAuth2 (Using the built-in Emacs 29+ or ELPA version)
+(use-package auth-source-xoauth2
+  :straight t
+  :config
+  (auth-source-xoauth2-enable))
+
+;; 3. mu4e Basic Settings
+
+(setq mu4e-maildir "~/Mail/gmail"
+      mu4e-get-mail-command "/usr/bin/mbsync -a"
+      mu4e-update-interval 600
+      mu4e-sent-folder   "/[Gmail]/Enviados"
+      mu4e-drafts-folder "/[Gmail]/Borradores"
+      mu4e-trash-folder  "/[Gmail]/Papelera"
+      mu4e-refile-folder "/[Gmail]/Todos")
+
+(setq mu4e-maildir-shortcuts
+    '( ("/INBOX"            . ?i)
+       ("/[Gmail]/Enviados" . ?s)
+       ("/[Gmail]/Papelera" . ?t)
+       ("/[Gmail]/Todos"    . ?a)
+       ("/Work"             . ?w)))
+
+;; 4. Sending Mail via msmtp
+(setq message-send-mail-function 'message-send-mail-with-sendmail
+      sendmail-program "msmtp"
+      message-sendmail-f-is-evil t
+      message-sendmail-extra-arguments '("--read-envelope-from"))
+(setq mu4e-get-mail-command "mbsync -a")
+   #+end_src
+
+I need to initialise the mu agent
+
+#+begin_src bash :eval no
+mu init --maildir=~/Mail/gmail --my-address=texhewson@gmail.com
+mu index
+#+end_src
+
+** Google Authentication
+
+Set up an oauth client project
+
+- Go to the Google Cloud Console.
+- Create a project → APIs & Services → Credentials.
+      If it asks you to "Configure Consent Screen":
+      - Choose External.
+      - Give it an app name (e.g., "My Emacs Mail").
+      - Add your email to the developer contact info.
+      - Crucial: Add your own email address under "Test users." If you don't do this, Google will block your login attempt later.
+- Create an OAuth 2.0 Client ID (Type: Desktop App).      Click + CREATE CREDENTIALS at the top and choose OAuth client ID.
+- Download the JSON, rename it client_secret.json, and run the script below: `python get_gmail_token.py`
+- Copy the Refresh Token it spits out.
+
+The following script grabs the oauth refresh token. FIrst, create a conda environment
+
+#+begin_src bash :eval no
+conda create -n gmail-auth
+conda activate gmail-auth
+conda install -c conda-forge google-auth-oauthlib
+#+end_src
+Then create the python script (e.g. get-gmail-token.py)
+
+#+begin_src python :eval no
+import os
+from google_auth_oauthlib.flow import InstalledAppFlow
+
+# The scope for full Gmail access (IMAP/SMTP)
+SCOPES = ['https://mail.google.com/']
+
+def main():
+    # You will need the 'client_secret.json' you downloaded from Google Console
+    flow = InstalledAppFlow.from_client_secrets_file('client_secret.json', SCOPES)
+    
+    # This opens a browser window for you to log in
+    # 'prompt=consent' ensures you get a Refresh Token
+    creds = flow.run_local_server(port=0, prompt='consent', access_type='offline')
+    
+    print(f"\nYour Refresh Token: {creds.refresh_token}")
+    print(f"Your Client ID: {creds.client_id}")
+    print(f"Your Client Secret: {creds.client_secret}")
+
+if __name__ == '__main__':
+    main()
+    #+end_src
+
+These go in /.authinfo.gpg/
+
+#+begin_src bash :eval no
+machine smtp.gmail.com login texhewson@gmail.com port 587 password YOUR_REFRESH_TOKEN_HERE
+machine imap.gmail.com login texhewson@gmail.com port 993 password YOUR_REFRESH_TOKEN_HERE
+#+end_src
+
+Need a script to massage the refresh token /~/configs/emacs/get-refresh-token.sh/
+
+#+begin_src bash :eval no
+#!/bin/bash
+# Use the refresh token from GPG to get a fresh access token
+REFRESH_TOKEN=$(gpg -q --for-your-eyes-only --no-tty -d ~/.authinfo.gpg | awk '/imap.gmail.com/ {print $NF}')
+CLIENT_ID="YOUR_CLIENT_ID"
+CLIENT_SECRET="YOUR_CLIENT_SECRET"
+
+curl -s -f -X POST \
+  --data "client_id=$CLIENT_ID" \
+  --data "client_secret=$CLIENT_SECRET" \
+  --data "refresh_token=$REFRESH_TOKEN" \
+  --data "grant_type=refresh_token" \
+  https://oauth2.googleapis.com/token | jq -r .access_token
+#+end_src
+
+A few config files that need putting under /stow/
+File /.mbsyncrc/
+
+#+begin_src bash :eval no
+IMAPAccount gmail
+Host imap.gmail.com
+User texhewson@gmail.com
+# We will use a script to feed the token to mbsync
+PassCmd  ~/configs/emacs/get-refresh-token.sh
+AuthMechs XOAUTH2
+SSLType IMAPS
+
+IMAPStore gmail-remote
+Account gmail
+
+MaildirStore gmail-local
+Subfolders Verbatim
+Path ~/Mail/gmail/
+Inbox ~/Mail/gmail/INBOX
+
+Channel gmail
+Far :gmail-remote:
+Near :gmail-local:
+Patterns INBOX "[Gmail]/Enviados" "[Gmail]/Todos" "[Gmail]/Papelera" "[Gmail]/Borradores" Personal Work Spanish holiday
+Create Near
+SyncState *
+#+end_src
+
+File /.msmtprc/
+
+#+begin_src bash :eval no
+defaults
+auth xoauth2
+tls on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+logfile ~/.msmtp.log
+
+account gmail
+host smtp.gmail.com
+port 587
+from texhewson@gmail.com
+user texhewson@gmail.com
+passwordeval ~/configs/emacs/get-gmail-token.sh
+tls on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+account default : gmail
+#+end_src
+
+
+Test the connection
+
+#+begin_src bash :eval no
+mbsync -V gmail
+#+end_src
+
+To rerun the indexer
+#+begin_src bash :eval no
+pkill -9 mu if any old mu process hanging around
+mu init --maildir=~/Mail/gmail --my-address=texhewson@gmail.com
+# Re-index
+mu index
+#+end_src
+
+
+Might need to disable apparmor
+#+begin_src bash :eval no
+sudo ln -s /etc/apparmor.d/usr.bin.msmtp /etc/apparmor.d/disable/
+(gmail-auth) phewson@ditsworthy:~/configs/emacs$ sudo apparmor_parser -R /etc/apparmor.d/usr.bin.msmtp
+#+end_src
+
+But by now it should be good to send a test message
+#+begin_src bash :eval no
+echo "Test message 2" | msmtp -a gmail texhewson@gmail.com
+#+end_src
+
+Also, in file  ~/.gnupg/gpg-agent.conf
+
+#+begin_src bash :eval no
+pinentry-program /usr/bin/pinentry
+allow-emacs-pinentry
+allow-loopback-pinentry
+#+end_src
+
+A couple of config issues, it's important we know who I am
+#+begin_src emacs-lisp :eval no
+(setq mu4e-change-filenames-when-moving t)
+
+(setq user-full-name "Paul Hewson"
+      user-mail-address "texhewson@gmail.com")
+(setq mail-host-address "gmail.com")
+(setq mu4e-sent-messages-behavior 'delete)
+#+end_src
+
+
+** Troubleshooting
+
+Common Error: Duplicate UID  If mbsync returns a non-zero exit code with a "duplicate UID" error, delete the /.mbsyncstate/ file in the offending maildir and run /mbsync -a/ again.  To find message e.g. 262  /find ~/Mail/gmail -name "*U=262*"/
+

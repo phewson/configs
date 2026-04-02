@@ -6,6 +6,7 @@
 ;; Disable package.el — straight.el replaces it
 ;; ------------------------------------------------------------
 (setq package-enable-at-startup nil)
+;;(setq straight-built-in-pseudo-packages '(auth-source-xoauth2))
 
 ;; ------------------------------------------------------------
 ;; Bootstrap straight.el
@@ -39,7 +40,7 @@
 
 (setq inhibit-splash-screen t
       use-dialog-box nil
-      initial-buffer-choice "~/configs/admin/planner.org")
+      initial-buffer-choice "~/configs/admin/tasks.org")
 
 (add-to-list 'default-frame-alist '(width . 101))
 
@@ -103,6 +104,7 @@
 (use-package pulsar
   :config
   (pulsar-global-mode 1))
+
 
 (use-package writeroom-mode
   :custom (writeroom-width 100)
@@ -210,9 +212,92 @@
         ("https://planet.debian.org/rss20.xml")
         ("https://ctan.org/ctan-ann/rss")))
 
+;; 1. Load mu4e from your specific path
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/elpa-src/mu4e-1.8.14")
+(require 'mu4e)
+(setq user-mail-address "texhewson@gmail.com"
+      user-full-name    "Paul Hewson")
+;; 2. Simplified OAuth2 (Using the built-in Emacs 29+ or ELPA version)
+(use-package auth-source-xoauth2
+  :straight t
+  :config
+  (auth-source-xoauth2-enable))
+
+;; 3. mu4e Basic Settings
+(setq mu4e-maildir "~/Mail/gmail"
+      mu4e-get-mail-command "/usr/bin/mbsync -a"
+      mu4e-sent-folder   "/[Gmail]/Enviados"
+      mu4e-drafts-folder "/[Gmail]/Borradores"
+      mu4e-trash-folder  "/[Gmail]/Papelera"
+      mu4e-refile-folder "/[Gmail]/Todos")
+
+(setq mu4e-index-update-error nil)
+(setq mu4e-get-mail-command "/usr/bin/mbsync -a"
+      mu4e-update-interval nil) ;; Disables the timer so 'g' is the manual trigger
+
+;;(with-eval-after-load 'mu4e
+;;  ;; Bind 'g' in the headers view
+;;  (define-key mu4e-headers-mode-map (kbd "g") 'mu4e-update-mail-and-index)
+;;  ;; Bind 'g' in the main mu4e dashboard/menu
+;;  (define-key mu4e-main-mode-map (kbd "g") 'mu4e-update-mail-and-index))
+
+;; Recommended: Update your shortcuts for these specific paths
+(setq mu4e-maildir-shortcuts
+    '( ("/INBOX"            . ?i)
+       ("/[Gmail]/Enviados" . ?s)
+       ("/[Gmail]/Papelera" . ?t)
+       ("/[Gmail]/Todos"    . ?a)
+       ("/Work"             . ?w)))
+
+;; 4. Sending Mail via msmtp
+(setq message-send-mail-function 'message-send-mail-with-sendmail
+      sendmail-program "msmtp"
+      message-sendmail-f-is-evil t
+      message-sendmail-extra-arguments '("--read-envelope-from"))
+
+;; 3. Fixed Face Attributes (The inheritance fix)
+(with-eval-after-load 'mu4e
+  (set-face-attribute 'mu4e-header-key-face nil :inherit 'font-lock-keyword-face)
+  (set-face-attribute 'mu4e-header-value-face nil :inherit 'font-lock-variable-name-face :bold nil)
+  (setq mu4e-view-show-addresses t
+        mu4e-view-hide-cited t))
+
+;; 1. Your Custom Naming Logic (Unchanged)
+(defun my-sc-author-name (full)
+  "Return 'First S' and handle email brackets correctly."
+  (let* ((clean-full (replace-regexp-in-string "<.*>" "" (or full ""))) ;; Strip <email>
+         (parts (split-string (string-trim clean-full)))
+         (first (car parts))
+         (last (car (last parts))))
+    (if (and first last (not (string= first last)))
+        (concat first " " (substring last 0 1))
+      (or first "Someone"))))
+
+;; 2. The Custom Attributed Citation Engine
+(setq mu4e-compose-cite-function
+      (lambda ()
+        (let* ((from (message-fetch-field "from"))
+               (date (message-fetch-field "date"))
+               (author (my-sc-author-name from))
+               ;; Use a space after the > for readability
+               (citation-prefix (concat author "> ")))
+          
+          ;; Insert Header
+          (goto-char (point))
+          (insert (format  "%s interacted with some tech device on %s causing millions of electrons to dance ultimately resulting in these characters wandering round cyberspace:\n\n"
+                          author (or date "a certain day")))
+          
+          ;; The "Nested" Magic: 
+          ;; We bind 'message-yank-prefix' to our new author,
+          ;; and Emacs will naturally put it in front of existing '>' marks.
+          (let ((message-yank-prefix citation-prefix)
+                (message-indentation-spaces 0))
+            (message-cite-original-without-signature)))))
+
 ;; ------------------------------------------------------------
 ;; Snippets
 ;; ------------------------------------------------------------
+
 
 (use-package yasnippet
   :config

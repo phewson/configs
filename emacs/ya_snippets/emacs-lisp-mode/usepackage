@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: use-package-straight
+# key: upkg
+# --
+(use-package ${1:package-name}
+  :straight t
+  :defer ${2:nil}          ;; nil = load immediately, t = lazy load
+  :init
+  ;; Code to run before the package loads
+  $3
+  :config
+  ;; Code to run after the package loads
+  $4)

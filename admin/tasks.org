@@ -1,0 +1,58 @@
+* Luke Paper
+** TODO Plot Marginal Posterior                                       :work:
+  :PROPERTIES:
+  :Effort: 3:00
+  :END:
+  DEADLINE: <2026-04-02 Thu>
+  - Related GitHub issue: https://github.com/lg577/Driver-age-vehicle-age-interaction-modelling/issues/3
+
+** INPROGRESS Add / Append MCMC diagnostics                           :work:
+  :PROPERTIES:
+  :Effort: 5:00
+  :END:
+  - Related GitHub issue: https://github.com/lg577/Driver-age-vehicle-age-interaction-modelling/issues/4
+
+
+* Emacs
+** INPROGRESS email mu4e
+- State "INPROGRESS" from              [2026-04-02 Thu 15:12]
+:LOGBOOK:
+CLOCK: [2026-04-02 Thu 12:11]
+CLOCK: [2026-03-31 Tue 08:32]--[2026-03-31 Tue 11:32] =>  3:00
+:END:
+- [x] Docs for how it works
+- [ ] Stow
+- [x] Get it working
+
+
+** INPROGRESS Recapture [0/2]                                   :admin:
+- State "INPROGRESS" from              [2024-04-17 Wed 12:00]
+- [ ] ORG refile, don't understand capture task and refile
+- [ ] Org capture direct from browser?
+** INPROGRESS Update config                                          :admin:
+SCHEDULED: <2026-03-30 Mon 09:00>
+:PROPERTIES:
+:Effort:   3:00
+:END:
+:LOGBOOK:
+CLOCK: [2026-03-30 Mon 08:36]--[2026-03-30 Mon 15:37] =>  7:01
+:END:
+** WAIT Things I thought I understood once [5/6]
+- State "WAIT"       from              [2024-04-17 Wed 12:00]
+- [X] [[https://stackoverflow.com/questions/6874516/relative-line-numbers-in-emacs][Relative line numbers]]
+- [X] Move files in dired+  Alt-0 w (gets abs filename), Ctrl-y pastes.
+- [X] Rename files in dired. Ctrl-x Ctrl-q to get dired edit mode. Ctrl-c Ctrl-c to commit.
+- [X] Dos2unix    C-x C-m f (or C-x RET f)    .emacs is set up to want utf8 unix
+- [X] Stow.  ~stow stow_directory/package target_directory~
+  By default, ~stow_directory~ is folder in which ~stow~ is called.
+  By default, ~target_directory~ is the parent folder of current folder
+  So you can specify ~-t \~/~
+  There is also a dry-run flag ~-n~, and a verbosity flag ~-v~ through ~-vvv~
+- [ ] diff <(jq -S . a.json) <(jq -S . b.json) diff two json files.
+- [ ] gif-screencast. Needs imagemagick, scrot and gifsicle, also needs a bit of config
+  
+* Learning
+** INPROGRESS spanish org drill                                    :learning:
+:LOGBOOK:
+CLOCK: [2026-03-30 Mon 17:36]--[2026-03-30 Mon 17:55] =>  0:19
+:END:

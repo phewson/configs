@@ -1,978 +1,223 @@
-* Emacs config
+#+TITLE: Emacs Configuration
+#+PROPERTY: header-args:emacs-lisp :tangle ~/.emacs.d/init.el :mkdirp yes
 
-This can be tangled using *M-x org-babel-tangle* or *C-c C-v t*
+* Overview
+This is my Emacs configuration.
 
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-;;; package --- summary
-;;; Commentary:
-;;; Code:
+- Managed with straight.el
+- Literate config using Org mode
+- Tangled with =C-c C-v t=
+
+Goal:
+- Minimal, reproducible setup
+- Focus on R, LaTeX, SQL, and programming
+
+  * Package Management (straight.el)
+
+We disable package.el and use straight.el for reproducibility.
+
+#+BEGIN_SRC emacs-lisp
+(setq package-enable-at-startup nil)
+
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el"
+                         user-emacs-directory))
+      (bootstrap-version 6))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+
+(straight-use-package 'use-package)
+(setq straight-use-package-by-default t)
+
+(eval-when-compile
+  (require 'use-package))
 #+END_SRC
 
-** Appearance
+* Appearance
 
-This theme is meant to be an accessible light mode theme.
+Simple, readable, distraction-free setup.
 
-#+BEGIN_SRC emacs-lisp :tangle testing.el
+#+BEGIN_SRC emacs-lisp
 (load-theme 'modus-operandi t)
 (set-frame-font "DejaVu Sans Mono-11" nil t)
+
+(setq inhibit-splash-screen t
+      use-dialog-box nil)
+
+(tool-bar-mode -1)
+(column-number-mode t)
+
+(setq-default line-spacing 0.4)
 #+END_SRC
 
-Don't pop up dialog boxes
+* Core Behaviour
 
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(setq use-dialog-box nil)
-#+END_SRC
-
-I want to inhibit the splash screen but open with my main planner.org file.
-Also, 101 by 101 is my default frame size.
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-  (setq inhibit-splash-screen t
-        initial-buffer-choice "~/configs/admin/planner.org")
-(add-to-list 'initial-frame-alist '(width . 101))
-(add-to-list 'default-frame-alist '(width . 101))
-#+END_SRC
-
-
-I don't want the tool bar, not even with the cutesy latex lion
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(tool-bar-mode 0)
-#+END_SRC
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(recentf-mode 1)
-(setq recentf-max-menu-items 25)
-(global-set-key "\C-x\ \C-r" 'recentf-open-files)
-#+END_SRC
-
-I want to display line numbers of just about everything (this is now an emacs built in).
-I also want the column number displayed in the modeline
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-  (column-number-mode t)
-  (global-display-line-numbers-mode t)
-#+END_SRC
-
-  #+BEGIN_SRC emacs-lisp :tangle testing.el
-  (setq-default line-spacing 0.4)
-#+END_SRC
-
-Loads writeroom mode. I don't like the f9 keybinding.
-Also, I want to couple this with a pomodoro.
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(use-package writeroom-mode
-  :ensure t
-  :hook
-  (writeroom-mode . (lambda ()
-                      (if writeroom-mode
-                          (progn
-                            (setq original-frame-width (frame-width))
-                            (setq original-frame-height (frame-height))
-                            (display-line-numbers-mode -1))
-                        (progn
-                          (display-line-numbers-mode 1)
-                          (set-frame-width (selected-frame) original-frame-width)
-                          (set-frame-height (selected-frame) original-frame-height)))))
-)
-(global-set-key (kbd "<f9>") 'writeroom-mode)
-#+END_SRC
-
-I just want ONE dired buffer opened at a time. Also, I want some order in the dired views
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(setf dired-kill-when-opening-new-dired-buffer t)
-(setq dired-listing-switches "-lah --group-directories-first")
-#+END_SRC
-
-
-This is meant to provide a blink when I'm moving the cursor from one window to another
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-  (use-package pulsar
-    :ensure t
-    :config
-    ;; Enable pulsar-mode globally
-    (pulsar-global-mode 1)
-
-    ;; Optionally, customize pulsar's behavior
-    (setq pulsar-pulse t)
-    (setq pulsar-delay 0.05)
-    (setq pulsar-iterations 10)
-    (setq pulsar-face 'pulsar-magenta)
-    (setq pulsar-highlight-face 'pulsar-yellow)
-
-    ;; Optionally, set up key bindings for pulsar commands
-    (global-set-key (kbd "C-x l") 'pulsar-pulse-line)
-)
-#+END_SRC
-
-
-** Nix compatibility
-
-Updating nix. I had to change some ownership (put it in my name), The chown is only needed because you had a half-installed system already, this was slow. Also, I had to move some profiles. Then I could run the installation daemon.  I don't really like doing this without shasums or something.
-
-#+BEGIN_SRC
-sudo chown -R phewson /nix
-
-
-mv ~/.local/state/nix/profiles/profile ~/.local/state/nix/profiles/profile.bak
-
-sh <(curl -L https://nixos.org/nix/install) --no-daemon
-#+END_SRC
-
-So I need to install direnv to the system. I could do this:
-
-#+BEGIN_SRC bash :eval false
-sudo apt-get install direnv
-#+END_SRC
-
-Or I could to tell nix to use direnv. We had a lot of fun with this trying to install nix-direnv but seemingly the relevant binaries are in direnv
-
-#+BEGIN_SRC bash :eval false
-nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
-nix-channel --update
-nix-env -iA nixpkgs.direnv
-#+END_SRC
-
-
-And we need to hook direnv into the shell, this is added to .bashrc
-
-#+BEGIN_SRC bash :eval false
-eval "$(direnv hook bash)"
-#+END_SRC
-
-
-Now I need to add this file in the folder (I don't think it exists already, could be wrong)
-
-
-~/official_stats/pg/.envrc
-
-And it needs to contain
-#+BEGIN_SRC bash :eval false
-use nix
-#+END_SRC
-
-And I think this needs to be run manually on any folder with a .envrc
-
-#+BEGIN_SRC bash :eval false
-direnv allow
-#+END_SRC
-
-
-Finally, .emacs needs to contain
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(use-package direnv
-  :ensure t
-  :config
-  (direnv-mode))  ;; enable immediately
-#+END_SRC
-
-
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(use-package exec-path-from-shell
-  :ensure t
-  :config
-  (exec-path-from-shell-initialize))
-#+END_SRC
-
-
-
-
-** Text coding
-
-Found out that expecting utf-8 can be really helpful
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
+#+BEGIN_SRC emacs-lisp
 (prefer-coding-system 'utf-8-unix)
-(set-default-coding-systems 'utf-8-unix)
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-;; Treat clipboard input as UTF-8 string first; compound text next, etc.
-(setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))
-#+END_SRC
 
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(setq require-final-newline t)
-#+END_SRC
-
-
-** Tree-sitter and lsp
-I want gnu style code formatting
-#+begin_src emacs-lisp :tangle testing.el
-(setq ess-style 'RRR)
-#+end_src
-
-,#+BEGIN_SRC emacs-lisp :tangle testing.el
-(setq treesit-language-source-alist
-   '((bash "https://github.com/tree-sitter/tree-sitter-bash")
-     (cmake "https://github.com/uyha/tree-sitter-cmake")
-     (c "https://github.com/tree-sitter/tree-sitter-c")
-     (cpp "https://github.com/tree-sitter/tree-sitter-cpp")
-     (css "https://github.com/tree-sitter/tree-sitter-css")
-     (elisp "https://github.com/Wilfred/tree-sitter-elisp")
-     (go "https://github.com/tree-sitter/tree-sitter-go")
-     (html "https://github.com/tree-sitter/tree-sitter-html")
-     (javascript "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src")
-     (json "https://github.com/tree-sitter/tree-sitter-json")
-     (latex "https://github.com/tree-sitter/tree-sitter-latex")
-     (make "https://github.com/alemuller/tree-sitter-make")
-     (markdown "https://github.com/ikatyang/tree-sitter-markdown")
-     (python "https://github.com/tree-sitter/tree-sitter-python")
-     (r "https://github.com/tree-sitter/tree-sitter-r")
-     (toml "https://github.com/tree-sitter/tree-sitter-toml")
-     (tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src")
-     (typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
-     (yaml "https://github.com/ikatyang/tree-sitter-yaml")))
-#+END_SRC
-
-An LSP can be set up with eglot because it's inbuilt
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(require 'eglot)
-#+END_SRC
-
-
-** ERC server
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(setq erc-server "irc.libera.chat"
-      erc-nick "texhewson"
-      erc-user-full-name "Paul Hewson"
-      erc-track-shorten-start 8
-      erc-autojoin-channels-alist '(("irc.libera.chat" "#systemcrafters" "#emacs"))
-      erc-kill-buffer-on-part t
-            erc-auto-query 'bury)
-#+END_SRC
-
-** Arrayify column
-
-I forgot why I wrote this, turns a column of data into a comma separate list for use in R?
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(defun arrayify (start end quote)
-    "Turn strings on newlines between START and END \
-into a comma-separated one-liner surrounded by QUOTE."
-    (interactive "r\nMQuote: ")
-    (let ((insertion
-           (mapconcat
-            (lambda (x) (format "%s%s%s" quote x quote))
-            (split-string (buffer-substring start end)) ", ")))
-      (delete-region start end)
-      (insert insertion)))
-#+END_SRC
-
-** C++
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-;; make c++ mode tree sitter mode
-(setq major-mode-remap-alist '((c++-mode . c++-ts-mode)))
-#+END_SRC
-
-** Memory
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
 (save-place-mode 1)
-#+END_SRC
-
-Revert buffers like dired. I'm not sure I need both
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
 (global-auto-revert-mode 1)
 (setq global-auto-revert-non-file-buffers t)
+
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+
+(global-set-key (kbd "C-x C-r") #'recentf-open-files)
 #+END_SRC
 
-** Bundle custom vars into their own file
+* Completion
 
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(setq custom-file (locate-user-emacs-file "~/configs/emacs/.custom-vars.el"))
-(load custom-file 'noerror 'nomessage)
+Modern minimal completion stack.
+
+#+BEGIN_SRC emacs-lisp
+(use-package vertico
+  :init (vertico-mode))
+
+(use-package orderless
+  :custom
+  (completion-styles '(orderless basic)))
+
+(use-package marginalia
+  :init (marginalia-mode))
+
+(use-package consult)
+
+(use-package corfu
+  :init (global-corfu-mode))
 #+END_SRC
 
-** PostgreSQL
+* Environment
 
-There are two sets of postgres variables. One set is environmental variables which can be picked up by various scripted usage of postgres (importing data for example). The other set are needed for direct emacs<-> postgresql interaction
+These are Emacs-specific environment variables.
 
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-;;(setenv "TEST_DATA_HOME" "/home/phewson/analytics-queries/ci/tests/sim_data")
-;;(setenv "HOME" "~/")
+#+BEGIN_SRC emacs-lisp
 (setenv "DATASTORE" "/home/phewson/DATA")
 (setenv "PGUSER" "pgdocker")
 (setenv "PGHOST" "localhost")
 (setenv "PGDATABASE" "official")
 (setenv "PGPORT" "15432")
+
+(use-package direnv
+  :config (direnv-mode))
+#+END_SRC
+
+* Navigation & Editing
+
+#+BEGIN_SRC emacs-lisp
+(windmove-default-keybindings)
+
+(use-package pulsar
+  :config (pulsar-global-mode 1))
+
+(use-package writeroom-mode
+  :custom (writeroom-width 100)
+  :hook (writeroom-mode . (lambda ()
+                            (display-line-numbers-mode
+                             (if writeroom-mode -1 1)))))
+
+(global-set-key (kbd "<f9>") #'writeroom-mode)
+
+(setq dired-kill-when-opening-new-dired-buffer t)
+(setq dired-listing-switches "-lah --group-directories-first")
+#+END_SRC
+
+* Programming
+
+#+BEGIN_SRC emacs-lisp
+(use-package eglot
+  :hook ((ess-r-mode . eglot-ensure)
+         (python-mode . eglot-ensure)
+         (c++-ts-mode . eglot-ensure)
+         (LaTeX-mode . eglot-ensure)))
+
+(setq major-mode-remap-alist
+      '((c++-mode . c++-ts-mode)
+        (python-mode . python-ts-mode)))
+
+(use-package rainbow-delimiters
+  :hook (prog-mode . rainbow-delimiters-mode))
+
+(use-package flycheck
+  :init (global-flycheck-mode))
+
+(add-hook 'text-mode-hook #'flyspell-mode)
+#+END_SRC
+
+* R / ESS
+
+#+BEGIN_SRC emacs-lisp
+(use-package ess
+  :init (require 'ess-site)
+  :config
+  (setq ess-indent-offset 2))
+#+END_SRC
+
+* SQL
+
+#+BEGIN_SRC emacs-lisp
+(setq sql-product 'postgres)
+
 (setq sql-postgres-login-params
       '((user :default "pgdocker")
         (database :default "official")
         (server :default "localhost")
         (port :default 15432)))
-(setq sql-product 'postgres)
 #+END_SRC
 
-** Framemove
+* LaTeX
 
-I want to bounce between windows using *C-ARROW*
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(use-package framemove
-    :load-path "~/configs/misc_el/")
-(windmove-default-keybindings)
-(setq framemove-hook-into-windmove t)
-;; (when (fboundp 'windmove-default-keybindings)
-;;  (windmove-default-keybindings))
-#+END_SRC
-
-#+begin_src emacs-lisp :eval no
-(require 'cl-lib)
-  (use-package windmove
-      :ensure nil
-      :config
-      ;; Enable windmove to use Shift + Arrow keys to switch between windows
-      (windmove-default-keybindings 'shift))
-  ;;  (global-set-key (kbd "C-c <left>")  'windmove-left)
-  ;;(global-set-key (kbd "C-c <right>") 'windmove-right)
-  ;;(global-set-key (kbd "C-c <up>")    'windmove-up)
-  ;;(global-set-key (kbd "C-c <down>")  'windmove-down)
-
-    ;; Configure framemove
-    (use-package framemove
-      :load-path "~/configs/misc_el/"
-      :ensure nil
-      :after windmove
-      :config
-      ;; Integrate framemove with windmove
-      (setq framemove-hook-into-windmove t))
-  #+end_src
-
-
-
-** Shell
-
-This ensures that the shell only records unique entries.
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(defvar comint-input-ignoredups)
-(setq comint-input-ignoredups t)
-#+END_SRC
-
-
-** Package loading
-
-So, the first thing is, I'm not sure I have any configs/misc_el anymore?
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(add-to-list 'load-path (expand-file-name "~/configs/misc_el/"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/elpa/"))
-
-#+END_SRC
-
-I need to check out how much of this is needed. Should all be superceded by things like
-straight.el?
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(require 'package)
-(setq package-archives
-   (quote
-    (("melpa" . "https://melpa.org/packages/")
-     ("gnu" . "https://elpa.gnu.org/packages/"))))
-(setq package-archive-priorities '(("melpa" . 1)
-                                   ("gnu" . 2)))
-(package-initialize)
-(eval-when-compile
-#+END_SRC
-
-This feels like (a) a convoluted way of loading use-package and (b) don't
-I need a better way of updating packages.
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(require 'use-package))
-(require 'bind-key)
-(setq use-package-always-ensure t)
-(use-package auto-package-update
+#+BEGIN_SRC emacs-lisp
+(use-package tex
+  :straight auctex
+  :hook (LaTeX-mode . (lambda ()
+                        (turn-on-reftex)
+                        (flyspell-mode)
+                        (TeX-fold-mode)))
   :config
-  (setq auto-package-update-delete-old-versions t)
-  (setq auto-package-update-hide-results t)
-  (auto-package-update-maybe))
+  (setq TeX-auto-save t
+        TeX-parse-self t
+        TeX-source-correlate-mode t))
+
+(use-package cdlatex)
+(use-package xenops)
 #+END_SRC
 
-** ESS
+* Utilities
 
-Options are:
+#+BEGIN_SRC emacs-lisp
+(use-package magit)
+(use-package docker)
+(use-package json-mode)
+(use-package stan-mode)
 
-1. Launch emacs from the command line within a nix shell, i.e.,
-
-  #+begin_src bash :eval no
-nix shell
-emacs
-#+end_src
-
-Or if I ever get round to using flakes
-
-#+begin_src bash :eval no
-nix develop
-emacs
-#+end_src
-
-2.  Alternatively, call emacs with some arguments
-
-   #+begin_src bash :eval no
-#!/bin/bash
-# ~/bin/emacs-nix
-exec nix-shell -p R --run "emacs $@"
-#+end_src
-
-Make it executable
-#+begin_src bash :eval no
-chmod +x ~/bin/emacs-nix
-#+end_src
-
-Then I can just run `emacs-nix`
-
-3. Set the inferior ESS process manually
-#+begin_src emacs-lisp :eval no
-   (setq inferior-ess-r-program "/nix/store/abc123-r-4.3.1/bin/R")
-#+end_src
-
-To find that address, I need to run
-#+begin_src bash :eval no
-nix build nixpkgs#R --no-link --print-out-paths
-#+end_src
-
-4. You can use `direnv` (new tool to me).
-   Install `direnv`
-   do the following in the project dir:
-
-#+begin_src bash :eval no
-echo "use nix" > .envrc
-direnv allow
-#+end_src
-
-And then in emacs
-#+begin_src emacs-lisp :eval no
-(use-package direnv
-  :config
-  (direnv-mode))
-#+end_src
-
-Short answer here seems to be to use emacs within the nix-shell.
-
- #+begin_src emacs-lisp :tangle testing.el
- (use-package ess
-  :ensure t
-  :init (require 'ess-site))
-(add-hook 'ess-r-mode-hook
-	  (lambda ()
-	    (setq-local eglot-ignored-server-capabilities
-			'(documentFormattingProvider
-			 :documentRangeFormattingProvider))))
-(add-hook 'ess-r-mode-hook
-	  (lambda () (remove-hook 'before-save-hook 'eglot-format-buffer t)))
-(setq ess-indent-offset 2)
-#+end_src
-
-** Standard packages
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-  (use-package wgrep
-    :ensure t)
-  (use-package magit
-    :ensure t)
-  (use-package docker
-    :ensure t)
-  (use-package docker-compose-mode
-    :ensure t)
-  (use-package json-mode
-    :ensure t)
-  (use-package hackernews
-    :ensure t)
-  (use-package stan-mode
-    :ensure t)
-  (use-package poly-R
-    :ensure t)
-  (use-package academic-phrases
-    :ensure t)
-  (use-package rainbow-delimiters
-    :ensure t
-    :hook (prog-mode . rainbow-delimiters-mode)
-  )
-  (use-package consult
-    :ensure t)
-#+END_SRC
-
-** RSS reading
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-  (use-package elfeed
-    :ensure t)
-  (setq elfeed-feeds '(("https://martinfowler.com/feed.atom")
-		        ("https://uk.fedimeteo.com/plymouth.rss")
-		        ("https://opensource.com/feed")
-		        ("https://feeds.feedburner.com/RBloggers")
-		        ("https://planet.debian.org/rss20.xml")
-		        ("https://sachachua.com/blog/feed/index.xml")
-		        ("https://karthinks.com/tags/elfeed/index.xml")
-		        ("https://ctan.org/ctan-ann/rss"))
-      )
-#+END_SRC
-** Completions
-
-This is also a work in progress. I think it could be simplified if I stopped trying to get
-icons in *C-x C-f*
-I have a note, M-x all-the-icons-install-fonts
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(use-package vertico
-  :init
-  (vertico-mode))
-
-(use-package general
-  :ensure t)
-
-(use-package marginalia
-  :general
-  (:keymaps 'minibuffer-local-map
-   "M-A" 'marginalia-cycle)
-  :custom
-  (marginalia-max-relative-age 0)
-  (marginalia-align 'right)
-  :init
-  (marginalia-mode))
-
-(use-package all-the-icons-completion
-  :ensure t
-  :after (marginalia all-the-icons)
-  :hook (marginalia-mode . all-the-icons-completion-marginalia-setup)
-  :init
-  (all-the-icons-completion-mode))
-#+END_SRC
-
-
-** Whitespace mode
-
-This is meant to work in prog mode (I think, code files)
-101 lines is the hard limit.
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(use-package whitespace
-  :ensure t)
-(setq-default whitespace-line-column 101)
-(add-hook 'emacs-lisp-mode-hook
-          (function (lambda()
-                      (whitespace-mode t))))
-(add-hook 'python-mode-hook
-          (function (lambda()
-                      (whitespace-mode t))))
-(add-hook 'r-mode-hook
-          (function (lambda()
-                      (whitespace-mode t))))
-#+END_SRC
-
-
-** Helpful things
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(use-package which-key
-  :init (which-key-mode)
-  :diminish which-key-mode
-  :config
-  (setq which-key-idle-delay 0.3))
-#+END_SRC
-
-
-** Adding icons
-
-I'm going to need to run *M-x all-the-icons-install-fonts*
-But this adds some icon displays in a few nice places.
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(when (display-graphic-p)
-  (require 'all-the-icons))
-(use-package all-the-icons-dired
-  :hook (dired-mode . all-the-icons-dired-mode)
-  :config (setq all-the-icons-dired-monochrome nil)
-  )
-#+END_SRC
-
-** Browsing kill ring
-
-I'm not sure I want to do this, or *consult-yank-from-kill-ring*
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(use-package browse-kill-ring
-  :ensure t
-  :bind (("M-y" . browse-kill-ring))
-  :config
-  (setq browse-kill-ring-highlight-current-entry t)
-  (setq browse-kill-ring-separator "\n--------------------\n")
-)
-#+END_SRC
-** Undo history
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
 (use-package vundo
-  :ensure t
-  :bind (("C-x u" . vundo))
-  :config
-  (setq vundo-compact-display t)
-  (setq vundo-roll-back-on-quit t)
-)
+  :bind (("C-x u" . vundo)))
+
+(use-package browse-kill-ring
+  :bind (("M-y" . browse-kill-ring)))
 #+END_SRC
 
+* Icons
 
-** ispell (actually hunspell)
-#+begin_src bash :eval no
-sudo apt-get install hunspell hunspell-es
-#+end_src
+NOTE: Run =M-x nerd-icons-install-fonts= after install.
 
-Use either of #+SPANISH: t or #+PROPERTY: DICTIONARY es_ES at the start of the file
-
-#+begin_src emacs-lisp :tangle testing.el
-(setq ispell-program-name "hunspell")
-(setq ispell-dictionary "en_GB") ;; Default dictionary
-
-(defun toggle-ispell-dictionary ()
-  "Toggle between English and Spanish dictionaries."
-  (interactive)
-  (let ((current ispell-local-dictionary))
-    (if (string= current "en_GB")
-        (ispell-change-dictionary "es_ES")
-      (ispell-change-dictionary "en_GB"))))
-
-(global-set-key (kbd "C-c d t") 'toggle-ispell-dictionary)
-(global-set-key (kbd "C-c f b") 'flyspell-buffer)
-#+end_src
-** LaTeX
-
-Here's a list of some standard packages and basic configs.
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(setq latex-run-command "pdflatex")
+#+BEGIN_SRC emacs-lisp
+(use-package nerd-icons)
+(use-package nerd-icons-dired
+  :hook (dired-mode . nerd-icons-dired-mode))
 #+END_SRC
 
-  #+BEGIN_SRC emacs-lisp :tangle testing.el
-(use-package auctex
-  :ensure t)
-(setq auto-mode-alist
-  (append '(("\\.tex\\'" . LaTeX-mode)) auto-mode-alist))
-;; Custom function to split window vertically and display PDF
-(defun my-TeX-revert-document-buffer (file)
-  "Revert the buffer corresponding to FILE in another window."
-  (let ((buf (find-buffer-visiting file)))
-    (if buf
-        (progn
-          (select-window (split-window-right))
-          (switch-to-buffer buf)
-          (pdf-view-mode)
-          (pdf-view-fit-page-to-window))
-      (message "No buffer associated with %s" file))))
+* Org Mode
 
-(setq TeX-view-program-selection '((output-pdf "PDF Tools"))
-    TeX-source-correlate-start-server t)
+Keep Org config separate for clarity.
 
-(add-hook 'TeX-after-compilation-finished-functions
-        #'TeX-revert-document-buffer)
-(use-package cdlatex
-    :ensure t)
-(use-package xenops
-  :ensure t)
-    ;;(setq TeX-view-program-list
-    ;;      '(("Okular" "okular %o")
-    ;;       ("Firefox" "firefox %o")
-    ;;       ("Zathura" "zathura %o"))
-    ;;)
-
-    ;;(setq TeX-view-program-selection
-    ;;      '((output-pdf "Okular")))
-
-    ;; Custom function to split window vertically and display PDF
-    (defun my-TeX-revert-document-buffer (file)
-      "Revert the buffer corresponding to FILE in another window."
-      (let ((buf (find-buffer-visiting file)))
-        (if buf
-            (progn
-              (select-window (split-window-right))
-              (switch-to-buffer buf)
-              (pdf-view-mode)
-              (pdf-view-fit-page-to-window))
-          (message "No buffer associated with %s" file))))
-
-    (setq TeX-view-program-selection '((output-pdf "PDF Tools"))
-          TeX-source-correlate-start-server t)
-
-    (add-hook 'TeX-after-compilation-finished-functions
-              #'TeX-revert-document-buffer)
-#+END_SRC
-The following will require emacs 30
-#+begin_src emacs-lisp :eval no
-(use-package twauctex
-  :vc (:url "https://github.com/jeeger/twauctex")
-#+end_src
-Do I get any more nonsense here?
-So, in the mean time I need to use:
-#+begin_src emacs-lisp :eval no
-(add-to-list 'load-path "~/configs/misc_el/twauctex")
-(require 'twauctex)
-(twauctex-global-mode)
-#+end_src
-If I want reftex to use biber (loading it automatically with latex mode as well)
-
-#+begin_src bash :eval no
-sudo apt install texlive-bibtex-extra texlive-publishers biber
-#+end_src
-
-  
-  #+begin_src emacs-lisp :eval no
-    (use-package reftex
-      :ensure t
-      :hook ((LaTeX-mode . reftex-mode))
-      :config
-      ;; Add custom citation commands for biblatex
-      (setq reftex-cite-format '((?\C-m . "\\cite[]{%l}")
-                                 (?p . "\\parencite[]{%l}")
-                                 (?t . "\\textcite[]{%l}")))
-
-      ;; Add biblatex commands to reftex
-    (setq reftex-cite-prompt-optional-args t) ; Prompt for empty optional arguments in cite commands
-    (setq reftex-cite-key-separator ", "))
-    (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
-
-    ;; Add custom citation commands for RefTeX
-    (setq reftex-cite-prompt-optional-args t) ; Prompt for empty optional arguments in cite commands
-    (setq reftex-cite-format
-          '((?a . "\\autocite[]{%l}")
-            (?c . "\\cite[]{%l}")
-            (?f . "\\footcite[]{%l}")
-            (?n . "\\nocite{%l}")
-            (?p . "\\parencite[]{%l}")
-            (?s . "\\smartcite[]{%l}")
-            (?t . "\\textcite[]{%l}"))))
-#+end_src
-
-Mark with m (multiple marks) insert with return.
-spc opens full database file
-
-*** LaTeX LSP
-I'm trying to only use company-lsp as the backend. I only want lsp support from company.
-#+begin_src emacs-lisp :eval no
-(use-package eglot
-  :hook (prog-mode . eglot-ensure)
-  :config
-  ;; Configure Eglot-specific settings here if needed
-  )
-
-;; Corfu Configuration
-(use-package corfu
-  :init
-  (setq corfu-auto t)                 ;; Enable auto completion
-  (setq corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
-  (setq corfu-auto-prefix 2)          ;; Show completions after 2 characters
-  (setq corfu-auto-delay 0.0)         ;; No delay for completion
-  (setq corfu-quit-at-boundary nil)   ;; Don't quit at completion boundary
-  (setq corfu-quit-no-match t)        ;; Quit if no match
-  (setq corfu-preview-current nil)    ;; Disable current candidate preview
-  (setq corfu-preselect-first nil)    ;; Do not preselect first candidate
-  (setq corfu-scroll-margin 5)        ;; Use scroll margin
-  :config
-  (global-corfu-mode))
-
-;; Corfu Documentation (Optional)
-(use-package corfu-doc
-  :after corfu
-  :hook (corfu-mode . corfu-doc-mode)
-  :bind (:map corfu-map
-              ("M-d" . corfu-doc-toggle)
-              ("M-p" . corfu-doc-scroll-up)
-              ("M-n" . corfu-doc-scroll-down)))
-
-;; Corfu Popup Info (Optional)
-(use-package corfu-popupinfo
-  :after corfu
-  :config
-  (corfu-popupinfo-mode))
-
-;; Integrate Corfu with Eglot
-(use-package eglot
-  :hook (eglot-managed-mode . corfu-eglot-setup)
-  :config
-  (defun corfu-eglot-setup ()
-    "Custom setup for Eglot with Corfu."
-    (setq-local completion-at-point-functions
-                (list (cape-super-capf #'eglot-completion-at-point #'cape-dabbrev)))))
-#+end_src
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-      ;;; wget https://github.com/latex-lsp/texlab/releases/download/v5.16.1/texlab-x86_64-linux.tar.gz in Downloads (need to change the location)
-      ;; tar -xvf texlab-x86_64-linux.tar.gz 
-    (use-package company
-      :ensure t
-      :config
-      (global-company-mode)
-      (setq company-backends '(company-capf))
-      (setq company-idle-delay 0.2
-          company-minimum-prefix-length 1
-          company-selection-wrap-around t
-          company-frontends '(company-pseudo-tooltip-frontend
-                              company-echo-metadata-frontend))
-      )  ; Use only company-capf for completions
-
-    ;; Install and configure eglot
-    (use-package eglot
-      :ensure t
-      :hook ((latex-mode . eglot-ensure)
-             (LaTeX-mode . eglot-ensure))  ; Ensure eglot starts for LaTeX modes
-      :config
-      (add-to-list 'eglot-server-programs '(latex-mode . ("~/Downloads/texlab"))))
-
-    ;; Optional: Additional settings for LaTeX editing (e.g., AUCTeX)
-    (use-package auctex
-      :ensure t
-      :defer t
-      :hook (LaTeX-mode . (lambda ()
-                            (turn-on-reftex)
-                            (flyspell-mode)
-                            (TeX-fold-mode))))
-
-      (use-package company-auctex
-        :ensure t
-        :config
-        (company-auctex-init))
-;; this is for minted I think
-      (eval-after-load "tex" 
-        '(setcdr (assoc "LaTeX" TeX-command-list)
-                '("%`%l%(mode) -shell-escape%' %t"
-                TeX-run-TeX nil (latex-mode doctex-mode) :help "Run LaTeX")
-          )
-        )
-#+END_SRC
-
-** yasnippet
-
-I'm not sure how much of this config I need, because it seems to pick up latex mode for example
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(use-package yasnippet
-    :ensure t)
-(setq yas-snippet-dirs '("~/configs/emacs/ya_snippets/"))
-(yas-reload-all)
-(add-hook 'prog-mode-hook #'yas-minor-mode)
-(add-hook 'sql-interactive-mode-hook
-          #'(lambda () (setq yas--extra-modes '(sql-mode))))
-(yas-global-mode 1)
-#+END_SRC
-
-
-** Flycheck
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-;;(setq flycheck-flake8rc "~/configs/splunk/.flake8")
-(use-package flycheck
-     :ensure t)
-;;(use-package flycheck-mypy
-;;     :load-path "~/configs/misc_el")
-(global-flycheck-mode)
-(add-hook 'after-init-hook #'global-flycheck-mode)
-(add-hook 'c++-mode-hook
-    (lambda() (setq flycheck-gcc-include-path
-       (list (expand-file-name "~/R/x86_64-pc-linux-gnu-library/4.0/testthat/include")
-             (expand-file-name "~/R/x86_64-pc-linux-gnu-library/4.0/Rcpp/include"))
-)))
-(setq flycheck-checker-error-threshold 800)
-(setq flycheck-lintr-linters "with_defaults(line_length_linter(100))")
-(setq flycheck-python-flake8-executable "~/miniconda3/envs/splunk/bin/flake8")
-(setq flycheck-python-mypy-executable "~/miniconda3/envs/splunk/bin/mypy")
-(setq magit-log-arguments '("--graph" "--color" "--decorate" "-n256"))
-
-(dolist (hook '(text-mode-hook))
-  (add-hook hook (lambda () (flyspell-mode 1))))
-
-;; stack exchange hack, ubuntu has old version of shell linter
-(setq flycheck-shellcheck-follow-sources nil)
-(add-hook 'sh-mode-hook 'flycheck-mode)
-#+END_SRC
-
-** Grammar assistance
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(use-package languagetool
-  :ensure t
-  :defer t
-  :commands (languagetool-check
-             languagetool-clear-suggestions
-             languagetool-correct-at-point
-             languagetool-correct-buffer
-             languagetool-set-language
-             languagetool-server-mode
-             languagetool-server-start
-             languagetool-server-stop)
-     :config
-  (setq languagetool-java-bin "/usr/bin/java"
-        languagetool-server-command "/snap/languagetool/current/usr/bin/languagetool-server.jar"
-       languagetool-console-command "/snap/languagetool/current/usr/bin/languagetool-commandline.jar"
-        languagetool-java-arguments '("-Dfile.encoding=UTF-8")
-	)
-)
-#+END_SRC
-
-** Bibliography management
-
-[[https://lucidmanager.org/productivity/emacs-bibtex-mode/][Lucid manager article]] and [[https://github.com/pprevos/emacs-writing-studio][Emacs writing studio]]
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(use-package citar
-:custom
-  (citar-bibliography '("~/configs/admin/papers/regression.bib"))
-  :hook (org-mode . citar-capf-setup)
-)
-
-(use-package citar-org-roam
-  :after (citar org-roam)
-  :config (citar-org-roam-mode))
-
-;;(use-package biblio
-;;  :ensure t)
-#+END_SRC
-
-#+begin_src emacs-lisp :eval no
-  (use-package gscholar-bibtex
-    :ensure t
-    :init
-    (setq gscholar-bibtex-default-source "Google Scholar")
-    (setq gscholar-bibtex-database-file "~/configs/admin/papers/regression.bib"))
-#+end_src
-
-I keep org configs in a separate file (probably need to stop this)
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-   (load-file "~/configs/emacs/.orgconfigs.el")
-#+END_SRC
-
-* DevDocs
-
-#+begin_src emacs-lisp :eval no
-  (use-package devdocs
-    :ensure t
-    :config
-    ;; Custom function to check if a documentation set is installed
-    (add-hook 'after-init-hook
-            (lambda ()
-              (unless (member "latex" (devdocs-installed-docs))
-                (devdocs-install "latex"))))
-     (setq devdocs-browser-function 'browse-url-default-browser)
-         :bind ("C-h D" . devdocs-lookup))
- #+end_src
-
-* Screencasting
-gif-screencast
-
-#+begin_src bash :eval no
-sudo apt-get install scrot
-#+end_src
-
-* End note
-
-#+BEGIN_SRC emacs-lisp :tangle testing.el
-(provide '.emacs)
-;;; .emacs ends here
+#+BEGIN_SRC emacs-lisp
+(load-file "~/configs/emacs/.orgconfigs.el")
 #+END_SRC

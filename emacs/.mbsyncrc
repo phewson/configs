@@ -1,0 +1,22 @@
+IMAPAccount gmail
+Host imap.gmail.com
+User texhewson@gmail.com
+# We will use a script to feed the token to mbsync
+PassCmd "~/configs/scripts/get-gmail-refresh-token.sh"
+AuthMechs XOAUTH2
+SSLType IMAPS
+
+IMAPStore gmail-remote
+Account gmail
+
+MaildirStore gmail-local
+Subfolders Verbatim
+Path ~/Mail/gmail/
+Inbox ~/Mail/gmail/INBOX
+
+Channel gmail
+Far :gmail-remote:
+Near :gmail-local:
+Patterns INBOX "[Gmail]/Enviados" "[Gmail]/Todos" "[Gmail]/Papelera" "[Gmail]/Borradores" Personal Work Spanish holiday
+Create Near
+SyncState *

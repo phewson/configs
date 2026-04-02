@@ -32,26 +32,98 @@
 ;;---------------------------------------------------
 ;; org-gtd
 
+;;; GTD Org Setup
+
 (setq org-directory "~/configs/admin")
+(setq org-agenda-files (list
+                        (concat org-directory "/fixed.org")
+                        (concat org-directory "/tasks.org")
+                        (concat org-directory "/journal.org")))
+(setq org-default-notes-file (concat org-directory "/refile.org"))
 
-(setq org-agenda-files
-      '("~/configs/admin/planner.org"
-        "~/configs/admin/schedule.org"
-        "~/configs/admin/github_projects.org"))
+;; Org mode appearance
+(use-package org
+  :ensure t
+  :hook (org-mode . dw/org-mode-setup)
+  :config
+  (setq org-ellipsis " ▾"
+        org-hide-emphasis-markers t
+        org-src-preserve-indentation t
+        org-edit-src-content-indentation 0))
 
-(setq org-default-notes-file "~/configs/admin/refile.org")
+(defun dw/org-mode-setup ()
+  (org-indent-mode)
+  (variable-pitch-mode 1)
+  (visual-line-mode 1)
+  (auto-fill-mode 0))
 
+;; Bullets
+(use-package org-bullets
+  :after org
+  :hook (org-mode . org-bullets-mode)
+  :custom
+  (org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●")))
+
+;; Keybindings
+(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c b") 'org-iswitchb)
+
+;; TODO keywords
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "|" "DONE(d)")
-        (sequence "READY(r!)" "INPROGRESS(i!)" "|"
-                  "REVIEW(v!)" "WAIT(w!)" "SHIPPED(s!)")))
+      '((sequence "TODO(t)" "READY(r!)" "INPROGRESS(i!)" "|" "REVIEW(v!)" "WAIT(w!)" "DONE(d)" "SHIPPED(s!)")
+        (sequence "PHONE(p)" "MEETING(m)" "|")))
 
+(setq org-use-fast-todo-selection t)
+(setq org-todo-keyword-faces
+      '(("TODO" . (:foreground "red" :weight bold))
+        ("READY" . (:foreground "red" :weight bold))
+        ("INPROGRESS" . (:foreground "magenta" :weight bold))
+        ("DONE" . (:foreground "blue" :weight bold))
+        ("WAIT" . (:foreground "forestgreen" :weight bold))
+        ("REVIEW" . (:foreground "forestgreen" :weight bold))
+        ("MEETING" . (:foreground "forestgreen" :weight bold))
+        ("PHONE" . (:foreground "forestgreen" :weight bold))))
+
+;; Refile targets
+(setq org-refile-targets '((nil :maxlevel . 9)
+                           (org-agenda-files :maxlevel . 9)))
+(setq org-refile-use-outline-path t)
+(setq org-refile-allow-creating-parent-nodes 'confirm)
+
+;; Capture templates
 (setq org-capture-templates
-      '(("t" "Todo" entry (file "~/configs/admin/refile.org")
-         "* TODO %?\n%U\n")
-        ("n" "Note" entry (file "~/configs/admin/refile.org")
-         "* %?\n%U\n")))
+      '(("t" "TODO task" entry (file ,(concat org-directory "/tasks.org"))
+         "* TODO %?\n  %U\n  %a\n" :clock-in t :clock-resume t)
+        ("r" "Respond" entry (file ,(concat org-directory "/tasks.org"))
+         "* NEXT Respond to %:from on %:subject\n  SCHEDULED: %t\n  %U\n  %a"
+         :clock-in t :clock-resume t :immediate-finish t)
+        ("n" "Note" entry (file ,(concat org-directory "/journal.org"))
+         "* %?\n  %U\n  %a" :clock-in t :clock-resume t)
+        ("j" "Journal" entry (file+datetree ,(concat org-directory "/journal.org"))
+         "* %?\n  %U" :clock-in t :clock-resume t)
+        ("m" "Meeting" entry (file ,(concat org-directory "/fixed.org"))
+         "* MEETING %?\n  %U" :clock-in nil)
+        ("p" "Phone call" entry (file ,(concat org-directory "/fixed.org"))
+         "* PHONE %?\n  %U" :clock-in nil)))
 
+;; Agenda time grid (fixed + discretionary)
+(setq org-agenda-time-grid '((daily today remove-match)
+                             (0900 1100 1300 1500 1700)
+                             "......" "----------------"))
+
+;; Clocking
+(setq org-agenda-clockreport-parameter-plist
+      '(:link t :maxlevel 3 :fileskip0 t :compact t))
+
+;; Windmove in org
+(add-hook 'org-shiftup-final-hook 'windmove-up)
+(add-hook 'org-shiftleft-final-hook 'windmove-left)
+(add-hook 'org-shiftdown-final-hook 'windmove-down)
+(add-hook 'org-shiftright-final-hook 'windmove-right)
+
+(provide 'gtd-org)
 
 ;; org-knowledge
 (use-package org-roam
@@ -103,9 +175,19 @@
 
 ;; These are the files that can contribute to the agenda
 ;;(defvar org-agenda-files);; this line added so emacs knows the next variable exists.
-(setq org-agenda-files (list "~/configs/admin/planner.org"
-                             "~/configs/admin/schedule.org"
-                             "~/configs/admin/github_projects.org"))
+;;(setq org-agenda-files (list "~/configs/admin/planner.org"
+;;                             "~/configs/admin/schedule.org"
+;;                             "~/configs/admin/github_projects.org"))
+
+(setq org-tag-alist
+      '((:startgroup)
+        ("teaching" . ?t)
+        ("research" . ?r)
+        ("admin" . ?a)
+        ("health" . ?h)
+        ("learning" . ?l)
+        (:endgroup)))
+
 
 (use-package org-roam
   :ensure t

@@ -1,0 +1,44 @@
+* TODO Appraisal In Person                                      :fixed:admin:
+SCHEDULED: <2026-04-02 Thu 10:30-11:30>
+:PROPERTIES:
+:CLOCKSUM: 1:00
+:END:
+
+* TODO ML Met Office Online                                     :fixed:admin:
+SCHEDULED: <2026-04-02 Thu 14:00-15:00>
+:PROPERTIES:
+:CLOCKSUM: 1:00
+:END:
+
+* TODO Gym                                                     :fixed:health:
+SCHEDULED: <2026-03-31 Tue 10:30-11:30 ++2w>
+:PROPERTIES:
+:CLOCKSUM: 1:00
+:END:
+
+* TODO Gym Travel Time                                               :fixed:health:
+SCHEDULED: <2026-03-31 Tue 10:00-12:00 ++2w>
+:PROPERTIES:
+:CLOCKSUM: 1:00
+:END:
+
+
+* TODO Piano                                                   :fixed:health:
+SCHEDULED: <2026-04-09 Thu 10:00-11:00 ++2w>
+:PROPERTIES:
+:CLOCKSUM: 1:00
+:END:
+
+
+
+* TODO Piano                                                   :fixed:health:
+SCHEDULED: <2026-04-21 Tue 10:00-11:00 ++2w>
+:PROPERTIES:
+:CLOCKSUM: 1:00
+:END:
+
+* TODO Piano travel time                                       :fixed:health:
+SCHEDULED: <2026-04-21 Tue 9:45-11:15 ++2w>
+:PROPERTIES:
+:CLOCKSUM: 0:30
+:END:

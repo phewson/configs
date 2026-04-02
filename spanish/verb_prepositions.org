@@ -1,317 +1,1225 @@
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       c973e375-b997-4908-8536-c55a34c4bf4a
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Tengo [que] estudiar esta noche.
 - Ella dice [que] tiene [que] salir temprano.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       04d21182-f1ef-492c-88bd-d62e7eb1d618
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Volvimos [a] ver la película.
 - Cuando terminó, empezó [a] leer y luego volvió [a] hacerlo.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       13cdfce3-f498-4a44-9323-1141315b8837
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Estoy aprendiendo [a] tocar la guitarra.
 - Aprendieron [a] conducir juntos.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       48e7c323-137a-4460-b5bc-d17de7dd23c4
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Voy a empezar [a] trabajar en el proyecto.
 - Ella empezó [a] correr todas las mañanas.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       2b9ffb5b-e0c1-41e2-95f1-9a04e6dab3e2
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - El curso comienza [a] las nueve.
 - Comencé [a] interesarme por la estadística hace años.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       baa73c4c-6ac1-41d5-84fb-299a6c4aad3c
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Ella me enseñó [a] cocinar.
 - Enseño [a] mis estudiantes a escribir en Python.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       23b29b38-a2e7-48db-a811-67d13388158a
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - ¿Puedes ayudarme [a] mover esto?
 - Siempre ayuda [a] sus compañeros cuando puede.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       53283eef-654c-40af-96b7-90870592063a
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Insistió [en] pagar la cuenta.
 - Sigo insistiendo [en] que lo intentemos otra vez.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       aa9dd1d4-a614-43e2-bb01-cb68c76a9e75
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Estoy pensando [en] cambiar de trabajo.
 - Siempre piensa [en] sus estudiantes.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       0537530a-4539-4ae1-9d0c-344cbdc8050f
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - El trabajo consiste [en] analizar los datos.
 - La receta consiste [en] mezclar todo bien.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       17ee75e4-09a1-4c70-80c2-19e5b533b459
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 3
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 2.333
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Todo depende [de] la situación.
 - Dependemos [de] los resultados del experimento.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       088bb603-12ca-4c55-913c-fa6aa70f0173
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - ¿Te acuerdas [de] ella?
 - Me acordé [de] enviar el correo justo a tiempo.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       1fbe7e9f-afe7-446e-a9f8-8ed2113552da
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 2.5
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Siempre me olvido [de] los nombres.
 - No te olvides [de] cerrar la puerta.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       febeb3fd-c0c4-419d-9b58-d750366efc2f
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Trato [de] hacer ejercicio cada día.
 - Trata [de] no llegar tarde.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       e5ebb5b3-ba92-4d65-a295-521e85341f9a
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Dejé [de] fumar hace años.
 - Ella no puede dejar [de] pensar en el examen.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       9702761b-c62f-4cd2-9f2c-54cf314e93f5
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 5
+:DRILL_FAILURE_COUNT: 5
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Sueño [con] viajar por Sudamérica.
 - Él soñó [con] ser piloto desde niño.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       eb338776-5623-45a1-8483-e502b710a033
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 3.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Puedes contar [con] mi ayuda.
 - Contamos [con] recursos limitados.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       05a758bc-7c5d-4fb1-92d1-e15e77f4c4c8
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 3.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Quedé [con] Ana para tomar un café.
 - ¿Quieres quedar [con] nosotros mañana?
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       d2400622-1e47-4de6-abd3-7976936ad2c8
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - No te preocupes [por] eso.
 - Me preocupo [por] mis estudiantes.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       69d58bf1-5e62-4a3a-b572-48a7f125db13
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Opté [por] la opción más sencilla.
 - Decidieron optar [por] viajar en tren.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       240272a4-73d9-47f0-bfa1-b1e9c60870f7
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Fíjate [en] los detalles.
 - Nunca se fija [en] lo importante.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       14868843-b242-49b8-83dd-5d9d20afcc8c
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Confío [en] ti plenamente.
 - No confían [en] el sistema.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       ce1d11b4-c34a-40f1-b850-dd603e87dc9e
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Quedamos [en] vernos mañana.
 - Ella quedó [en] avisarme cuando llegara.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       7bd3b4e3-78e7-4820-9faa-853d3ed1e3ea
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 3
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Tardé mucho [en] entenderlo.
 - ¿Cuánto tardas [en] llegar?
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       4881f0e6-cd86-41d1-a0ca-046e967d0f20
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me intereso [por] la estadística bayesiana.
 - Ella se interesa [por] la música clásica.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       4fd91d48-8b20-4fa6-9a02-dc62c973e223
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Insisten [en] hacerlo ellos mismos.
 - Él insistió [en] que era verdad.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       4a92e7e4-82e2-4345-ba2b-d6fef46e09e2
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me acuerdo [de] aquel día perfectamente.
 - ¿Te acuerdas [de] traer el libro?
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       f6fadc45-fd56-43a6-983d-f0a7b9f226bf
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Tratamos [de] terminar antes de las seis.
 - Ella trata [de] aprender japonés.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       3e758ce7-1ca5-4919-8eb8-0f96e6b52af9
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 3.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Cuento [con] que estés aquí mañana.
 - Ellos cuentan [con] nuevo apoyo financiero.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       8115f46c-256b-4e8c-aa6f-f47d20b175d4
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Depende [de] ti decidir.
 - Todo dependió [de] una llamada.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       c1d53b2a-5e76-48c0-83f4-7a214052311a
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Asistí [a] la conferencia ayer.
 - ¿Vas a asistir [a] la reunión?
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       dd267986-1a6c-4faa-a0dc-ddd677dc5f88
+:DRILL_LAST_INTERVAL: 3.86
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 3.0
+:DRILL_EASE: 2.36
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Renunció [a] su puesto.
 - No quiero renunciar [a] mis planes.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       163e0d10-82f1-47da-9f4e-a8c001790651
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 3
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me dedico [a] la enseñanza.
 - Ella se dedica [a] investigar temas climáticos.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       5efe11a7-5ae9-4f3c-9578-af061376a2cb
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 3
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me estoy acostumbrando [a] vivir en España.
 - Nunca se acostumbra [a] madrugar.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       c9c12688-ce0c-4eb9-802d-f114045064ce
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me aficioné [a] cocinar en pandemia.
 - Se aficionó [a] la fotografía.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       024f161a-8790-4cf4-bea2-eb1b9ae0e5fc
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me alegro [de] verte.
 - Ella se alegró [de] la noticia.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       faf12315-0258-41e5-ad29-b9eb58b77872
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me despedí [de] todos antes de irme.
 - Ella se despidió [de] su familia en el aeropuerto.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       17be619f-73a1-4032-96df-4bc9ba74011a
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Trato [con] estudiantes todos los días.
 - Él no quiere tratar [con] ese problema ahora.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       2fd3910b-0ac6-445b-b557-5d0d19c9fe92
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 4
+:DRILL_FAILURE_COUNT: 4
+:DRILL_AVERAGE_QUALITY: 1.25
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 2
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - La solución depende [de] los datos.
 - Mi decisión dependerá [de] las circunstancias.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       9cac2974-e909-4276-b609-1eacc464246f
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Hablamos [de] estadística todo el día.
 - Ella habló [de] sus planes futuros.** verb preposition :drill:
 - Me atrevo [a] decir la verdad.
 - No se atreve [a] hablar en público.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       700cafde-2315-45c9-aacf-d92ff12119e0
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Aspiro [a] mejorar cada día.
 - Él aspira [a] un puesto mejor.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       8640ebfa-4cb3-4a12-9bee-0459cfe31554
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 3
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me obligaron [a] firmar el documento.
 - El profesor nos obliga [a] participar.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       7d8e2642-269a-4a7e-ab27-08b3d1ba08a7
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 3
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me pongo [a] trabajar a las ocho.
 - Se puso [a] llorar sin aviso.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       b8b52404-bf55-4e00-9fdc-e0e293b03aff
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me decido [a] estudiar más.
 - Ella se decidió [a] cambiar de ciudad.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       5c9ce125-fd22-49c8-bc21-bcad251d68d0
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me resisto [a] aceptar la situación.
 - Él se resiste [a] colaborar.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       34fb3107-4cff-4821-a87b-1b697d51cad4
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Voy a empezar [por] lo más fácil.
 - Empezaron [por] presentarse.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       39d174f7-b8d2-45a6-ab48-b14f87a4b602
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Paso [por] tu casa después.
 - Siempre pasa [por] momentos difíciles.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       3c7e8cb7-e248-41d2-ade7-2e69a5cd3559
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 3
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Aposté [por] el equipo local.
 - La empresa apuesta [por] la innovación.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       5f510d9b-80ca-43e1-a2f0-b1b90ade95bd
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Aprovecho [para] descansar un poco.
 - Ella aprovechó [para] estudiar.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       00aff831-f857-40fd-bf1c-d4e376e73459
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Sirve [para] cortar madera.
 - Esto no sirve [para] nada.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       5f947021-8ce2-47fa-ac4d-1c64101f2aa6
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Lo hago [por] ti.
 - Se enfadó [por] la discusión.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       8d4ba8ab-b1df-40eb-a0df-d4625b98042a
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Optamos [por] quedarnos en casa.
 - Ella optó [por] otra estrategia.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       968f9b51-fcfd-43dd-ac87-25cb8d926b31
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Lo digo [sin] pensar.
 - Actuó [sin] dudar un segundo.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       38225921-d1e4-4210-8633-b995ac02645e
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 3
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me acuerdo [con] cariño de ese día.
 - Ellos recuerdan [con] orgullo su logro.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       396165a3-95cb-4543-9c60-601619769808
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Estudio [para] ser médico.
 - Trabajo [para] pagar mis estudios.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       2e8c5e58-2f5b-4232-b692-1768e29bcfce
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 4
+:DRILL_FAILURE_COUNT: 4
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Sueño [con] un futuro mejor.
 - Ella soñó [con] su familia.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       eab7bfca-94b3-4d0b-9a0a-b0f28049c78f
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me fijo [en] tus errores.
 - Siempre se fija [en] los detalles pequeños.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       9fae128a-11bf-40e8-a608-9467a189b672
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me choca [con] esa actitud.
 - El coche chocó [con] la pared.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       10b805b5-8866-4590-a1b9-fd9ae8309784
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 3.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me encuentro [con] mis amigos los viernes.
 - Se encontró [con] un viejo colega.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       d0b47aee-3330-4c29-a30a-69f2bf3bddd8
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 3
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Tropieza [con] todo.
 - Tropecé [con] una piedra.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       b8cff8a8-6f40-4e83-9f0c-ce4af4349f71
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me enfado [con] mis hermanos a veces.
 - Se enfadaron [con] el profesor.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       a4850a0c-f104-4246-9106-ace377021752
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 3
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 2.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Disfruto [de] la música clásica.
 - Ella disfruta [de] un buen café por la mañana.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       7aba22d0-4877-4fda-bd1d-97c0e93141c5
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me río [de] mis errores.
 - Se rieron [de] su chiste.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       0c414d01-13bc-4eee-9e1e-3d43eddbef0a
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me alegro [por] tu éxito.
 - Se alegró [por] la buena noticia.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       217c2b0b-9b87-4b24-a492-52349f0b2853
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me preocupo [por] mis hijos.
 - Ella se preocupó [por] el examen.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       981e4d6c-7a2e-4b63-b32d-03db11d0b7c3
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 3
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 2.333
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me preparo [para] el viaje.
 - Se preparó [para] la entrevista.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       099404b5-9506-47b3-b488-2aa31144efe9
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 3
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Consigo [con] esfuerzo mis objetivos.
 - Lo logró [con] dedicación.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       e2430dfd-a05f-4911-8685-65b232b0d8cf
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 4.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Apunto [a] mejorar mis habilidades.
 - Él apunta [a] un ascenso.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       be7a7383-a4e0-424e-bf30-d791a0581cde
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 3
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Amenazó [con] irse.
 - El cielo amenaza [con] lluvia.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       3cd1d99a-eeb9-49c5-a416-65d79ae9afbd
+:DRILL_LAST_INTERVAL: 3.86
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 3.0
+:DRILL_EASE: 2.36
+:DRILL_LAST_QUALITY: 3
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Se limita [a] responder lo justo.
 - Me limito [a] observar.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       3ecfb03d-e89a-4eda-ad5f-19df7587831c
+:DRILL_LAST_INTERVAL: 4.0
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 4
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 2.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 4
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Cuenta [de] sus experiencias.
 - Contaron [de] un problema importante.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       50c7e4fd-6de8-4eb1-a3cb-0c277180c385
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Abusó [de] la confianza de todos.
 - No quiero abusar [de] tu tiempo.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       062f5db3-5261-49e5-8045-20b29017c323
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Carezco [de] paciencia.
 - Muchos carecen [de] recursos básicos.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       5c0582a3-5233-45a8-b6e0-d889b505e044
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 1
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Harto [de] esperar.
 - Estoy harto [de] tus excusas.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       c903a3f9-60c3-4232-9082-bf63221d05e1
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me burlo [de] mis errores.
 - No te burles [de] él.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       113a95b8-adde-419c-b7e9-6622aefd25dd
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 2
+:DRILL_FAILURE_COUNT: 2
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me encargo [de] las inscripciones.
 - Ella se encargará [de] los informes.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       89e45958-8fde-4065-bd13-302509dbb9e8
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 4
+:DRILL_FAILURE_COUNT: 4
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Me comprometo [a] terminar hoy.
 - Él se comprometió [a] ayudar.
 
 ** verb preposition :drill:
+:PROPERTIES:
+:ID:       786aa266-9359-4f42-863a-e16c30590d04
+:DRILL_LAST_INTERVAL: 0.0
+:DRILL_REPEATS_SINCE_FAIL: 1
+:DRILL_TOTAL_REPEATS: 3
+:DRILL_FAILURE_COUNT: 3
+:DRILL_AVERAGE_QUALITY: 1.0
+:DRILL_EASE: 2.5
+:DRILL_LAST_QUALITY: 1
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Aspiro [a] más libertad.
 - Aspiramos [a] un futuro sostenible.
 
 ** verb preposition :drill:
+SCHEDULED: <2026-04-01 Wed>
+:PROPERTIES:
+:ID:       c0cbe631-b9b9-4fdb-81ee-eb5e4fa411ae
+:DRILL_LAST_INTERVAL: 4.14
+:DRILL_REPEATS_SINCE_FAIL: 2
+:DRILL_TOTAL_REPEATS: 1
+:DRILL_FAILURE_COUNT: 0
+:DRILL_AVERAGE_QUALITY: 5.0
+:DRILL_EASE: 2.6
+:DRILL_LAST_QUALITY: 5
+:DRILL_LAST_REVIEWED: [Y-03-28 Sat 10:%]
+:END:
 - Insisto [en] hablarlo ahora.
 - Ella insistió [en] revisar el informe.

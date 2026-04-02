@@ -6,3 +6,8 @@ CLOCK: [2024-04-18 Thu 16:48]--[2024-04-18 Thu 16:48] =>  0:00
 [2024-04-18 Thu 16:48]
 [[file:~/configs/admin/planner.org::*Meetings][Meetings]]
 Data is an artefact of the human experience
+
+* PPCA newsletter 
+:LOGBOOK:
+CLOCK: [2026-03-30 Mon 15:37]--[2026-03-30 Mon 17:36] =>  1:59
+:END:
