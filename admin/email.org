@@ -248,3 +248,15 @@ A couple of config issues, it's important we know who I am
 
 Common Error: Duplicate UID  If mbsync returns a non-zero exit code with a "duplicate UID" error, delete the /.mbsyncstate/ file in the offending maildir and run /mbsync -a/ again.  To find message e.g. 262  /find ~/Mail/gmail -name "*U=262*"/
 
+I might want to change the token getter script at some point
+
+#+begin_src bash :eval no
+CLIENT_ID=asdfasdf
+CLIENT_SECRET=.asdfasdfasdf
+REFRESH_TOKEN=.asdfasdfasdf
+#+end_src
+
+Then the script would be
+#+begin_src bash :eval no
+eval "$(gpg -q --no-tty -d ~/.config/oauth.env.gpg)"
+#+end_src

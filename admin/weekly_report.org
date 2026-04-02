@@ -8,36 +8,50 @@
 ** Fixed Commitments (scheduled)
 This section includes all scheduled and recurring events from `fixed.org`.
 
-#+BEGIN: agenda
-
+#+BEGIN: clocktable :file ("~/configs/admin/fixed.org") :maxlevel 2 :formula "sum(prop:CLOCKSUM)"
+#+CAPTION: Clock summary at [2026-04-02 Thu 16:44]
+| Headline   | Time |
+|------------+------|
+| *Total time* | *0:00* |
+#+TBLFM: sum(prop:CLOCKSUM)
 #+END:
 
 ** Active Tasks (clocked)
 This table sums all clocked time from `tasks.org` and `refile.org`. Only include discretionary work.
 
-#+BEGIN: clocktable
-#+CAPTION: Clock summary at [2026-03-30 Mon 17:39]
-| Headline   | Time |
-|------------+------|
-| *Total time* | *0:00* |
+#+BEGIN: clocktable :scope org-agenda-files :maxlevel 2 :fileskip0 t
+#+CAPTION: Clock summary at [2026-04-02 Thu 16:32]
+| File      | Headline              | Time  |      |
+|-----------+-----------------------+-------+------|
+|           | ALL *Total time*        | *10:20* |      |
+|-----------+-----------------------+-------+------|
+| tasks.org | *File time*             | *10:20* |      |
+|           | Emacs                 | 10:01 |      |
+|           | \_  email mu4e        |       | 3:00 |
+|           | \_  Update config     |       | 7:01 |
+|           | Learning              | 0:19  |      |
+|           | \_  spanish org drill |       | 0:19 |
 #+END:
 
-** Deferred / Longgrass Tasks
-Tasks that are on hold but worth reviewing.
-
-#+BEGIN: agenda
-
-#+END:
 
 ** Summary by Tag
 This section automatically totals time spent per tag.
 
-#+BEGIN: clocktable
-#+CAPTION: Clock summary at [2026-03-30 Mon 11:39]
-| Headline   | Time |
-|------------+------|
-| *Total time* | *0:00* |
+
+#+BEGIN: clocktable :scope org-agenda-files :maxlevel 2 :tags ("health" "language" "teaching" "research") :fileskip0 t
+#+CAPTION: Clock summary at [2026-04-02 Thu 16:36]
+| File      | Tags     | Headline              | Time  |      |
+|-----------+----------+-----------------------+-------+------|
+|           | ALL      | *Total time*            | *10:20* |      |
+|-----------+----------+-----------------------+-------+------|
+| tasks.org |          | *File time*             | *10:20* |      |
+|           |          | Emacs                 | 10:01 |      |
+|           |          | \_  email mu4e        |       | 3:00 |
+|           | admin    | \_  Update config     |       | 7:01 |
+|           |          | Learning              | 0:19  |      |
+|           | learning | \_  spanish org drill |       | 0:19 |
 #+END:
+
 
 ** Notes
 - Make sure all SCHEDULED entries in `fixed.org` have `:CLOCKSUM:` set if you want them included in total time.

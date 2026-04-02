@@ -12,6 +12,14 @@
   :END:
   - Related GitHub issue: https://github.com/lg577/Driver-age-vehicle-age-interaction-modelling/issues/4
 
+* Teaching
+** Handshake forms
+SCHEDULED: <2026-04-03 Fri>
+** Set up MTHM503 repo
+SCHEDULED: <2026-04-07 Mon>
+** Write MTHM503 coursework
+SCHEDULED: <2026-04-08 Wed>
+
 
 * Emacs
 ** INPROGRESS email mu4e
@@ -21,7 +29,7 @@ CLOCK: [2026-04-02 Thu 12:11]
 CLOCK: [2026-03-31 Tue 08:32]--[2026-03-31 Tue 11:32] =>  3:00
 :END:
 - [x] Docs for how it works
-- [ ] Stow
+- [x] Stow
 - [x] Get it working
 
 

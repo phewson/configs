@@ -10,13 +10,18 @@ IMAPStore gmail-remote
 Account gmail
 
 MaildirStore gmail-local
-Subfolders Verbatim
 Path ~/Mail/gmail/
 Inbox ~/Mail/gmail/INBOX
+Subfolders Verbatim
 
 Channel gmail
 Far :gmail-remote:
 Near :gmail-local:
-Patterns INBOX "[Gmail]/Enviados" "[Gmail]/Todos" "[Gmail]/Papelera" "[Gmail]/Borradores" Personal Work Spanish holiday
-Create Near
-SyncState *
+# Use * to catch "holiday" and any other custom folders you create
+Patterns INBOX "[Gmail]/Enviados" "[Gmail]/Papelera" "[Gmail]/Borradores" Personal Work Spanish holiday
+Create Both
+Expunge Both
+Sync All
+SyncState ~/.mbsync/
+CopyArrivalDate yes
+

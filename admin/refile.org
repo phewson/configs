@@ -11,3 +11,55 @@ Data is an artefact of the human experience
 :LOGBOOK:
 CLOCK: [2026-03-30 Mon 15:37]--[2026-03-30 Mon 17:36] =>  1:59
 :END:
+
+
+* Roger Geffen
+Paul
+
+ 
+
+Many thanks for this – and a very Happy New Year to you too.
+
+ 
+
+If you’ve not already seen the following, do check out:
+
+* Yaron Hollander’s booklet and summary article on the misuses of transport modelling; and
+* Paul Buchanan’s article Transport, Land Use and Economics, explaining why he believes it is nonsensical to base
+ transport modelling primarily on spurious time-savings, and arguing that changes in land use values would be a
+ better way to assess and justify transport investment proposals.
+
+ 
+
+I’d also agree that the history of UK transport planning has generated a lot of pseudo-science.  From the 1960s to the
+1990s, time-savings-based pseudo-science was all too often used to blind anyone objecting to road schemes – and I’d
+add that the same has occurred more recently with HS2.  However, as the environmental movement’s criticisms of
+this approach got stronger, it seems increasingly the case that transport modelling now tends to produce UK-style 
+‘paralysis by analysis’.
+
+ 
+
+By contrast, my understanding is that Dutch transport planners are much more interested in simply trying out
+schemes that they think might work, and then putting their efforts into post-scheme appraisal (rather than
+pre-scheme modelling), so as to learn from what has (or hasn’t) worked.  That seems pretty sensible to me!
+
+ 
+
+Still, you make a valid point about the need to model the short-term capacity impacts of individual schemes intended
+to boost cycle use and cycle safety.  The question then is whether you can sensibly predict what level of ‘traffic
+evaporation’ will occur if such a scheme causes a reduction in road or junction capacity.  As you say, that will involve
+consideration of wider network effects.
+
+ 
+
+I have to confess I don’t know who’s best to talk to about all this.  I’d suggest starting with Philip Loy, as the person
+most likely to know – or to know who else might know!
+
+ 
+
+Best wishes
+
+ 
+* Gmail gardening
+
+has:nouserlabels older_than:3y

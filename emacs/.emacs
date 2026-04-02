@@ -229,7 +229,8 @@
       mu4e-sent-folder   "/[Gmail]/Enviados"
       mu4e-drafts-folder "/[Gmail]/Borradores"
       mu4e-trash-folder  "/[Gmail]/Papelera"
-      mu4e-refile-folder "/[Gmail]/Todos")
+      ;;mu4e-refile-folder "/[Gmail]/Todos"
+      )
 
 (setq mu4e-index-update-error nil)
 (setq mu4e-get-mail-command "/usr/bin/mbsync -a"
@@ -246,8 +247,10 @@
     '( ("/INBOX"            . ?i)
        ("/[Gmail]/Enviados" . ?s)
        ("/[Gmail]/Papelera" . ?t)
-       ("/[Gmail]/Todos"    . ?a)
+       ;; ("/[Gmail]/Todos"    . ?a)
        ("/Work"             . ?w)))
+
+(setq mu4e-change-filenames-when-moving t)
 
 ;; 4. Sending Mail via msmtp
 (setq message-send-mail-function 'message-send-mail-with-sendmail
