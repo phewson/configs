@@ -297,6 +297,30 @@
                 (message-indentation-spaces 0))
             (message-cite-original-without-signature)))))
 
+;; Use EasyPG (standard)
+(require 'epa-file)
+(epa-file-enable)
+
+;; MML Settings
+(setq mml-secure-openpgp-sign-with-sender t)
+(setq mml-secure-openpgp-signers '("texhewson@gmail.com"))
+
+;; Mu4e Compose Hook
+(add-hook 'mu4e-compose-mode-hook
+          (lambda ()
+            (setq-local mml-default-sign-method 'pgpmime)
+            ;; Uncomment the line below to sign every email automatically
+            ;; (mml-secure-message-sign-pgpmime)
+            ))
+
+;; Keybinding to sign manually
+(with-eval-after-load 'mu4e-compose
+  (define-key mu4e-compose-mode-map (kbd "C-c s") 'mml-secure-message-sign-pgp)
+  (define-key mu4e-compose-mode-map (kbd "C-c S") 'mml-secure-message-sign-pgpmine))
+
+(setq mu4e-compose-signature
+      "Paul Hewson\n\nhttps://insightsforaction.uk\n")
+
 ;; ------------------------------------------------------------
 ;; Snippets
 ;; ------------------------------------------------------------
