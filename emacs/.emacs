@@ -189,6 +189,10 @@
 ;; ------------------------------------------------------------
 
 (use-package magit)
+(use-package forge
+  :after magit
+  :straight t)
+
 (use-package docker)
 (use-package docker-compose-mode)
 (use-package json-mode)
@@ -318,8 +322,31 @@
   (define-key mu4e-compose-mode-map (kbd "C-c s") 'mml-secure-message-sign-pgp)
   (define-key mu4e-compose-mode-map (kbd "C-c S") 'mml-secure-message-sign-pgpmine))
 
-(setq mu4e-compose-signature
-      "Paul Hewson\n\nhttps://insightsforaction.uk\n")
+(setq mu4e-compose-signature-auto-include t)
+(setq mu4e-compose-signature (with-temp-buffer
+                               (insert-file-contents "~/.signature")
+                               (buffer-string)))
+
+
+;; -----------------------------------------------------------
+;; copilot
+;; -----------------------------------------------------------
+
+(use-package copilot
+  :straight
+  (copilot
+   :type git
+   :host github
+   :repo "copilot-emacs/copilot.el")
+  :hook
+  ((prog-mode . copilot-mode))
+  :bind
+  (:map copilot-completion-map
+        ("TAB" . copilot-accept-completion)
+        ("<tab>" . copilot-accept-completion)
+        ("C-TAB" . copilot-accept-completion-by-word)
+        ("C-<tab>" . copilot-accept-completion-by-word)))
+
 
 ;; ------------------------------------------------------------
 ;; Snippets
