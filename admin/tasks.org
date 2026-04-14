@@ -13,19 +13,152 @@
   - Related GitHub issue: https://github.com/lg577/Driver-age-vehicle-age-interaction-modelling/issues/4
 
 * Teaching
-** Handshake forms
+** DONE Handshake forms
 SCHEDULED: <2026-04-03 Fri>
 ** Set up MTHM503 repo
+- [ ] Check there is a P = Path(outfile) p.parent.mkdir(parents=True, exist_ok=True) before I write any python anywhere
+- [x] Add linter to scripts?
+
+
+It is very common to get "tangled in the wires" once you move from single scripts to a structured software project. Using consistent terminology will help you distinguish between the "How" (the logic) and the "When" (the pipeline).
+
+Here is a breakdown of the standard engineering terms you can use in your lab notes:
+1. The "Logic Core" (Module Files)
+ -  Terminology: "Modules" or "Library Code."
+-  Location: course/regression/regression_core.py etc.
+- Role: These contain pure, stateless functions.
+ The "Why": These are Testable. They don't depend on CLI arguments or specific file paths (they just take data and return objects), you can point pytest at them easily.
+
+  Analogy: This is the Engine. It’s built on a workbench and tested in isolation.
+
+2. The "Entry Points" (Script Files)
+- Terminology: "CLI Scripts" or "Driver Scripts."
+- Location: e.g. course/scripts/02_fit_model.py.
+- Role: These are the "thin wrappers." They handle the "plumbing"—parsing command-line arguments (via Click), loading CSVs, calling the module functions, and saving the output.
+The "Why": They aren't really meant for unit testing; they are for Execution.
+
+Analogy: This is the Dashboard/Ignition. It’s how the user actually interacts with the engine.
+
+3. The "Pipeline" (dvc.yaml)
+- Terminology: "The Orchestrator" or "The Workflow Definition."
+- Role: It defines the Lineage. It tells DVC: "To get Output C, you must run Script B using Data A."
+- The "Why": It provides Reproducibility.
+Analogy: This is the Assembly Line. It ensures every step happens in the right order and only re-runs if something has changed.
+
+Comparison Table
+ | Feature	Modules (course.blah) | Driver Scripts (02_*.py) | Orchestrator (dvc.yaml) |                       |
+ | Primary Goal                  | Define Logic             | Execute Logic           | Link Logic & Data     |
+ | Key Action                    | def fit_model(...)       | click.command()         | cmd: python script.py |
+ | Testing                       | Unit Tests (pytest)      | Integration Tests       | End-to-End Pipeline   |
+ | Analogy                       | The Tool                 | The Hand using the Tool | The Project Blueprint |
+
+    "We put the hard math in the Modules so we can test it. We put the file-saving in the Scripts so we can run it. We put the scripts in the Orchestrator so we never have to remember the order of operations."   This "Separation of Concerns" is what separates a Data Scientist who writes "one-off" code from a Data Engineer who builds systems. You aren't just teaching them Regression; you're teaching them System Architecture.
+
+
+Mastering the Pipeline: An Introduction to DVC
+
+Welcome to the course! To manage our data science workflows, we use a tool called DVC (Data Version Control). While DVC can do many complex things, we use it primarily as a build system to ensure your analysis is reproducible, traceable, and organized.
+1. Getting Started: Environment First
+
+Before you type a single DVC command, you must activate your environment. DVC and all the necessary libraries (like pandas and scikit-learn) live there.
+Bash
+
+conda activate your_env_name
+
+2. Understanding dvc.yaml
+
+Think of dvc.yaml as the "recipe book" for your project. It defines Stages. Each stage tells DVC:
+
+    Command (cmd): What script to run.
+
+    Dependencies (deps): What files must exist (or haven't changed) for this to work.
+
+    Outputs (outs): What file the script will create (dataframes, models, or plots).
+
+    Important: If DVC tells you to "commit your artefacts to Git," ignore it. We use DVC specifically so that large data files (artefacts) stay out of our GitHub repository.
+
+3. The Big Three: dag, repro, and force
+Visualizing the Flow: dvc dag
+
+To see how your scripts connect, run:
+Bash
+
+dvc dag
+
+This prints a "Directed Acyclic Graph"—a map showing how data flows from your SQL queries through to your final report.
+Running the Pipeline: dvc repro
+
+This is your primary command. When you run dvc repro, DVC checks your dependencies. If you've changed a script or a data file, it re-runs only the necessary stages.
+
+    Partial Success: If your pipeline fails at Stage 3, DVC remembers that Stages 1 and 2 are finished. You don't have to start over!
+
+Starting Fresh: dvc repro -f
+
+If you want to force DVC to re-run a specific stage (even if it thinks nothing has changed), use the force flag:
+Bash
+
+dvc repro <stage_name> --force
+
+4. Development Workflow: Scripts vs. Modules
+Developing Scripts
+
+While DVC handles the automation, you are encouraged to run scripts manually while debugging:
+Bash
+
+python course/scripts/02_eda.py --input-csv data/toy.csv
+
+You can also import your module code into a Jupyter Notebook to experiment with visualizations or model parameters before "baking" them into the pipeline.
+The "Engine Room": core.py
+
+Most of the heavy lifting is done in the module files (e.g., course/supervised_classification/core.py).
+
+    Read the Docstrings: I have provided detailed instructions inside the functions.
+
+    Pass the Tests: Use the provided unit tests to verify your logic.
+
+    Run the Pipeline: Once your code passes the tests, dvc repro should sail through to completion.
+
+5. A Note on Naming: The "Click" Translation
+
+We use a library called click to handle command-line arguments. There is one golden rule to remember:
+
+    In the Terminal (DVC YAML): We use hyphens, e.g., --data-csv.
+
+    In the Python Function: We use underscores, e.g., data_csv.
+
+Python cannot use hyphens in variable names, so Click automatically translates them for you!
+6. Extra Credit and Customization
+
+Walk before you run. 1.  Complete the existing pipelines (Unsupervised, Supervised, and Regression) exactly as they are defined.
+2.  Once your final_report.html is looking perfect, you may consider adding extra credit features:
+* Modifying the SQL queries.
+* Adding extra classification scripts (e.g., Random Forest).
+* Adding new stages to dvc.yaml.
+
+Good luck! Lean on dvc status to see what needs work, and trust the pipeline.
+    
 SCHEDULED: <2026-04-07 Mon>
+:LOGBOOK:
+CLOCK: [2026-04-14 Tue 08:43]--[2026-04-14 Tue 19:39] => 10:56
+CLOCK: [2026-04-13 Mon 19:58]--[2026-04-13 Mon 19:58] =>  0:00
+CLOCK: [2026-04-13 Mon 08:53]--[2026-04-13 Mon 19:58] => 11:05
+CLOCK: [2026-04-09 Thu 16:56]--[2026-04-09 Thu 18:35] =>  1:39
+CLOCK: [2026-04-10 Fri 08:22]--[2026-04-10 Fri 16:39] =>  8:17
+:END:
 ** Write MTHM503 coursework
 SCHEDULED: <2026-04-08 Wed>
-
+** Regression paper
+:LOGBOOK:
+CLOCK: [2026-04-07 Tue 10:48]--[2026-04-10 Fri 18:31] => 79:43
+:END:
+** Assertion reason paper
 
 * Emacs
 ** INPROGRESS email mu4e
 - State "INPROGRESS" from              [2026-04-02 Thu 15:12]
 :LOGBOOK:
-CLOCK: [2026-04-02 Thu 12:11]
+CLOCK: [2026-04-09 Thu 14:49]--[2026-04-09 Thu 16:56] =>  2:07
+CLOCK: [2026-04-02 Thu 12:11]--[2026-04-02 Thu 18:11] =>  6:00
 CLOCK: [2026-03-31 Tue 08:32]--[2026-03-31 Tue 11:32] =>  3:00
 :END:
 - [x] Docs for how it works

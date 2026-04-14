@@ -1,10 +1,10 @@
-* TODO Appraisal In Person                                      :fixed:admin:
+* DONE Appraisal In Person                                      :fixed:admin:
 SCHEDULED: <2026-04-02 Thu 10:30-11:30>
 :PROPERTIES:
 :CLOCKSUM: 60
 :END:
 
-* TODO ML Met Office Online                                     :fixed:admin:
+* DONE ML Met Office Online                                     :fixed:admin:
 SCHEDULED: <2026-04-02 Thu 14:00-15:00>
 :PROPERTIES:
 :CLOCKSUM: 60
@@ -24,13 +24,15 @@ SCHEDULED: <2026-03-31 Tue 10:00-12:00 ++2w>
 
 
 * TODO Piano                                                   :fixed:health:
-SCHEDULED: <2026-04-09 Thu 10:00-11:00 ++2w>
+SCHEDULED: <2026-04-23 Thu 10:00-11:00 ++2w>
 :PROPERTIES:
 :CLOCKSUM: 60
+:LAST_REPEAT: [2026-04-09 Thu 14:51]
 :END:
 
 
 
+- State "DONE"       from "TODO"       [2026-04-09 Thu 14:51]
 * TODO Piano                                                   :fixed:health:
 SCHEDULED: <2026-04-21 Tue 10:00-11:00 ++2w>
 :PROPERTIES:

@@ -332,6 +332,17 @@
 ;; copilot
 ;; -----------------------------------------------------------
 
+
+(setq treesit-language-source-alist
+      '((python "https://github.com/tree-sitter/tree-sitter-python")))
+(setq treesit-extra-load-path
+      '("~/.emacs.d/tree-sitter/"))
+(setq major-mode-remap-alist
+      '((python-mode . python-ts-mode)))
+
+
+(featurep 'treesit)
+
 (use-package copilot
   :straight
   (copilot
@@ -346,7 +357,6 @@
         ("<tab>" . copilot-accept-completion)
         ("C-TAB" . copilot-accept-completion-by-word)
         ("C-<tab>" . copilot-accept-completion-by-word)))
-
 
 ;; ------------------------------------------------------------
 ;; Snippets

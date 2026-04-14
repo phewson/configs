@@ -33,7 +33,7 @@ RESPONSE=$(curl -s -X POST \
   --data "grant_type=refresh_token" \
   https://oauth2.googleapis.com/token)
 
-#echo -n "$REFRESH_TOKEN" | cat -A
-#echo "Raw Response: $RESPONSE"
+# echo -n "$REFRESH_TOKEN" | cat -A
+# echo "Raw Response: $RESPONSE"
 # Parse output
 echo "$RESPONSE" | jq -r .access_token

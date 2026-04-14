@@ -20,17 +20,20 @@ This section includes all scheduled and recurring events from `fixed.org`.
 This table sums all clocked time from `tasks.org` and `refile.org`. Only include discretionary work.
 
 #+BEGIN: clocktable :scope org-agenda-files :maxlevel 2 :fileskip0 t
-#+CAPTION: Clock summary at [2026-04-02 Thu 16:32]
-| File      | Headline              | Time  |      |
-|-----------+-----------------------+-------+------|
-|           | ALL *Total time*        | *10:20* |      |
-|-----------+-----------------------+-------+------|
-| tasks.org | *File time*             | *10:20* |      |
-|           | Emacs                 | 10:01 |      |
-|           | \_  email mu4e        |       | 3:00 |
-|           | \_  Update config     |       | 7:01 |
-|           | Learning              | 0:19  |      |
-|           | \_  spanish org drill |       | 0:19 |
+#+CAPTION: Clock summary at [2026-04-10 Fri 18:31]
+| File      | Headline                | Time    |         |
+|-----------+-------------------------+---------+---------|
+|           | ALL *Total time*          | *4d 3:49* |         |
+|-----------+-------------------------+---------+---------|
+| tasks.org | *File time*               | *4d 3:49* |         |
+|           | Teaching                | 3d 9:22 |         |
+|           | \_  Set up MTHM503 repo |         |    1:39 |
+|           | \_  Regression paper    |         | 3d 7:43 |
+|           | Emacs                   | 18:08   |         |
+|           | \_  email mu4e          |         |   11:07 |
+|           | \_  Update config       |         |    7:01 |
+|           | Learning                | 0:19    |         |
+|           | \_  spanish org drill   |         |    0:19 |
 #+END:
 
 
