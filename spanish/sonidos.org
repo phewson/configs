@@ -1,0 +1,45 @@
+
+
+* 
+- coger -> recoja (subjunctive): g changes to j before a
+- traducir -> traduzca (subjunctive): c changes to z before a
+
+Position |	G followed by |	Sound |	Example
+------------+----------------------+--------------+-------------
+Hard G |	 a, o, u	| Like English "g" in "go"	  | gato, gocho, guapo
+Soft G |	 e, i	       |Like "j" (raspy throat sound /χ/) |	gente, girar, gimnasio
+J           | any vowel	| Same as soft g	                    | jamón, jira, juego
+
+. -GER / -GIR verbs → g becomes j before a or o
+Infinitive	| Yo form (present) |	Subjunctive
+coger         | 	cojo	 | coja
+proteger  | 	protejo    |	proteja
+elegir       | 	elejo        |	eleja
+
+-GAR verbs → g becomes gu before e
+Infinitive | 	Yo form   | 	Subjunctive
+pagar	    | pago (regular) |	pague
+llegar	    | llego (regular) |	llegue
+
+-CAR verbs → c becomes qu before e
+Infinitive	| Yo form |	Subjunctive
+buscar    |	busco      |	busque
+tocar	     | toco        |	toque
+
+-CER / -CIR verbs (after vowel) → c becomes z before a/o
+Infinitive	| Yo form (present)  |	Subjunctive
+traducir  | 	traduzco	           | traduzca
+conocer |	 conozco                  |	conozca
+
+
+Change |	When |	Purpose
+g → j	| before a, o         | Preserve soft g sound
+g → gu |	before e	       | preserve hard g sound
+c → qu |	before e	      | preserve hard c sound
+c → z |	before a, o	| preserve soft c sound
+
+C spelling	Before which vowels?	Sound	English approximation
+c	a, o, u	Hard C	"k" in cat, cool
+c	e, i	Soft C	"s" in see (Spain/Latin America)
+z	any vowel	Z sound	Same as soft c
+qu	e, i	Hard QU	"k" in cat

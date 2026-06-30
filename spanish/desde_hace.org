@@ -1,0 +1,57 @@
+
+Expression                       | What follows it?                                             | 	Tense required	  | Meaning	                         | Action status
+desde + [point in time]	 | date, day, moment (2010, lunes, enero)   |	Present or Past               |	"since" [specific point]  | Started in past, continues
+desde hace + [period]   | amount of time (un año, dos horas)	    | Present only	                | "for" / "since" [duration]	 | Started in past, continues
+hace + [period]	        | amount of time (un año, dos horas)	    | Present or Past	         |"ago"	                                 | Action finished 
+
+
+Vivo en España desde 2010.          (presente = still living there) [1][14]
+Trabajo aquí desde el lunes.         (presente = still working)
+Desde que cambié de trabajo, ...     (desde que + verbo) [1][14]
+Comía desde hacía una hora.          (imperfecto = continued in past) [1][13]
+
+
+Somos amigos desde hace más de veinte años.  (presente = still friends) [1][14]
+Trabajo aquí desde hace un año.              (presente = still working) [1][14]
+Marta come desde hace una hora.              (presente = still eating) [1][13]
+
+Marta comía desde hacía una hora.   (imperfecto = continued in past) [1][13]
+
+
+Pattern A: Action FINISHED (most common)
+hace + [period] + [verbo en pasado]
+Nos conocimos hace cuatro años.     (indefinido = finished) [1][12][14]
+Fuimos al lago hace dos meses.      (indefinido = finished) [1][14]
+Marta comió hace una hora.          (indefinido = finished) [1][13]
+
+hace + [period] + que + [verbo en presente]
+Hace tres años que somos novios.    (presente = still novios) [1][12][14]
+Hace dos años que estudio español.  (presente = still studying) [1][18]
+
+In Past Tense: Use HACÍA
+Había dejado el gimnasio hacía un par de meses.  (pluscuamperfecto) [1][15]
+Marta había comido hacía una hora.               (pluscuamperfecto = finished) [1][13]
+
+Is the action STILL CONTINUING?
+├─ YES → Use DESDE or DESDE HACE
+│   ├─ Followed by EXACT POINT (2010, lunes)? → DESDE
+│   │   Vivo aquí desde 2010.
+│   └─ Followed by DURATION (un año, dos horas)? → DESDE HACE
+│       Vivo aquí desde hace un año.
+│
+└─ NO (action FINISHED) → Use HACE
+    └─ Hace + [period] + [past verb]
+        Nos conocimos hace cuatro años.
+
+
+ Sentence                                         |	Emphasis	                                        | Continuity
+Trabajo aquí hace un año.	         | emphasizes amount of time	                |continues
+Trabajo aquí desde hace un año. |	emphasizes when it started                 | Continues
+Me conocí hace un año.                |	action finished (we're not together)	| finished
+
+
+Memory trick:
+
+    desde = "since" (point)
+    desde hace = "for" (duration, continues)
+    hace = "ago" (finished) or "for" (with "que", continues)

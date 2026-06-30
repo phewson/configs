@@ -12,7 +12,12 @@
   :END:
   - Related GitHub issue: https://github.com/lg577/Driver-age-vehicle-age-interaction-modelling/issues/4
 
+    
+
+* How does bash know about datastore / change .emacs
+  
 * Teaching
+
 ** DONE Handshake forms
 SCHEDULED: <2026-04-03 Fri>
 ** Set up MTHM503 repo

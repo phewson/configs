@@ -1,0 +1,93 @@
+Infinitive	Past participle
+abrir	abierto
+cubrir	cubierto
+decir	dicho
+escribir	escrito
+hacer	hecho
+morir	muerto
+poner	puesto
+resolver	resuelto
+romper	roto
+satisfacer	satisfecho
+ver	visto
+volver	vuelto
+
+
+Infinitive	Gerund
+caer	cayendo
+decir	diciendo
+dormir	durmiendo
+elegir	eligiendo
+ir	yendo
+leer	leyendo
+mentir	mintiendo
+morir	muriendo
+oír	oyendo
+pedir	pidiendo
+poder	pudiendo
+preferir	prefiriendo
+reír	riendo
+seguir	siguiendo
+sentir	sintiendo
+servir	sirviendo
+traer	trayendo
+venir	viniendo
+
+A useful rule is that most -ir stem-changing verbs keep the stem change in the gerund, while verbs with a vowel before the ending often take -yendo. For example, leer becomes leyendo and dormir becomes durmiendo.
+Handy pattern
+
+    Vowel stem + gerund ending: leer → leyendo, creer → creyendo, oír → oyendo, traer → trayendo.
+
+Stem change preserved: pedir → pidiendo, sentir → sintiendo, servir → sirviendo.
+
+Special cases: ir → yendo and poder → pudiendo.
+
+
+
+Infinitive	Preterite stem
+andar	anduv-
+caber	cup-
+conducir	conduj-
+decir	dij-
+hacer	hic-/hiz-
+poder	pud-
+poner	pus-
+querer	quis-
+saber	sup-
+tener	tuv-
+traer	traj-
+venir	vin-
+ver	vi-
+dar	di-
+
+
+Infinitive	Future stem
+caber	cabr-
+decir	dir-
+hacer	har-
+haber	habr-
+poder	podr-
+poner	pondr-
+querer	querr-
+saber	sabr-
+salir	saldr-
+tener	tendr-
+valer	valdr-
+venir	vendr-
+
+Easy pattern to remember
+
+    Preterite irregulars usually need memorizing as separate stems, especially tuv-, pud-, pus-, dij-, vin-.
+
+    Future irregulars are more regular-looking: they mostly keep the infinitive minus the final e/i, then add -dr- before the endings.
+
+
+    Infinitive	yo	tú	él/ella/usted	nosotros	vosotros	ellos/ellas/ustedes
+ser	era	eras	era	éramos	erais	eran
+ir	iba	ibas	iba	íbamos	ibais	iban
+ver	veía	veías	veía	veíamos	veíais	veían
+
+
+
+ClaroDele
+LangCorrect

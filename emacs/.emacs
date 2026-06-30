@@ -131,9 +131,14 @@
 ;; ------------------------------------------------------------
 
 (use-package ess
-  :init (require 'ess-site)
+  :init 
+  (require 'ess-site)
   :config
+  ;; Explicitly force the wide, structured GNU indentation style
+  (setq ess-style 'GNU)
+  ;; Keep your preferred baseline indentation offset
   (setq ess-indent-offset 2))
+
 
 ;; ------------------------------------------------------------
 ;; SQL
@@ -248,7 +253,7 @@
 
 ;; Recommended: Update your shortcuts for these specific paths
 (setq mu4e-maildir-shortcuts
-    '( ("/INBOX"            . ?i)
+    '( ("/gmail/INBOX"    . ?i)
        ("/[Gmail]/Enviados" . ?s)
        ("/[Gmail]/Papelera" . ?t)
        ;; ("/[Gmail]/Todos"    . ?a)
@@ -357,7 +362,7 @@
         ("<tab>" . copilot-accept-completion)
         ("C-TAB" . copilot-accept-completion-by-word)
         ("C-<tab>" . copilot-accept-completion-by-word)))
-
+(setq copilot-indent-offset-alist '((t . nil)))
 ;; ------------------------------------------------------------
 ;; Snippets
 ;; ------------------------------------------------------------
