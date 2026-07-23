@@ -6,13 +6,21 @@
   DEADLINE: <2026-04-02 Thu>
   - Related GitHub issue: https://github.com/lg577/Driver-age-vehicle-age-interaction-modelling/issues/3
 
+ select lsoa21_code, lsoa21_name from ons.lsoa_msoa_2021_lookup left join ons.lad_region_dec_2022 on lad22_code = lad_code_2022 where region_name = 'North East' limit 2; 
+  
 ** INPROGRESS Add / Append MCMC diagnostics                           :work:
   :PROPERTIES:
   :Effort: 5:00
   :END:
   - Related GitHub issue: https://github.com/lg577/Driver-age-vehicle-age-interaction-modelling/issues/4
 
-    
+* Age standardisation paper
+Rerun with regional extraction
+
+* ICD-10 comparison
+- We have stats19 as ICD10, just need to download and then import mortality data
+
+  
 
 * How does bash know about datastore / change .emacs
   

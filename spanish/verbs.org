@@ -89,5 +89,49 @@ ver	veía	veías	veía	veíamos	veíais	veían
 
 
 
+Turning OFF (like apagar)
+Verb	Meaning	Common uses
+Verb	Meaning	Common uses
+apagar	to turn off / extinguish	lights, car, electrical appliances, fires
+Turning ON (opposites of apagar)
+Verb	Meaning	Common uses	Regional note
+encender	to turn on / light	lights, electrical devices, fires	Most common in Spain
+prender	to turn on / start	lights, car (prender el coche)	More common in Latin America
+arrancar	to start	car engine specifically	Used for starting cars
+Examples
+
+    Lights: Enciende la luz / Apaga la luz (turn on/off the light)
+
+Car: Arrancar el coche or Prender el coche (start the car) / Apagar el coche (turn off the car)
+
+Electrical appliance: Encender el televisor / Apagar el televisor
+Key point: In Spain, encender is the standard verb for "turn on" (lights, devices), while apagar covers all "turn off" situations. In Latin America, prender is often used instead of encende
+
+
+
+Starting (iniciar / poner en marcha)
+Verb	Meaning	Common uses
+arrancar	to start	car engine, machine
+iniciar	to begin/start	process, activity, computer program
+empezar	to begin	general actions, activities
+comenzar	to begin	general actions (synonym of empezar)
+poner en marcha	to start up	machine, engine, process
+Stopping (detener / terminar)
+Verb	Meaning	Common uses
+detener	to stop/detain	motion, person, process
+parar	to stop	general stopping, machine
+terminar	to finish/end	activity, process
+finalizar	to finish	formal stopping, process
+interrumpir	to interrupt	temporary stop, process
+Key pairs for cars/machines:
+Action	Spanish
+Start the car	arrancar el coche / poner en marcha el coche
+Stop the car	parar el coche / detener el coche
+Start a machine	arrancar la máquina / iniciar la máquina
+Stop a machine	parar la máquina
+Note: Arrancar and parar are the most direct opposites for mechanical starting/stopping, while empezar/terminar are more general for activities
+
+
+
 ClaroDele
 LangCorrect
