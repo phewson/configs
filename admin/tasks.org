@@ -1,3 +1,26 @@
+* New
+Ctrl - x r m save a folder in dired
+Ctrl -x r b Open a named folder
+Ctrl -x r l List bookmarks
+
+SO I "backed up" with pg_dump -t landing.dft_stats19_collision mydb > export.sql
+I loaded with psql -d targetdb -f collision.sql but wondered if I should have used pg_restore -d targetdb collision.dump as I had a parameter warning
+
+rclone ls uni
+rclone copy mydump.sql uni:postgres-dumps:
+rclone copy dumps/ onedrive:stats19
+(Semi sure I blogged about this)
+
+Right, it's working, I think I selected a wrong option during the autoconfig (the default was pretty much your cache, option 2 was your data). It's downloading, but the file I'm downloading is being recursively put into a folder with the same name as the file. Did I do soemthing wrong? (it's easy to fix up once it's downloaded, I just wondered)
+sudo apt install rclone
+rclone config
+d → delete uni
+n → create uni
+choose onedrive
+accept defaults
+authenticate
+when asked which drive/library to use, choose the one corresponding to your personal OneDrive (usually the one with your name or "OneDrive")
+
 * Luke Paper
 ** TODO Plot Marginal Posterior                                       :work:
   :PROPERTIES:
@@ -15,12 +38,463 @@
   - Related GitHub issue: https://github.com/lg577/Driver-age-vehicle-age-interaction-modelling/issues/4
 
 * Age standardisation paper
+:LOGBOOK:
+CLOCK: [2026-08-03 Mon 12:55]--[2026-08-04 Tue 17:14] => 28:19
+:END:
 Rerun with regional extraction
+- [ ] Missing data analysis and modelling
+- [ ] Model 1: spatial only, run for each region and for nation
+- [ ] Model 2: spatial plus covariates, run for each region and for nation
+  - [ ] Write up possible missing data models for the missing spatial data by police force
+  - [ ] Consider the severity model
 
 * ICD-10 comparison
 - We have stats19 as ICD10, just need to download and then import mortality data
 
-  
+* Seeds
+** Geller Cycling Infrastructure, Geller Categories and Active Lives Data
+
+*** Motivation
+
+Roger Geller's cyclist typology suggests that differences between cyclists are largely driven by tolerance for traffic stress rather than destination choice. The key groups are:
+
+- Strong and Fearless
+- Enthused and Confident
+- Interested but Concerned
+- No Way No How
+
+Most infrastructure metrics (e.g. km of cycle lanes per capita) do not distinguish between the needs of these groups. A city may have substantial cycling infrastructure but still provide poor connectivity for more cautious cyclists.
+
+The objective is to develop city-level indicators describing how well a city serves different cyclist types and assess whether these indicators are associated with cycling participation reported in the Active Lives Survey.
+
+*** Data Sources
+
+**** OpenStreetMap
+
+Use OSM to construct a routable transport network and identify:
+
+- road classifications
+- cycle tracks
+- painted cycle lanes
+- shared-use paths
+- traffic-free routes
+- speed limits
+- surface types
+- one-way restrictions
+
+**** Census 2021 Origin-Destination Data
+
+Use commuting OD matrices to identify likely travel demand between areas.
+
+Potentially use these data:
+- directly as demand weights
+- or within a simple traffic assignment model to estimate relative traffic volumes on roads
+
+**** Active Lives Survey
+
+Use cycling participation rates as outcome variables.
+
+Possible dependent variables:
+- overall cycling participation
+- female cycling participation
+- older adult cycling participation
+- participation among less active groups
+
+The expectation is that infrastructure suitable for "Interested but Concerned" cyclists may be more strongly associated with these groups than with already confident cyclists.
+
+**** Terrain Data
+
+Previous work has shown that hilliness is associated with lower cycling levels.
+
+Potential extensions:
+- revisit this relationship in the context of e-bike adoption
+- measure hilliness along likely cycling routes rather than for whole local authorities
+
+*** Network Construction
+
+Load OSM into PostgreSQL/PostGIS (e.g. via osm2pgsql).
+
+Create an edge table with fields such as:
+
+- edge_id
+- from_node
+- to_node
+- length
+- road_class
+- speed_limit
+- cycleway_type
+- surface
+- gradient
+- assigned_flow (optional)
+- stress_score
+
+Avoid hard-coding cyclist types initially. Instead create a generic stress score that can later be reclassified.
+
+*** Stress Classification
+
+Assign each edge a cycling stress score based on:
+
+- road hierarchy
+- speed limit
+- cycling provision
+- inferred traffic volume
+- gradient
+
+Example scale:
+
+0 = traffic-free route
+1 = protected cycle track
+2 = quiet residential street
+3 = painted cycle lane
+4 = busy urban road
+5 = major arterial road
+
+*** Geller Networks
+
+Create separate networks for different cyclist types.
+
+**** Strong and Fearless
+
+Almost all roads except motorways.
+
+**** Enthused and Confident
+
+Exclude the highest-stress roads.
+
+**** Interested but Concerned
+
+Restrict to:
+- protected infrastructure
+- traffic-free routes
+- quiet residential streets
+
+**** Very Cautious Cyclists
+
+Only:
+- fully separated routes
+- traffic-free facilities
+
+These can be implemented as filtered views of the same edge table.
+
+*** Candidate Metrics
+
+**** Connectivity
+
+ 
+* Saplings
+** Casuality * Idea: Quantifying the Value of Additional Variables in STATS19/STATS20
+
+*** Motivation
+
+Current STATS19 records all drivers involved in reported injury collisions, but
+passenger information is incomplete. Passengers who are present but uninjured
+are generally not observed in the dataset.
+
+This creates a partially observed occupancy variable:
+
+\[
+O_i = \text{true occupancy of vehicle } i
+\]
+
+while the observed data contain only:
+
+\[
+Y_i = \{\text{driver information, collision details, injured casualties}\}.
+\]
+
+The immediate application is estimating the effect of carrying passengers on
+collision risk, but the broader question is:
+
+#+begin_quote
+How much information would be gained by recording a currently unobserved
+variable?
+#+end_quote
+
+This reframes STATS20 design as a statistical decision problem rather than a
+simple data collection problem.
+
+*** Passenger Presence as a Missing Data Problem
+
+The key issue is not missing collision data but missing occupancy data.
+
+Let:
+
+\[
+P_i = 1
+\]
+
+if a passenger was present.
+
+In current STATS19, a passenger is typically observed only when they become a
+recorded casualty:
+
+\[
+ObservedPassenger_i = P_i \times I_i
+\]
+
+where
+
+\[
+I_i = 1
+\]
+
+if the passenger is injured.
+
+Thus many vehicles with passengers are indistinguishable from vehicles with no
+passengers.
+
+*** Why STATS19 Alone Cannot Identify Passenger Effects
+
+The desired quantity is something like:
+
+\[
+P(Collision \mid do(Passenger = 1))
+\]
+
+compared with
+
+\[
+P(Collision \mid do(Passenger = 0)).
+\]
+
+However STATS19 contains only injury collisions, not the non-collision exposure
+population.
+
+In practice it provides information about:
+
+\[
+P(Passenger \mid Collision)
+\]
+
+rather than
+
+\[
+P(Collision \mid Passenger).
+\]
+
+Consequently occupancy effects are not identifiable from STATS19 alone.
+
+*** Role of the National Travel Survey
+
+The National Travel Survey (NTS) provides exposure information for the travelling
+population, including:
+
+- vehicle occupancy rates;
+- journey purposes;
+- age and sex distributions;
+- passenger travel frequency.
+
+This allows estimation of:
+
+\[
+P(O)
+\]
+
+or more generally
+
+\[
+P(O \mid X)
+\]
+
+for demographic and journey covariates \(X\).
+
+Combining NTS and STATS19 creates a case-population design where:
+
+- NTS provides exposure;
+- STATS19 provides collision outcomes.
+
+*** Using Collision Geometry to Recover Occupancy Information
+
+A potentially useful identification strategy is based on impact location.
+
+For a right-hand-drive vehicle:
+
+- left-side impacts disproportionately affect nearside passengers;
+- right-side impacts disproportionately affect drivers.
+
+If a passenger is present, a left-side impact increases the probability that the
+passenger becomes an observed casualty.
+
+This can be represented as:
+
+\[
+O_i \rightarrow C_i
+\]
+
+\[
+Impact_i \rightarrow C_i
+\]
+
+where \(C_i\) denotes observed passenger casualties.
+
+Collision geometry therefore changes the observation probability without
+necessarily changing occupancy itself.
+
+This provides partial information about otherwise unobserved passengers.
+
+*** Latent Occupancy Model
+
+A Bayesian latent-variable model could treat occupancy as unobserved.
+
+Estimate:
+
+\[
+P(O_i \mid D_i)
+\]
+
+where \(D_i\) contains:
+
+- driver age;
+- driver sex;
+- vehicle type;
+- collision type;
+- impact location;
+- road characteristics;
+- time of day;
+- casualty records.
+
+NTS data provide informative priors on occupancy patterns.
+
+The analysis would estimate occupancy probabilities rather than assuming
+occupancy is known.
+
+*** Main Contribution: Value of Information
+
+The most interesting research question may not be the passenger effect itself.
+
+Instead:
+
+#+begin_quote
+What is the value of collecting occupancy information directly?
+#+end_quote
+
+Compare three scenarios.
+
+**** Scenario 1: Current STATS19
+
+Occupancy partially observed.
+
+Inference based solely on existing records.
+
+**** Scenario 2: Enhanced Inference
+
+Occupancy inferred using:
+
+- STATS19;
+- collision geometry;
+- NTS priors.
+
+**** Scenario 3: Full Occupant Recording
+
+Occupancy observed directly for all vehicle occupants.
+
+This represents a hypothetical STATS20.
+
+*** Measuring Information Gain
+
+Possible measures:
+
+- posterior variance;
+- credible interval width;
+- Shannon entropy;
+- uncertainty in policy-relevant parameters.
+
+For example:
+
+\[
+Var(\theta_{occupancy})
+\]
+
+or
+
+\[
+Var(RR_{passenger})
+\]
+
+under each scenario.
+
+The value of the new variable is then:
+
+\[
+VOI =
+Uncertainty_{current}
+-
+Uncertainty_{enhanced}
+\]
+
+for an appropriate uncertainty measure.
+
+*** Possible Outcomes
+
+The study may find:
+
+1. occupancy is already recoverable from existing variables and additional
+   collection adds little information;
+
+2. occupancy becomes much more certain with direct recording;
+
+3. occupancy becomes certain but causal estimates remain uncertain because of
+   confounding (e.g. trip purpose);
+
+4. some other variable would be more valuable to collect than occupancy.
+
+A useful result could therefore be:
+
+#+begin_quote
+Recording occupancy would reduce uncertainty in occupancy prevalence by 80% but
+reduce uncertainty in passenger-risk estimates by only 10%.
+#+end_quote
+
+Such findings would directly inform data collection policy.
+
+*** Broader Framework
+
+This framework could be applied to any candidate STATS20 variable:
+
+- occupancy;
+- seatbelt use;
+- distraction indicators;
+- journey purpose;
+- mobile phone use;
+- other behavioural variables.
+
+The general principle is:
+
+#+begin_quote
+The objective is not to determine whether a variable is useful, but whether it
+is sufficiently informative to justify collection.
+#+end_quote
+
+*** Potential Journal Targets
+
+If framed as a transport application:
+
+- Accident Analysis & Prevention
+- Traffic Injury Prevention
+- Transportation Research Part F
+- Journal of Safety Research
+
+If framed as a methodology for evaluating administrative data collection:
+
+- JRSS Series A
+- Journal of Official Statistics
+- Journal of Survey Statistics and Methodology
+- International Statistical Review
+- Statistics and Public Policy
+
+The stronger methodological contribution is likely the value-of-information
+framework rather than the occupancy case study itself.
+
+*** Working Title Ideas
+
+- Quantifying the Value of Additional Variables in Road Collision Reporting Systems
+- How Much Information Is Occupancy Worth? A Value-of-Information Analysis for STATS19
+- Evaluating Candidate Variables for STATS20 Using Bayesian Missing-Data Models
+- Information Gain from Enhanced Occupant Recording in Road Collision Data
+ 
+* Active
+Things that could plausibly become a paper this year.
+
 
 * How does bash know about datastore / change .emacs
   
