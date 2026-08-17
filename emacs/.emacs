@@ -414,5 +414,71 @@
 
 (load-file "~/configs/emacs/.orgconfigs.el")
 
+;; -
+;; Placement reports
+;; -
+
+(defun placement-feedback-template ()
+  (interactive)
+  (insert
+  "Strength:\n- \n\n"
+  "Develop:\n- \n\n"
+  "Develop:\n- \n\n"
+  "Presentation:\n- \n\n"))
+(global-set-key (kbd "C-c r") #'placement-feedback-template)
+
+(defvar placement-comments
+  '(
+    ("Too descriptive"
+     "The discussion tends towards description rather than reflection. Consider analysing what you learned, how your thinking developed, and what you would do differently in future.")
+    ("Stream of conciousness"
+     "The reflective content is strong, but the discussion would benefit from a more structured and analytical style. Consider moving from a descriptive narrative towards a clearer evaluation of what was effective, what was not, and how your subsequent actions improved your practice.")
+    ("Narrative waffle"
+   "There is evidence of learning throughout this section; however, the discussion currently feels somewhat descriptive and episodic. Consider identifying two or three key incidents or themes and structuring the reflection around them. For each, explain the challenge, your response, what you learned, and how it influenced your subsequent practice. The literature should be used to help interpret these experiences and support your reflections on personal and professional growth.")
+    ("Weak module links"
+     "Strengthen the connection between workplace activities and specific modules, concepts or techniques from your degree programme.")
+
+    ("Limited evaluation"
+     "Evaluate the effectiveness of your approach in greater depth, considering strengths, limitations and possible improvements.")
+
+    ("Technical challenge unclear"
+     "Clarify the technical challenge being addressed and explain why it was significant.")
+    ("Specific and evidenced"
+     "The discussion would be strengthened by moving beyond general statements about personal growth and identifying specific experiences that contributed to the development of particular skills or attributes.")
+    ("Interpersonal reflection"
+     "Include deeper reflection on workplace interactions and how these experiences developed your professional skills.")
+
+    ("Future development"
+     "Discuss how these experiences will influence your future professional practice and career development.")
+
+    ("Good structure"
+     "The report is clearly structured and professionally presented.")
+("Asking questions" "The reflection identifies an important learning experience. To deepen the analysis, consider relating your observations to wider professional practice or relevant literature, rather than presenting the lesson solely as a personal realisation.")
+    ("Strong reflection"
+     "The report contains thoughtful reflection which moves beyond description to consider learning and future development.")
+    ("Synthesing"
+     "The report identifies several valuable learning experiences, but the reflection would be strengthened by considering how these experiences collectively shaped your understanding of professional practice.")
+    ("Generic statement"
+     "The placement appears to have provided substantial opportunities for learning and development. It is pleasing to see the range of technical, professional and interpersonal skills that you have developed through these experiences.")
+    ("Well referenced but no reflection"
+     "The section contains thoughtful observations about professional practice, but much of the discussion reads as a summary of conclusions reached at the end of the placement. To deepen the reflection, consider tracing how your understanding evolved over time by discussing the experiences, decisions, and feedback that led you to these insights and how they subsequently affected your behaviour and performance.")
+    ))
+
+
+(defun placement-insert-comment ()
+  (interactive)
+  (insert
+  (cadr
+    (assoc
+      (completing-read "Comment: "
+                        placement-comments
+                        nil t)
+       placement-comments))))
+
+(global-set-key (kbd "C-c p") #'placement-insert-comment)
+
+(assoc "Strong reflection" placement-comments)
+
+
 (provide 'init)
 ;;; init.el ends here
